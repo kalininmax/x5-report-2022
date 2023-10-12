@@ -1,0 +1,15 @@
+.intro {
+	text-align: center;
+	&__text {
+		margin-bottom: rem(16);
+		font-size: rem(20);
+	}
+	&__picture {
+		display: block;
+	}
+	&__img {
+		width: rem(560);
+		max-width: 100%;
+		height: auto;
+	}
+}

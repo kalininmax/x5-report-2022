@@ -1,0 +1,59 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "cross-env ELEVENTY_ENV=development npm-run-all dev:clean dev:eleventy",
+    "build": "cross-env ELEVENTY_ENV=production npm-run-all build:clean build:eleventy",
+    "zip": "npm-run-all build archive",
+    "archive": "bestzip build-production.zip build-production",
+    "clean": "rimraf build build-production build-production.zip",
+    "dev:clean": "rimraf build",
+    "dev:eleventy": "eleventy --serve --quiet --incremental",
+    "build:clean": "rimraf build-production",
+    "build:eleventy": "eleventy",
+    "test": "npm-run-all editorconfig css js",
+    "editorconfig": "editorconfig-checker",
+    "html": "java -jar node_modules/vnu-jar/build/dist/vnu.jar --filterfile .vnurc build/**/*.html",
+    "css": "stylelint \"src/**/*.scss\" --fix",
+    "js": "eslint src/**/*.js",
+    "prettier": "npx prettier --write .",
+    "format": "npm-run-all css prettier",
+    "prepare": "husky install"
+  },
+  "browserslist": [
+    "last 2 version",
+    "not dead"
+  ],
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-img": "^3.1.0",
+    "autoprefixer": "^10.4.14",
+    "bestzip": "^2.2.1",
+    "cross-env": "^7.0.3",
+    "editorconfig-checker": "^5.0.1",
+    "eleventy-plugin-icons": "^3.0.0",
+    "esbuild": "^0.17.15",
+    "eslint": "^8.38.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.0",
+    "js-yaml": "^4.1.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.21",
+    "postcss-assets": "^6.0.0",
+    "postcss-csso": "^6.0.1",
+    "postcss-media-minmax": "^5.0.0",
+    "prettier": "^2.8.8",
+    "rimraf": "^4.4.1",
+    "sass": "^1.62.1",
+    "stylelint": "^15.4.0",
+    "stylelint-config-standard-scss": "^8.0.0",
+    "stylelint-order": "^6.0.3",
+    "vnu-jar": "^23.4.11"
+  },
+  "dependencies": {
+    "gsap": "^3.11.5",
+    "uuid": "^9.0.0"
+  }
+}
