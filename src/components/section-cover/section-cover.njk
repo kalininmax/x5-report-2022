@@ -1,0 +1,50 @@
+{% set lang = props.lang %}
+
+<section {% if props.id %} id="{{ props.id }}"{% endif %} class="section-cover{% if props.className %} {{ props.className }}{% endif %}">
+	{% if props.bgImg %}
+		<picture>
+			<source media="(max-width:767px)" srcset="{{ props.bgImg }}-mobile.jpg, {{ props.bgImg }}-mobile@2x.jpg 2x" type="image/webp">
+			<source srcset="{{ props.bgImg }}.jpg, {{ props.bgImg }}@2x.jpg 2x" type="image/webp">
+			<img class="section-cover__bg-img" src="{{ props.bgImg }}.jpg" srcset="{{ props.bgImg }}@2x.jpg 2x" {% if props.imgAttributes %} {{ props.imgAttributes }}{% endif %} alt="">
+		</picture>
+	{% endif %}
+	<div class="section-cover__content">
+		<div class="section-cover__container container">
+			<p class="section-cover__number {% if props.annex %}_hide{% endif %}">{{ props.number }}</p>
+			<h2 class="section-cover__title big-title _white">{{ props.title | safe }}</h2>
+			{% if not props.annex %}
+				<div class="section-cover__items-block {% if props.items3 %}{% else %}_two-blocks{% endif %}">
+					<ul class="section-cover__items">
+						{% for item in props.items1 %}
+							<li class="section-cover__item">
+								<a class="section-cover__link" href="{{ item.link }}">
+									{{ item.title[lang] | safe }}
+								</a>
+							</li>
+						{% endfor %}
+					</ul>
+					<ul class="section-cover__items">
+						{% for item in props.items2 %}
+							<li class="section-cover__item">
+								<a class="section-cover__link" href="{{ item.link }}">
+									{{ item.title[lang] | safe }}
+								</a>
+							</li>
+						{% endfor %}
+					</ul>
+					<ul class="section-cover__items {% if props.items3 %}{{ "" }}{% else %}{{ "_two-blocks" }}{% endif %}">
+						{% for item in props.items3 %}
+							<li class="section-cover__item">
+								<a class="section-cover__link" href="{{ item.link }}">
+									{{ item.title[lang] | safe }}
+								</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			{% else %}
+				<p class="section-cover__text">{{ props.text | safe }}</p>
+			{% endif %}
+		</div>
+	</div>
+</section>

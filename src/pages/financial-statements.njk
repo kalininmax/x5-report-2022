@@ -1,0 +1,68 @@
+{% extends "../templates/base.njk" %}
+
+{% set pageClassMod = '_financial-statements' %}
+
+{% block content %}
+
+	{# {{ sectionCover({
+		number: financialStatements.number,
+		id: financialStatements.id,
+		title: financialStatements.title[lang],
+		bgImg: financialStatements.coverImg[lang],
+		imgAttributes: 'width="1920" height="736"',
+		items1: financialStatements["menu-items-1"],
+		items2: financialStatements["menu-items-2"],
+		lang: lang
+	}) }}
+
+	{% include "../includes/section-3/00-consolidated-statement/consolidated-statement.njk" %}
+	{% include "../includes/section-3/01-principal-activities/principal-activities.njk" %}
+	{% include "../includes/section-3/02-summary-significant/summary-significant.njk" %}
+	{% include "../includes/section-3/03-critical-accounting/critical-accounting.njk" %}
+	{% include "../includes/section-3/04-adoption/adoption.njk" %}
+	{% include "../includes/section-3/05-segment-reporting/segment-reporting.njk" %}
+	{% include "../includes/section-3/06-subsidiaries/subsidiaries.njk" %}
+	{% include "../includes/section-3/07-acquisition/acquisition.njk" %}
+	{% include "../includes/section-3/08-related-party/related-party.njk" %}
+	{% include "../includes/section-3/09-cash-and-cash/cash-and-cash.njk" %}
+	{% include "../includes/section-3/10-property/property.njk" %}
+	{% include "../includes/section-3/11-leases/leases.njk" %}
+	{% include "../includes/section-3/12-investment-properties/investment-properties.njk" %}
+	{% include "../includes/section-3/13-goodwill/goodwill.njk" %}
+	{% include "../includes/section-3/14-other-intangible/other-intangible.njk" %}
+	{% include "../includes/section-3/15-inventories/inventories.njk" %}
+	{% include "../includes/section-3/16-financial-instruments/financial-instruments.njk" %}
+	{% include "../includes/section-3/17-trade/trade.njk" %}
+	{% include "../includes/section-3/18-vat/vat.njk" %}
+	{% include "../includes/section-3/19-provisions/provisions.njk" %}
+	{% include "../includes/section-3/20-contract/contract.njk" %}
+	{% include "../includes/section-3/21-borrowings/borrowings.njk" %}
+	{% include "../includes/section-3/22-share-capital/share-capital.njk" %}
+	{% include "../includes/section-3/23-earnings/earnings.njk" %}
+	{% include "../includes/section-3/24-revenue/revenue.njk" %}
+	{% include "../includes/section-3/25-expenses-by-nature/expenses-by-nature.njk" %}
+	{% include "../includes/section-3/26-lease-sublease/lease-sublease.njk" %}
+	{% include "../includes/section-3/27-finance-income/finance-income.njk" %}
+	{% include "../includes/section-3/28-staff-costs/staff-costs.njk" %}
+	{% include "../includes/section-3/29-share-based-payments/share-based-payments.njk" %}
+	{% include "../includes/section-3/30-income-tax/income-tax.njk" %}
+	{% include "../includes/section-3/31-financial-risk-management/financial-risk-management.njk" %}
+	{% include "../includes/section-3/32-operating-environment/operating-environment.njk" %}
+	{% include "../includes/section-3/33-capital-risk-management/capital-risk-management.njk" %}
+	{% include "../includes/section-3/34-fair-value/fair-value.njk" %}
+	{% include "../includes/section-3/35-commitments/commitments.njk" %}
+	{% include "../includes/section-3/36-subsequent/subsequent.njk" %}
+	{% include "../includes/section-3/37-accounting/accounting.njk" %}
+	{% include "../includes/section-3/38-financial/financial.njk" %}
+	{% include "../includes/section-3/39-shareholders/shareholders.njk" %}
+	{% include "../includes/section-3/40-loans/loans.njk" %}
+	{% include "../includes/section-3/41-share-based/share-based.njk" %}
+	{% include "../includes/section-3/42-general/general.njk" %}
+	{% include "../includes/section-3/43-income/income.njk" %}
+	{% include "../includes/section-3/44-key/key.njk" %}
+	{% include "../includes/section-3/45-contingent/contingent.njk" %}
+	{% include "../includes/section-3/46-related/related.njk" %}
+	{% include "../includes/section-3/47-subsequent/subsequent.njk" %}
+
+	{{ tooltips(financialStatementsTooltips, lang) }} #}
+{% endblock %}

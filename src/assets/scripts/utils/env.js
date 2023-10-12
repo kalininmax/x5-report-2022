@@ -23,6 +23,9 @@ const env = {
 
 	// Dev environment
 	isLocal: envObject.isLocal,
+
+	// Lang
+	isEn: document.querySelector('html').getAttribute('lang') === 'en',
 };
 
 window.environmentObject = null;

@@ -1,7 +1,12 @@
-/* Use Google Fonts
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic)
-or
-@include font-face("Samplina Neue", "../fonts/SamplinaNeue"); */
+/* Use Google Fonts */
 
-@include font-face('Roboto', '../fonts/Roboto-Regular', 400, normal, woff2 woff);
-@include font-face('Roboto', '../fonts/Roboto-Bold', 700, normal, woff2 woff);
+/* @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic) */
+
+/* or */
+
+/* @include font-face("Samplina Neue", "../fonts/SamplinaNeue"); */
+
+@include font-face('X5 Sans', '../fonts/X5-Sans_Light', 300, normal, woff2 woff);
+@include font-face('X5 Sans', '../fonts/X5-Sans_Regular', 400, normal, woff2 woff);
+@include font-face('X5 Sans', '../fonts/X5-Sans_Medium', 500, normal, woff2 woff);
+@include font-face('X5 Sans', '../fonts/X5-Sans_Bold', 700, normal, woff2 woff);

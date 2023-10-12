@@ -1,0 +1,29 @@
+<div class="wrapper__cover cover">
+	<picture>
+		<source media="(max-width: 567px)" srcset="/assets/images/cover/cover-m.jpg, /assets/images/cover/cover-m@2x.jpg 2x" type="image/webp">
+		<source srcset="/assets/images/cover/cover.jpg, /assets/images/cover/cover@2x.jpg 2x" type="image/webp">
+		<img class="cover__bg" src="/assets/images/cover/cover.jpg" srcset="/assets/images/cover/cover@2x.jpg 2x" width="1900" height="988" alt="">
+	</picture>
+	<div class="cover__wrapper container">
+		<div class="cover__position">
+			<ul class="cover__menu">
+				{% for item in site.menuItems %}
+					<li class="cover__menu-item">
+						<a class="cover__menu-link g-tdn {% if not item.submenu %}_no-submenu{% endif %}" href=".{% if item.startLink %}{{ item.startLink }}{% else %}{{ item.link }}{% endif %}">
+							<div class="cover__menu-title {% if not item.submenu %}h3 _ls-minus-03{% endif %}">
+								{{ item.section[lang] | safe }}
+							</div>
+							{% if not item.submenu %}
+								<p class="text c-default">{{ item.submenuText[lang] | safe }}</p>
+							{% endif %}
+							{% if item.submenu %}
+								<div  class="cover__menu-counter">0{{ loop.index }}</div>
+							{% endif %}
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+			<h1 class="cover__title">{{ site.mainTitle[lang] | safe }}</h1>
+		</div>
+	</div>
+</div>

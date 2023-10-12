@@ -1,10 +1,16 @@
 @use 'sass:math';
 
+@mixin b {
+	display: block;
+	content: ' ';
+	position: absolute;
+}
+
 @mixin hide-input {
+	display: block;
 	position: absolute;
 	top: 0;
 	left: 0;
-	display: block;
 	width: 100%;
 	height: 100%;
 	cursor: pointer;
@@ -14,12 +20,11 @@
 
 @mixin hide-input-file {
 	@include hide-input;
-
-	right: 0;
+	font-size: 100px;
 	left: auto;
+	right: 0;
 	width: auto;
 	height: auto;
-	font-size: 100px;
 }
 
 /* Grid */
@@ -41,10 +46,29 @@
 	white-space: nowrap;
 }
 
+@mixin letterSpacing($interval) {
+	letter-spacing: unquote(($interval / 1000) + 'em');
+}
+
+@mixin cover {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
 @mixin retina {
-	@media only screen and (resolution >= 2dppx) {
+	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
 		@content;
 	}
+}
+
+@mixin box {
+	box-sizing: border-box;
+}
+
+@mixin ti {
+	overflow: hidden;
+	text-indent: -999em;
 }
 
 @mixin placeholder {
@@ -65,57 +89,78 @@
 	}
 }
 
+@mixin unselectable {
+	user-select: none;
+}
+
+@mixin prevent-text {
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+}
+
+@mixin gpu {
+	@include transform(translate3d(0, 0, 0));
+}
+
+@mixin smooth-triangle {
+	transform: rotate(0.05deg);
+}
+
 @mixin scrollbar {
-	&::-moz-scrollbar {
+	& ::-moz-scrollbar {
 		@content;
 	}
-	&::-webkit-scrollbar {
+	& ::-webkit-scrollbar {
 		@content;
 	}
-	&::scrollbar {
+	& ::scrollbar {
 		@content;
 	}
 }
 
 @mixin scrollbar-track {
-	&::-moz-scrollbar-track {
+	& ::-moz-scrollbar-track {
 		@content;
 	}
-	&::-webkit-scrollbar-track {
+	& ::-webkit-scrollbar-track {
 		@content;
 	}
-	&::scrollbar-track {
+	& ::scrollbar-track {
 		@content;
 	}
 }
 
 @mixin scrollbar-thumb {
-	&::-moz-scrollbar-thumb {
+	& ::-moz-scrollbar-thumb {
 		@content;
 	}
-	&::-webkit-scrollbar-thumb {
+	& ::-webkit-scrollbar-thumb {
 		@content;
 	}
-	&::scrollbar-thumb {
+	& ::scrollbar-thumb {
 		@content;
 	}
 }
 
 @mixin scrollbar-track-piece {
-	&::-moz-scrollbar-track-piece {
+	& ::-moz-scrollbar-track-piece {
 		@content;
 	}
-	&::-webkit-scrollbar-track-piece {
+	& ::-webkit-scrollbar-track-piece {
 		@content;
 	}
-	&::scrollbar-track-piece {
+	& ::scrollbar-track-piece {
 		@content;
 	}
 }
 
-@mixin arrow($width, $height, $bg, $direction) {
-	width: 0;
-	height: 0;
+@mixin arr($width, $height, $bg, $direction) {
+	width: 0px;
+	height: 0px;
 	border-style: solid;
 	@if $direction == t {
 		border-width: 0 $width / 2 + px $height + px $width / 2 + px;
@@ -148,6 +193,58 @@
 	@if $direction == bl {
 		border-width: $width + px 0 0 $height + px;
 		border-color: transparent transparent transparent $bg;
+	}
+}
+
+/* example */
+/* +arr(500,50, #000, l) */
+/* +arr(500,50, #000, bl) */
+
+@mixin br($radius) {
+	border-radius: $radius;
+}
+
+/* Retina Backgrounds for Compass */
+/* by:              Gaya Kessler */
+/* last update:     03/11/14 */
+/* url: https://github.com/pixelmord/Retina-Sprites-for-Compass */
+/* */
+/* Usage: */
+/* 1. create background image for pixel ratio 1 screens and put it somewhere in your images folder. */
+/* 2. create background image for pixel ratio 2 screens and put it somewhere in your images folder. */
+/* 3. include the background-image property in your Sass/Scss using: '@include background-retina(<ratio-1-imagefile>, <ratio-2-imagefile>)' */
+
+@mixin background-retina($normal, $retina, $contain: false) {
+	background-image: image-url($normal);
+	@media (-webkit-min-device-pixel-ratio: 2),
+		(-o-min-device-pixel-ratio: 3/2),
+		(min--moz-device-pixel-ratio: 2),
+		(min-device-pixel-ratio: 2),
+		(min-resolution: 144dppx) {
+		background-image: image-url($retina);
+		@if $contain == true {
+			background-size: contain;
+		} @else {
+			background-size: (image-width($retina) / 2) (image-height($retina) / 2);
+		}
+	}
+}
+
+@mixin vertical-align($parent_container) {
+	vertical-align: middle;
+	display: inline-block;
+	white-space: normal;
+	font-size: $default-font-size;
+	@at-root #{$parent_container} {
+		white-space: nowrap;
+		font-size: 0;
+		&:before {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+			width: 0;
+		}
 	}
 }
 
@@ -193,14 +290,26 @@
 	}
 }
 
-@mixin reset-btn {
-	padding: 0;
-	border: 0;
-	background: 0;
-	color: inherit;
-	text-decoration: none;
-	font-family: inherit;
-	cursor: pointer;
+@mixin col($max-cols) {
+	@for $i from 1 through $max-cols {
+		&-#{$i} {
+			display: block;
+			float: left;
+			width: math.div(100%, ($max-cols * $i));
+		}
+	}
+}
+
+@mixin offset-width($max-cols) {
+	@for $i from 0 through $max-cols {
+		&-#{$i} {
+			@if $i == 0 {
+				margin-left: 0;
+			} @else {
+				margin-left: math.div(100%, $max-cols * $i);
+			}
+		}
+	}
 }
 
 @function rem($px, $context: 16) {
@@ -216,7 +325,7 @@
 }
 
 @function strip-unit($number) {
-	@if type-of($number) == 'number' and not unitless($number) {
+	@if (type-of($number) == 'number' and not unitless($number)) {
 		@return calc($number / ($number * 0 + 1px));
 	}
 	@return $number;
@@ -236,4 +345,13 @@
 	@media (max-width: ($minViewPort - 1)) {
 		#{$prop}: $min;
 	}
+}
+
+@mixin reset-btn {
+	padding: 0;
+	border: 0;
+	outline: 0;
+	background: 0;
+	font: inherit;
+	cursor: pointer;
 }

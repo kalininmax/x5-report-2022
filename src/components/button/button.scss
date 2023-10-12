@@ -1,21 +1,31 @@
 .button {
-	@include reset-btn;
+	@extend .transition-active;
 
-	display: inline-flex;
+	display: flex;
+	justify-content: center;
 	align-items: center;
-	column-gap: rem(8);
-	padding: rem(8) rem(16);
-	border: 1px solid currentColor;
-	text-transform: uppercase;
-	transition: box-shadow $fast-transition-duration $default-transition-function;
-	font-size: rem(18);
+	padding: 1px 20px 0;
+	height: 54px;
+	border: 2px solid rgba(#000, 0.3);
+	font-size: 16px;
 	font-weight: 700;
-	&:hover,
-	&:focus-within {
-		box-shadow: 0 0 10px var(--light-grey);
-		outline: none;
+	cursor: pointer;
+	letter-spacing: -0.5px;
+	&:hover {
+		background-color: rgba(#000, 0.3);
+		color: rgba(#000, 0.8);
+		transition: none;
 	}
 	&:active {
-		box-shadow: none;
+		border-color: rgba(#000, 0.25);
+		background-color: rgba(#000, 0.25);
+		.button__chevron-right {
+			transform: translateX(1px);
+			transition: none;
+		}
+	}
+	&__chevron-right {
+		margin-left: 5px;
+		transition: transform 0.1s ease-out, fill $default-transition-duration $default-transition-function;
 	}
 }

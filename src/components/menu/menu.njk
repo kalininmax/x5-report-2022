@@ -1,0 +1,58 @@
+{% set lang = props.lang %}
+{% set menuHeaderTitle = props.menuHeaderTitle %}
+{% set menuItems = props.menuItems %}
+{% set menuButtonBack = props.menuButtonBack %}
+
+<div class="menu {{ '_wide' if lang=='ru'}}" data-menu>
+	<div class="menu__header menu-header">
+		<a href="./">
+			<div class="menu-header__title">{{ menuHeaderTitle[lang] | safe }}</div>
+		</a>
+	</div>
+	<div class="menu__main menu-main">
+		<div class="menu-main__list">
+			{% for item in menuItems %}
+				<a href=".{% if lang == ru %}/ru{% endif %}{% if item.startLink %}{{ item.startLink }}{% else %}{{ item.link }}{% endif %}"
+						class="menu-main__item {% if not item.submenu %}_no-submenu{% endif %}" data-menu-item="{{ item.id }}">
+					<div class="menu-main__item-title {% if not item.submenu %}h3 _ls-minus-03{% endif %}">
+						{{ item.section[lang] | safe }}
+					</div>
+					{% if not item.submenu %}
+						<p class="text _fs-14">{{item.submenuText[lang] | safe }}</p>
+					{% endif %}
+					{% if item.submenu %}
+						<div class="menu-main__item-count">
+							0{{ loop.index }}
+						</div>
+					{% endif %}
+				</a>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="menu__submenu submenu" data-submenu>
+		<button type="button" class="submenu__back" data-submenu-back>
+			<i class="submenu__back-icon"></i>
+			{{ menuButtonBack[lang] }}
+		</button>
+		<div class="submenu__wrap">
+			{% for item in menuItems %}
+				<div class="submenu__list" data-submenu-id="{{ item.id }}">
+					{% for blocks in item.submenu.blocks %}
+						<div class="submenu__block">
+							{% for blocksItem in blocks %}
+								{% if blocksItem[lang] !== false %}
+									<div class="submenu__item">
+										<a href=".{{ item.link + '#' + blocksItem.sectionId }}"
+											class="submenu__link {% if loop.first and item.id == 0 %}_main{% endif %}">
+											{{ blocksItem.title[lang] | safe }}
+										</a>
+									</div>
+								{% endif %}
+							{% endfor %}
+						</div>
+					{% endfor %}
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

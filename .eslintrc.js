@@ -2,6 +2,7 @@ module.exports = {
 	env: {
 		browser: true,
 		es2022: true,
+		jquery: true,
 	},
 	extends: ['airbnb-base', 'prettier'],
 	parserOptions: {
@@ -22,6 +23,7 @@ module.exports = {
 		'no-underscore-dangle': 'off',
 		'no-class-assign': 'off',
 		'import/no-named-as-default': 'off',
+		'import/no-import-module-exports': 'off',
 		'dot-notation': 'off',
 		'prefer-template': 'off',
 		'no-plusplus': 'off',

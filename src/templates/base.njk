@@ -1,40 +1,61 @@
 {% from "../components/system/component.njk" import component %}
 
 <!DOCTYPE html>
-<html class="page _loading" lang="{{ site.lang }}">
+<html lang="{{ lang }}" class="page{% if pageClassMod %} {{ pageClassMod }}{% endif %}">
+	<head>
+		<meta charset="utf-8" />
+		<title>{% block title %}X5 Group | Annual Report 2022 {% endblock %}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="robots" content="noindex, nofollow">
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preload" href="/assets/fonts/X5-Sans_Light.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="/assets/fonts/X5-Sans_Regular.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="/assets/fonts/X5-Sans_Medium.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="/assets/fonts/X5-Sans_Bold.woff2" as="font" type="font/woff2" crossorigin>
 
-	<title>
-	{% block title %}
-		{% if title %}
-			{{ title }} | {{ site.title }}
-		{% else %}
-			{{ site.title }}
-		{% endif %}
-	{% endblock %}
-	</title>
+		{% include "./_favicons.njk" %}
+		{% include "./_head-scripts.njk" %}
 
-	<meta name="description" content="{{ site.desc }}">
+		{% block stylesheets %}
+			<link rel="stylesheet" href="/assets/styles/index.css?hash" />
+		{% endblock stylesheets %}
+	</head>
+	<body>
+		{% svgSprite %}
 
-	<link rel="preload" href="/assets/fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="/assets/fonts/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin>
+		{% include "preloader/preloader.njk" %}
 
-	<link rel="stylesheet" href="/assets/styles/index.css?{% hash %}">
+		<div class="wrapper" data-wrapper>
+			{% include 'header/header.njk' %}
 
-	{% include "./_favicons.njk" %}
-	{% include "./_head-scripts.njk" %}
+			<div class="wrapper__menu-toggler menu-toggler" data-menu-toggler>
+				<button class="menu-toggler__toggle" data-burger-button>
+					<span class="menu-toggler__bar bar-top"></span>
+					<span class="menu-toggler__bar bar-bottom"></span>
+					<span class="menu-toggler__bar bar-left"></span>
+					<span class="menu-toggler__bar bar-right"></span>
+				</button>
+			</div>
+			<div class="wrapper__menu">
+				{{ component('menu', {
+					lang: lang,
+					menuHeaderTitle: site.menuHeaderTitle[lang],
+					menuButtonBack: site.menuButtonBack[lang],
+					menuItems: site.menuItems
+				}) }}
 
-	<script defer src="/assets/scripts/index.js?{% hash %}"></script>
-</head>
+			</div>
+			<main class="wrapper__main">
+				{% block content %}
+				{% endblock content %}
+			</main>
+		</div>
 
-<body class="page__body">
-	{% svgSprite %}
+		{% include 'form-search/form-search.njk' %}
+		{% include 'modal-search/modal-search.njk' %}
 
-	{% block content %}{% endblock %}
-</body>
-
+		{% block scripts %}
+			<script src="/assets/scripts/index.js?hash"></script>
+		{% endblock scripts %}
+	</body>
 </html>

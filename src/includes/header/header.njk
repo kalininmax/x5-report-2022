@@ -1,0 +1,39 @@
+<header class="wrapper__header header">
+	<div class="header__container">
+		<a class="header__logo-link" href="{% if lang == 'ru' %}/ru{% endif %}/">
+			{{ component('icon', {
+					iconName: "site-logo",
+					className: "header__logo-icon",
+					attributes: "width='95' height='28'"
+				})
+			}}
+		</a>
+
+		<div class="header__text" data-header-scroll-spy>
+			<div data-header-scroll-spy-page>Strategic report</div>
+			<span class="header__divider">|</span>
+			<div class="header__spy-container" data-header-scroll-spy-text>
+				<div data-header-scroll-spy-current></div>
+				<div data-header-scroll-spy-new></div>
+			</div>
+		</div>
+
+		<ul class="header__tools">
+			<li>
+				<a class="header__tool header__lang-toggle" href="#" data-lang-button>EN</a>
+			</li>
+
+			<li>
+				<a class="header__tool header__upload-pdf _lg" href="{% if lang == 'ru' %}../assets/pdf/X5-Annual-Report-2022-RUS.pdf{% else %}assets/pdf/X5-Annual-Report-2022-ENG.pdf{% endif %}" target="_blank">
+					{{ component('icon', {
+							iconName: "download",
+							className: "header__download-icon",
+							attributes: "width='16' height='13'"
+						})
+					}}
+					<span>PDF</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</header>

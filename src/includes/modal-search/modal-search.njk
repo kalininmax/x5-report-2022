@@ -1,0 +1,41 @@
+<div class="modal-search" style="display: none">
+	<template id="tmpl-search-result">
+		<a class="modal-search__result">
+			<strong class="modal-search__result-title"></strong>
+		</a>
+	</template>
+	<button class="modal-search__button-close" data-modal-search-close>
+		{{ component('icon', {
+				iconName: "close",
+				className: "form-search__button-close-icon",
+				attributes: "width='18' height='18'"
+			})
+		}}
+	</button>
+	<div class="modal-search__body">
+		<form class="modal-search__form">
+			<input
+				class="modal-search__field"
+				type="search"
+				name="search"
+				placeholder="{{ site.search.inputPlaceholder[lang] }}"
+				autocomplete="off"
+			>
+			<button class="modal-search__button-clear _hidden" type="button">
+				{{ component('icon', {
+						iconName: "close",
+						className: "modal-search__button-clear-icon",
+						attributes: "width='18' height='18'"
+					})
+				}}
+			</button>
+		</form>
+		<div class="modal-search__message"></div>
+		<div class="modal-search__results-box">
+			<div class="modal-search__results"></div>
+			<div class="modal-search__overlay _hidden">
+				<div class="modal-search__loader"></div>
+			</div>
+		</div>
+	</div>
+</div>

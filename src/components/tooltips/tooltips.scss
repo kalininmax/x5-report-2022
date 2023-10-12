@@ -1,0 +1,131 @@
+.tooltips {
+	display: none;
+	&__tooltip {
+		display: none;
+	}
+}
+
+.tooltip-button {
+	@extend .animated;
+
+	position: relative;
+	z-index: 2;
+	display: inline-block;
+	margin-bottom: -0.5em;
+	margin-left: 0.7em;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background-color: $c-link-water;
+	background-image: inline('i.svg');
+	background-position: center;
+	background-size: 2px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	&._top-v1 {
+		top: 4px;
+	}
+	&._ml-v1 {
+		margin-left: 0.2em;
+	}
+	&:hover {
+		background-color: darken($c-link-water, 10);
+	}
+	&._mb-fix-1 {
+		margin-bottom: -15px;
+
+		@include max-screen($breakpoint-sm) {
+			margin-bottom: 0;
+		}
+	}
+	&._offset {
+		margin-left: -16px;
+		transform: translateX(22px);
+	}
+
+	@media (max-width: $breakpoint-sm) {
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 42px;
+			height: 42px;
+		}
+	}
+}
+
+.tooltip-box {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 5px;
+	.tooltip-button {
+		top: 3px;
+	}
+}
+
+.tippy-box {
+	position: relative;
+	padding: 16px 20px;
+	box-sizing: border-box;
+	box-shadow: 0 15px 50px rgb(0 0 0 / 10%);
+	outline: 0;
+	border: 1px solid $c-light-gray;
+	border-radius: 10px;
+	background-color: $c-white;
+	color: $c-gray-desc-text;
+	font-size: 12px;
+	line-height: 1.27;
+	letter-spacing: -0.02em;
+	transition-property: transform, visibility, opacity;
+	ul {
+		margin: 11px 0;
+		li {
+			position: relative;
+			margin: 0 0 8px;
+			padding: 0 0 0 14px;
+			&:last-of-type {
+				margin: 0;
+			}
+			&::before {
+				position: absolute;
+				top: 7px;
+				left: 0;
+				display: block;
+				width: 6px;
+				min-width: 6px;
+				height: 6px;
+				min-height: 6px;
+				border-radius: 6px;
+				background-color: $c-green;
+				content: '';
+			}
+		}
+	}
+
+	@include max-screen($breakpoint-xs) {
+		width: 100%;
+		max-width: 100% !important;
+		border-radius: 0;
+	}
+}
+
+[data-tippy-root] {
+	@include max-screen($breakpoint-xs) {
+		position: fixed !important;
+		top: auto !important;
+		right: 0 !important;
+		bottom: 0 !important;
+		transform: none !important;
+	}
+}
+
+.tippy-box[data-animation='fade'][data-state='hidden'] {
+	opacity: 0;
+}
+
+.tippy-box[data-inertia][data-state='visible'] {
+	transition-timing-function: cubic-bezier(0.54, 1.5, 0.38, 1.11);
+}

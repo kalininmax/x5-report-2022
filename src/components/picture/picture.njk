@@ -1,12 +1,21 @@
-{% set src = props.src %}
-{% set cls = props.className %}
-{% set clsImg = props.classNameImg %}
-{% set attr = props.attr %}
-{% set widths = props.widths %}
-{% set sizes = props.sizes %}
-{% set formats = props.formats %}
+{% if props.lang === "ru" %}
+	{% set pathBase = "../assets/images/" %}
+{% else %}
+	{% set pathBase = "assets/images/" %}
+{% endif %}
+{% set path = props.path %}
+{% set srcName = props.name %}
+{% set ext = props.ext %}
+{% set className = props.className %}
+{% set width = props.width %}
+{% set height = props.height %}
 {% set alt = props.alt %}
-{% set loading = props.loading %}
-{% set decoding = props.decoding %}
+{% set fullPath = pathBase + path + '/' + srcName %}
 
-{% picture src, cls, clsImg, attr, widths, sizes, formats, alt, loading, decoding %}
+<picture>
+	<source media="(max-width: 567px)" srcset="{{ fullPath }}-s.jpg, {{ fullPath }}-s@2x.jpg 2x" type="image/webp">
+	<source media="(max-width: 767px)" srcset="{{ fullPath }}-m.jpg, {{ fullPath }}-m@2x.jpg 2x" type="image/webp">
+	<source media="(max-width: 1111px)" srcset="{{ fullPath }}-l.jpg, {{ fullPath }}-l@2x.jpg 2x" type="image/webp">
+	<source srcset="{{ fullPath }}.jpg, {{ fullPath }}@2x.jpg 2x" type="image/webp">
+	<img class="responsive-image{% if className %} {{ className }}{% endif %}" src="{{ fullPath }}.jpg" srcset="{{ fullPath }}@2x.jpg 2x" width="{{ width }}" height="{{ height }}" alt="{{ alt }}" loading="lazy">
+</picture>

@@ -1,0 +1,18 @@
+{% extends "../templates/base.njk" %}
+
+{% set pageClassMod = '_financial-statements' %}
+
+{% block content %}
+	{# {{ sectionCover({
+		number: financialStatements.number,
+		id: financialStatements.id,
+		title: annex.title[lang],
+		text: annex.text[lang],
+		bgImg: financialStatements.coverImg[lang],
+		imgAttributes: 'width="1920" height="736"',
+		lang: lang,
+		annex: annex.annex,
+		className: 'mb-0'
+	})}}
+	{% include "../includes/tcfd/tcfd.njk" %} #}
+{% endblock %}

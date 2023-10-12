@@ -1,0 +1,36 @@
+{% extends "../templates/base.njk" %}
+
+{% set pageClassMod = '_corporate-governance' %}
+
+{% block content %}
+	{# {{ sectionCover({
+		number: corporateGovernance.number,
+		id: corporateGovernance.id,
+		title: corporateGovernance.title[lang],
+		bgImg: corporateGovernance.coverImg[lang],
+		imgAttributes: 'width="1920" height="736"',
+		items1: corporateGovernance.items1,
+		items2: corporateGovernance.items2,
+		items3: corporateGovernance.items3,
+		lang: lang
+	}) }}
+
+	{% include "../includes/supervisory-letter/supervisory-letter.njk" %}
+	{% include "../includes/corporate-report/corporate-report.njk" %}
+	{% include "../includes/governance-structure/governance-structure.njk" %}
+	{% include "../includes/committees-supervisory-board/committees-supervisory-board.njk" %}
+	{% include "../includes/shareholders-rights/shareholders-rights.njk" %}
+	{% include "../includes/auditor/auditor.njk" %}
+	{% include "../includes/compliance-dutch/compliance-dutch.njk" %}
+	{% include "../includes/manage-risk/manage-risk.njk" %}
+	{% include "../includes/manage-risk-content/manage-risk-content.njk" %}
+	{% include "../includes/supervisory-management-boards/supervisory-management-boards.njk" %}
+	{% include "../includes/report-supervisory-board/report-supervisory-board.njk" %}
+	{% include "../includes/board-evaluation/board-evaluation.njk" %}
+	{% include "../includes/meetings-committees/meetings-committees.njk" %}
+	{% include "../includes/independence-remuneration/independence-remuneration.njk" %}
+	{% include "../includes/remuneration-report/remuneration-report.njk" %}
+
+	{{ tooltips(corporateGovernanceTooltips, lang) }} #}
+
+{% endblock %}

@@ -1,0 +1,32 @@
+.separator {
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	width: calc(100% - 2 * var(--indent-col));
+	height: 1px;
+	background-color: $c-gray-menu-underline;
+	&._green-start {
+		&::before {
+			content: '';
+			position: absolute;
+			top: -1px;
+			left: 0;
+			width: 17%;
+			height: 2px;
+			background-color: $c-green;
+
+			@include max-screen($breakpoint-md) {
+				width: 50%;
+			}
+		}
+	}
+	&._h2 {
+		height: 2px;
+	}
+	&._green {
+		background-color: $c-green;
+	}
+	&._cf {
+		clear: both;
+	}
+}

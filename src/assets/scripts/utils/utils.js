@@ -93,6 +93,25 @@ const utils = {
 				: cases[number % 10 < 5 ? number % 10 : 5]
 		];
 	},
+
+	getCurrentScrollTop() {
+		return Math.max(
+			0,
+			window.pageYOffset,
+			document.documentElement.scrollTop,
+			document.body.scrollTop
+		);
+	},
+	isAnyPartOfElementInViewport(el) {
+		const rect = el.getBoundingClientRect();
+		const windowHeight =
+			window.innerHeight || document.documentElement.clientHeight;
+		const windowWidth =
+			window.innerWidth || document.documentElement.clientWidth;
+		const vertInView = rect.top <= windowHeight && rect.top + rect.height >= 0;
+		const horInView = rect.left <= windowWidth && rect.left + rect.width >= 0;
+		return vertInView && horInView;
+	},
 };
 
 export default utils;

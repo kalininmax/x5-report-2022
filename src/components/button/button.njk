@@ -1,18 +1,6 @@
-<button
-	class="button{% if props.className %} {{ props.className }}{% endif %}"
-	type="{% if props.type %}{{ props.type }}{% else %}button{% endif %}"
-	{% if props.attr %} {{ props.attr }}{% endif %}>
-
-	{% if props.text %}
-		<span class="button__text">{{ props.text }}</span>
+<button class="button{% if props.className %} {{ props.className }}{% endif %}">
+	{{ props.children }}
+	{% if props.chevronRight %}
+	<span class="button__chevron-right">&gt;</span>
 	{% endif %}
-
-	{% if props.iconName %}
-		{{ component('icon', {
-			iconName: props.iconName,
-			className: 'button__icon',
-			attr: props.iconAttr
-		}) }}
-	{% endif %}
-
 </button>

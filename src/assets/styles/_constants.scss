@@ -1,26 +1,109 @@
-@import 'lib/mixins';
+$default-font-size: 16px;
+$default-color: #222429;
+$default-bg-color: #f2f5f5;
 
-$default-transition-duration: 0.3s;
-$fast-transition-duration: 0.15s;
+$default-transition-duration: 0.4s;
 $default-transition-function: ease-out;
 
-$desktop-lg: 1920px;
-$desktop-md: 1440px;
-$mobile-lg: 640px;
-$mobile-sm: 320px;
+$default-font-family: 'X5 Sans', arial, sans-serif;
+$default-border-radius: 10px;
+
+$breakpoint-lg: 1400px;
+$breakpoint-lg-2: 1280px;
+$breakpoint-lg-3: 1164px;
+$breakpoint-md: 1111px;
+$breakpoint-md-2: 992px;
+$breakpoint-md-3: 936px;
+$breakpoint-md-4: 808px;
+$breakpoint-sm: 767px;
+$breakpoint-xs: 567px;
+$breakpoint-xs-1: 500px;
+$breakpoint-xs-2: 340px;
+$breakpoint-xs-3: 504px;
+$mobile-2: 375px;
+$mobile-3: 360px;
+$mobile: 320px;
+$desktop: 1920px;
+
+$indent-col-lg: 40px;
+$indent-col-md: 40px;
+$indent-col-sm: 20px;
+$indent-col-xs: 20px;
+
+$cols-total: 12;
+$site-paddings: 26px;
+
+$c-white: #fff;
+$c-dark: #33353d;
+$c-dark-bg: #28292f;
+$c-orange: #fa6400;
+$c-orange-2: #ff794f;
+$c-light-orange: #ffaf73;
+$c-red: #e4190a;
+$c-red-bight: #f41731;
+$c-cinnabar: #e52825;
+$c-green: #5faf2d;
+$c-green-light: #008a5e;
+$c-green-light-2: #9fcf81;
+$c-green-dark: #003e14;
+$c-green-dark-2: #396d2c;
+$c-green-dark-3: #216334;
+$c-green-dark-border: #298948;
+$c-gray: #57697c;
+$c-gray-desc-text: #777f8c;
+$c-gray-header-text: #6c737d;
+$c-gray-separator: #d6dbe2;
+$c-highlights-separator: #aeb6c3;
+$c-highlights-border: #b4bbc5;
+$c-partners-border: #cbcfd6;
+$c-gray-menu-text: #50565e;
+$c-gray-menu-hover-text: #222429;
+$c-gray-menu-underline: #9299a3;
+$c-light-gray: #ebf0f0;
+$c-light-gray-2: #777f8c;
+$c-light-gray-3: #a4b5bb;
+$c-light-gray-4: #d9d9d9;
+$c-dark-gray: #8698a0;
+$c-dark-gray-2: #648494;
+$c-dark-gray-3: #d9dde2;
+$c-blue-gray: #b5c7cb;
+$c-dark-blue-gray: #526477;
+$c-gray-text: #888a92;
+$c-spindle: #bfced4;
+$c-tangaroa: #03273d;
+$c-link-water: #c2c9d1;
+$c-zircon: #e1e6e6;
+$c-vulcan: #393b42;
+$c-raven: #667081;
+$c-horizon: #648494;
+$c-bg-gray: #e5e9e9;
+$c-bg-gray-light: #f1f5f5;
+$c-post-gray: #667081;
+$c-table-header: #393b42;
+$c-table-header-general: #393b42;
+$c-charts-dark-grey: #4b5366;
+$c-lime: #a3cf46;
+$c-yellow: #ffdc50;
+$c-red-arrow: #ff4040;
+$c-black: #000;
+$c-border-white-3: rgb(217 217 217 / 30%);
+$c-border-white-4: rgb(241 241 241 / 30%);
+$c-border-green-1: #609270;
+$c-green-transparent: rgb(95 175 45 / 60%);
 
 html {
-	--white: #fff;
-	--black: #000;
-	--teal: #5ab9c1;
-	--light-grey: #ddd;
+	--site-paddings: 20px;
+	--container-width: 1112;
+	--indent-col: 20px;
+	--header-height: 64px;
+	--menu-toggle-size: 64px;
 
-	--default-bg-color: var(--white);
+	@media (max-width: $breakpoint-sm) {
+		--indent-col: 10px;
+	}
 
-	--container-max-width: #{rem(1400)};
-	--container-padding: #{rem(40)};
-
-	@media (width < $mobile-lg) {
-		--container-padding: #{rem(16)};
+	@media (max-width: $breakpoint-xs) {
+		--header-height: 40px;
+		--menu-toggle-size: 40px;
 	}
 }

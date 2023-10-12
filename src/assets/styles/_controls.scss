@@ -1,0 +1,33 @@
+.i-text {
+	display: block;
+	padding: 5px;
+	width: 100%;
+	border-radius: 0;
+
+	/* Turn off iPhone/Safari input element rounding: */
+	-webkit-appearance: none;
+}
+
+.i-select {
+	display: block;
+	padding: 5px;
+	width: 100%;
+}
+
+.i-textarea {
+	display: block;
+	padding: 5px;
+	width: 100%;
+	max-width: 100%;
+
+	/* Remove scrollbar in IE */
+	overflow: auto;
+}
+
+.i-radio {
+	position: relative;
+}
+
+.i-checkbox {
+	position: relative;
+}

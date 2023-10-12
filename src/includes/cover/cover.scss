@@ -1,0 +1,249 @@
+$root: '.cover';
+
+#{$root} {
+	position: relative;
+	min-height: 100vh;
+	overflow: hidden;
+	&__position {
+		position: relative;
+		display: flex;
+		flex-grow: 1;
+		flex-direction: column;
+		&::before {
+			position: absolute;
+			top: vh(-150);
+			left: 0;
+			width: 1px;
+			min-height: 120vh;
+			background: $c-gray-separator;
+			content: '';
+
+			@include max-screen($breakpoint-xs) {
+				display: none;
+			}
+		}
+	}
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+
+		@include max-screen($breakpoint-md) {
+			object-fit: cover;
+			object-position: bottom;
+		}
+	}
+	&__wrapper {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		padding-top: vh(147);
+		min-height: calc(100vh - vh(147));
+
+		@include max-screen($breakpoint-xs) {
+			padding-top: 80px;
+			min-height: auto;
+		}
+	}
+	&__title {
+		position: relative;
+		top: 2px;
+		display: flex;
+		align-items: center;
+		margin-top: auto;
+		margin-bottom: 100px;
+		padding-left: vw(37);
+		color: $c-white;
+
+		@include max-screen($breakpoint-xs) {
+			order: -1;
+			margin-bottom: 42px;
+			padding: 0;
+			color: $default-color;
+		}
+
+		@include max-screen($mobile-3) {
+			flex-direction: column;
+			align-items: initial;
+		}
+	}
+	&__title-year {
+		position: relative;
+		margin-right: 21px;
+		padding-right: 21px;
+		text-transform: uppercase;
+		font-size: 58px;
+		line-height: 71%;
+		font-weight: 300;
+		letter-spacing: -0.03em;
+		&::after {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			width: 1px;
+			height: 62px;
+			background: $c-white;
+			content: '';
+			transform: translateY(-50%);
+		}
+
+		@include max-screen($breakpoint-xs) {
+			color: $c-green;
+			&::after {
+				background: $c-highlights-border;
+			}
+		}
+
+		@include max-screen($mobile-3) {
+			margin-bottom: 20px;
+			&::after {
+				display: none;
+			}
+		}
+	}
+	&__title-name {
+		text-transform: uppercase;
+		font-size: 28px;
+		line-height: 79%;
+		font-weight: 400;
+		letter-spacing: -0.01em;
+		span {
+			font-size: 14px;
+			line-height: 157%;
+		}
+
+		@include max-screen($breakpoint-xs) {
+			font-size: 26px;
+		}
+	}
+	&__text {
+		max-width: 280px;
+		span {
+			display: inline-block;
+			margin-bottom: em(5, 16);
+		}
+	}
+	&__right-block {
+		display: flex;
+		&::before {
+			margin-top: -25vh;
+			width: 1px;
+			height: 100vh;
+			background-color: rgba($c-white, 0.2);
+			content: '';
+		}
+	}
+	&__menu {
+		display: flex;
+		flex-grow: 1;
+		flex-direction: column;
+		row-gap: 39px;
+		max-width: 610px;
+
+		@include max-screen($breakpoint-xs) {
+			row-gap: 25px;
+		}
+	}
+	&__menu-item {
+		position: relative;
+		padding-left: vw(37);
+		border-bottom: 1px solid $c-gray-separator;
+		&::after {
+			@extend .transition-all;
+
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background-color: $c-green;
+			content: '';
+			transform: scaleX(0);
+			transform-origin: left center;
+		}
+		&:hover {
+			&::after {
+				transform: scaleX(1);
+			}
+		}
+		&:last-child {
+			margin-top: -10px;
+		}
+
+		@include max-screen($breakpoint-xs) {
+			padding: 0;
+		}
+	}
+	&__menu-title {
+		letter-spacing: -0.03em;
+	}
+	&__menu-link {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		column-gap: 20px;
+		padding-bottom: em(12, 32);
+		color: $default-color;
+		font-size: 32px;
+		line-height: 1.12;
+		font-weight: 500;
+		letter-spacing: -0.02em;
+		&._no-submenu {
+			flex-direction: column;
+			justify-content: initial;
+			align-items: initial;
+		}
+
+		@include max-screen($breakpoint-lg) {
+			font-size: 30px;
+		}
+
+		@include max-screen($breakpoint-md) {
+			font-size: 28px;
+		}
+
+		@include max-screen($breakpoint-sm) {
+			font-size: 26px;
+		}
+
+		@include max-screen($breakpoint-xs) {
+			font-size: 20px;
+		}
+		&:hover {
+			color: $default-color;
+			.cover__menu-counter {
+				opacity: 1;
+			}
+		}
+		br {
+			display: none;
+		}
+	}
+	&__menu-counter {
+		@extend .transition-all;
+
+		position: relative;
+		top: -3px;
+		color: $c-green;
+		text-align: right;
+		font-size: 20px;
+		line-height: 1;
+		letter-spacing: -0.03em;
+	}
+}
+
+[lang='ru'] {
+	#{$root} {
+		&__title-year {
+			&::after {
+				height: 80px;
+			}
+		}
+		&__title-name {
+			line-height: 1;
+		}
+	}
+}

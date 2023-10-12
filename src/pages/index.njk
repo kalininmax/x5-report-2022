@@ -1,6 +1,65 @@
-{% extends "../templates/page.njk" %}
+{% extends "../templates/base.njk" %}
 
-{% block mainContent %}
-	{% include "intro/intro.njk" %}
-	{% include "examples/examples.njk" %}
+{% set strategicReport = section1.strategicReport %}
+
+{% block content %}
+	{% include "cover/cover.njk" %}
+
+	{{ component('section-cover', {
+		number: strategicReport.number,
+		id: strategicReport.id,
+		title: strategicReport.title[lang],
+		bgImg: strategicReport.coverImg[lang],
+		imgAttributes: 'width="1920" height="736"',
+		items1: strategicReport.items1,
+		items2: strategicReport.items2,
+		items3: strategicReport.items3,
+		lang: lang
+	}) }}
+
+	{#
+	{% include "overview/overview.njk" %}
+	{% include "our-approach/our-approach.njk" %}
+	{% include "sustainability-goals/sustainability-goals.njk" %}
+	{% include "key-highlights/key-highlights.njk" %}
+	{% include "financial-operating-highlights/financial-operating-highlights.njk" %}
+	{% include "business-model/business-model.njk" %}
+	{% include "our-formats/our-formats.njk" %}
+	{% include "russias-food-retail-market/russias-food-retail-market.njk" %}
+	{% include "trends-in-economy-and-consumer-behaviour/trends-in-economy-and-consumer-behaviour.njk" %}
+	{% include "legislative-changes/legislative-changes.njk" %}
+	{% include "ceo-statement/ceo-statement.njk" %}
+	{% include "our-strategy/our-strategy.njk" %}
+	{% include "geography-of-operations/geography-of-operations.njk" %}
+	{% include "leadership-team/leadership-team.njk" %}
+
+	{% include "pyaterochka/pyaterochka.njk" %}
+	{% include "perekrestok/perekrestok.njk" %}
+	{% include "chizhik/chizhik.njk" %}
+	{% include "karusel/karusel.njk" %}
+	{% include "krasny-and-slata/krasny-and-slata.njk" %}
+	{% include "x5-club/x5-club.njk" %}
+	{% include "paket/paket.njk" %}
+	{% include "x5-digital/x5-digital.njk" %}
+	{% include "express-delivery/express-delivery.njk" %}
+	{% include "mnogo-lososya/mnogo-lososya.njk" %}
+	{% include "5post/5post.njk" %}
+	{% include "food/food.njk" %}
+
+	{% include "logistic-and-transport/logistic-and-transport.njk" %}
+	{% include "direct-imports/direct-imports.njk" %}
+	{% include "x5-technologies/x5-technologies.njk" %}
+	{% include "innovations/innovations.njk" %}
+	{% include "financial-review/financial-review.njk" %}
+	{% include "information/information.njk" %}
+	{% include "sustainability-strategy/sustainability-strategy.njk" %}
+
+	{% include "sustainability-management/sustainability-management.njk" %}
+	{% include "stakeholder-engagement/stakeholder-engagement.njk" %}
+	{% include "community/community.njk" %}
+	{% include "planet/planet.njk" %}
+	{% include "health/health.njk" %}
+	{% include "employees/employees.njk" %}
+
+	{{ tooltips(strategicReportTooltips, lang) }} #}
 {% endblock %}

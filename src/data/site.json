@@ -1,0 +1,468 @@
+{
+	"mainTitle": {
+		"ru": "<span class='cover__title-year'>2022</span><span class='cover__title-name'>ГОДОВОЙ ОТЧЁТ <br> <span>Неаудированный</span> </span>",
+		"en": "<span class='cover__title-year'>2022</span><span class='cover__title-name'>ANNUAL REPORT <br> <span>unaudited</span> </span>"
+	},
+	"coverText": {
+		"ru": "<span class='text-simple'>НЕАУДИРОВАННЫЙ</span>.<br> отчёт&nbsp;в&nbsp;формате ESEF не имеет статуса финансовой отчётности.",
+		"en": "<span class='text-simple'>UNAUDITED</span>.<br> ESEF reporting should not be considered as the ﬁnancial statements"
+	},
+	"menuItems": [
+		{
+			"id": 0,
+			"section": {
+				"id": "main-fs",
+				"ru": "Стратегический<br> отчёт",
+				"en": "Strategic <br>Report"
+			},
+			"link": "/",
+			"startLink": "/#main-fs",
+			"submenu": {
+				"blocks": [
+					[
+						{
+							"title": {
+								"ru": "Общие сведения",
+								"en": "Overview"
+							},
+							"sectionId": "overview"
+						},
+						{
+							"title": {
+								"ru": "Об Отчёте",
+								"en": "About this report"
+							},
+							"sectionId": "overview"
+						},
+						{
+							"title": {
+								"ru": "Наш подход, ценности и&nbsp;цели",
+								"en": "Our approach, values and goals"
+							},
+							"sectionId": "our-approach"
+						},
+						{
+							"title": {
+								"ru": "Основные результаты в&nbsp;2022 году",
+								"en": "2022 key highlights"
+							},
+							"sectionId": "key-highlights"
+						},
+						{
+							"title": {
+								"ru": "Бизнес-модель",
+								"en": "Business model"
+							},
+							"sectionId": "business-model"
+						},
+
+						{
+							"title": {
+								"ru": "Наши торговые сети",
+								"en": "Our formats"
+							},
+							"sectionId": "our-formats"
+						},
+						{
+							"title": {
+								"ru": "Российский рынок продуктовой розницы",
+								"en": "Russia’s food retail market"
+							},
+							"sectionId": "russias-food-retail-market"
+						}
+					],
+					[
+						{
+							"title": {
+								"ru": "Стратегический обзор",
+								"en": "Strategic review"
+							},
+							"sectionId": "ceo-statement"
+						},
+						{
+							"title": {
+								"ru": "Обращение главного исполнительного директора и&nbsp;президента",
+								"en": "CEO and President&rsquo;s statement"
+							},
+							"sectionId": "ceo-statement"
+						},
+						{
+							"title": {
+								"ru": "Стратегия X5",
+								"en": "Our strategy"
+							},
+							"sectionId": "our-strategy"
+						},
+						{
+							"title": {
+								"ru": "География операционной деятельности",
+								"en": "Geography of operations"
+							},
+							"sectionId": "geography-of-operations"
+						},
+						{
+							"title": {
+								"ru": "Топ-менеджмент",
+								"en": "Leadership team"
+							},
+							"sectionId": "leadership-team"
+						}
+					],
+					[
+						{
+							"title": {
+								"ru": "Обзор форматов",
+								"en": "Review by formats"
+							},
+							"sectionId": "pyaterochka"
+						},
+						{
+							"title": {
+								"ru": "&laquo;Пятёрочка&raquo;",
+								"en": "Pyaterochka"
+							},
+							"sectionId": "pyaterochka"
+						},
+						{
+							"title": {
+								"ru": "&laquo;Перекрёсток&raquo;",
+								"en": "Perekrestok"
+							},
+							"sectionId": "perekrestok"
+						},
+						{
+							"title": {
+								"ru": "&laquo;Чижик&raquo;",
+								"en": "Chizhik"
+							},
+							"sectionId": "chizhik"
+						},
+						{
+							"title": {
+								"ru": "&laquo;Карусель&raquo;",
+								"en": "Karusel"
+							},
+							"sectionId": "karusel"
+						},
+						{
+							"title": {
+								"ru": "&laquo;Красный Яр&nbsp;и&nbsp;Слата&raquo;",
+								"en": "Krasny Yar and Slata"
+							},
+							"sectionId": "krasny-yar-and-slata"
+						}
+					],
+					[
+						{
+							"title": {
+								"ru": "Клиентоориентированность",
+								"en": "Focus on customer"
+							},
+							"sectionId": "x5-club"
+						},
+						{
+							"title": {
+								"ru": "&laquo;X5&nbsp;Клуб&raquo;",
+								"en": "X5 Club"
+							},
+							"sectionId": "x5-club"
+						},
+						{
+							"title": {
+								"ru": "Сервис &laquo;Пакет&raquo;",
+								"en": "Paket"
+							},
+							"sectionId": "paket"
+						}
+					],
+					[
+						{
+							"title": {
+								"ru": "Цифровые бизнесы",
+								"en": "Digital businesses"
+							},
+							"sectionId": "x5-digital"
+						},
+						{
+							"title": {
+								"ru": "X5 Digital",
+								"en": "X5 Digital"
+							},
+							"sectionId": "x5-digital"
+						},
+						{
+							"title": {
+								"ru": "&laquo;Много лосося&raquo;",
+								"en": "Mnogo Lososya"
+							},
+							"sectionId": "mnogo-lososya"
+						},
+						{
+							"title": {
+								"ru": "5Post",
+								"en": "5Post"
+							},
+							"sectionId": "five-post"
+						},
+						{
+							"title": {
+								"ru": "Food",
+								"en": "Food"
+							},
+							"sectionId": "food"
+						}
+					],
+					[
+						{
+							"title": {
+								"ru": "Инфраструктура розничной торговли",
+								"en": "Retail infrastructure"
+							},
+							"sectionId": "logistics-and-transport"
+						},
+						{
+							"title": {
+								"ru": "Логистика и&nbsp;транспорт",
+								"en": "Logistics and transport"
+							},
+							"sectionId": "logistics-and-transport"
+						},
+						{
+							"title": {
+								"ru": "Прямой импорт",
+								"en": "Direct imports"
+							},
+							"sectionId": "direct-imports"
+						},
+						{
+							"title": {
+								"ru": "&laquo;Х5&nbsp;Технологии&raquo;",
+								"en": "X5 Technologies"
+							},
+							"sectionId": "x5-technologies"
+						},
+						{
+							"title": {
+								"ru": "Инновации",
+								"en": "Innovations"
+							},
+							"sectionId": "innovations"
+						}
+					],
+					[
+						{
+							"title": {
+								"ru": "Обзор финансовых результатов",
+								"en": "Financial review"
+							},
+							"sectionId": "financial-review"
+						}
+					],
+					[
+						{
+							"title": {
+								"ru": "Альтернативные показатели эффективности",
+								"en": "Information on&nbsp;alternative performance measures"
+							},
+							"sectionId": "information-on-alternative-performance-measures"
+						}
+					],
+
+					[
+						{
+							"title": {
+								"ru": "Устойчивое развитие",
+								"en": "Sustainability development"
+							},
+							"sectionId": "sustainability-strategy"
+						},
+						{
+							"title": {
+								"ru": "Стратегия устойчивого развития",
+								"en": "Sustainability development"
+							},
+							"sectionId": "sustainability-strategy"
+						},
+						{
+							"title": {
+								"ru": "Управление устойчивым развитием",
+								"en": "Sustainability management"
+							},
+							"sectionId": "sustainability-management"
+						},
+						{
+							"title": {
+								"ru": "Взаимодействие с&nbsp;заинтересованными сторонами",
+								"en": "Stakeholder engagement"
+							},
+							"sectionId": "stakeholder"
+						},
+						{
+							"title": {
+								"ru": "Сообщество",
+								"en": "Community"
+							},
+							"sectionId": "community"
+						},
+						{
+							"title": {
+								"ru": "Планета",
+								"en": "Planet"
+							},
+							"sectionId": "planet"
+						},
+						{
+							"title": {
+								"ru": "Здоровье",
+								"en": "Health"
+							},
+							"sectionId": "health"
+						},
+						{
+							"title": {
+								"ru": "Персонал",
+								"en": "Employees"
+							},
+							"sectionId": "employees"
+						}
+					]
+				]
+			}
+		},
+		{
+			"id": 1,
+			"section": {
+				"ru": "Корпоративное <br>управление",
+				"en": "Corporate <br>Governance"
+			},
+			"link": "/corporate-governance.html",
+			"submenu": {
+				"blocks": [
+					[
+						{
+							"title": {
+								"ru": "Обращение председателя Supervisory Board",
+								"en": "Letter from the Chair of the Supervisory Board"
+							},
+							"sectionId": "supervisory-letter"
+						},
+						{
+							"title": {
+								"ru": "Структура корпоративного управления",
+								"en": "Governance structure"
+							},
+							"sectionId": "governance-structure"
+						},
+						{
+							"title": {
+								"ru": "Управление рисками",
+								"en": "How we manage risk"
+							},
+							"sectionId": "manage-risk"
+						},
+						{
+							"title": {
+								"ru": "Supervisory Board и Management Board",
+								"en": "Supervisory and Management Boards"
+							},
+							"sectionId": "supervisory-management-boards"
+						},
+						{
+							"title": {
+								"ru": "Отчёт Supervisory Board",
+								"en": "Report of&nbsp;the Supervisory Board"
+							},
+							"sectionId": "report-supervisory-board"
+						},
+						{
+							"title": {
+								"ru": "Отчёт о&nbsp;вознаграждениях",
+								"en": "Remuneration Report"
+							},
+							"sectionId": "remuneration-report"
+						}
+					]
+				]
+			}
+		},
+		{
+			"id": 2,
+			"section": {
+				"ru": "Финансовая <br>отчётность",
+				"en": "Financial <br>Statements"
+			},
+			"link": "/financial-statements.html",
+			"submenu": {
+				"blocks": [
+					[
+						{
+							"title": {
+								"ru": "Консолидированная финансовая отчётность",
+								"en": "Consolidated Financial Statements"
+							},
+							"sectionId": "consolidated-statements"
+						},
+						{
+							"title": {
+								"ru": "Примечания к консолидированной финансовой отчётности",
+								"en": "Notes to the Consolidated Financial Statements"
+							},
+							"sectionId": "principal-activities"
+						},
+						{
+							"title": {
+								"ru": "Финансовая отчётность Компании",
+								"en": "Company Financial Statements"
+							},
+							"sectionId": "subsequent"
+						},
+						{
+							"title": {
+								"ru": "Примечания к финансовой отчётности Компании",
+								"en": "Notes to the Company Financial Statements"
+							},
+							"sectionId": "accounting"
+						},
+						{
+							"title": {
+								"ru": "Прочая информация",
+								"en": "Other information"
+							},
+							"sectionId": "other-information"
+						}
+					]
+				]
+			}
+		},
+		{
+			"id": 3,
+			"section": {
+				"ru": "Приложение",
+				"en": "Annex"
+			},
+			"link": "/annex.html",
+			"submenu": false,
+			"submenuText": {
+				"en": "TCFD compliance statement and index",
+				"ru": "Заявление о соответствии рекомендациям TCFD и указатель"
+			}
+		}
+	],
+	"menuButtonBack": {
+		"ru": "Назад",
+		"en": "Back"
+	},
+	"menuHeaderTitle": "Годовой отчёт 2022",
+	"search": {
+		"inputPlaceholder": {
+			"ru": "Поиск",
+			"en": "Search"
+		}
+	},
+	"footerInfo": {
+		"copyright": {
+			"ru": "&copy;&nbsp;2019 X5&nbsp;Retail Group N.V.",
+			"en": "&copy;&nbsp;2019 X5&nbsp;Retail Group N.V."
+		}
+	}
+}
