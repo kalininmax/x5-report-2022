@@ -20,7 +20,7 @@ class ProjectApp {
 			Menu: require('../../components/menu/menu').default,
 			Preloader: require('../../includes/preloader/preloader').default,
 			Tooltips: require('../../components/tooltips/tooltips').default,
-			// Scheme: require('../../includes/scheme/scheme').default,
+			Scheme: require('../../includes/scheme/scheme').default,
 		};
 		this.helpers = {
 			KeypressHelper: require('./helpers/KeypressHelper'),

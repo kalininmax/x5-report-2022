@@ -295,7 +295,7 @@
 		&-#{$i} {
 			display: block;
 			float: left;
-			width: math.div(100%, ($max-cols * $i));
+			width: calc(100% / $max-cols * $i);
 		}
 	}
 }
@@ -306,7 +306,7 @@
 			@if $i == 0 {
 				margin-left: 0;
 			} @else {
-				margin-left: math.div(100%, $max-cols * $i);
+				margin-left: calc(100% / $max-cols * $i);
 			}
 		}
 	}

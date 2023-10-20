@@ -1,0 +1,54 @@
+<section id="financial-operating-highlights" class="financial-operating-highlights section _last">
+	<div class="section__container container">
+		<h2 class="h2 _ls-minus-03 mb-lg-30 pb-lg-12 _line-b">{{ strategicReport['financial-operating-highlights'].title[lang] | safe }}</h2>
+		<h3 class="h3 _standart-mb _standart-pt pb-lg-12 _line-b">{{ strategicReport['financial-operating-highlights'].subtitle1[lang] | safe }}</h3>
+		<div class="financial-operating-highlights__charts">
+			{% for item in strategicReport['financial-operating-highlights'].list1 %}
+				<figure class="financial-operating-highlights__item">
+					<div class="financial-operating-highlights__chart-wrapper">
+						<img class="financial-operating-highlights__chart-img" src="{{ item.img[lang] | safe }}.svg" width="534" alt="">
+						{% if item.number %}
+							<p class="financial-operating-highlights__chart-info">
+								<span>{{ item.number.value[lang] | safe }} <span>%</span></span>
+								{{ item.number.desc[lang] | safe }}
+							</p>
+						{% endif %}
+					</div>
+					<figcaption class="financial-operating-highlights__item-title h4"><span>{{ item.title[lang] | safe }}</span>{% if item.text[lang] %}{{ item.text[lang] | safe }}{% endif %}</figcaption>
+				</figure>
+			{% endfor %}
+		</div>
+		<h3 class="h3 _line-b pb-lg-12 mb-lg-32">{{ strategicReport['financial-operating-highlights'].subtitle2[lang] | safe }}</h3>
+		<div class="financial-operating-highlights__charts">
+			{% for item in strategicReport['financial-operating-highlights'].list2 %}
+				<figure class="financial-operating-highlights__item{% if item.legend %} _legend{% endif %}">
+					<div class="financial-operating-highlights__chart-wrapper">
+						<img class="financial-operating-highlights__chart-img" src="{{ item.img[lang] | safe }}.svg" width="534" alt="">
+						{% if item.number %}
+							<p class="financial-operating-highlights__chart-info">
+								<span>{{ item.number.value[lang] | safe }} <span>%</span></span>
+								{{ item.number.desc[lang] | safe }}
+							</p>
+						{% endif %}
+					</div>
+					{% if item.legend %}
+						<ul class="financial-operating-highlights__chart-legend">
+							{% for legend in item.legend %}
+							<li class="financial-operating-highlights__legend-item">
+								{{ component('icon', {
+										iconName: legend.iconName,
+										className: "financial-operating-highlights__legend-icon",
+										attributes: legend.iconData
+									})
+								}}
+								{{ legend.text[lang] | safe }}
+							</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+					<figcaption class="financial-operating-highlights__item-title h4"><span>{{ item.title[lang] | safe }}</span>{% if item.text[lang] %}{{ item.text[lang] | safe }}{% endif %}</figcaption>
+				</figure>
+			{% endfor %}
+		</div>
+	</div>
+</section>

@@ -1,6 +1,7 @@
 {% extends "../templates/base.njk" %}
 
 {% set strategicReport = section1.strategicReport %}
+{% set strategicReportTooltips = section1.strategicReportTooltips %}
 
 {% block content %}
 	{% include "cover/cover.njk" %}
@@ -17,13 +18,15 @@
 		lang: lang
 	}) }}
 
-	{#
+
 	{% include "overview/overview.njk" %}
+
 	{% include "our-approach/our-approach.njk" %}
 	{% include "sustainability-goals/sustainability-goals.njk" %}
 	{% include "key-highlights/key-highlights.njk" %}
 	{% include "financial-operating-highlights/financial-operating-highlights.njk" %}
 	{% include "business-model/business-model.njk" %}
+	{#
 	{% include "our-formats/our-formats.njk" %}
 	{% include "russias-food-retail-market/russias-food-retail-market.njk" %}
 	{% include "trends-in-economy-and-consumer-behaviour/trends-in-economy-and-consumer-behaviour.njk" %}
@@ -60,6 +63,6 @@
 	{% include "planet/planet.njk" %}
 	{% include "health/health.njk" %}
 	{% include "employees/employees.njk" %}
-
-	{{ tooltips(strategicReportTooltips, lang) }} #}
+#}
+	{{ component('tooltips', { data: strategicReportTooltips, lang: lang }) }}
 {% endblock %}

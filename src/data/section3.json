@@ -605,8 +605,8 @@
 			"en": "Financial<br> Statements"
 		},
 		"coverImg": {
-			"ru": "../assets/images/cover/cover-3",
-			"en": "assets/images/cover/cover-3"
+			"ru": "/assets/images/cover/cover-3",
+			"en": "/assets/images/cover/cover-3"
 		},
 		"menu-items-1": [
 			{
@@ -20753,7 +20753,7 @@
 			"text-5": [
 				{
 					"ru": "",
-					"en": "The table below specifies the remuneration of the members of the Supervisory Board. Details on Supervisory Board remuneration in 2022 are reflected in <a class=\"c-green\" href=\"./corporate-governance.html#remuneration-report\" target=\"_blank\">\"Remuneration Report\"</a>."
+					"en": "The table below specifies the remuneration of the members of the Supervisory Board. Details on Supervisory Board remuneration in 2022 are reflected in <a class=\"c-green\" href=\"./corporate-governance#remuneration-report\" target=\"_blank\">\"Remuneration Report\"</a>."
 				},
 				{
 					"ru": "",

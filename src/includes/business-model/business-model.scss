@@ -1,0 +1,84 @@
+$root: '.business-model';
+
+#{$root} {
+	position: relative;
+	overflow: hidden;
+	.text:not(.c-gray-menu-text, .c-gray-desc-text) {
+		color: $c-gray-menu-hover-text;
+	}
+	&__header {
+		position: relative;
+		min-height: 810px;
+
+		@include max-screen($breakpoint-xs) {
+			min-height: auto;
+		}
+	}
+	&__header-content {
+		position: relative;
+		z-index: 3;
+
+		@include max-screen($breakpoint-xs) {
+			margin-bottom: 60px;
+		}
+	}
+	&__header-img {
+		position: absolute;
+		top: 118px;
+		left: 50%;
+		width: 1920px;
+		height: 691px;
+		object-fit: cover;
+		transform: translateX(-50%);
+
+		@include max-screen($breakpoint-md) {
+			position: relative;
+			top: auto;
+			bottom: 69px;
+			margin-bottom: -69px;
+			width: 100%;
+			height: initial;
+		}
+	}
+	&__scheme {
+		position: relative;
+		padding-top: 67px;
+		padding-bottom: 134px;
+		background: $c-bg-gray-light;
+
+		@include max-screen($breakpoint-xs) {
+			padding-top: 26px;
+		}
+	}
+	&__number-desc {
+		padding-top: 10px;
+		max-width: 288px;
+		border-top: 1px solid $c-highlights-border;
+	}
+	&__icon-wrapper {
+		display: flex;
+		flex-shrink: 0;
+		justify-content: center;
+		align-items: center;
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		background-color: $c-light-gray;
+	}
+}
+
+[lang='ru'] {
+	#{$root} {
+		&__header {
+			min-height: 940px;
+		}
+		&__header-img {
+			top: auto;
+			bottom: 0;
+
+			@include max-screen($breakpoint-md) {
+				bottom: 69px;
+			}
+		}
+	}
+}

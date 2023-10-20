@@ -1,7 +1,7 @@
 <div class="tooltips">
 	{% for tooltip in props.data %}
-		<div class="tooltips__tooltip" id="{{ tooltip.id }}">
-			{{ tooltip.template[lang] }}
+		<div class="tooltips__tooltip" id="{{ tooltip.id | safe }}">
+			{{ tooltip.template[props.lang] | safe }}
 		</div>
 	{% endfor %}
 </div>

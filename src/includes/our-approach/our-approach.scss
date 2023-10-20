@@ -1,0 +1,114 @@
+$root: '.our-approach';
+
+#{$root} {
+	.text:not(.c-gray-menu-text) {
+		color: $c-gray-menu-hover-text;
+	}
+	&__section {
+		& + & {
+			margin-top: 38px;
+
+			@include max-screen($breakpoint-md) {
+				margin-top: 12px;
+			}
+		}
+	}
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 40px;
+		margin-bottom: 40px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@include max-screen($breakpoint-md) {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			&:first-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__item {
+		&:first-child {
+			width: calc(100% + 20px);
+		}
+		&:not(:first-child) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	&__item-text {
+		&._v1 {
+			height: 228px;
+		}
+		&._v2 {
+			height: 140px;
+		}
+		&._v2-1 {
+			height: 190px;
+		}
+		&._v2-2 {
+			height: 103px;
+		}
+
+		@include max-screen($breakpoint-md) {
+			&._v1,
+			&._v2,
+			&._v2-1,
+			&._v2-2 {
+				height: auto;
+			}
+			&._dn-md {
+				display: none;
+			}
+		}
+	}
+	&__item-what {
+		&._mobile {
+			display: none;
+		}
+
+		@include max-screen($breakpoint-md) {
+			display: none;
+			&._mobile {
+				display: block;
+				br {
+					display: none;
+				}
+			}
+		}
+	}
+	&__card {
+		flex-grow: 1;
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+
+		@include max-screen($breakpoint-md) {
+			gap: 3px;
+			margin-top: 3px !important;
+		}
+		li {
+			&:not(:first-child) {
+				margin-top: 10px;
+			}
+		}
+	}
+}
+
+[lang='ru'] {
+	#{$root} {
+		&__item-text {
+			&._v2-1 {
+				height: 208px;
+			}
+			&._v2-2 {
+				height: 121px;
+			}
+		}
+	}
+}

@@ -2,9 +2,12 @@
 
 {% set pageClassMod = '_financial-statements' %}
 
+{% set financialStatements = section3.financialStatements %}
+{% set financialStatementsTooltips = section3.financialStatementsTooltips %}
+
 {% block content %}
 
-	{# {{ sectionCover({
+	{{ component('section-cover', {
 		number: financialStatements.number,
 		id: financialStatements.id,
 		title: financialStatements.title[lang],
@@ -14,6 +17,8 @@
 		items2: financialStatements["menu-items-2"],
 		lang: lang
 	}) }}
+
+	{#
 
 	{% include "../includes/section-3/00-consolidated-statement/consolidated-statement.njk" %}
 	{% include "../includes/section-3/01-principal-activities/principal-activities.njk" %}
@@ -63,6 +68,6 @@
 	{% include "../includes/section-3/45-contingent/contingent.njk" %}
 	{% include "../includes/section-3/46-related/related.njk" %}
 	{% include "../includes/section-3/47-subsequent/subsequent.njk" %}
-
-	{{ tooltips(financialStatementsTooltips, lang) }} #}
+#}
+	{{ component('tooltips', { data: financialStatementsTooltips, lang: lang }) }}
 {% endblock %}

@@ -7,8 +7,8 @@
 			"en": "Strategic <br> Report"
 		},
 		"coverImg": {
-			"ru": "../assets/images/section-1/cover-1",
-			"en": "assets/images/section-1/cover-1"
+			"ru": "/assets/images/section-1/cover-1",
+			"en": "/assets/images/section-1/cover-1"
 		},
 		"introtext": {
 			"ru": "<p class=\"text\">X5&nbsp;Group является одним из&nbsp;ведущих игроков на&nbsp;российском рынке продовольственной розницы и&nbsp;включает в&nbsp;себя успешно развивающиеся офлайн- и&nbsp;онлайн-бизнесы, занимающие лидирующие позиции в&nbsp;своих отраслях.</p><p class=\"text\">Наряду с&nbsp;непрерывным повышением эффективности и&nbsp;результативности текущих операций для&nbsp;нас концептуально важно инвестировать в&nbsp;будущее развитие розничной торговли, в&nbsp;том числе за&nbsp;счет внедрения цифровых инициатив&nbsp;&mdash; от&nbsp;инструментов расширенного анализа больших данных и&nbsp;автоматизации процессов до&nbsp;интеграции цифровых медиаплатформ с&nbsp;розничными онлайн-сервисами Группы.</p><p class=\"text\">Компания также реализует международную программу по&nbsp;поиску и&nbsp;отбору инноваций, которая помогает нам находить, оценивать, тестировать и&nbsp;внедрять успешные инновационные решения, способствующие дальнейшему развитию бизнеса. За&nbsp;последние годы такой стратегический подход позволил нам укрепить лидирующие позиции X5&nbsp;на&nbsp;российском рынке продуктовой розницы, и&nbsp;мы&nbsp;убеждены в&nbsp;готовности Группы сделать уверенный шаг в&nbsp;будущее.</p>",
@@ -1416,8 +1416,8 @@
 				"en": "our-formats"
 			},
 			"imgSvg": {
-				"ru": "../assets/images/section-1/our-formats-brands-ru",
-				"en": "assets/images/section-1/our-formats-brands"
+				"ru": "/assets/images/section-1/our-formats-brands-ru",
+				"en": "/assets/images/section-1/our-formats-brands"
 			},
 			"headerImg": "our-formats-digital",
 			"list1": [
@@ -1794,8 +1794,8 @@
 					"en": "Russian food retail market development"
 				},
 				"chartImg": {
-					"ru": "../assets/images/section-1/charts/russian-food-retail-market-development-ru.svg",
-					"en": "assets/images/section-1/charts/russian-food-retail-market-development-en.svg"
+					"ru": "/assets/images/section-1/charts/russian-food-retail-market-development-ru.svg",
+					"en": "/assets/images/section-1/charts/russian-food-retail-market-development-en.svg"
 				},
 				"chartLegend": [
 					{
@@ -2014,8 +2014,8 @@
 					"en": "X5&nbsp;vs Russian food retail in&nbsp;top-line growth"
 				},
 				"chartImg": {
-					"en": "assets/images/section-1/charts/x5-vs-russian-food-retail-in-top-line-growth.svg",
-					"ru": "../assets/images/section-1/charts/x5-vs-russian-food-retail-in-top-line-growth-ru.svg"
+					"en": "/assets/images/section-1/charts/x5-vs-russian-food-retail-in-top-line-growth.svg",
+					"ru": "/assets/images/section-1/charts/x5-vs-russian-food-retail-in-top-line-growth-ru.svg"
 				},
 				"source": {
 					"ru": "Источники: INFOLine, данные&nbsp;X5",
@@ -2643,8 +2643,8 @@
 						"en": "Grocery retail market size globally in&nbsp;2021, <span>USD bln</span>"
 					},
 					"chartImg": {
-						"ru": "../assets/images/section-1/charts/grocery-retail-market-size-globally-ru.svg",
-						"en": "assets/images/section-1/charts/grocery-retail-market-size-globally-en.svg"
+						"ru": "/assets/images/section-1/charts/grocery-retail-market-size-globally-ru.svg",
+						"en": "/assets/images/section-1/charts/grocery-retail-market-size-globally-en.svg"
 					}
 				},
 				"chart2": {
@@ -2653,8 +2653,8 @@
 						"en": "Modern grocery retail selling space per thousand people in&nbsp;2021, <span>sqm</span>"
 					},
 					"chartImg": {
-						"ru": "../assets/images/section-1/charts/modern-grocery-retail-selling-space-per-thousand-people-ru.svg",
-						"en": "assets/images/section-1/charts/modern-grocery-retail-selling-space-per-thousand-people-en.svg"
+						"ru": "/assets/images/section-1/charts/modern-grocery-retail-selling-space-per-thousand-people-ru.svg",
+						"en": "/assets/images/section-1/charts/modern-grocery-retail-selling-space-per-thousand-people-en.svg"
 					},
 					"source": {
 						"ru": "Источники: Euromonitor, INFOline (только российский рынок)<br> Примечание: Все показатели приведены без&nbsp;учета НДС / налога с продаж.",
@@ -2675,8 +2675,8 @@
 						"en": "The combined market share of&nbsp;Russia&rsquo;s five largest grocery retailers was&nbsp;32% in&nbsp;2021, while this number reaches as&nbsp;high as&nbsp;76% in&nbsp;other European markets and&nbsp;46% in&nbsp;the&nbsp;US market."
 					},
 					"chartImg": {
-						"ru": "../assets/images/section-1/charts/share-of-top-5-grocery-retailers-globally-ru.svg",
-						"en": "assets/images/section-1/charts/share-of-top-5-grocery-retailers-globally-en.svg"
+						"ru": "/assets/images/section-1/charts/share-of-top-5-grocery-retailers-globally-ru.svg",
+						"en": "/assets/images/section-1/charts/share-of-top-5-grocery-retailers-globally-en.svg"
 					},
 					"source": {
 						"ru": "Источники: Euromonitor, INFOline (для&nbsp;России)",
@@ -2703,8 +2703,8 @@
 					"icon": "chart-arrow-right",
 					"iconData": "width=\"19\" height=\"15\"",
 					"chartImg": {
-						"ru": "../assets/images/section-1/charts/traditional-vs-modern-retail-in-russia-and-across-key-world-regions-ru.svg",
-						"en": "assets/images/section-1/charts/traditional-vs-modern-retail-in-russia-and-across-key-world-regions-en.svg"
+						"ru": "/assets/images/section-1/charts/traditional-vs-modern-retail-in-russia-and-across-key-world-regions-ru.svg",
+						"en": "/assets/images/section-1/charts/traditional-vs-modern-retail-in-russia-and-across-key-world-regions-en.svg"
 					},
 					"chartLegend": [
 						{
@@ -2741,8 +2741,8 @@
 						"en": "Russian grocery retail market dynamics, <span class=\"text _fs-14\">%</span>"
 					},
 					"chartImg": {
-						"ru": "../assets/images/section-1/charts/russian-grocery-retail-market-dynamics",
-						"en": "assets/images/section-1/charts/russian-grocery-retail-market-dynamics"
+						"ru": "/assets/images/section-1/charts/russian-grocery-retail-market-dynamics",
+						"en": "/assets/images/section-1/charts/russian-grocery-retail-market-dynamics"
 					},
 					"chartLegend": [
 						{
@@ -2778,12 +2778,12 @@
 						"en": "E-grocery market development, <span class=\"text _fs-14\">%</span>"
 					},
 					"chartImg": {
-						"ru": "../assets/images/section-1/charts/e-grocery-market-development-ru",
-						"en": "assets/images/section-1/charts/e-grocery-market-development-en"
+						"ru": "/assets/images/section-1/charts/e-grocery-market-development-ru",
+						"en": "/assets/images/section-1/charts/e-grocery-market-development-en"
 					},
 					"chartImgMob": {
-						"ru": "../assets/images/section-1/charts/e-grocery-market-development-ru",
-						"en": "assets/images/section-1/charts/e-grocery-market-development-en"
+						"ru": "/assets/images/section-1/charts/e-grocery-market-development-ru",
+						"en": "/assets/images/section-1/charts/e-grocery-market-development-en"
 					},
 					"chartLegend": [
 						{
@@ -2833,8 +2833,8 @@
 						"en": "Online grocery sales penetration globally, <span>%</span>"
 					},
 					"chartImg": {
-						"ru": "../assets/images/section-1/charts/online-grocery-sales-penetration-globally-ru.svg",
-						"en": "assets/images/section-1/charts/online-grocery-sales-penetration-globally-en.svg"
+						"ru": "/assets/images/section-1/charts/online-grocery-sales-penetration-globally-ru.svg",
+						"en": "/assets/images/section-1/charts/online-grocery-sales-penetration-globally-en.svg"
 					},
 					"source": {
 						"ru": "Источники: Euromonitor, INFOline (для&nbsp;России)",
@@ -4345,8 +4345,8 @@
 					"en": "journey-img"
 				},
 				"imgVector": {
-					"ru": "../assets/images/section-1/journey-img-ru",
-					"en": "assets/images/section-1/journey-img"
+					"ru": "/assets/images/section-1/journey-img-ru",
+					"en": "/assets/images/section-1/journey-img"
 				}
 			}
 		},
@@ -6625,8 +6625,8 @@
 				"en": "Leadership <br> team"
 			},
 			"chartImg": {
-				"en": "assets/images/section-1/charts/top-management-team-gender.svg",
-				"ru": "../assets/images/section-1/charts/top-management-team-gender-ru.svg"
+				"en": "/assets/images/section-1/charts/top-management-team-gender.svg",
+				"ru": "/assets/images/section-1/charts/top-management-team-gender-ru.svg"
 			},
 			"text": {
 				"ru": "В&nbsp;нашу команду руководителей высшего звена входят ведущие профессионалы в&nbsp;своих областях. Руководство X5&nbsp;Group осуществляет оперативное управление деятельностью Компании и&nbsp;отвечает за&nbsp;выполнение долгосрочных стратегических задач. Руководящие сотрудники находятся в&nbsp;подчинении Supervisory Board, который, в&nbsp;свою очередь, определяет обязанности менеджмента в&nbsp;части достижения стратегических, финансовых и&nbsp;операционных целей.",
@@ -7253,12 +7253,12 @@
 				"en": "Net sales by region, <span class=\"text _fs-14 c-grey-strong\">%</span>"
 			},
 			"chartImg1": {
-				"ru": "../assets/images/section-1/charts/pyaterochka-net-sales-by-region-1-ru.svg",
-				"en": "assets/images/section-1/charts/pyaterochka-net-sales-by-region-1.svg"
+				"ru": "/assets/images/section-1/charts/pyaterochka-net-sales-by-region-1-ru.svg",
+				"en": "/assets/images/section-1/charts/pyaterochka-net-sales-by-region-1.svg"
 			},
 			"chartImg2": {
-				"ru": "../assets/images/section-1/charts/pyaterochka-net-sales-by-region-2-ru.svg",
-				"en": "assets/images/section-1/charts/pyaterochka-net-sales-by-region-2.svg"
+				"ru": "/assets/images/section-1/charts/pyaterochka-net-sales-by-region-2-ru.svg",
+				"en": "/assets/images/section-1/charts/pyaterochka-net-sales-by-region-2.svg"
 			},
 			"legend": [
 				{
@@ -7358,8 +7358,8 @@
 				"en": "Share of&nbsp;private labels in&nbsp;sales (year-end)"
 			},
 			"img": {
-				"ru": "../assets/images/section-1/charts/pyaterochka-share-ru",
-				"en": "assets/images/section-1/charts/pyaterochka-share"
+				"ru": "/assets/images/section-1/charts/pyaterochka-share-ru",
+				"en": "/assets/images/section-1/charts/pyaterochka-share"
 			}
 		},
 		"pyaterochka-operational-efficiency": {
@@ -7457,8 +7457,8 @@
 				}
 			},
 			"img": {
-				"ru": "../assets/images/section-1/charts/pyaterochka-shrinkage-ru",
-				"en": "assets/images/section-1/charts/pyaterochka-shrinkage"
+				"ru": "/assets/images/section-1/charts/pyaterochka-shrinkage-ru",
+				"en": "/assets/images/section-1/charts/pyaterochka-shrinkage"
 			}
 		},
 		"pyaterochka-intro": {
@@ -7959,12 +7959,12 @@
 				"en": "Perekrestok net retail sales by region, <span class=\"text _fs-14 c-grey-strong\">%</span>"
 			},
 			"chartImg1": {
-				"ru": "../assets/images/section-2/charts/perekrestok-net-sales-by-region-1-ru.svg",
-				"en": "assets/images/section-2/charts/perekrestok-net-sales-by-region-1.svg"
+				"ru": "/assets/images/section-2/charts/perekrestok-net-sales-by-region-1-ru.svg",
+				"en": "/assets/images/section-2/charts/perekrestok-net-sales-by-region-1.svg"
 			},
 			"chartImg2": {
-				"ru": "../assets/images/section-2/charts/perekrestok-net-sales-by-region-2-ru.svg",
-				"en": "assets/images/section-2/charts/perekrestok-net-sales-by-region-2.svg"
+				"ru": "/assets/images/section-2/charts/perekrestok-net-sales-by-region-2-ru.svg",
+				"en": "/assets/images/section-2/charts/perekrestok-net-sales-by-region-2.svg"
 			},
 			"legend": [
 				{
@@ -8165,16 +8165,16 @@
 				"en": "Private label share in&nbsp;sales (year average), <span class=\"text _fs-14 c-grey-strong\">%</span>"
 			},
 			"chart-1-img": {
-				"ru": "../assets/images/section-2/charts/perekrestok-assortment-1-ru",
-				"en": "assets/images/section-2/charts/perekrestok-assortment-1"
+				"ru": "/assets/images/section-2/charts/perekrestok-assortment-1-ru",
+				"en": "/assets/images/section-2/charts/perekrestok-assortment-1"
 			},
 			"chart-2-title": {
 				"ru": "Доля готовых блюд в&nbsp;продажах, <span class=\"text _fs-14 c-grey-strong\">%</span>",
 				"en": "Ready-to-eat share in&nbsp;sales, <span class=\"text _fs-14 c-grey-strong\">%</span>"
 			},
 			"chart-2-img": {
-				"ru": "../assets/images/section-2/charts/perekrestok-assortment-2-ru",
-				"en": "assets/images/section-2/charts/perekrestok-assortment-2"
+				"ru": "/assets/images/section-2/charts/perekrestok-assortment-2-ru",
+				"en": "/assets/images/section-2/charts/perekrestok-assortment-2"
 			}
 		},
 		"perekrestok-personnel": {
@@ -9123,8 +9123,8 @@
 					"en": "<span class=\"ttu\">Express delivery order dynamics</span>, <span class=\"text normal _fs-14\">mln</span>"
 				},
 				"chartImg": {
-					"ru": "../assets/images/section-2/charts/x5-digital-chart-ru.svg",
-					"en": "assets/images/section-2/charts/x5-digital-chart.svg"
+					"ru": "/assets/images/section-2/charts/x5-digital-chart-ru.svg",
+					"en": "/assets/images/section-2/charts/x5-digital-chart.svg"
 				},
 				"legend": [
 					{
@@ -9333,8 +9333,8 @@
 					}
 				],
 				"diagramImg": {
-					"ru": "../assets/images/section-2/charts/express-delivery-diagram-img-ru.svg",
-					"en": "assets/images/section-2/charts/express-delivery-diagram-img.svg"
+					"ru": "/assets/images/section-2/charts/express-delivery-diagram-img-ru.svg",
+					"en": "/assets/images/section-2/charts/express-delivery-diagram-img.svg"
 				}
 			},
 			"charts": {
@@ -9344,8 +9344,8 @@
 						"en": "<span class=\"ttu medium\">Net sales</span>, <span class=\"text _fs-14\">RUB mln</span>"
 					},
 					"chartImg": {
-						"ru": "../assets/images/section-2/charts/express-delivery-data-chart-1-ru.svg",
-						"en": "assets/images/section-2/charts/express-delivery-data-chart-1.svg"
+						"ru": "/assets/images/section-2/charts/express-delivery-data-chart-1-ru.svg",
+						"en": "/assets/images/section-2/charts/express-delivery-data-chart-1.svg"
 					}
 				},
 				"two": {
@@ -9371,8 +9371,8 @@
 						}
 					],
 					"chartImg": {
-						"ru": "../assets/images/section-2/charts/express-delivery-data-chart-2-ru.svg",
-						"en": "assets/images/section-2/charts/express-delivery-data-chart-2.svg"
+						"ru": "/assets/images/section-2/charts/express-delivery-data-chart-2-ru.svg",
+						"en": "/assets/images/section-2/charts/express-delivery-data-chart-2.svg"
 					}
 				}
 			},
@@ -9684,8 +9684,8 @@
 					}
 				],
 				"diagramImg": {
-					"ru": "../assets/images/section-2/charts/five-post-diagram-img-ru.svg",
-					"en": "assets/images/section-2/charts/five-post-diagram-img.svg"
+					"ru": "/assets/images/section-2/charts/five-post-diagram-img-ru.svg",
+					"en": "/assets/images/section-2/charts/five-post-diagram-img.svg"
 				}
 			},
 			"key-partners": {
@@ -10004,8 +10004,8 @@
 				},
 				"img": "food-data-platform-img",
 				"diagram": {
-					"ru": "../assets/images/section-2/charts/food-data-platform-diagram-ru.svg",
-					"en": "assets/images/section-2/charts/food-data-platform-diagram.svg"
+					"ru": "/assets/images/section-2/charts/food-data-platform-diagram-ru.svg",
+					"en": "/assets/images/section-2/charts/food-data-platform-diagram.svg"
 				},
 				"list": [
 					{
@@ -11172,7 +11172,7 @@
 				},
 				{
 					"ru": "Как отмечено&nbsp;в&nbsp;отчёте о вознаграждении на&nbsp;с.&nbsp;243–253, целевые показатели второго этапа предыдущей долгосрочной программы премирования были достигнуты&nbsp;в&nbsp;2017 году. В связи с этим&nbsp;в&nbsp;консолидированной финансовой отчётности за год, закончившийся 31 декабря 2019 года, было отражено начисление&nbsp;в&nbsp;размере 327 млн руб., относящееся к предыдущей программе.",
-					"en": "As described in the <a class=\"link\" href=\"corporate-governance.html#remuneration\">Remuneration Report</a>, the targets under the second stage of the old LTI programme were achieved in 2017. Therefore, an accrual of RUB 327 million has been made in the consolidated financial statements for the year ended 31 December 2019 related to the old LTI programme."
+					"en": "As described in the <a class=\"link\" href=\"corporate-governance#remuneration\">Remuneration Report</a>, the targets under the second stage of the old LTI programme were achieved in 2017. Therefore, an accrual of RUB 327 million has been made in the consolidated financial statements for the year ended 31 December 2019 related to the old LTI programme."
 				},
 				{
 					"ru": "Компания также начислила обязательство&nbsp;в&nbsp;размере 2 444 млн руб., исходя из ожидаемого достижения цели по сохранению лидирующих позиций по показателям выручки и опережения конкурентов по мультипликатору&nbsp;в&nbsp;рамках новой долгосрочной программы премирования. С начала действия новой программы до IV квартала 2019 года все начисления были сделаны только с учётом цели по сохранению лидирующих позиций по показателям выручки. Начиная с IV квартала 2019 года&nbsp;в&nbsp;условия выплаты по программе включена&nbsp;цель по достижению самых высоких показателей мультипликатора EV/EBITDA компании среди конкурентов. Все начисления по долгосрочной программе премирования и связанным с ней социальными взносами с начала действия предыдущей программы приведены&nbsp;в&nbsp;таблице.",
@@ -24156,8 +24156,8 @@
 								"en": "Shareholders / investors"
 							},
 							"desc": {
-								"ru": "Более подробная информация о работе с акционерами представлена&nbsp;в разделе \"<a class=\"link\" href=\"corporate-governance.html\">Корпоративное управление</a>\"",
-								"en": "Please see more information on shareholder matters in the \"<a class=\"link\" href=\"corporate-governance.html\">Corporate governance</a>\" section"
+								"ru": "Более подробная информация о работе с акционерами представлена&nbsp;в разделе \"<a class=\"link\" href=\"corporate-governance\">Корпоративное управление</a>\"",
+								"en": "Please see more information on shareholder matters in the \"<a class=\"link\" href=\"corporate-governance\">Corporate governance</a>\" section"
 							}
 						},
 						{
@@ -42264,8 +42264,8 @@
 						"en": " <span class=\"text light c-gray-menu-text\">RUB&nbsp;bln</span>"
 					},
 					"img": {
-						"ru": "../assets/images/section-1/charts/net-retail-sales-ru",
-						"en": "assets/images/section-1/charts/net-retail-sales"
+						"ru": "/assets/images/section-1/charts/net-retail-sales-ru",
+						"en": "/assets/images/section-1/charts/net-retail-sales"
 					}
 				},
 				{
@@ -42288,8 +42288,8 @@
 						"en": "<span class=\"text light c-gray-menu-text\"><sup class='tooltip-button' data-tooltip-id='tooltip-1-4' aria-expanded='false'></sup> ths&nbsp;sqm</span>"
 					},
 					"img": {
-						"ru": "../assets/images/section-1/charts/selling-space-ru",
-						"en": "assets/images/section-1/charts/selling-space"
+						"ru": "/assets/images/section-1/charts/selling-space-ru",
+						"en": "/assets/images/section-1/charts/selling-space"
 					}
 				},
 				{
@@ -42312,8 +42312,8 @@
 						"en": ""
 					},
 					"img": {
-						"ru": "../assets/images/section-1/charts/number-of-stores-ru",
-						"en": "assets/images/section-1/charts/number-of-stores"
+						"ru": "/assets/images/section-1/charts/number-of-stores-ru",
+						"en": "/assets/images/section-1/charts/number-of-stores"
 					}
 				},
 				{
@@ -42322,8 +42322,8 @@
 						"en": "Number of orders in online businesses, <span class=\"text light c-gray-menu-text\">ths</span>"
 					},
 					"img": {
-						"ru": "../assets/images/section-1/charts/number-of-orders-ru",
-						"en": "assets/images/section-1/charts/number-of-orders"
+						"ru": "/assets/images/section-1/charts/number-of-orders-ru",
+						"en": "/assets/images/section-1/charts/number-of-orders"
 					}
 				}
 			],
@@ -42348,8 +42348,8 @@
 						"en": " <span class=\"text light c-gray-menu-text\">RUB&nbsp;bln</span>"
 					},
 					"img": {
-						"ru": "../assets/images/section-1/charts/revenue-ru",
-						"en": "assets/images/section-1/charts/revenue"
+						"ru": "/assets/images/section-1/charts/revenue-ru",
+						"en": "/assets/images/section-1/charts/revenue"
 					}
 				},
 				{
@@ -42372,8 +42372,8 @@
 						"en": " <span class=\"text light c-gray-menu-text\">RUB&nbsp;bln</span>"
 					},
 					"img": {
-						"ru": "../assets/images/section-1/charts/gross-profit-ru",
-						"en": "assets/images/section-1/charts/gross-profit"
+						"ru": "/assets/images/section-1/charts/gross-profit-ru",
+						"en": "/assets/images/section-1/charts/gross-profit"
 					}
 				},
 				{
@@ -42396,8 +42396,8 @@
 						"en": " <span class=\"text light c-gray-menu-text\">RUB&nbsp;bln</span>"
 					},
 					"img": {
-						"ru": "../assets/images/section-1/charts/ebitda-ru",
-						"en": "assets/images/section-1/charts/ebitda"
+						"ru": "/assets/images/section-1/charts/ebitda-ru",
+						"en": "/assets/images/section-1/charts/ebitda"
 					}
 				},
 				{
@@ -42420,8 +42420,8 @@
 						"en": " <span class=\"text light c-gray-menu-text\">RUB&nbsp;bln</span>"
 					},
 					"img": {
-						"ru": "../assets/images/section-1/charts/net-profit-ru",
-						"en": "assets/images/section-1/charts/net-profit"
+						"ru": "/assets/images/section-1/charts/net-profit-ru",
+						"en": "/assets/images/section-1/charts/net-profit"
 					}
 				}
 			]
@@ -47122,8 +47122,8 @@
 						"ru": "%&nbsp;от&nbsp;выручки"
 					},
 					"graph": {
-						"ru": "../assets/images/section-1/charts/logistic-pyaterochka-graph-1-ru",
-						"en": "assets/images/section-1/charts/logistic-pyaterochka-graph-1"
+						"ru": "/assets/images/section-1/charts/logistic-pyaterochka-graph-1-ru",
+						"en": "/assets/images/section-1/charts/logistic-pyaterochka-graph-1"
 					}
 				},
 				"col7": {
@@ -47152,8 +47152,8 @@
 						}
 					],
 					"graph": {
-						"ru": "../assets/images/section-1/charts/logistic-pyaterochka-graph-2-ru",
-						"en": "assets/images/section-1/charts/logistic-pyaterochka-graph-2"
+						"ru": "/assets/images/section-1/charts/logistic-pyaterochka-graph-2-ru",
+						"en": "/assets/images/section-1/charts/logistic-pyaterochka-graph-2"
 					}
 				},
 				"col8": {
@@ -47199,8 +47199,8 @@
 						}
 					],
 					"graph": {
-						"ru": "../assets/images/section-1/charts/logistic-pyaterochka-graph-3-ru",
-						"en": "assets/images/section-1/charts/logistic-pyaterochka-graph-3"
+						"ru": "/assets/images/section-1/charts/logistic-pyaterochka-graph-3-ru",
+						"en": "/assets/images/section-1/charts/logistic-pyaterochka-graph-3"
 					}
 				},
 				"plans": {
@@ -47598,7 +47598,12 @@
 					"ru": "По&nbsp;состоянию на&nbsp;конец 2022 года в&nbsp;состав подразделения прямого импорта X5&nbsp;входило четыре хаба:"
 				},
 				"list": {
-					"ru": ["Хаб Пулково", "Хаб Богородск", "Хаб Новороссийск", "Хаб Екатеринбург"],
+					"ru": [
+						"Хаб Пулково",
+						"Хаб Богородск",
+						"Хаб Новороссийск",
+						"Хаб Екатеринбург"
+					],
 					"en": ["Pulkovo", "Bogorodsk", "Novorossiysk", "Yekaterinburg"]
 				},
 				"text": {
@@ -47617,8 +47622,8 @@
 				}
 			},
 			"graph": {
-				"ru": "../assets/images/section-1/charts/direct-imports-total-share-ru",
-				"en": "assets/images/section-1/charts/direct-imports-total-share"
+				"ru": "/assets/images/section-1/charts/direct-imports-total-share-ru",
+				"en": "/assets/images/section-1/charts/direct-imports-total-share"
 			}
 		},
 		"x5-technologies-2": {
@@ -52239,8 +52244,8 @@
 				"en": "The financial and operational information contained in&nbsp;this financial review comprises information about X5&nbsp;Group N.V. and its consolidated subsidiaries (hereinafter jointly referred to&nbsp;as&nbsp;\"we\", \"X5\" or&nbsp;the \"Company\"). The following is&nbsp;a&nbsp;review of&nbsp;our financial condition and results of&nbsp;operations as&nbsp;at&nbsp;31&nbsp;December 2022 and for the years ended 31&nbsp;December 2022 and 31&nbsp;December 2021."
 			},
 			"col2": {
-				"ru": "Консолидированная финансовая отчётность и&nbsp;примечания к&nbsp;ней представлены в разделе <a class=\"c-green\" href=\"./financial-statements.html\" target=\"_blank\">&laquo;Финансовая отчётность&raquo;</a> настоящего документа и&nbsp;подготовлены в&nbsp;соответствии с&nbsp;утверждёнными Европейским союзом Международными стандартами финансовой отчётности (МСФО).",
-				"en": "The consolidated financial statements and related notes thereto are available in&nbsp;<a class=\"c-green\" href=\"./financial-statements.html\" target=\"_blank\">\"Financial Statements\"</a> of&nbsp;this document and were prepared in&nbsp;accordance with International Financial Reporting Standards (IFRS), as&nbsp;adopted by&nbsp;the European Union."
+				"ru": "Консолидированная финансовая отчётность и&nbsp;примечания к&nbsp;ней представлены в разделе <a class=\"c-green\" href=\"./financial-statements\" target=\"_blank\">&laquo;Финансовая отчётность&raquo;</a> настоящего документа и&nbsp;подготовлены в&nbsp;соответствии с&nbsp;утверждёнными Европейским союзом Международными стандартами финансовой отчётности (МСФО).",
+				"en": "The consolidated financial statements and related notes thereto are available in&nbsp;<a class=\"c-green\" href=\"./financial-statements\" target=\"_blank\">\"Financial Statements\"</a> of&nbsp;this document and were prepared in&nbsp;accordance with International Financial Reporting Standards (IFRS), as&nbsp;adopted by&nbsp;the European Union."
 			},
 			"highlights": {
 				"title": {
@@ -60875,8 +60880,8 @@
 					},
 					"text": [
 						{
-							"ru": "Supervisory Board осуществляет контроль за&nbsp;деятельностью Компании в&nbsp;целом, реализацией стратегии и&nbsp;операционными показателями, включая мероприятия по&nbsp;борьбе с&nbsp;изменением климата и&nbsp;меры реагирования на&nbsp;климатические риски. Supervisory Board стоит выше Правления&nbsp;&mdash; высшего руководства Компании&nbsp;&mdash; и&nbsp;делегирует важнейшие обязанности постоянным комитетам в&nbsp;соответствии с&nbsp;их&nbsp;сферами ответственности. Более подробная информация о&nbsp;Supervisory Board представлена в&nbsp;разделе <a class=\"c-green\" href=\"./corporate-governance.html#report-supervisory-board\" target=\"_blank\">&laquo;Отчёт Supervisory Board&raquo;</a>",
-							"en": "The Company&rsquo;s overall course of&nbsp;affairs, strategy, and operational performance, including on&nbsp;climate action and climate risk response, are overseen by&nbsp;the Supervisory Board. The Supervisory Board sits above the Executive Board&nbsp;&mdash; the Company&rsquo;s senior management&nbsp;&mdash; and delegates essential responsibilities to&nbsp;the standing committees in&nbsp;accordance with their areas of&nbsp;responsibility. See more in&nbsp;<a class=\"c-green\" href=\"./corporate-governance.html#report-supervisory-board\" target=\"_blank\">\"Report of&nbsp;the Supervisory Board\"</a>."
+							"ru": "Supervisory Board осуществляет контроль за&nbsp;деятельностью Компании в&nbsp;целом, реализацией стратегии и&nbsp;операционными показателями, включая мероприятия по&nbsp;борьбе с&nbsp;изменением климата и&nbsp;меры реагирования на&nbsp;климатические риски. Supervisory Board стоит выше Правления&nbsp;&mdash; высшего руководства Компании&nbsp;&mdash; и&nbsp;делегирует важнейшие обязанности постоянным комитетам в&nbsp;соответствии с&nbsp;их&nbsp;сферами ответственности. Более подробная информация о&nbsp;Supervisory Board представлена в&nbsp;разделе <a class=\"c-green\" href=\"./corporate-governance#report-supervisory-board\" target=\"_blank\">&laquo;Отчёт Supervisory Board&raquo;</a>",
+							"en": "The Company&rsquo;s overall course of&nbsp;affairs, strategy, and operational performance, including on&nbsp;climate action and climate risk response, are overseen by&nbsp;the Supervisory Board. The Supervisory Board sits above the Executive Board&nbsp;&mdash; the Company&rsquo;s senior management&nbsp;&mdash; and delegates essential responsibilities to&nbsp;the standing committees in&nbsp;accordance with their areas of&nbsp;responsibility. See more in&nbsp;<a class=\"c-green\" href=\"./corporate-governance#report-supervisory-board\" target=\"_blank\">\"Report of&nbsp;the Supervisory Board\"</a>."
 						},
 						{
 							"ru": "Стратегия устойчивого развития Х5&nbsp;была одобрена Supervisory Board и&nbsp;стала неотъемлемой частью долгосрочной бизнес-стратегии Группы. Заседания Supervisory Board, на&nbsp;которых рассматривается и&nbsp;утверждается процесс оценки корпоративных рисков, включая оценку климатических рисков, проводятся не&nbsp;реже одного раза в&nbsp;квартал. Опираясь на&nbsp;регулярные подробные отчёты профильных комитетов, Supervisory Board осуществляет контроль за&nbsp;эффективностью всех ключевых проектов и&nbsp;мероприятий, включая прогресс в&nbsp;минимизации климатических рисков, а&nbsp;также за&nbsp;ходом реализации стратегии устойчивого развития и&nbsp;результатами экологических проектов. Supervisory Board ежегодно утверждает бюджет Компании и&nbsp;её&nbsp;проектов, в&nbsp;том числе ESG-инициатив и&nbsp;инициатив по&nbsp;борьбе с&nbsp;изменением климата, в&nbsp;соответствии со&nbsp;стратегическими приоритетами Группы.",
@@ -61416,8 +61421,8 @@
 				},
 				"text1": [
 					{
-						"ru": "Процесс оценки климатических рисков согласован с&nbsp;общим процессом оценки рисков Группы и&nbsp;является предметом тщательного анализа в&nbsp;рамках регулярно проводимых стратегических сессий Наблюдательного совета. Дополнительная информация о&nbsp;системе управления рисками Группы представлена в разделе <a class=\"c-green\" href=\"./corporate-governance.html#manage-risk\" target=\"_blank\">&laquo;Управление рисками&raquo;</a>.",
-						"en": "Our climate risk assessment process aligns with the Group&rsquo;s general risk assessment and is&nbsp;closely reviewed on&nbsp;a&nbsp;regular basis during the Supervisory Board&rsquo;s strategy sessions. Additional information on&nbsp;the Group&rsquo;s risk management can be&nbsp;found in&nbsp;<a class=\"c-green\" href=\"./corporate-governance.html#manage-risk\" target=\"_blank\">\"How we&nbsp;manage risk\"</a>."
+						"ru": "Процесс оценки климатических рисков согласован с&nbsp;общим процессом оценки рисков Группы и&nbsp;является предметом тщательного анализа в&nbsp;рамках регулярно проводимых стратегических сессий Наблюдательного совета. Дополнительная информация о&nbsp;системе управления рисками Группы представлена в разделе <a class=\"c-green\" href=\"./corporate-governance#manage-risk\" target=\"_blank\">&laquo;Управление рисками&raquo;</a>.",
+						"en": "Our climate risk assessment process aligns with the Group&rsquo;s general risk assessment and is&nbsp;closely reviewed on&nbsp;a&nbsp;regular basis during the Supervisory Board&rsquo;s strategy sessions. Additional information on&nbsp;the Group&rsquo;s risk management can be&nbsp;found in&nbsp;<a class=\"c-green\" href=\"./corporate-governance#manage-risk\" target=\"_blank\">\"How we&nbsp;manage risk\"</a>."
 					},
 					{
 						"ru": "Анализ рисков и&nbsp;возможностей, обусловленных изменением климата, помогает Группе формировать более полное понимание тех действий, которые необходимо осуществить для перехода на&nbsp;низкоуглеродную экономическую модель. Принимаемые Группой меры по&nbsp;декарбонизации во&nbsp;многом определяются результатами оценки климатических рисков, особенно предлагаемыми мерами по&nbsp;снижению подобных рисков, для обеспечения эффективности и&nbsp;устойчивости стратегии устойчивого развития Группы.",

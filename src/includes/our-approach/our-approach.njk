@@ -1,0 +1,78 @@
+<section id="our-approach" class="our-approach section">
+	<div class="section__container container">
+		<h2 class="h1 pt-lg-32 pt-sm-16 mb-lg-36 mb-sm-32 _line-t _ls-minus-03">{{ strategicReport['our-approach'].title[lang] | safe }}</h2>
+		<div class="row">
+			<div class="our-approach__section col-lg-12 g-line-t">
+				<h3 class="h3 pb-lg-12 mb-lg-24 _line-b">{{ strategicReport['our-approach'].subtitle[lang] | safe }}</h3>
+				<div class="row">{{ strategicReport['our-approach'].text[lang] | safe }}</div>
+			</div>
+			<div class="our-approach__section col-lg-12 g-line-t">
+				<h3 class="h3 pb-lg-14 mb-lg-30 _standart-mt _line-b">{{ strategicReport['our-approach'].subtitle2[lang] | safe }}</h3>
+				<ul class="our-approach__items">
+					<li class="our-approach__item">
+						<p class="our-approach__item-text _v1 text c-gray-menu-text">{{ strategicReport['our-approach'].text2[lang] }}</p>
+						<p class="our-approach__item-what text _fs-14 medium ttu _line-t pt-lg-20">{{ strategicReport['our-approach'].question[lang] | safe }}</p>
+					</li>
+					<li class="our-approach__item">
+						<div class="our-approach__card card">
+							<p class="h4 medium _fs-18 _line-b pb-lg-16 mb-lg-16">
+								{{ strategicReport['our-approach'].card1[lang].title | safe }}
+							</p>
+							<p class="our-approach__item-text _v2 text _fs-14 mb-sm-30">{{ strategicReport['our-approach'].card1[lang].text | safe }}</p>
+							<p class="our-approach__item-what text _fs-14 ttu _mobile">{{ strategicReport['our-approach'].question[lang] | safe }}</p>
+							<ul class="our-approach__list list text _fs-14 _line-t pt-lg-20 pt-sm-10">
+								{% for item in strategicReport['our-approach'].card1[lang].items %}
+									<li>{{ item | safe }}</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</li>
+					<li class="our-approach__item">
+						<div class="our-approach__card card">
+							<p class="h4 medium _fs-18 _line-b pb-lg-16 mb-lg-16 hyphens">{{ strategicReport['our-approach'].card2[lang].title | safe }}</p>
+							<p class="our-approach__item-text _v2 text _fs-14 mb-sm-30">{{ strategicReport['our-approach'].card2[lang].text | safe }}</p>
+							<p class="our-approach__item-what text _fs-14 ttu _mobile">{{ strategicReport['our-approach'].question[lang] | safe }}</p>
+							<ul class="our-approach__list list text _fs-14 _line-t pt-lg-20 pt-sm-10">
+								{% for item in strategicReport['our-approach'].card2[lang].items %}
+									<li>{{ item | safe }}</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<ul class="our-approach__items">
+					<li class="our-approach__item">
+						<p class="our-approach__item-text _v2-1 text opacity-0 _dn-md">{{ strategicReport['our-approach'].text2[lang] | safe }}</p>
+						<p class="our-approach__item-what text medium _fs-14 ttu _line-t pt-lg-20">{{ strategicReport['our-approach'].question[lang] | safe }}</p>
+					</li>
+					<li class="our-approach__item">
+						<div class="our-approach__card card">
+							<p class="h4 medium _fs-18 _line-b pb-lg-16 mb-lg-16">{{ strategicReport['our-approach'].card3[lang].title | safe }}</p>
+							<p class="our-approach__item-text text _fs-14 _v2-2 mb-sm-30">{{ strategicReport['our-approach'].card3[lang].text | safe }}</p>
+							<p class="our-approach__item-what text _fs-14 ttu _mobile">{{ strategicReport['our-approach'].question[lang] | safe }}</p>
+							<ul class="our-approach__list list text _fs-14 _line-t pt-lg-20 pt-sm-10">
+								{% for item in strategicReport['our-approach'].card3[lang].items %}
+									<li>{{ item | safe }}</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</li>
+					<li class="our-approach__item">
+						<div class="our-approach__card card">
+							<p class="h4 medium _fs-18 _line-b pb-lg-16 mb-lg-16">{{ strategicReport['our-approach'].card4[lang].title }}</p>
+							<p class="our-approach__item-text text _fs-14 _v2-2 mb-sm-30">{{ strategicReport['our-approach'].card4[lang].text }}</p>
+							<p class="our-approach__item-what text _fs-14 ttu _mobile">{{ strategicReport['our-approach'].question[lang] }}</p>
+							<ul class="our-approach__list list text _fs-14 _line-t pt-lg-20 pt-sm-10">
+								{% for item in strategicReport['our-approach'].card4[lang].items %}
+									<li>{{ item | safe }}</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+

@@ -1,0 +1,68 @@
+<section id="sustainability-goals" class="sustainability-goals section">
+	<div class="sustainability-goals__container">
+		<div class="section__container container">
+			<h2 class="sustainability-goals__title h2 _ls-minus-03 _line-b pb-lg-10">{{ strategicReport['sustainability-goals'].title[lang] | safe }}</h2>
+			<div class="row">
+				<div class="col-lg-9 col-sm-12">
+					<p class="sustainability-goals__text text">{{ strategicReport['sustainability-goals'].text[lang] | safe }}</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-9 col-xxs-12">
+					<ul class="sustainability-goals__tiles">
+						{% for item in strategicReport['sustainability-goals'].tiles %}
+							<li class="sustainability-goals__tile">
+								{{ component('icon', {
+										iconName: item.name[lang],
+										className: "sustainability-goals__tile-icon",
+										attributes: item.iconData
+									})
+								}}
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<p class="sustainability-goals__legend text c-gray-desc-text">{{ strategicReport['sustainability-goals'].legend[lang] | safe }}</p>
+			</div>
+			<div class="row">
+				<div class="col-lg-9 col-sm-12 mt-lg-2 mt-xxs-40">
+					<p class="sustainability-goals__legend _mobile text">{{ strategicReport['sustainability-goals'].legendMobile[lang] | safe }}</p>
+					<p class="sustainability-goals__text text c-gray-menu-text">{{ strategicReport['sustainability-goals'].text2[lang] | safe }}</p>
+				</div>
+			</div>
+			<div class="row">
+				<ul class="sustainability-goals__list col-lg-12">
+					{% for item in strategicReport['sustainability-goals'].list %}
+						<li class="sustainability-goals__item">
+							<div class="sustainability-goals__icon-wrapper">
+								{{ component('icon', {
+										iconName: item.icon.name,
+										className: "sustainability-goals__item-icon",
+										attributes: item.icon.data
+									})
+								}}
+								<p class="sustainability-goals__item-title text ttu c-gray-menu-text {% if item.modTitle %} {{ item.modTitle }}{% endif %}">	{{ item.title[lang] | safe }}</p>
+								<div class="sustainability-goals__item-line"></div>
+							</div>
+							<ul class="sustainability-goals__numbers{% if item.numbers[0].mod %} {{ item.numbers[0].mod }}{% endif %}">
+								{% for number in item.numbers %}
+									<li>
+										{{ number.value | safe }}
+										<p class="sustainability-goals__number-text text _fs-14">{{ number.text[lang] | safe }}</p>
+									</li>
+								{% endfor %}
+							</ul>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+	{{ component('picture', {
+		path: "section-1",
+		name: "sustainability-goals-bg",
+		ext: "jpg",
+		className: "sustainability-goals__bg-img",
+		lang: lang
+	}) }}
+</section>

@@ -1,0 +1,52 @@
+<section id="key-highlights" class="key-highlights section">
+	<div class="section__container container">
+		<h2 class="h1 pt-lg-32 pt-sm-16 mb-lg-40 mb-sm-32 _line-t _ls-minus-03">{{ strategicReport['key-highlights'].title[lang] | safe }}</h2>
+		<div class="row">
+			<div class="col-lg-6 col-sm-12">
+				<div class="key-highlights__card">
+					{{ component('picture', {
+						path: "section-1",
+						name: strategicReport['key-highlights']['revenue'].img,
+						ext: "jpg",
+						width: '536',
+						height: "319",
+						className: "key-highlights__card-img",
+						lang: lang
+					})}}
+					<div class="key-highlights__card-content">
+						<p class="key-highlights__card-text _subtitle">{{ strategicReport['key-highlights']['revenue'].text[lang] | safe }}</p>
+						<p class="key-highlights__card-title">{{ strategicReport['key-highlights']['revenue'].value[lang] | safe }}</p>
+						<p class="key-highlights__card-text">{{ strategicReport['key-highlights']['revenue'].title[lang] | safe }}</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-sm-12 mt-sm-24">
+				{{ strategicReport['key-highlights'].text[lang] | safe }}
+			</div>
+		</div>
+		<div class="row mt-lg-68 mt-sm-60" id="financial-and-operating">
+			<div class="col-lg-12 g-line-t _dark">
+				<h3 class="h2 mt-lg-20 mt-sm-2 mb-lg-38 mb-sm-20 _line-b pb-lg-14 _ls-minus-03">{{ strategicReport['key-highlights'].subtitle[lang] | safe }}</h3>
+			</div>
+			<div class="col-lg-12">
+				<ul class="key-highlights__list row">
+					{% for item in strategicReport['key-highlights'].list %}
+						<li class="key-highlights__item{% if item.mod %} {{ item.mod }}{% endif %} col-lg-4 col-sm-6">
+							<div class="key-highlights__icon-wrapper">
+								{{ component('icon', {
+										iconName: item.iconName,
+										className: "key-highlights__item-icon",
+										attributes: item.iconData
+									})
+								}}
+							</div>
+							<p class="key-highlights__value">{{ item.value[lang] | safe }}</p>
+							<p class="key-highlights__item-title">{{ item.title[lang] | safe }}</p>
+							<p class="key-highlights__item-text">{{ item.text[lang] | safe }}</p>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>

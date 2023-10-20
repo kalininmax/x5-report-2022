@@ -1,0 +1,134 @@
+<section id="business-model" class="business-model section">
+	<header class="business-model__header">
+		<div class="business-model__header-content container">
+			<h2 class="h1 pt-lg-30 pt-sm-16 mb-lg-36 mb-sm-32 _line-t _ls-minus-03">{{ strategicReport['business-model-2'].title[lang] }}</h2>
+			<div class="business-model__intro row">
+				<div class="col-lg-4 col-xs-12">
+					{{ strategicReport['business-model-2'].leadText[lang] | safe }}
+				</div>
+				<div class="col-lg-4 col-xs-12">
+					{{ strategicReport['business-model-2'].text[lang] | safe }}
+				</div>
+			</div>
+		</div>
+		{{ component('picture', {
+			path: "section-1",
+			name: strategicReport['business-model-2'].img[lang],
+			ext: "jpg",
+			width: "1920",
+			height: "691",
+			className: "business-model__header-img",
+			lang: lang
+		}) }}
+	</header>
+	<section class="business-model__scheme scheme">
+		<div class="scheme__container container">
+			<ul class="scheme__controls">
+				{% for control in strategicReport['business-model-2'].scheme %}
+					<li class="scheme__control" data-scheme-anchor="{{ control.data }}">{{ control.text[lang] | safe }}</li>
+				{% endfor %}
+			</ul>
+			<div class="scheme__inner">
+				<div class="scheme__items">
+					<div class="scheme__item _line-one" id="corporate">
+						<p class="scheme__title">{{strategicReport['business-model-2'].card1.title[lang] | safe }}</p>
+						<p class="scheme__text">{{strategicReport['business-model-2'].card1.text[lang] | safe }}</p>
+					</div>
+					<div class="scheme__items-wrap">
+						<div class="scheme__item _line-three" id="suppliers">
+							<p class="scheme__title">{{strategicReport['business-model-2'].card2.title[lang] | safe }}</p>
+							<div class="scheme__row _big">
+								<div class="scheme__col">
+									<p class="scheme__text">{{strategicReport['business-model-2'].card2.text[lang] | safe }}</p>
+								</div>
+								<ul class="scheme__cols">
+									{% for item in strategicReport['business-model-2'].card2.numbers %}
+										<li class="scheme__col">
+											{{ item.number[lang] | safe }}
+											<p class="scheme__big-number-text text _fs-14">{{ item.text[lang] | safe }}</p>
+										</li>
+									{% endfor %}
+								</ul>
+							</div>
+						</div>
+						<div class="scheme__item _line-two" id="offline">
+							<div class="scheme__row _big pb-lg-28">
+								<div class="scheme__col">
+									<p class="scheme__title">{{strategicReport['business-model-2'].card3.title[lang] | safe }}</p>
+									<p class="scheme__text">{{strategicReport['business-model-2'].card3.text[lang] | safe }}</p>
+								</div>
+								<ul class="scheme__cols">
+									{% for item in strategicReport['business-model-2'].card3.numbers %}
+										<li class="scheme__col">
+											<div class="scheme__icon-wrapper">
+												{{ component('icon', {
+													iconName: item.icon,
+													className: "scheme__icon",
+													attributes: item.iconData
+												})}}
+											</div>
+											<p class="scheme__big-number">{{ item.number[lang] | safe }}</p>
+											<p class="scheme__big-number-text text _fs-14">{{ item.text[lang] | safe }}</p>
+										</li>
+									{% endfor %}
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="scheme__items">
+					<div class="scheme__item" id="supply">
+						<p class="scheme__title">{{strategicReport['business-model-2'].card4.title[lang] | safe }}</p>
+						<p class="scheme__text mb-lg-34">{{strategicReport['business-model-2'].card4.text[lang] | safe }}</p>
+						<ul class="scheme__big-wrap">
+							{% for item in strategicReport['business-model-2'].card4.numbers %}
+								<li>
+									<p class="scheme__big-number">{{ item.number[lang] | safe }}</p>
+									<p class="scheme__big-number-text text _fs-14">{{ item.text[lang] | safe }}</p>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+					<div class="scheme__items-wrap _full">
+						<div class="scheme__item" id="digital">
+							<p class="scheme__title _mb-20">{{strategicReport['business-model-2'].card5.title[lang] | safe }}</p>
+							<ul class="scheme__row">
+								{% for item in strategicReport['business-model-2'].card5.items %}
+									<div class="scheme__col{% if item.className %} {{ item.className }}{% endif %}">
+										<header class="scheme__card-header">
+											<div class="scheme__icon-wrapper _header{% if item.iconClassName %} {{ item.iconClassName }}{% endif %}">
+												{% if item.icon %}
+												{{ component('icon', {
+													iconName: item.icon,
+													className: "scheme__icon",
+													attributes: item.iconData
+												})}}
+												{% else %}
+												{{ component('picture', {
+													path: "section-1",
+													name: item.img,
+													ext: "png",
+													width: item.imgWiidth,
+													height: item.imgHeight,
+													lang: lang
+												})}}
+												{% endif %}
+											</div>
+											<div class="scheme__icon-title">{{ item.title[lang] | safe }}</div>
+										</header>
+											<ul class="scheme__list">
+												{% for itemList in item.list %}
+													<li class="scheme__list-item">{{ itemList[lang] | safe }}</li>
+												{% endfor %}
+											</ul>
+										<p class="scheme__list-text">{{ item.text[lang] | safe }}</p>
+									</div>
+								{% endfor %}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</section>

@@ -335,7 +335,7 @@
 				"ru": "Корпоративное <br>управление",
 				"en": "Corporate <br>Governance"
 			},
-			"link": "/corporate-governance.html",
+			"link": "/corporate-governance",
 			"submenu": {
 				"blocks": [
 					[
@@ -391,7 +391,7 @@
 				"ru": "Финансовая <br>отчётность",
 				"en": "Financial <br>Statements"
 			},
-			"link": "/financial-statements.html",
+			"link": "/financial-statements",
 			"submenu": {
 				"blocks": [
 					[
@@ -440,7 +440,7 @@
 				"ru": "Приложение",
 				"en": "Annex"
 			},
-			"link": "/annex.html",
+			"link": "/annex",
 			"submenu": false,
 			"submenuText": {
 				"en": "TCFD compliance statement and index",

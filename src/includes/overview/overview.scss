@@ -1,0 +1,14 @@
+.overview {
+	&__list {
+		display: flex;
+		flex-direction: column;
+		row-gap: 42px;
+
+		@include max-screen($breakpoint-sm) {
+			row-gap: 30px;
+		}
+	}
+	&__item {
+		border-top: 1px solid $c-gray-menu-underline;
+	}
+}

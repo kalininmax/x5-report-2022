@@ -1,0 +1,21 @@
+<section id="overview" class="overview section">
+	<div class="section__container container">
+		<h2 class="h1 pt-lg-32 pt-sm-16 mb-lg-42 mb-sm-32 _line-t _ls-minus-03">{{ strategicReport.overview[lang] | safe }}</h2>
+		<div class="row">
+			<div class="col-lg-4 col-sm-12 g-line-t">
+				<h3 class="h3 ttu _green _ls-02 _line-b pb-lg-14 pb-sm-12 mb-lg-20">{{ strategicReport.about.title[lang] | safe }}</h3>
+				<p class="large-text _fs-18">{{ strategicReport.about.largeText[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-8 col-sm-12 mt-sm-26">
+				<ul class="overview__list">
+					{% for item in strategicReport.about.list %}
+						<li>
+							<p class="h4 pb-lg-12 _standart-mt _line-b _standart-mb">{{ item.title[lang] | safe }}</p>
+							{{ item.text[lang] | safe }}
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>

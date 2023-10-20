@@ -1,0 +1,133 @@
+.financial-operating-highlights {
+	&__charts {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 51px;
+		column-gap: 40px;
+
+		@include max-screen($breakpoint-sm) {
+			display: flex;
+			flex-direction: column;
+			row-gap: 40px;
+		}
+
+		@include max-screen($breakpoint-xs) {
+			row-gap: 30px;
+		}
+		&:not(:last-child) {
+			margin-bottom: 81px;
+		}
+	}
+	&__item {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding-top: 10px;
+		&._legend {
+			display: grid;
+			grid-template-rows: min-content 1fr;
+			grid-template-columns: 1fr minmax(25%, 160px);
+			align-items: start;
+			column-gap: 20px;
+
+			@include max-screen($breakpoint-xs) {
+				grid-template-columns: 1fr minmax(25%, 120px);
+			}
+			.financial-operating-highlights__chart-wrapper {
+				align-self: end;
+			}
+		}
+	}
+	&__chart-wrapper {
+		display: flex;
+		grid-column: 1/-1;
+		flex-direction: column;
+		order: 2;
+	}
+	&__item-title {
+		position: relative;
+		display: flex;
+		grid-row: 1/2;
+		grid-column: 1/2;
+		align-items: center;
+		gap: 4px;
+		margin-bottom: 14px;
+		padding-bottom: 15px;
+		color: $c-gray-desc-text;
+		font-weight: 400;
+		& > span:not(.text) {
+			color: $c-gray-menu-hover-text;
+			font-weight: 500;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background-color: $c-gray-menu-underline;
+		}
+	}
+	&__chart-info {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: -23px;
+		font-size: 10px;
+		line-height: 1;
+		font-weight: 400;
+		letter-spacing: 0.04em;
+
+		@include max-screen($breakpoint-xs) {
+			margin-bottom: -8px;
+			font-size: 11px;
+		}
+		span {
+			margin-bottom: 6px;
+			color: $c-green;
+			font-size: 36px;
+			line-height: 1;
+			font-weight: 500;
+			letter-spacing: -0.03em;
+
+			@include max-screen($breakpoint-xs) {
+				font-size: 18px;
+			}
+			span {
+				margin-left: -1px;
+				font-size: 20px;
+			}
+		}
+	}
+	&__chart-img {
+		order: 2;
+		width: 100%;
+	}
+	&__desc {
+		margin-bottom: 40px;
+		color: $c-gray-desc-text;
+	}
+	&__chart-legend {
+		top: 15px;
+		right: 20px;
+		display: flex;
+		grid-column: 2/3;
+		flex-direction: column;
+		row-gap: 8px;
+	}
+	&__legend-item {
+		display: flex;
+		align-items: center;
+		column-gap: 12px;
+		color: $c-gray-header-text;
+		font-size: 13px;
+		line-height: 1.23;
+		letter-spacing: -0.01em;
+
+		@include max-screen($breakpoint-xs) {
+			column-gap: 6px;
+			font-size: 11px;
+		}
+	}
+}

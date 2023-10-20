@@ -2,8 +2,11 @@
 
 {% set pageClassMod = '_corporate-governance' %}
 
+{% set corporateGovernance = section2.corporateGovernance %}
+{% set corporateGovernanceTooltips = section2.corporateGovernanceTooltips %}
+
 {% block content %}
-	{# {{ sectionCover({
+	 {{ component('section-cover', {
 		number: corporateGovernance.number,
 		id: corporateGovernance.id,
 		title: corporateGovernance.title[lang],
@@ -15,6 +18,7 @@
 		lang: lang
 	}) }}
 
+	{#
 	{% include "../includes/supervisory-letter/supervisory-letter.njk" %}
 	{% include "../includes/corporate-report/corporate-report.njk" %}
 	{% include "../includes/governance-structure/governance-structure.njk" %}
@@ -30,7 +34,7 @@
 	{% include "../includes/meetings-committees/meetings-committees.njk" %}
 	{% include "../includes/independence-remuneration/independence-remuneration.njk" %}
 	{% include "../includes/remuneration-report/remuneration-report.njk" %}
+ #}
 
-	{{ tooltips(corporateGovernanceTooltips, lang) }} #}
-
+	{{ component('tooltips', { data: corporateGovernanceTooltips, lang: lang }) }}
 {% endblock %}
