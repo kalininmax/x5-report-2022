@@ -1,0 +1,110 @@
+{% set stakeholderData = strategicReport["stakeholder-engagemen"] %}
+{% set howWeEngage = strategicReport["stakeholder-engagemen"]["how-we-engage"] %}
+
+<section class="stakeholder" id="stakeholder">
+	<div class="section__container container">
+		<h2 class="h1 pt-lg-32 pt-sm-16 mb-lg-40 mb-sm-32 _line-t _ls-minus-03 _sm-h">
+			{{ stakeholderData.title[lang] | safe }}
+		</h2>
+		<div class="row mb-lg-76 mb-sm-60">
+			<div class="col-lg-6 col-sm-12 mb-sm-10">
+				<p class="stakeholder__text _mb-p _fs-16">{{ stakeholderData.text1[lang] | safe }}</p>
+				<p class="stakeholder__text mb-lg-22">{{ stakeholderData.text2[lang] | safe }}</p>
+				<p class="stakeholder__text _mb-p">{{ stakeholderData.text3[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<p class="mb-lg-10 pl-lg-24 pl-sm-0"> {{ stakeholderData.text4[lang] | safe }}</p>
+				<ul class="list pl-lg-24 pl-sm-0">
+					{% for item in stakeholderData.list %}
+						<li class="mb-lg-10">{{ item[lang] | safe }}</li>
+					{% endfor %}
+				</ul>
+				<p class="pt-lg-10 pl-lg-24 pl-sm-0"> {{ stakeholderData.text5[lang] | safe }}</p>
+			</div>
+		</div>
+		<h4 class="h3 _line-b pb-lg-14 mb-lg-30 mb-sm-24">{{ howWeEngage.title[lang] | safe }}</h4>
+		<div class="stakeholder__cards mb-lg-120 mb-sm-60">
+			<div class="stakeholder__card">
+				{{ component('icon', {
+					iconName: howWeEngage.card1.icon,
+					className: 'stakeholder__card-icon',
+					attributes: 'width="70" height="70" viewBox="0 0 36 36"'
+				}) }}
+				<h5 class="stakeholder__card-title">{{ howWeEngage.card1.title[lang] | safe }}</h5>
+				<ul class="list stakeholder__card-list">
+					{% for item in howWeEngage.card1.list %}
+						<li class="stakeholder__card-list-item">{{ item[lang] | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="stakeholder__card">
+				{{ component('icon', {
+					iconName: howWeEngage.card2.icon,
+					className: 'stakeholder__card-icon',
+					attributes: 'width="70" height="70" viewBox="0 0 36 36"'
+				}) }}
+				<h5 class="stakeholder__card-title">{{ howWeEngage.card2.title[lang] | safe }}</h5>
+				<ul class="list stakeholder__card-list mb-lg-40">
+					{% for item in howWeEngage.card2.list %}
+						<li class="stakeholder__card-list-item">{{ item[lang] | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="stakeholder__card">
+				{{ component('icon', {
+					iconName: howWeEngage.card3.icon,
+					className: 'stakeholder__card-icon',
+					attributes: 'width="70" height="70" viewBox="0 0 36 36"'
+				}) }}
+				<h5 class="stakeholder__card-title mw-160">{{ howWeEngage.card3.title[lang] | safe }}</h5>
+				<ul class="list stakeholder__card-list">
+					{% for item in howWeEngage.card3.list %}
+						<li class="stakeholder__card-list-item">{{ item[lang] | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="stakeholder__card">
+				{{ component('icon', {
+					iconName: howWeEngage.card4.icon,
+					className: 'stakeholder__card-icon',
+					attributes: 'width="70" height="70" viewBox="0 0 36 36"'
+				}) }}
+				<h5 class="stakeholder__card-title _mb-0">{{ howWeEngage.card4.title1[lang] | safe }}</h5>
+				<h5 class="stakeholder__card-title">{{ howWeEngage.card4.title2[lang] | safe }}</h5>
+				<ul class="list stakeholder__card-list mb-lg-20">
+					{% for item in howWeEngage.card4.list %}
+						<li class="stakeholder__card-list-item">{{ item[lang] | safe }}</li>
+					{% endfor %}
+				</ul>
+				<p class="mb-lg-48">{{ howWeEngage.card4.text[lang] | safe }}</p>
+			</div>
+			<div class="stakeholder__card">
+				{{ component('icon', {
+					iconName: howWeEngage.card5.icon,
+					className: 'stakeholder__card-icon',
+					attributes: 'width="70" height="70" viewBox="0 0 36 36"'
+				}) }}
+				<h5 class="stakeholder__card-title _mb-0">{{ howWeEngage.card5.title1[lang] | safe }}</h5>
+				<h5 class="stakeholder__card-title">{{ howWeEngage.card5.title2[lang] | safe }}</h5>
+				<ul class="list stakeholder__card-list">
+					{% for item in howWeEngage.card5.list %}
+						<li class="stakeholder__card-list-item">{{ item[lang] | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="stakeholder__card">
+				{{ component('icon', {
+					iconName: howWeEngage.card6.icon,
+					className: 'stakeholder__card-icon',
+					attributes: 'width="70" height="70" viewBox="0 0 36 36"'
+				}) }}
+				<h5 class="stakeholder__card-title mw-160">{{ howWeEngage.card6.title[lang] | safe }}</h5>
+				<ul class="list stakeholder__card-list">
+					{% for item in howWeEngage.card6.list %}
+						<li class="stakeholder__card-list-item">{{ item[lang] | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>

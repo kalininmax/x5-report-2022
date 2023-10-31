@@ -1,0 +1,103 @@
+.paket {
+	margin-bottom: 100px;
+	&__icon-wrapper {
+		width: 100px;
+		height: 100px;
+	}
+	&__card {
+		padding: 34px 40px 38px;
+		overflow: hidden;
+		border-radius: $default-border-radius;
+		background: $c-green;
+		color: $c-white;
+	}
+	&__img {
+		height: 100%;
+		overflow: hidden;
+		border-radius: $default-border-radius;
+	}
+}
+
+.paket-card {
+	&__title {
+		margin-bottom: 33px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid $c-white;
+		letter-spacing: initial;
+	}
+	&__number-wrap {
+		margin-bottom: 30px;
+	}
+	&__number {
+		display: flex;
+		align-items: baseline;
+		gap: 7px;
+		&:not(.unit) {
+			font-size: 56px;
+			line-height: 100%;
+			font-weight: 500;
+			letter-spacing: -0.03em;
+		}
+	}
+	&__number-text {
+		margin-top: 0 !important;
+		color: rgba($c-white, 0.6);
+	}
+	&__list-item {
+		display: flex;
+		gap: 11px;
+		padding: 14px 0;
+		&:first-child {
+			padding-top: 0;
+		}
+		&:not(:last-child) {
+			border-bottom: 1px solid $c-border-white-4;
+		}
+		&.text {
+			margin-top: 0 !important;
+		}
+	}
+	&__list-item-number {
+		flex-shrink: 0;
+		width: 14px;
+	}
+}
+
+.paket-keys {
+	overflow: hidden;
+	&__img {
+		margin: 5px 0;
+		width: initial;
+	}
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, calc(288 / 1111 * 100%)) calc(248 / 1111 * 100%);
+
+		@include max-screen($breakpoint-md) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include max-screen($breakpoint-sm) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	&__item {
+		padding: 30px;
+		box-sizing: border-box;
+		border-top: 1px solid $c-dark-gray-3;
+		border-left: 1px solid $c-dark-gray-3;
+	}
+	&__icon-wrapper {
+		margin-bottom: 22px;
+		width: 60px;
+		height: 60px;
+	}
+	&__item-value {
+		display: flex;
+		align-items: baseline;
+		gap: 5px;
+		margin-bottom: 2px;
+		color: $c-green;
+	}
+}

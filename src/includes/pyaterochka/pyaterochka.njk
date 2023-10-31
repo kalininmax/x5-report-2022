@@ -1,0 +1,237 @@
+<section class="pyaterochka" id="pyaterochka">
+	<div class="container">
+		<div class="pyaterochka__icon-wrapper circle">
+			{{ component('icon', {
+				iconName: "pyatyorochka",
+				className: "pyaterochka__icon",
+				attributes: "width='50' height='50'"
+			})}}
+		</div>
+		<h2 class="h1 pt-lg-32 pt-sm-16 mb-lg-38 mb-sm-32 _line-t _ls-minus-03">{{ strategicReport['pyaterochka'].title[lang] | safe }}</h2>
+		<div class="row mb-lg-60">
+			<div class="col-lg-5 col-sm-12 mb-sm-30">
+				<p class="pyaterochka__text text c-default">{{ strategicReport['pyaterochka'].text[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-7 col-sm-12">
+				<p class="pyaterochka__text-prefix text c-default medium ttu">{{ strategicReport['pyaterochka'].prefix[lang] | safe }}</p>
+				<ul class="pyaterochka__numbers">
+					{% for number in strategicReport['pyaterochka'].numbers %}
+						<li class="pyaterochka__number">
+							<p class="pyaterochka__number-value big-text">{{ number.value[lang] | safe }}</p>
+							<p class="pyaterochka__number-text text _fs-14">{{ number.text[lang] | safe }}</p>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		<div class="pyaterochka__header">
+			{{ component('picture', {
+				path: "section-2",
+				name: strategicReport["pyaterochka-keys"].cover,
+				ext: "jpg",
+				width: '1112',
+				height: "654",
+				className: "pyaterochka__header-img",
+				lang: lang
+			})}}
+		</div>
+		<div class="pyaterochka__keys mb-lg-60">
+			<p class="pyaterochka__keys-title h3 _white pb-lg-14">
+				{{ strategicReport["pyaterochka-keys"].title[lang] | safe }}
+			</p>
+			<div class="pyaterochka__keys-inner pyaterochka-keys">
+				<div class="pyaterochka-keys__item">
+					<header class="pyaterochka-keys__header">
+						<div class="pyaterochka-keys__header-icon-wrapper">
+							{{ component('icon', {
+								iconName: 'man-green',
+								className: "pyaterochka-keys__header-icon",
+								attributes: "width=\"24\" height=\"24\""
+							})}}
+						</div>
+						<p class="pyaterochka-keys__header-title text ttu">
+							{{ strategicReport["pyaterochka-keys"]['header-titles'][0][lang] | safe }}
+						</p>
+					</header>
+					<ul class="pyaterochka-keys__list">
+						{% for item in strategicReport["pyaterochka-keys"].list %}
+							<li class="pyaterochka-keys__list-item">
+								<p class="pyaterochka-keys__list-value big-text">
+									{{ item.value[lang] | safe }}
+								</p>
+								<p class="pyaterochka-keys__list-title text _fs-14{% if item.classTitle %} {{item.classTitle}}{% endif %}">{{ item.title[lang] | safe }}</p>
+								<p class="pyaterochka-keys__list-text">{{ item.text[lang] | safe }}</p>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="pyaterochka-keys__item">
+					<header class="pyaterochka-keys__header">
+						<div class="pyaterochka-keys__header-icon-wrapper">
+							{{ component('icon', {
+								iconName: 'basket-dark-green',
+								className: "pyaterochka-keys__header-icon",
+								attributes: "width=\"24\" height=\"24\""
+							})}}
+						</div>
+						<p class="pyaterochka-keys__header-title text ttu">
+							{{ strategicReport["pyaterochka-keys"]['header-titles'][1][lang] | safe }}
+						</p>
+					</header>
+					<ul class="pyaterochka-keys__list">
+						{% for item in strategicReport["pyaterochka-keys"].list2 %}
+							<li class="pyaterochka-keys__list-item">
+								<p class="pyaterochka-keys__list-value big-text {% if item.classValue %} {{item.classValue}}{% endif %}">
+									{{ item.value[lang] | safe }}
+								</p>
+								<p class="pyaterochka-keys__list-title text _fs-14{% if item.classTitle %} {{item.classTitle}}{% endif %}">{{ item.title[lang] | safe }}</p>
+								<p class="pyaterochka-keys__list-text">{{ item.text[lang] | safe }}</p>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="pyaterochka-keys__item">
+					<header class="pyaterochka-keys__header">
+						<div class="pyaterochka-keys__header-icon-wrapper">
+							{{ component('icon', {
+								iconName: 'money-gray',
+								className: "pyaterochka-keys__header-icon",
+								attributes: "width=\"24\" height=\"24\""
+							})}}
+						</div>
+						<p class="pyaterochka-keys__header-title text ttu">
+							{{ strategicReport["pyaterochka-keys"]['header-titles'][2][lang] | safe }}
+						</p>
+					</header>
+					<ul class="pyaterochka-keys__list">
+						{% for item in strategicReport["pyaterochka-keys"].list3 %}
+							<li class="pyaterochka-keys__list-item">
+								<p class="pyaterochka-keys__list-value big-text {% if item.classValue %} {{item.classValue}}{% endif %}">
+									{{ item.value[lang] | safe }}
+								</p>
+								<p class="pyaterochka-keys__list-title text _fs-14{% if item.classTitle %} {{item.classTitle}}{% endif %}">{{ item.title[lang] | safe }}</p>
+								<p class="pyaterochka-keys__list-text">{{ item.text[lang] | safe }}</p>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<h3 class="pyaterochka-strategic__title h3 _line-b pb-lg-12 mb-lg-30">{{ strategicReport['pyaterochka-strategic'].title2[lang] | safe }}</h3>
+		<div class="pyaterochka-strategic__table mb-lg-60">
+			{{ component('table', {
+				data: strategicReport['pyaterochka-strategic'].tableOperatingResults1.data,
+				lang: lang
+			})}}
+		</div>
+		<h3 class="pyaterochka-strategic__title h3 _line-b pb-lg-12 mb-lg-34">{{ strategicReport['pyaterochka-strategic'].title3[lang] | safe }}</h3>
+		<div class="pyaterochka-strategic__charts mb-lg-60">
+			<div class="pyaterochka-strategic__charts-images">
+				<img class="pyaterochka-strategic__chart-img" src="{{ strategicReport['pyaterochka-strategic'].chartImg1[lang] | safe }}" width="362" height="335" alt="">
+				<img class="pyaterochka-strategic__chart-img" src="{{ strategicReport['pyaterochka-strategic'].chartImg2[lang] | safe }}" width="362" height="335" alt="">
+			</div>
+			<ul class="pyaterochka-strategic__legend">
+				{% for item in strategicReport['pyaterochka-strategic'].legend %}
+					<li class="pyaterochka-strategic__legend-item">
+						<i class="circle-icon" style="background: #{{ item.icon }}"></i>
+						{{ item.text[lang] | safe }}
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="pyaterochka__list-card list-card mb-lg-60">
+			<div class="list-card__info">
+				<header class="list-card__header">
+					<div class="list-card__icon-wrapper">
+						{{ component('icon', {
+							iconName: 'green-target',
+							className: "list-card__icon",
+							attributes: "width='36' height='36'"
+						})}}
+					</div>
+					<p class="list-card__title h3 _white">
+						{{ strategicReport["pyaterochka-list-card-1"].title[lang] | safe }}
+					</p>
+				</header>
+				<ul class="list-card__list list">
+					{% for item in strategicReport["pyaterochka-list-card-1"].list %}
+						<li class="text _fs-14">{{ item[lang] | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			{{ component('picture', {
+				path: "section-2",
+				name: strategicReport["pyaterochka-list-card-1"].img,
+				ext: "jpg",
+				width: '536',
+				height: "540",
+				className: "list-card__img",
+				lang: lang
+			})}}
+		</div>
+		<div class="row mb-lg-64">
+			<div class="col-lg-6 col-sm-12 mb-sm-30">
+				<h3 class="h3 _line-b pb-lg-12 mb-lg-20">
+					{{ strategicReport['pyaterochka-cvp'].title[lang] | safe }}
+				</h3>
+				<p class="text c-gray-menu-text">{{ strategicReport['pyaterochka-cvp'].text[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<h3 class="h3 _line-b pb-lg-12 mb-lg-36">
+					{{ strategicReport['pyaterochka-share'].title[lang] | safe }}
+				</h3>
+				<img class="financial-operating-highlights__chart-img" src="{{ strategicReport['pyaterochka-share'].img[lang] | safe }}.svg" width="536" alt="">
+			</div>
+		</div>
+		<h3 class="h3 _line-b pb-lg-12 mb-lg-24">
+			{{ strategicReport['pyaterochka-operational-efficiency'].title[lang] | safe }}
+		</h3>
+		<div class="row mb-lg-60">
+			<div class="col-lg-6 col-sm-12 mb-sm-30">
+				<p class="text c-gray-menu-text mb-lg-40">{{ strategicReport['pyaterochka-operational-efficiency'].text[lang] | safe }}</p>
+				<div class="pyaterochka__table">
+					{{ component('table', {
+						data: strategicReport['pyaterochka-operational-efficiency'].table.data,
+						lang: lang
+					})}}
+				</div>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<p class="large-text _fs-18 ls-minus-2 medium _line-b pb-lg-12 mb-lg-32">
+					{{ strategicReport['pyaterochka-operational-efficiency'].title2[lang] | safe }}
+				</p>
+				<img class="financial-operating-highlights__chart-img" src="{{ strategicReport['pyaterochka-operational-efficiency'].img[lang] | safe }}.svg" width="536" alt="">
+			</div>
+		</div>
+		<h3 class="h3 _line-b pb-lg-12 mb-lg-24">
+			{{ strategicReport['pyaterochka-intro'].title[lang] | safe }}
+		</h3>
+		<div class="row mb-lg-60">
+			<div class="col-lg-6 col-sm-12 mb-sm-30">
+				{{ strategicReport['pyaterochka-intro'].text1[lang] | safe }}
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				{{ strategicReport['pyaterochka-intro'].text2[lang] | safe }}
+			</div>
+		</div>
+		<h3 class="h3 _line-b pb-lg-12 mb-lg-24">
+			{{ strategicReport['pyaterochka-social'].title[lang] | safe }}
+		</h3>
+		<div class="row mb-lg-60">
+			<div class="col-lg-6 col-sm-12 mb-sm-30">
+				{{ strategicReport['pyaterochka-social'].text[lang] | safe }}
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				{{ component('picture', {
+					path: "section-2",
+					name: strategicReport['pyaterochka-social'].img,
+					ext: "jpg",
+					width: '535',
+					height: "357",
+					className: "pyaterochka-social__img",
+					lang: lang
+				})}}
+			</div>
+		</div>
+	</div>
+</section>

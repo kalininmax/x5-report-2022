@@ -1,0 +1,402 @@
+<div class="planet-table-mob">
+	<div class="planet-table-mob__buttons mb-sm-16">
+		<button class="planet-table-mob__button _active" data-target="regulation">{{ year2022.table.row1.title[lang] | safe }}</button>
+		<button class="planet-table-mob__button" data-target="behavior">{{ year2022.table.row4.title[lang] | safe }}</button>
+	</div>
+	<div class="planet-table-mob__blocks">
+		<div class="planet-table-mob__block _active" data-block="regulation">
+			<p class="mb-sm-26"> {{ year2022.table.row1.text[lang] | safe }}</p>
+			<h5 class="planet-table-mob__title">{{ year2022.table.header.th1[lang] | safe }}</h5>
+			<h5 class="text c-default mb-sm-10">{{ year2022.table.row2.col1[lang] | safe }}</h5>
+			<button class="planet-table-mob__accordion-button mb-sm-10" data-accordion="accordion-payments">
+				{{ component('icon', {
+					iconName: year2022.table.icon,
+					className: 'planet-table-mob__icon',
+					attributes: 'width="60" height="60" viewBox="0 0 36 36"'
+				}) }}
+			</button>
+			<div class="planet-table-mob__panel" data-panel="accordion-payments">
+				<h5 class="text c-default mb-sm-10">{{ year2022.table.header.th2[lang] | safe }}</h5>
+				<p class="mb-sm-26">{{ year2022.table.row2.col2[lang] | safe }}</p>
+				<div class="planet-table-mob__scenarios mb-sm-24">
+					<div class="planet-table-mob__scenario">
+						<div class="medium c-default mw-70 mb-sm-12">
+							{{ year2022.table.header.th3.text[lang] | safe }}<span class="_th-grey mw-70">{{ year2022.table.header.th3.c[lang] | safe }}</span>
+						</div>
+						<div class="planet-table__years mw-70">
+							<div class="planet-table__year">
+								{{ component('icon', {
+									iconName: year2022.table.marks.mark4.icon,
+									className: 'planet-table__icon',
+									attributes: 'width="14" height="15" viewBox="0 0 36 36"'
+								}) }}
+								{{ year2022.table.row5.col3.num1 }}
+								<div class="planet-table__year-block _gradient"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row5.col3.num2 }}
+								<div class="planet-table__year-block _yellow"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row5.col3.num3 }}
+								<div class="planet-table__year-block _red"></div>
+							</div>
+						</div>
+					</div>
+					<div class="planet-table-mob__scenario">
+						<div class="medium c-default mw-70 mb-sm-12">
+							{{ year2022.table.header.th4.text[lang] | safe }}<span class="_th-grey mw-70">{{ year2022.table.header.th4.c[lang] | safe }}</span>
+						</div>
+						<div class="planet-table__years mw-70">
+							<div class="planet-table__year">
+								{{ component('icon', {
+									iconName: year2022.table.marks.mark4.icon,
+									className: 'planet-table__icon',
+									attributes: 'width="14" height="15" viewBox="0 0 36 36"'
+								}) }}
+								{{ year2022.table.row5.col4.num1 }}
+								<div class="planet-table__year-block _gradient"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row5.col4.num2 }}
+								<div class="planet-table__year-block _yellow"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row5.col4.num3 }}
+								<div class="planet-table__year-block _yellow"></div>
+							</div>
+						</div>
+					</div>
+					<div class="planet-table-mob__scenario">
+						<div class="medium c-default mw-70 mb-sm-12">
+							{{ year2022.table.header.th5.text[lang] | safe }}<span class="_th-grey mw-70">{{ year2022.table.header.th5.c[lang] | safe }}</span>
+						</div>
+						<div class="planet-table__years mw-70">
+							<div class="planet-table__year">
+								{{ component('icon', {
+									iconName: year2022.table.marks.mark4.icon,
+									className: 'planet-table__icon',
+									attributes: 'width="14" height="15" viewBox="0 0 36 36"'
+								}) }}
+								{{ year2022.table.row5.col4.num1 }}
+								<div class="planet-table__year-block _gradient"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row5.col4.num2 }}
+								<div class="planet-table__year-block _yellow"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row5.col4.num3 }}
+								<div class="planet-table__year-block _yellow"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="table-marks mb-lg-40 mb-sm-24">
+					<div class="table-mark">
+						<div class="table-marker _green"></div>
+						<p>{{ year2022.table.marks.mark1[lang] | safe }}</p>
+					</div>
+					<div class="table-mark">
+						<div class="table-marker _yellow"></div>
+						<p>{{ year2022.table.marks.mark2[lang] | safe }}</p>
+					</div>
+					<div class="table-mark">
+						<div class="table-marker _red"></div>
+						<p>{{ year2022.table.marks.mark3[lang] | safe }}</p>
+					</div>
+					<div class="table-mark">
+						{{ component('icon', {
+							iconName: year2022.table.marks.mark4.icon,
+							attributes: 'width="14" height="15" viewBox="0 0 36 36"'
+						}) }}
+						<p>{{ year2022.table.marks.mark4.text[lang] | safe }}</p>
+					</div>
+					<div class="table-mark">
+						{{ component('icon', {
+							iconName: year2022.table.marks.mark5.icon,
+							attributes: 'width="14" height="15" viewBox="0 0 36 36"'
+						}) }}
+						<p>{{ year2022.table.marks.mark5.text[lang] | safe }}</p>
+					</div>
+					<div class="table-mark">
+						<div class="table-marker _grey-line"></div>
+						<p>{{ year2022.table.marks.mark6[lang] | safe }}</p>
+					</div>
+				</div>
+				<h5 class="text c-default mb-sm-10">{{ year2022.table.header.th6[lang] | safe }} </h5>
+				<div class="mb-sm-26">
+					{% for item in  year2022.table.row2.col6 %}
+						<p class="planet__text"> {{ item[lang] | safe }}</p>
+					{% endfor %}
+				</div>
+				<h5 class="text c-default mb-sm-10">{{ year2022.table.header.th7[lang] | safe }}</h5>
+				<div class="mb-sm-36">
+					{% for item in  year2022.table.row2.col7 %}
+						<p class="planet__text _table"> {{ item[lang] | safe }}</p>
+					{% endfor %}
+				</div>
+			</div>
+			<h5 class="text c-default mb-sm-10">{{ year2022.table.row3.col1[lang] | safe }}</h5>
+			<button class="planet-table-mob__accordion-button" data-accordion="accordion-changes">
+				{{ component('icon', {
+					iconName: year2022.table.icon,
+					className: 'planet-table-mob__icon',
+					attributes: 'width="60" height="60" viewBox="0 0 36 36"'
+				}) }}
+			</button>
+			<div class="planet-table-mob__panel" data-panel="accordion-changes">
+				<h5 class="text c-default mb-sm-10">{{ year2022.table.header.th2[lang] | safe }}</h5>
+				<p class="mb-sm-26">{{ year2022.table.row3.col2[lang] | safe }}</p>
+				<div class="planet-table-mob__scenarios mb-sm-24">
+					<div class="planet-table-mob__scenario">
+						<div class="medium c-default mw-70 mb-sm-12">
+							{{ year2022.table.header.th3.text[lang] | safe }}<span class="_th-grey mw-70">{{ year2022.table.header.th3.c[lang] | safe }}</span>
+						</div>
+						<div class="planet-table__years mw-70">
+							<div class="planet-table__year">
+								{{ component('icon', {
+									iconName: year2022.table.marks.mark4.icon,
+									className: 'planet-table__icon',
+									attributes: 'width="14" height="15" viewBox="0 0 36 36"'
+								}) }}
+								{{ year2022.table.row5.col3.num1 }}
+								<div class="planet-table__year-block _gradient"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row5.col3.num2 }}
+								<div class="planet-table__year-block _yellow"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row5.col3.num3 }}
+								<div class="planet-table__year-block _red"></div>
+							</div>
+						</div>
+					</div>
+					<div class="planet-table-mob__scenario">
+						<div class="medium c-default mw-70 mb-sm-12">
+							{{ year2022.table.header.th4.text[lang] | safe }}<span class="_th-grey mw-70">{{ year2022.table.header.th4.c[lang] | safe }}</span>
+						</div>
+						<div class="planet-table__years mw-70">
+							<div class="planet-table__year">
+								{{ component('icon', {
+									iconName: year2022.table.marks.mark4.icon,
+									className: 'planet-table__icon',
+									attributes: 'width="14" height="15" viewBox="0 0 36 36"'
+								}) }}
+								{{ year2022.table.row5.col4.num1 }}
+								<div class="planet-table__year-block _gradient"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row5.col4.num2 }}
+								<div class="planet-table__year-block _yellow"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row5.col4.num3 }}
+								<div class="planet-table__year-block _red"></div>
+							</div>
+						</div>
+					</div>
+					<div class="planet-table-mob__scenario">
+						<div class="medium c-default mw-70 mb-sm-12">
+							{{ year2022.table.header.th5.text[lang] | safe }}<span class="_th-grey mw-70">{{ year2022.table.header.th5.c[lang] | safe }}</span>
+						</div>
+						<div class="planet-table__years mw-70">
+							<div class="planet-table__year">
+								{{ component('icon', {
+									iconName: year2022.table.marks.mark4.icon,
+									className: 'planet-table__icon',
+									attributes: 'width="14" height="15" viewBox="0 0 36 36"'
+								}) }}
+								{{ year2022.table.row5.col4.num1 }}
+								<div class="planet-table__year-block _gradient"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row5.col4.num2 }}
+								<div class="planet-table__year-block _yellow"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row5.col4.num3 }}
+								<div class="planet-table__year-block _red"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="table-marks mb-lg-40 mb-sm-24">
+					<div class="table-mark">
+						<div class="table-marker _green"></div>
+						<p>{{ year2022.table.marks.mark1[lang] | safe }}</p>
+					</div>
+					<div class="table-mark">
+						<div class="table-marker _yellow"></div>
+						<p>{{ year2022.table.marks.mark2[lang] | safe }}</p>
+					</div>
+					<div class="table-mark">
+						<div class="table-marker _red"></div>
+						<p>{{ year2022.table.marks.mark3[lang] | safe }}</p>
+					</div>
+					<div class="table-mark">
+						{{ component('icon', {
+							iconName: year2022.table.marks.mark4.icon,
+							attributes: 'width="14" height="15" viewBox="0 0 36 36"'
+						}) }}
+						<p>{{ year2022.table.marks.mark4.text[lang] | safe }}</p>
+					</div>
+					<div class="table-mark">
+						{{ component('icon', {
+							iconName: year2022.table.marks.mark5.icon,
+							attributes: 'width="14" height="15" viewBox="0 0 36 36"'
+						}) }}
+						<p>{{ year2022.table.marks.mark5.text[lang] | safe }}</p>
+					</div>
+					<div class="table-mark">
+						<div class="table-marker _grey-line"></div>
+						<p>{{ year2022.table.marks.mark6[lang] | safe }}</p>
+					</div>
+				</div>
+				<h5 class="text c-default mb-sm-10">{{ year2022.table.header.th6[lang] | safe }} </h5>
+				<div class="mb-sm-26">
+					{% for item in  year2022.table.row3.col6 %}
+						<p class="planet__text"> {{ item[lang] | safe }}</p>
+					{% endfor %}
+				</div>
+				<h5 class="text c-default mb-sm-10">{{ year2022.table.header.th7[lang] | safe }}</h5>
+				<div class="mb-sm-36">
+					{% for item in  year2022.table.row3.col7 %}
+						<p class="planet__text _table"> {{ item[lang] | safe }}</p>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<div class="planet-table-mob__block" data-block="behavior">
+			<p class="mb-sm-26">{{ year2022.table.row4.text[lang] | safe }}</p>
+			<h5 class="planet-table-mob__title">{{ year2022.table.header.th1[lang] | safe }}</h5>
+			<p class="mb-lg-10">{{ year2022.table.row5.col1.text[lang] | safe }}</p>
+			<ul class="list mb-sm-26">
+				{% for item in year2022.table.row5.col1.list %}
+					<li>{{ item[lang] | safe }}</li>
+				{% endfor %}
+			</ul>
+			<h5 class="text c-default mb-sm-10">{{ year2022.table.header.th2[lang] | safe }}</h5>
+			<p class="mb-sm-26">{{ year2022.table.row5.col2[lang] | safe }}</p>
+			<div class="planet-table-mob__scenarios mb-sm-24">
+				<div class="planet-table-mob__scenario">
+					<div class="medium c-default mw-70 mb-sm-12">
+						{{ year2022.table.header.th3.text[lang] | safe }}<span class="_th-grey mw-70">{{ year2022.table.header.th3.c[lang] | safe }}</span>
+					</div>
+					<div class="planet-table__years mw-70">
+						<div class="planet-table__year">
+							{{ year2022.table.row5.col3.num1 }}
+							<div class="planet-table__year-block _green"></div>
+						</div>
+						<div class="planet-table__year">
+							{{ component('icon', {
+								iconName: year2022.table.marks.mark4.icon,
+								className: 'planet-table__icon',
+								attributes: 'width="14" height="15" viewBox="0 0 36 36"'
+							}) }}
+							{{ year2022.table.row5.col3.num2 }}
+							<div class="planet-table__year-block _yellow"></div>
+						</div>
+						<div class="planet-table__year">
+							{{ year2022.table.row5.col3.num3 }}
+							<div class="planet-table__year-block _yellow"></div>
+						</div>
+					</div>
+				</div>
+				<div class="planet-table-mob__scenario">
+					<div class="medium c-default mw-70 mb-sm-12">
+						{{ year2022.table.header.th4.text[lang] | safe }}<span class="_th-grey mw-70">{{ year2022.table.header.th4.c[lang] | safe }}</span>
+					</div>
+					<div class="planet-table__years mw-70">
+						<div class="planet-table__year">
+							{{ component('icon', {
+								iconName: year2022.table.marks.mark5.icon,
+								className: 'planet-table__icon',
+								attributes: 'width="14" height="15" viewBox="0 0 36 36"'
+							}) }}
+							{{ year2022.table.row5.col4.num1 }}
+							<div class="planet-table__year-block _gradient"></div>
+						</div>
+						<div class="planet-table__year">
+							{{ year2022.table.row5.col4.num2 }}
+							<div class="planet-table__year-block _yellow"></div>
+						</div>
+						<div class="planet-table__year">
+							{{ year2022.table.row5.col4.num3 }}
+							<div class="planet-table__year-block _yellow"></div>
+						</div>
+					</div>
+				</div>
+				<div class="planet-table-mob__scenario">
+					<div class="medium c-default mw-70 mb-sm-12">
+						{{ year2022.table.header.th5.text[lang] | safe }}<span class="_th-grey mw-70">{{ year2022.table.header.th5.c[lang] | safe }}</span>
+					</div>
+					<div class="planet-table__years mw-70">
+						<div class="planet-table__year">
+							{{ component('icon', {
+								iconName: year2022.table.marks.mark4.icon,
+								className: 'planet-table__icon',
+								attributes: 'width="14" height="15" viewBox="0 0 36 36"'
+							}) }}
+							{{ year2022.table.row5.col4.num1 }}
+							<div class="planet-table__year-block _green"></div>
+						</div>
+						<div class="planet-table__year">
+							{{ year2022.table.row5.col4.num2 }}
+							<div class="planet-table__year-block _green"></div>
+						</div>
+						<div class="planet-table__year">
+							{{ year2022.table.row5.col4.num3 }}
+							<div class="planet-table__year-block _yellow"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="table-marks mb-lg-40 mb-sm-24">
+				<div class="table-mark">
+					<div class="table-marker _green"></div>
+					<p>{{ year2022.table.marks.mark1[lang] | safe }}</p>
+				</div>
+				<div class="table-mark">
+					<div class="table-marker _yellow"></div>
+					<p>{{ year2022.table.marks.mark2[lang] | safe }}</p>
+				</div>
+				<div class="table-mark">
+					<div class="table-marker _red"></div>
+					<p>{{ year2022.table.marks.mark3[lang] | safe }}</p>
+				</div>
+				<div class="table-mark">
+					{{ component('icon', {
+						iconName: year2022.table.marks.mark4.icon,
+						attributes: 'width="14" height="15" viewBox="0 0 36 36"'
+					}) }}
+					<p>{{ year2022.table.marks.mark4.text[lang] | safe }}</p>
+				</div>
+				<div class="table-mark">
+					{{ component('icon', {
+						iconName: year2022.table.marks.mark5.icon,
+						attributes: 'width="14" height="15" viewBox="0 0 36 36"'
+					}) }}
+					<p>{{ year2022.table.marks.mark5.text[lang] | safe }}</p>
+				</div>
+				<div class="table-mark">
+					<div class="table-marker _grey-line"></div>
+					<p>{{ year2022.table.marks.mark6[lang] | safe }}</p>
+				</div>
+			</div>
+			<h5 class="text c-default mb-sm-10">{{ year2022.table.header.th6[lang] | safe }} </h5>
+			<div class="mb-sm-26">
+				{% for item in  year2022.table.row5.col6 %}
+					<p class="planet__text"> {{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<h5 class="text c-default mb-sm-10">{{ year2022.table.header.th7[lang] | safe }}</h5>
+			<div class="mb-sm-26">
+				{% for item in  year2022.table.row5.col7 %}
+					<p class="planet__text _table"> {{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>

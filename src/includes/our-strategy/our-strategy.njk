@@ -1,0 +1,58 @@
+<section class="our-strategy" id="our-strategy">
+	<div class="section__container container">
+		<h2 class="h1 _line-t pt-lg-32 mb-lg-40">{{ strategicReport['our-strategy'].title[lang] | safe }}</h2>
+		<div class="row mb-lg-80">
+			<div class="col-lg-8 col-sm-12 mb-md-30">
+				<header class="our-strategy__priorities-header">
+					<div class="our-strategy__priorities-icon-wrapper circle">
+						{{ component('icon', {
+							iconName: "target",
+							className: "our-strategy__priorities-icon",
+							attributes: "width='36' height='36'"
+						})}}
+					</div>
+					<p class="our-strategy__priorities-ttitle h3">{{ strategicReport['our-strategy']['priorities'].title[lang] | safe }}</p>
+				</header>
+				<ul class="our-strategy__priorities-list list">
+					{% for item in strategicReport['our-strategy']['priorities'].list %}
+						<li class="our-strategy__priorities-list-item">{{ item[lang] | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="col-lg-4 col-sm-12">
+				<div class="our-strategy__priorities-info">
+					<p class="our-strategy__priorities-info-title">
+						<span class="our-strategy__priorities-info-title _unit">#</span>
+						1
+					</p>
+					<ul class="our-strategy__priorities-info-list list">
+						{% for item in strategicReport['our-strategy']['priorities'].list2 %}
+							<li class="our-strategy__priorities-info-list-item">{{ item[lang] | safe }}</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<h3 class="h3 _line-b pb-lg-14 mb-lg-20">{{ strategicReport['our-strategy']['journey'].title[lang] | safe }}</h3>
+		<div class="row">
+			<div class="col-lg-6 col-xs-12">
+				<p class="text _ls-minus-02">{{ strategicReport['our-strategy']['journey'].text1[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-6 col-xs-12">
+				<p class="text _ls-minus-02">{{ strategicReport['our-strategy']['journey'].text2[lang] | safe }}</p>
+			</div>
+		</div>
+		<div class="our-strategy__img-wrapper">
+			{{ component('picture', {
+				path: "section-1",
+				name: strategicReport["our-strategy"]['journey'].imgRastr[lang],
+				ext: "png",
+				width: '1118',
+				height: "760",
+				className: "our-strategy__img",
+				lang: lang
+			})}}
+			<img class="our-strategy__brands" src="{{ strategicReport['our-strategy']['journey'].imgVector[lang] | safe }}.svg" />
+		</div>
+	</div>
+</section>

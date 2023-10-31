@@ -1,0 +1,342 @@
+{% set financialReview = strategicReport['financial-review-2'] %}
+
+{% set tableProfit = strategicReport["financial-review-2"]["table-profit"] %}
+{% set table2022Net = strategicReport["financial-review-2"]["table-20220-net"] %}
+{% set tableSelling = strategicReport["financial-review-2"]["table-selling"] %}
+{% set table2022Lfl = strategicReport["financial-review-2"]["table-2022-lfl"] %}
+{% set tableSales = strategicReport["financial-review-2"]["table-seles"] %}
+{% set tableAdjusted = strategicReport["financial-review-2"]["table-adjusted"] %}
+{% set tableLti = strategicReport["financial-review-2"]["table-lti"] %}
+{% set tableEbitda = strategicReport["financial-review-2"]["table-ebitda"] %}
+{% set tablePyaterochka = strategicReport["financial-review-2"]["table-pyaterochka"] %}
+{% set tablePerekrestok = strategicReport["financial-review-2"]["table-perekrestok"] %}
+{% set tableOther = strategicReport["financial-review-2"]["table-other"] %}
+{% set tableCorporate = strategicReport["financial-review-2"]["table-corporate"] %}
+{% set tableNonOperating = strategicReport["financial-review-2"]["table-non-operating"] %}
+{% set tableConsolidated = strategicReport["financial-review-2"]["table-consolidated"] %}
+{% set tableLiquid = strategicReport["financial-review-2"]["table-liquid"] %}
+
+<section id="financial-review" class="financial-review section c-gray-menu-text">
+	<div class="section__container container">
+		<h2 class="h1 pt-lg-32 pt-sm-16 mb-lg-40 mb-sm-32 _line-t _ls-minus-03">
+			{{ financialReview.title[lang] | safe }}
+		</h2>
+		<div class="row mb-lg-40 mb-lg-68">
+			<div class="col-lg-6 col-sm-12">
+				<p class="text information__text-1">{{ financialReview.col1[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<p class="text information__text-1">{{ financialReview.col2[lang] | safe }}</p>
+			</div>
+		</div>
+		{# highlights #}
+		{% set highlights = financialReview.highlights %}
+		<h3 class="h3 pb-lg-14 mb-lg-30 _line-b _ls-minus-03">
+			{{ highlights.title[lang] | safe }}
+		</h3>
+		<div class="financial-review__hightlights mb-lg-60">
+			<div class="financial-review__hightlights-block">
+				<p class="ttu mb-lg-20 financial-review__hightlights-name">{{ highlights.gross.title[lang] | safe }}</p>
+				<ul class="financial-review__hightlights-list">
+					<li class="financial-review__hightlights-item">
+						<p class="financial-review__hightlights-title">{{ highlights.gross.data.item1.title[lang] | safe }} <span class="financial-review__hightlights-title-small">{{ highlights.gross.data.item1.title2[lang] | safe }}</span></p>
+						<p class="financial-review__hightlights-text mb-lg-2">{{ highlights.gross.data.item1.text1[lang] | safe }}</p>
+						<p class="financial-review__hightlights-text-2">{{ highlights.gross.data.item1.text2[lang] | safe }}</p>
+					</li>
+					<li class="financial-review__hightlights-item">
+						<p class="financial-review__hightlights-title">{{ highlights.gross.data.item2.title[lang] | safe }} <span class="financial-review__hightlights-title-small">{{ highlights.gross.data.item2.title2[lang] | safe }}</span></p>
+						<p class="financial-review__hightlights-text mb-lg-2">{{ highlights.gross.data.item2.text1[lang] | safe }}</p>
+						<p class="financial-review__hightlights-text-2">{{ highlights.gross.data.item2.text2[lang] | safe }}</p>
+					</li>
+				</ul>
+			</div>
+			<div class="financial-review__hightlights-col">
+				<div class="financial-review__hightlights-block _dark-green">
+					<p class="ttu mb-lg-20 financial-review__hightlights-name">{{ highlights.revenue.title[lang] | safe }}</p>
+					<ul class="financial-review__hightlights-list">
+						<li class="financial-review__hightlights-item">
+							<p class="financial-review__hightlights-title">{{ highlights.revenue.data.item1.title[lang] | safe }} <span class="financial-review__hightlights-title-small _sm">{{ highlights.revenue.data.item1.title2[lang] | safe }}</span></p>
+							<p class="financial-review__hightlights-text-2">{{ highlights.revenue.data.item1.text1[lang] | safe }}</p>
+						</li>
+					</ul>
+				</div>
+				<div class="financial-review__hightlights-block _grey">
+					<p class="ttu mb-lg-20 financial-review__hightlights-name">{{ highlights.capital.title[lang] | safe }}</p>
+					<ul class="financial-review__hightlights-list">
+						<li class="financial-review__hightlights-item">
+							<p class="financial-review__hightlights-title">{{ highlights.capital.data.item1.title[lang] | safe }} <span class="financial-review__hightlights-title-small _sm">{{ highlights.capital.data.item1.title2[lang] | safe }}</span></p>
+							<p class="financial-review__hightlights-text-2">{{ highlights.capital.data.item1.text1[lang] | safe }}</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="financial-review__hightlights-block _dark-grey">
+				<p class="ttu mb-lg-20 financial-review__hightlights-name">{{ highlights.adjusted.title[lang] | safe }}</p>
+				<ul class="financial-review__hightlights-list">
+					<li class="financial-review__hightlights-item">
+						<p class="financial-review__hightlights-title">{{ highlights.adjusted.data.item1.title[lang] | safe }} <span class="financial-review__hightlights-title-small">{{ highlights.adjusted.data.item1.title2[lang] | safe }}</span></p>
+						<p class="financial-review__hightlights-text mb-lg-2">{{ highlights.adjusted.data.item1.text1[lang] | safe }}</p>
+						<p class="financial-review__hightlights-text-2">{{ highlights.adjusted.data.item1.text2[lang] | safe }}</p>
+					</li>
+					<li class="financial-review__hightlights-item">
+						<p class="financial-review__hightlights-title">{{ highlights.adjusted.data.item2.title[lang] | safe }} <span class="financial-review__hightlights-title-small">{{ highlights.adjusted.data.item2.title2[lang] | safe }}</span></p>
+						<p class="financial-review__hightlights-text mb-lg-2">{{ highlights.adjusted.data.item2.text1[lang] | safe }}</p>
+						<p class="financial-review__hightlights-text-2">{{ highlights.adjusted.data.item2.text2[lang] | safe }}</p>
+					</li>
+				</ul>
+			</div>
+			<div class="financial-review__hightlights-block">
+				<p class="ttu mb-lg-20 financial-review__hightlights-name">{{ highlights.net.title[lang] | safe }}</p>
+				<ul class="financial-review__hightlights-list">
+					<li class="financial-review__hightlights-item">
+						<p class="financial-review__hightlights-title">{{ highlights.net.data.item1.title[lang] | safe }} <span class="financial-review__hightlights-title-small">{{ highlights.net.data.item1.title2[lang] | safe }}</span></p>
+						<p class="financial-review__hightlights-text mb-lg-2">{{ highlights.net.data.item1.text1[lang] | safe }}</p>
+						<p class="financial-review__hightlights-text-2">{{ highlights.net.data.item1.text2[lang] | safe }}</p>
+					</li>
+					<li class="financial-review__hightlights-item">
+						<p class="financial-review__hightlights-title">{{ highlights.net.data.item2.title[lang] | safe }} <span class="financial-review__hightlights-title-small">{{ highlights.net.data.item1.title2[lang] | safe }}</span></p>
+						<p class="financial-review__hightlights-text mb-lg-2">{{ highlights.net.data.item2.text1[lang] | safe }}</p>
+						<p class="financial-review__hightlights-text-2">{{ highlights.net.data.item2.text2[lang] | safe }}</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<h3 class="h3 pb-lg-14 mb-lg-34 _line-b _ls-minus-03">
+			{{ financialReview['expenditure-structure'].title[lang] | safe }}
+		</h3>
+		<div class="row mb-lg-80">
+			<div class="col-lg-9 col-sm-12">
+				{% if lang == 'en' %}
+					<div class="financial-review__capital-charts">
+						<img src="assets/images/section-1/charts/financial-review-1.svg" alt="">
+						<img src="assets/images/section-1/charts/financial-review-2.svg" alt="">
+					</div>
+				{% else %}
+					<div class="financial-review__capital-charts">
+						<img src="../assets/images/section-1/charts/financial-review-1-RU.svg" alt="">
+						<img src="../assets/images/section-1/charts/financial-review-2-RU.svg" alt="">
+					</div>
+				{% endif %}
+			</div>
+			<div class="col-lg-3 col-sm-12">
+				<ul class="financial-review__legend pt-lg-12">
+					{% for item in financialReview['expenditure-structure'].legend %}
+						<li class="financial-review__legend-item">
+							<span class="financial-review__legend-color" style="background-color:{{item.color}}"></span>
+							<span>{{ item[lang] | safe }}</span>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		<div class="row mb-lg-44 financial-review__capital-text pt-lg-30">
+			<div class="col-lg-6 col-sm-12 mb-sm-20">
+				<p>{{ financialReview['expenditure-structure'].text1[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-5 col-sm-12">
+				<p class="text _fs-14 c-gray-menu-text">{{ financialReview['expenditure-structure'].text2[lang] | safe }}</p>
+			</div>
+		</div>
+		<h3 class="h4 pb-lg-14 mb-lg-24 _line-b _ls-minus-03">
+			{{ financialReview['expenditure-structure'].title2[lang] | safe }}
+		</h3>
+		{{ component('table', {
+			data: tableProfit,
+			lang: lang
+		})}}
+		<div class="row mb-lg-40">
+			<div class="col-lg-6 col-sm-12 mb-sm-20">
+				<h3 class="h3 pb-lg-12 mb-lg-20 _line-b _ls-minus-03">{{ financialReview.revenue.title[lang] | safe }}</h3>
+				{% for item in financialReview.revenue.text[lang] %}
+					<p class="text _fs-14 c-gray-menu-text">{{ item | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<h3 class="h3 pb-lg-12 mb-lg-20 _line-b _ls-minus-03">{{ financialReview.profit.title[lang] | safe }}</h3>
+				{% for item in financialReview.profit.text[lang] %}
+					<p class="text _fs-14 c-gray-menu-text">{{ item | safe }}</p>
+				{% endfor %}
+			</div>
+		</div>
+		<h3 class="h3 pb-lg-12 mb-lg-32 mb-sm-24 _line-b _ls-minus-03">{{ financialReview.summary.title[lang] | safe }}</h3>
+		<div class="row mb-lg-2">
+			<div class="col-lg-6 col-sm-12">
+				<h4 class="h4 pb-lg-12 mb-lg-14 _line-b">{{ table2022Net.title[lang] | safe }}</h4>
+				{{ component('table', {
+					data: table2022Net.table,
+					lang: lang
+				})}}
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<h4 class="h4 pb-lg-12 mb-lg-18 _line-b">{{ tableSelling.title[lang] | safe }}</h4>
+				{{ component('table', {
+					data: tableSelling.table,
+					lang: lang
+				})}}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-sm-12">
+				<h4 class="h4 pb-lg-12 mb-lg-18 _line-b">{{ table2022Lfl.title[lang] | safe }}</h4>
+				{{ component('table', {
+					data: table2022Lfl.table,
+					lang: lang
+				})}}
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<h4 class="h4 pb-lg-12 mb-lg-18 _line-b">{{ tableSales.title[lang] | safe }}</h4>
+				{{ component('table', {
+					data: tableSales.table,
+					lang: lang
+				})}}
+			</div>
+		</div>
+		<h3 class="h3 pb-lg-12 mb-lg-24 mb-sm-16 _line-b _ls-minus-03">{{ financialReview["adjusted-selling"].title[lang] | safe }}</h3>
+		{{ component('table', {
+			data: tableAdjusted,
+			lang: lang
+		})}}
+		<h3 class="h3 pb-lg-12 mb-lg-20 _line-b _ls-minus-03">{{ financialReview.analysis.title[lang] | safe }}</h3>
+		<div class="row mb-lg-76">
+			<div class="col-lg-6 col-sm-12 financial-review__col-text text _fs-14">
+				{% for item in financialReview.analysis.text1[lang] %}
+					<p>{{ item | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="col-lg-6 col-sm-12 financial-review__col-text text _fs-14">
+				{% for item in financialReview.analysis.text2[lang] %}
+					<p>{{ item | safe }}</p>
+				{% endfor %}
+			</div>
+		</div>
+		<h3 class="h3 pb-lg-12 mb-lg-20 _line-b _ls-minus-03">{{ financialReview.incentive.title[lang] | safe }}</h3>
+		<div class="row mb-lg-40">
+			<div class="col-lg-6 col-sm-12 financial-review__col-text text _fs-14">
+				{% for item in financialReview.incentive.text1[lang] %}
+					<p>{{ item | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="col-lg-6 col-sm-12 financial-review__col-text text _fs-14">
+				{% for item in financialReview.incentive.text2[lang] %}
+					<p>{{ item | safe }}</p>
+				{% endfor %}
+			</div>
+		</div>
+		<h4 class="h4 pb-lg-16 mb-lg-14 _line-b">{{ tableLti.title[lang] | safe }}</h4>
+		{{ component('table', {
+			data: tableLti.table,
+			lang: lang
+		})}}
+		<h3 class="h3 pb-lg-12 mb-lg-24 mb-sm-16 _line-b _ls-minus-03">{{ tableEbitda.title[lang] | safe }}</h3>
+		{{ component('table', {
+			data: tableEbitda,
+			lang: lang
+		})}}
+		<div class="row mb-lg-60 mb-sm-48">
+			<div class="col-lg-4 mb-sm-20 col-sm-12">
+				<h3 class="h3 pb-lg-12 mb-lg-20 _line-b _ls-minus-03">{{ financialReview.lease.title[lang] | safe }}</h3>
+				<p class="text _fs-14 c-gray-menu-text">{{ financialReview.lease.text[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-4 mb-sm-20 col-sm-12">
+				<h3 class="h3 pb-lg-12 mb-lg-20 _line-b _ls-minus-03">{{ financialReview['ebitda-analysis'].title[lang] | safe }}</h3>
+				<p class="text _fs-14 c-gray-menu-text">{{ financialReview['ebitda-analysis'].text[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-4 col-sm-12">
+				<h3 class="h3 pb-lg-12 mb-lg-20 _line-b _ls-minus-03">{{ financialReview['ebitda-analysis-segment'].title[lang] | safe }}</h3>
+				<p class="text _fs-14 c-gray-menu-text">{{ financialReview['ebitda-analysis-segment'].text[lang] | safe }}</p>
+			</div>
+		</div>
+		<div class="row mb-lg-2">
+			<div class="col-lg-6 col-sm-12">
+				<h3 class="h3 pb-lg-12 mb-lg-14 _line-b">{{ tablePyaterochka.title[lang] | safe }}</h3>
+				{{ component('table', {
+					data: tablePyaterochka.table,
+					lang: lang
+				})}}
+				<p class="text _fs-14 mb-lg-58 mb-sm-46">{{ tablePyaterochka.text[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<h3 class="h3 pb-lg-12 mb-lg-14 _line-b">{{ tablePerekrestok.title[lang] | safe }}</h3>
+				{{ component('table', {
+					data: tablePerekrestok.table,
+					lang: lang
+				})}}
+				<p class="text _fs-14 mb-lg-58 mb-sm-46">{{ tablePerekrestok.text[lang] | safe }}</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-sm-12">
+				<h3 class="h3 pb-lg-12 mb-lg-8 _line-b">{{ tableOther.title[lang] | safe }}</h3>
+				{{ component('table', {
+					data: tableOther.table,
+					lang: lang
+				})}}
+				<p class="text _fs-14 mb-lg-64 mb-sm-48">{{ tableOther.text[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<h3 class="h3 pb-lg-12 mb-lg-14 _line-b">{{ tableCorporate.title[lang] | safe }}</h3>
+				{{ component('table', {
+					data: tableCorporate.table,
+					lang: lang
+				})}}
+				<p class="text _fs-14 mb-lg-60 mb-sm-48">{{ tableCorporate.text[lang] | safe }}</p>
+			</div>
+		</div>
+		<h3 class="h3 pb-lg-12 mb-lg-20 _line-b _ls-minus-03">{{ financialReview.depreciation.title[lang] | safe }}</h3>
+		<p class="text mb-lg-60 _fs-14 c-gray-menu-text financial-review__depreciation-text">{{ financialReview.depreciation.text[lang] | safe }}</p>
+		<h3 class="h3 pb-lg-12 mb-lg-22 mb-sm-16 _line-b _ls-minus-03">{{ tableNonOperating.title[lang] | safe }}</h3>
+		{{ component('table', {
+			data: tableNonOperating,
+			lang: lang
+		})}}
+		<h3 class="h3 pb-lg-12 mb-lg-20 _line-b _ls-minus-03">{{ financialReview["analysis-of-non-operating"].title[lang] | safe }}</h3>
+		<div class="row mb-lg-60">
+			<div class="col-lg-6 mb-sm-20 col-sm-12 financial-review__col-text">
+				{% for item in financialReview["analysis-of-non-operating"].text1[lang] %}
+					<p>{{ item | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="col-lg-6 col-sm-12 financial-review__col-text">
+				{% for item in financialReview["analysis-of-non-operating"].text2[lang] %}
+					<p>{{ item | safe }}</p>
+				{% endfor %}
+			</div>
+		</div>
+		<h3 class="h3 pb-lg-12 mb-lg-22 mb-sm-16 _line-b _ls-minus-03">{{ tableConsolidated.title[lang] | safe }}</h3>
+		{{ component('table', {
+			data: tableConsolidated,
+			lang: lang
+		})}}
+		<h3 class="h3 pb-lg-12 mb-lg-20 _line-b _ls-minus-03">{{ financialReview["cash-flow-analysis"].title[lang] | safe }}</h3>
+		<div class="row mb-lg-60">
+			<div class="col-lg-6 mb-sm-20 col-sm-12 financial-review__col-text">
+				{% for item in financialReview["cash-flow-analysis"].text1[lang] %}
+					<p>{{ item | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="col-lg-6 col-sm-12 financial-review__col-text">
+				{% for item in financialReview["cash-flow-analysis"].text2[lang] %}
+					<p>{{ item | safe }}</p>
+				{% endfor %}
+			</div>
+		</div>
+		<h3 class="h3 pb-lg-12 mb-lg-20 _line-b _ls-minus-03">{{ financialReview["liquidity-analysis"].title[lang] | safe }}</h3>
+		<div class="row mb-lg-60">
+			<div class="col-lg-6 mb-sm-20 col-sm-12 financial-review__col-text">
+				{% for item in financialReview["liquidity-analysis"].text1[lang] %}
+					<p>{{ item | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="col-lg-6 col-sm-12 financial-review__col-text">
+				{% for item in financialReview["liquidity-analysis"].text2[lang] %}
+					<p>{{ item | safe }}</p>
+				{% endfor %}
+			</div>
+		</div>
+		<h3 class="h3 pb-lg-12 mb-lg-24 mb-sm-16 _line-b _ls-minus-03">{{ tableLiquid.title[lang] | safe }}</h3>
+		{{ component('table', {
+			data: tableLiquid.table,
+			lang: lang
+		})}}
+	</div>
+</section>

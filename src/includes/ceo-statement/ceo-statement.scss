@@ -1,0 +1,103 @@
+.ceo-statement {
+	padding-bottom: 110px;
+	&__quote {
+		display: grid;
+		grid-template-columns: calc(343 / 1112 * 100%) calc(727 / 1112 * 100%);
+		gap: 41px;
+		margin-bottom: 64px;
+
+		@include max-screen($breakpoint-md-3) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	&__quote-icon {
+		display: block;
+		margin-bottom: 30px;
+	}
+	&__quote-name {
+		padding-top: 20px;
+		border-top: 1px solid $c-green;
+		font-size: 28px;
+		line-height: 1.25;
+		letter-spacing: -0.03em;
+	}
+	&__quote-text-wrap {
+		display: flex;
+		flex-direction: column;
+		gap: 26px;
+	}
+	&__talks {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 40px;
+		margin-bottom: 60px;
+
+		@include max-screen($breakpoint-md-3) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	&__talk {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+		.text {
+			margin-top: 0;
+		}
+	}
+	&__signatures {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		padding: 30px 0;
+		background: $c-bg-gray-light;
+
+		@include max-screen($breakpoint-md-3) {
+			display: flex;
+			flex-direction: column;
+		}
+
+		@include max-screen($breakpoint-xs) {
+			gap: 30px;
+		}
+	}
+	&__signature {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 40px;
+		padding: 0 40px;
+		max-width: 407px;
+		&:last-child {
+			border-left: 1px solid $c-partners-border;
+
+			@include max-screen($breakpoint-md-3) {
+				border-left: none;
+			}
+		}
+
+		@include max-screen($breakpoint-md-3) {
+			max-width: 100%;
+		}
+
+		@include max-screen($breakpoint-xs) {
+			display: flex;
+			flex-direction: column;
+			justify-content: initial;
+			align-items: initial;
+			gap: 20px;
+			padding: 0 30px;
+		}
+	}
+	&__signature-data-name {
+		margin-bottom: 14px;
+		line-height: 96%;
+	}
+	&__signature-data-company {
+		color: $c-light-gray-2;
+		text-transform: uppercase;
+		font-size: 11px;
+		line-height: 1.45;
+		letter-spacing: 0.01em;
+	}
+}

@@ -1,0 +1,58 @@
+{% set innovations = strategicReport['innovations-2'] %}
+
+<section id="innovations" class="innovations section">
+	<div class="section__container container">
+		<h2 class="h1 pt-lg-32 pt-sm-16 mb-lg-36 mb-sm-32 _line-t _ls-minus-03">
+			{{ innovations.title[lang] | safe }}
+		</h2>
+		<div class="row mb-lg-60">
+			<div class="col-lg-6 col-sm-12 innovations__col-text">
+				{% for item in innovations.col1[lang] %}
+					<p>{{ item | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="col-lg-6 col-sm-12 innovations__col-text">
+				{% for item in innovations.col2[lang] %}
+					<p>{{ item | safe }}</p>
+				{% endfor %}
+			</div>
+		</div>
+		<h3 class="h3 pb-lg-12 mb-lg-20 mb-sm-32 _line-b _ls-minus-03">
+			{{ innovations.scouting.title[lang] | safe }}
+		</h3>
+		<div class="row mb-lg-38 c-gray-menu-text">
+			<div class="col-lg-6 col-sm-12 innovations__col-text">
+				{% for item in innovations.scouting.col1[lang] %}
+					<p>{{ item | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="col-lg-6 col-sm-12 innovations__col-text">
+				{% for item in innovations.scouting.col2[lang] %}
+					<p>{{ item | safe }}</p>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-sm-12 mb-sm-40">
+				<h3 class="h3 pb-lg-12 pt-lg-30 mb-lg-20 mb-sm-32 _line-b _ls-minus-03">
+					{{ innovations.joint.title[lang] | safe }}
+				</h3>
+				<div class="innovations__col-text c-gray-menu-text">
+					{% for item in innovations.joint.col[lang] %}
+						<p>{{ item | safe }}</p>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<h3 class="h3 pb-lg-12 mb-lg-20 mb-sm-32 _line-b _ls-minus-03">
+					{{ innovations.fostering.title[lang] | safe }}
+				</h3>
+				<div class="innovations__col-text c-gray-menu-text">
+					{% for item in innovations.fostering.col[lang] %}
+						<p>{{ item | safe }}</p>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -9,9 +9,9 @@
 {% set fullPath = pathBase + path + '/' + srcName %}
 
 <picture>
-	<source media="(max-width: 567px)" srcset="{{ fullPath }}-s.jpg, {{ fullPath }}-s@2x.jpg 2x" type="image/webp">
-	<source media="(max-width: 767px)" srcset="{{ fullPath }}-m.jpg, {{ fullPath }}-m@2x.jpg 2x" type="image/webp">
-	<source media="(max-width: 1111px)" srcset="{{ fullPath }}-l.jpg, {{ fullPath }}-l@2x.jpg 2x" type="image/webp">
-	<source srcset="{{ fullPath }}.jpg, {{ fullPath }}@2x.jpg 2x" type="image/webp">
-	<img class="responsive-image{% if className %} {{ className }}{% endif %}" src="{{ fullPath }}.jpg" srcset="{{ fullPath }}@2x.jpg 2x" width="{{ width }}" height="{{ height }}" alt="{{ alt }}" loading="lazy">
+	<source media="(max-width: 567px)" srcset="{{ fullPath }}-s.{{ ext }}, {{ fullPath }}-s@2x.{{ ext }} 2x" type="image/webp">
+	<source media="(max-width: 767px)" srcset="{{ fullPath }}-m.{{ ext }}, {{ fullPath }}-m@2x.{{ ext }} 2x" type="image/webp">
+	<source media="(max-width: 1111px)" srcset="{{ fullPath }}-l.{{ ext }}, {{ fullPath }}-l@2x.{{ ext }} 2x" type="image/webp">
+	<source srcset="{{ fullPath }}.{{ ext }}, {{ fullPath }}@2x.{{ ext }} 2x" type="image/webp">
+	<img class="responsive-image{% if className %} {{ className }}{% endif %}" src="{{ fullPath }}.{{ ext }}" srcset="{{ fullPath }}@2x.jpg 2x" width="{{ width }}" height="{{ height }}" alt="{{ alt }}" loading="lazy">
 </picture>

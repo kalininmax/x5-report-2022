@@ -1,0 +1,262 @@
+.sustainability {
+	color: $c-gray-menu-text;
+	font-size: 14px;
+	line-height: 1.43;
+	letter-spacing: -0.02em;
+
+	@include max-screen($breakpoint-sm) {
+		font-size: 12px;
+		line-height: 1.33;
+	}
+	&__image {
+		height: auto;
+		border-radius: 10px;
+	}
+	li {
+		color: $c-gray-menu-text;
+	}
+	&__max-width-text {
+		max-width: 891px;
+	}
+	&__text {
+		&._mw-95 {
+			max-width: 95px;
+		}
+		&._mw-180 {
+			max-width: 180px;
+		}
+		&._mw-190 {
+			max-width: 180px;
+		}
+		&._mw-200 {
+			max-width: 200px;
+		}
+		&._mw-780 {
+			max-width: 780px;
+		}
+		&._p-l-30 {
+			position: relative;
+			left: 30px;
+		}
+		&._p-l-20 {
+			position: relative;
+			left: 40px;
+		}
+		&._p-l-10 {
+			position: relative;
+			left: 30px;
+		}
+		&._p-l-0 {
+			position: relative;
+			left: 20px;
+		}
+		&._mb-p:not(:last-of-type) {
+			margin-bottom: 15px;
+		}
+		&._black {
+			color: $c-black;
+		}
+		&._def-c {
+			color: $default-color;
+		}
+	}
+	&__key-documents {
+		overflow-x: auto;
+	}
+	&__key-table {
+		min-width: $breakpoint-sm;
+	}
+	&__key-table-th {
+		padding-bottom: 10px;
+		color: $c-gray-menu-hover-text;
+		text-align: left;
+		font-size: 13px;
+		line-height: 17px;
+		font-weight: 500;
+	}
+	&__key-table-td {
+		border: 1px solid $c-highlights-border;
+		border-left: none;
+	}
+	&__key-table-tr td:nth-child(1) {
+		padding-top: 20px;
+		width: 243px;
+	}
+	&__key-table-tr td:nth-child(2) {
+		padding: 20px 0 30px 30px;
+		border-right: none;
+	}
+	ul li:not(:first-child) {
+		margin-top: 10px;
+	}
+	&__value-model-table {
+		&._desktop {
+			@include max-screen($breakpoint-md) {
+				display: none;
+			}
+		}
+		&._mobile {
+			display: none;
+			padding: 32px 26px 20px;
+			background-color: $c-bg-gray-light;
+
+			@include max-screen($breakpoint-md) {
+				display: block;
+			}
+
+			@include max-screen($breakpoint-sm) {
+				.h4 {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+	ul.list li::before {
+		@include max-screen($breakpoint-sm) {
+			top: 7px;
+		}
+	}
+}
+
+.sustainability-table {
+	&__tr-h {
+		border-bottom: 1px solid $c-highlights-border;
+	}
+	&__th {
+		padding-bottom: 10px;
+		color: $default-color;
+		text-align: left;
+		font-size: 13px;
+		line-height: 17px;
+		font-weight: 500;
+		vertical-align: bottom;
+	}
+	&__td-left {
+		width: 228px;
+	}
+	&__td-left-text {
+		margin-right: 37px;
+		padding-bottom: 15px;
+		border-bottom: 1px solid $c-partners-border;
+		&._pb-10 {
+			padding-bottom: 10px;
+		}
+		&._mt-110 {
+			margin-top: 110px;
+		}
+		&._mt-34 {
+			margin-top: 34px;
+		}
+	}
+	&__td-with-list {
+		width: 220px;
+	}
+	&__td-without-list {
+		width: 220px;
+	}
+	&__card {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		margin-left: 20px;
+		width: 200px;
+	}
+	&__card-list {
+		margin-top: 20px;
+		width: 220px;
+	}
+}
+
+.sustainability-card {
+	display: flex;
+	flex-direction: column;
+	padding-top: 20px;
+	padding-left: 20px;
+	box-sizing: border-box;
+	height: 373px;
+	border-radius: 10px;
+	background-color: $c-bg-gray-light;
+	&__icon {
+		margin-bottom: 20px;
+	}
+	&__title {
+		margin-bottom: 10px;
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: 500;
+		&._mw-140 {
+			max-width: 140px;
+		}
+		&._mw-150 {
+			max-width: 150px;
+		}
+		&._mw-160 {
+			max-width: 160px;
+		}
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 53px;
+	}
+	&__cl-4 {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 50px;
+		padding-top: 3px;
+		height: 120px;
+	}
+	&__ul-2 {
+		position: relative;
+		bottom: 3px;
+	}
+}
+
+.mobile-table {
+	color: $default-color;
+	text-align: left;
+	th {
+		padding-bottom: 12px;
+	}
+	tr:not(:last-child) {
+		border-bottom: 1px solid $c-partners-border;
+	}
+	td {
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+	tr td:first-child {
+		padding-right: 10px;
+		width: 30%;
+	}
+	tr td:nth-child(2) {
+		padding-left: 20px;
+	}
+	._disp-row {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+	&__icon {
+		flex-shrink: 0;
+		width: 32px;
+		height: 32px;
+	}
+}
+
+[lang='ru'] {
+	.sustainability-card {
+		height: 520px;
+		&__cl-4 {
+			height: 120px;
+		}
+	}
+	.mobile-table {
+		tr td:nth-child(2) {
+			padding-left: 0;
+		}
+		th {
+			padding-left: 0;
+		}
+	}
+}

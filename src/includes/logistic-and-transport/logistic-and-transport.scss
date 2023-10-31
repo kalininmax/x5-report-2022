@@ -1,0 +1,208 @@
+.logistic-and-transport {
+	.text {
+		color: $c-gray-menu-text;
+	}
+	&__title {
+		display: grid;
+		grid-template-columns: 1fr auto;
+		align-items: flex-start;
+		gap: 12px;
+	}
+	&__title-icon {
+		--size: 60px;
+
+		padding: 15px;
+		box-sizing: border-box;
+		width: var(--size);
+		height: var(--size);
+		border: 1px solid $c-highlights-border;
+		border-radius: 50%;
+	}
+	&__highlights {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 0 60px;
+
+		@include max-screen($breakpoint-sm) {
+			grid-template-columns: repeat(1, 1fr);
+			gap: 20px;
+		}
+		& > * {
+			&:nth-child(2n + 1):last-child {
+				grid-column: 1 / 3;
+
+				@include max-screen($breakpoint-sm) {
+					grid-column: initial;
+				}
+			}
+			&:not(:nth-child(1), :nth-child(2)) {
+				margin-top: -10px;
+
+				@include max-screen($breakpoint-sm) {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+	&__legend {
+		display: flex;
+		gap: 8px;
+	}
+	&__legend-item {
+		display: flex;
+		gap: 10px;
+		min-width: 152px;
+		font-size: 13px;
+		line-height: 15px;
+		letter-spacing: -0.02em;
+	}
+	&__legend-color {
+		--size: 15px;
+
+		display: flex;
+		width: var(--size);
+		height: var(--size);
+		border-radius: 50%;
+	}
+	&__achieving {
+		padding: 41px;
+		padding-bottom: 62px;
+		border-radius: 10px;
+		background-color: $c-green-dark;
+		color: $c-white;
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: -0.02em;
+
+		@include max-screen($breakpoint-sm) {
+			padding: 27px;
+		}
+		.h3 {
+			color: $c-white;
+		}
+		[href] {
+			color: $c-green;
+			text-decoration: none;
+			&:hover {
+				color: $c-white;
+			}
+		}
+	}
+	&__achieving-title {
+		display: flex;
+		gap: 23px;
+	}
+	&__achieving-icon {
+		--size: 60px;
+
+		flex-shrink: 0;
+		padding: 11px;
+		padding-bottom: 13px;
+		padding-left: 13px;
+		box-sizing: border-box;
+		width: var(--size);
+		height: var(--size);
+		border: 1px solid currentColor;
+		border-radius: 50%;
+		color: $c-green;
+	}
+	&__plans {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		overflow: hidden;
+		border-radius: 10px;
+		background-color: $c-bg-gray-light;
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: -0.02em;
+
+		@include max-screen($breakpoint-sm) {
+			grid-template-columns: 1fr;
+		}
+	}
+	&__plans-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	&__plans-content {
+		padding: 50px;
+
+		@include max-screen($breakpoint-sm) {
+			padding: 27px;
+		}
+	}
+	&__max-width-text {
+		max-width: 765px;
+	}
+	&__list {
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: -0.02em;
+
+		@media (max-width: $breakpoint-sm) {
+			font-size: 12px;
+			line-height: 1.33;
+		}
+		&.list {
+			li + li {
+				margin-top: 10px;
+			}
+			li {
+				&::before {
+					top: 7px;
+
+					@media (max-width: $breakpoint-sm) {
+						top: 4px;
+					}
+				}
+				li + li {
+					margin-top: 5px;
+				}
+			}
+			.list {
+				li::before {
+					background-color: $c-highlights-border;
+				}
+			}
+		}
+		&.list ul.list {
+			margin-top: 10px;
+			margin-left: 6px;
+		}
+		&._pr {
+			padding-right: 56px;
+
+			@media (max-width: $breakpoint-sm) {
+				padding-right: 0;
+			}
+		}
+	}
+	&__cols {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 56px;
+
+		@include max-screen($breakpoint-sm) {
+			grid-template-columns: repeat(1, 1fr);
+			gap: 0.625em;
+		}
+	}
+	&__highlights-icon {
+		--size: 60px;
+
+		padding: 12px;
+		box-sizing: border-box;
+		width: var(--size);
+		height: var(--size);
+		border-radius: 50%;
+		background-color: $c-bg-gray-light;
+	}
+	&__col-text {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		font-size: 14px;
+		line-height: 1.43;
+	}
+}

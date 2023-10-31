@@ -1,0 +1,82 @@
+.mnogo-lososya {
+	padding-bottom: 100px;
+}
+
+.mnogo-lososya-card {
+	padding: 40px 56px;
+	box-sizing: border-box;
+	min-height: 388px;
+	border-radius: $default-border-radius;
+	background: $c-green-dark;
+	&__icon-wrapper {
+		margin-bottom: 30px;
+		width: 60px;
+		height: 60px;
+	}
+
+	@include max-screen($breakpoint-sm) {
+		padding: 20px;
+		min-height: auto;
+	}
+}
+
+.mnogo-lososya-keys {
+	overflow: hidden;
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, calc(288 / 1111 * 100%)) calc(248 / 1111 * 100%);
+
+		@include max-screen($breakpoint-md) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include max-screen($breakpoint-sm) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	&__item {
+		padding: 30px;
+		border-top: 1px solid $c-dark-gray-3;
+		border-left: 1px solid $c-dark-gray-3;
+	}
+	&__icon-wrapper {
+		margin-bottom: 22px;
+		width: 60px;
+		height: 60px;
+	}
+	&__item-value {
+		display: flex;
+		align-items: baseline;
+		gap: 5px;
+		margin-bottom: 2px;
+		color: $c-green;
+	}
+	&__item-subtext {
+		color: $c-green;
+		font-size: 13px;
+		line-height: 1.31;
+		font-weight: 400;
+		letter-spacing: -0.02em;
+	}
+}
+
+.mnogo-lososya-plans {
+	display: grid;
+	grid-template-columns: calc(440 / 1111 * 100%) calc(672 / 1111 * 100%);
+	overflow: hidden;
+	border-radius: $default-border-radius;
+
+	@include max-screen($breakpoint-md) {
+		display: flex;
+		flex-direction: column;
+	}
+	&__cnt {
+		padding: 40px 56px;
+		background: $c-green;
+
+		@include max-screen($breakpoint-sm) {
+			padding: 20px;
+		}
+	}
+}

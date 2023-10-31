@@ -1,0 +1,225 @@
+.five-post {
+	padding-bottom: 110px;
+	background: $c-bg-gray-light;
+	&__list {
+		margin-top: -3px;
+		padding: 43px 56px;
+
+		@include max-screen($breakpoint-md) {
+			margin-top: 0;
+			padding: 0;
+		}
+	}
+}
+
+.five-post-keys {
+	overflow: hidden;
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(4, 288px);
+
+		@include max-screen($breakpoint-md) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include max-screen($breakpoint-sm) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	&__item {
+		padding: 30px;
+		border-top: 1px solid $c-dark-gray-3;
+		border-left: 1px solid $c-dark-gray-3;
+	}
+	&__icon-wrapper {
+		margin-bottom: 22px;
+		width: 60px;
+		height: 60px;
+	}
+	&__item-value {
+		display: flex;
+		align-items: baseline;
+		gap: 5px;
+		margin-bottom: 2px;
+		color: $c-green;
+
+		@include max-screen($breakpoint-sm) {
+			.unit {
+				&._big {
+					align-self: center;
+				}
+			}
+		}
+	}
+	&__item-subtext {
+		color: $c-green;
+		font-size: 13px;
+		line-height: 1.31;
+		font-weight: 400;
+		letter-spacing: -0.02em;
+	}
+}
+
+.five-post-business-model {
+	display: grid;
+	grid-template-columns: calc(727 / 1111 * 100%) calc(384 / 1111 * 100%);
+	width: 100%;
+	min-height: 791px;
+	overflow: hidden;
+	border-radius: $default-border-radius;
+	color: $c-white;
+
+	@include max-screen($breakpoint-md) {
+		display: flex;
+		flex-direction: column;
+	}
+	&__value {
+		padding: 50px;
+		box-sizing: border-box;
+		min-height: 301px;
+		background: $c-green;
+
+		@include max-screen($breakpoint-sm) {
+			padding: 30px;
+			min-height: auto;
+		}
+	}
+	&__value-number {
+		margin-bottom: 10px;
+		font-size: 80px;
+		line-height: 100%;
+		font-weight: 500;
+		letter-spacing: -0.03em;
+
+		@include max-screen($breakpoint-sm) {
+			font-size: 48px;
+		}
+	}
+	&__value-text {
+		font-size: 16px;
+		line-height: 1.88;
+		font-weight: 400;
+		letter-spacing: -0.02em;
+	}
+	&__photo-wrapper {
+		img {
+			height: 100%;
+		}
+	}
+}
+
+.five-post-key-partners {
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 10px;
+
+		@include max-screen($breakpoint-md) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@include max-screen($breakpoint-sm) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 195px;
+		overflow: hidden;
+		border-radius: 2px;
+		background: $c-white;
+	}
+}
+
+.five-post-advantages {
+	display: grid;
+	grid-template-columns: calc(632 / 1111 * 100%) calc(480 / 1111 * 100%);
+	overflow: hidden;
+	border-radius: $default-border-radius;
+
+	@include max-screen($breakpoint-md) {
+		display: flex;
+		flex-direction: column;
+	}
+	&__img-wrapper {
+		img {
+			height: 100%;
+		}
+	}
+	&__cnt {
+		padding: 45px 56px;
+		background: $c-green;
+		color: $c-white;
+
+		@include max-screen($breakpoint-sm) {
+			padding: 30px;
+		}
+	}
+	&__cnt-list-item {
+		display: flex;
+		gap: 20px;
+		padding: 19px 0;
+		&:not(:last-child) {
+			border-bottom: 1px solid $c-border-white-3;
+		}
+		&:first-child {
+			padding-top: 0;
+		}
+
+		@include max-screen($breakpoint-sm) {
+			flex-direction: column;
+		}
+	}
+	&__cnt-list-icon-wrapper {
+		flex-shrink: 0;
+		margin-bottom: 0;
+		width: 60px;
+		height: 60px;
+	}
+}
+
+.five-post-goals {
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 40px;
+
+		@include max-screen($breakpoint-md) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@include max-screen($breakpoint-sm) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	&__list-item {
+		padding: 30px 35px;
+		box-sizing: border-box;
+		min-height: 290px;
+		border-radius: $default-border-radius;
+		background: $c-white;
+		&:nth-child(6) {
+			grid-column: 2/4;
+
+			@include max-screen($breakpoint-md) {
+				grid-column: initial;
+			}
+		}
+	}
+	&__list-icon-wrapper {
+		margin-bottom: 20px;
+		width: 72px;
+		height: 72px;
+		border: none;
+		background: $c-bg-gray-light;
+	}
+	&__text {
+		padding-top: 14px;
+		border-top: 1px solid $c-highlights-border;
+	}
+}

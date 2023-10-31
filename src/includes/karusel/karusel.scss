@@ -1,0 +1,28 @@
+.karusel {
+	margin-bottom: 54px;
+	padding-top: 62px;
+	&__numbers {
+		grid-template-columns: calc(174 / 632 * 100%) calc(165 / 632 * 100%) calc(248 / 632 * 100%);
+		gap: 18px;
+	}
+	&__number {
+		&:last-child {
+			margin-left: 10px;
+
+			@include max-screen($breakpoint-md) {
+				margin-left: 0;
+			}
+		}
+	}
+	&__text-prefix {
+		margin-bottom: 20px;
+	}
+	&__text {
+		max-width: 100%;
+	}
+	&__header-img {
+		height: 100%;
+		max-height: 600px;
+		border-radius: $default-border-radius;
+	}
+}

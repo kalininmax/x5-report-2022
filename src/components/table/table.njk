@@ -1,39 +1,40 @@
-{% macro table(data, lang) %}
-	<div class="table {{data.mod}}" >
-		<div class="table__container">
-			<table class="table__table">
-				{% if data.caption %}
-					<caption class="table__caption {{data.caption.mod}}">{{ data.caption }}</caption>
-				{% endif %}
-				{% if data.thead %}
-					<thead>
-						{% for row in data.thead.rows %}
-							<tr {% if row.mod %} class="{{row.mod}}" {% endif %}>
-								{% for th in row.ths %}
-									{% set colspanValue = "colspan=" + th.colspan if th.colspan else '' %}
-									{% set rowspanValue = "rowspan=" + th.rowspan if th.rowspan else '' %}
-									<th class="table__th {{ th.mod }}" {{colspanValue}} {{rowspanValue}}>
-										{{ th.title[lang] }}
-									</th>
-								{% endfor %}
-							</tr>
-						{% endfor %}
-					</thead>
-				{% endif %}
-				<tbody>
-					{% for row in data.tbody.rows %}
-						<tr>
-							{% for td in row.tds %}
-								{% set colspanValue = "colspan=" + td.colspan if td.colspan else '' %}
-								{% set rowspanValue = "rowspan=" + td.rowspan if td.rowspan else '' %}
-								<td class="table__td {{ td.mod }}" {{colspanValue}} {{rowspanValue}}>
-									{{ td.text[lang] }}
-								</td>
+{% set data = props.data %}
+{% set lang = props.lang %}
+
+<div class="table {{data.mod}}" >
+	<div class="table__container">
+		<table class="table__table">
+			{% if data.caption %}
+				<caption class="table__caption {{data.caption.mod}}">{{ data.caption | safe }}</caption>
+			{% endif %}
+			{% if data.thead %}
+				<thead>
+					{% for row in data.thead.rows %}
+						<tr {% if row.mod %} class="{{row.mod}}" {% endif %}>
+							{% for th in row.ths %}
+								{% set colspanValue = "colspan=" + th.colspan if th.colspan else '' %}
+								{% set rowspanValue = "rowspan=" + th.rowspan if th.rowspan else '' %}
+								<th class="table__th {{ th.mod | safe }}" {{colspanValue}} {{rowspanValue}}>
+									{{ th.title[lang] | safe }}
+								</th>
 							{% endfor %}
 						</tr>
 					{% endfor %}
-				</tbody>
-			</table>
-		</div>
+				</thead>
+			{% endif %}
+			<tbody>
+				{% for row in data.tbody.rows %}
+					<tr>
+						{% for td in row.tds %}
+							{% set colspanValue = "colspan=" + td.colspan if td.colspan else '' %}
+							{% set rowspanValue = "rowspan=" + td.rowspan if td.rowspan else '' %}
+							<td class="table__td {{ td.mod | safe }}" {{colspanValue}} {{rowspanValue}}>
+								{{ td.text[lang] | safe }}
+							</td>
+						{% endfor %}
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
 	</div>
-{% endmacro %}
+</div>

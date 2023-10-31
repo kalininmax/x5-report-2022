@@ -1,0 +1,89 @@
+<section class="x5-digital" id="x5-digital">
+	<div class="container">
+		<h2 class="h1 pt-lg-32 pt-sm-16 mb-lg-60 mb-sm-32 _line-t _ls-minus-03">
+			{{ strategicReport['x5-digital'].title[lang] | safe }}
+		</h2>
+		<h3 class="h2 pb-lg-10 mb-lg-30 _line-b _ls-minus-03">
+			{{ strategicReport['x5-digital'].subtitle[lang] | safe }}
+		</h3>
+		<div class="row mb-lg-30">
+			<div class="col-lg-6 col-sm-12 mb-lg-30">
+				{{ strategicReport['x5-digital'].text1[lang] | safe }}
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				{{ strategicReport['x5-digital'].text2[lang] | safe }}
+			</div>
+		</div>
+		<div class="x5-digital__keys x5-digital-keys mb-lg-34">
+			<p class="text c-default medium mb-lg-16 ttu _ls-0">{{ strategicReport['x5-digital'].keys.title[lang] | safe }}</p>
+			<ul class="x5-digital-keys__items">
+				{% for item in strategicReport['x5-digital'].keys.list %}
+					<li class="x5-digital-keys__item">
+						<p class="x5-digital-keys__item-value big-text">{{ item.value[lang] | safe }}</p>
+						<p class="x5-digital-keys__item-text text _fs-14">{{ item.text[lang] | safe }}</p>
+						<p class="x5-digital-keys__item-subtext">{{ item.subtext[lang] | safe }}</p>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="x5-digital__delivery x5-digital-delivery mb-lg-46">
+			<div class="x5-digital-delivery__express">
+				<h2 class="text _lh-1-12 _ls-0 ttu medium _white pb-lg-16 mb-lg-30 _line-b _white">
+					{{ strategicReport['x5-digital'].delivery.express.title[lang] | safe }}
+				</h2>
+				<div class="x5-digital-delivery__sheme text _fs-14 _white mb-lg-30">
+					<div class="x5-digital-delivery__sheme-item">
+						<p class="big-text">{{ strategicReport['x5-digital'].delivery.express.sheme.value[lang] | safe }}</p>
+						<p class="x5-digital-delivery__sheme-item-text">{{ strategicReport['x5-digital'].delivery.express.sheme.text[lang] | safe }}</p>
+					</div>
+					<div class="x5-digital-delivery__sheme-item _circle">
+						<p>{{ strategicReport['x5-digital'].delivery.express.sheme.circle[lang] | safe }}</p>
+					</div>
+					<div class="x5-digital-delivery__sheme-item">
+						<p class="big-text">{{ strategicReport['x5-digital'].delivery.express.sheme.value2[lang] | safe }}</p>
+						<p class="x5-digital-delivery__sheme-item-text">{{ strategicReport['x5-digital'].delivery.express.sheme.text2[lang] | safe }}</p>
+					</div>
+				</div>
+				<ul class="x5-digital-delivery__list mb-lg-30">
+					{% for item in strategicReport['x5-digital'].delivery.express.list %}
+						<li class="x5-digital-delivery__list-item">
+							<div class="x5-digital-delivery__icon-wrapper">
+								{{ component('icon', {
+									iconName: item.icon,
+									attributes: item.iconData,
+									className: "x5-digital-delivery__icon"
+								})}}
+							</div>
+							{{ item.text[lang] | safe }}
+						</li>
+					{% endfor %}
+				</ul>
+				<p class="big-text">{{ strategicReport['x5-digital'].delivery.express.value[lang] | safe }}</p>
+				<p class="text _white _fs-14 mb-lg-30">{{ strategicReport['x5-digital'].delivery.express.valueText[lang] | safe }}</p>
+				<p class="text _white _70 _fs-14">{{ strategicReport['x5-digital'].delivery.express.text[lang] | safe }}</p>
+			</div>
+			<div class="x5-digital-delivery__plans">
+				<h2 class="text _lh-1-12 _ls-0 ttu medium _white pb-lg-16 mb-lg-22 _line-b">
+					{{ strategicReport['x5-digital'].delivery.plans.title[lang] | safe }}
+				</h2>
+				{{ strategicReport['x5-digital'].delivery.plans.text[lang] | safe }}
+			</div>
+		</div>
+		<div class="x5-digital__charts x5-digital-charts mb-lg-60">
+			<p class="text c-default medium pb-lg-10 mb-lg-26 _line-b _ls-0">
+				{{ strategicReport['x5-digital'].charts.title[lang] | safe }}
+			</p>
+			<ul class="x5-digital__legend">
+				{% for item in strategicReport['x5-digital'].charts.legend %}
+					<li class="x5-digital__legend-item">
+						<i class="circle-icon" style="background: #{{ item.icon }}"></i>
+						{{ item.text[lang] | safe }}
+					</li>
+				{% endfor %}
+			</ul>
+			<div class="x5-digital__charts-images scroll-wrapper-900">
+				<img class="x5-digital__chart-img" src="{{ strategicReport['x5-digital'].charts.chartImg[lang] | safe }}" width="1005" height="259" alt="">
+			</div>
+		</div>
+	</div>
+</section>

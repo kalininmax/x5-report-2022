@@ -1,0 +1,156 @@
+<section class="express-delivery section" id="express-delivery">
+	<div class="container">
+		<h2 class="h2 pb-lg-14 mb-lg-40 _line-b _ls-minus-03">
+			{{ strategicReport['express-delivery-data'].title[lang] | safe }}
+		</h2>
+		<div class="row mb-lg-60">
+			<div class="col-lg-4 col-sm-12 mb-lg-30">
+				<div class="express-delivery__icon-wrapper mb-lg-32">
+					{{ component('icon', {
+						iconName: "vprok-big",
+						attributes: "width=\"146\" height=\"42\"",
+						className: "express-delivery__icon"
+					})}}
+				</div>
+				{{ strategicReport['express-delivery-data'].text1[lang] | safe }}
+			</div>
+			<div class="col-lg-8 col-sm-12">
+				<div class="express-delivery__card">
+					<div class="express-delivery__card-item">
+						<p class="express-delivery__card-title text c-default ttu medium pb-lg-14 mb-lg-20 _line-b _ls-0">
+							{{ strategicReport['express-delivery-data'].card.title[lang] | safe }}
+						</p>
+						<ul class="express-delivery__list list">
+							{% for item in strategicReport['express-delivery-data'].card.list %}
+								<li class="express-delivery__list-item text _fs-14 c-gray-menu-text _mt-10">{{ item[lang] | safe }}</li>
+							{% endfor %}
+						</ul>
+					</div>
+					<div class="express-delivery__card-item _phone">
+						{{ component('picture', {
+							path: "section-2",
+							name: strategicReport["express-delivery-data"].card.img[lang],
+							ext: "png",
+							width: '155',
+							height: "346",
+							className: "express-delivery__card-img",
+							lang: lang
+						})}}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="express-delivery__keys express-delivery-keys mb-lg-58">
+			<p class="text c-default medium mb-lg-16 ttu _ls-0">{{ strategicReport['express-delivery-data'].keys.title[lang] | safe }}</p>
+			<ul class="express-delivery-keys__items">
+				{% for item in strategicReport['express-delivery-data'].keys.list %}
+					<li class="express-delivery-keys__item">
+						<p class="express-delivery-keys__item-value big-text">{{ item.value[lang] | safe }}</p>
+						<p class="express-delivery-keys__item-text text _fs-14">{{ item.text[lang] | safe }}</p>
+						<p class="express-delivery-keys__item-subtext">{{ item.subtext[lang] | safe }}</p>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="express-delivery__business-model express-delivery-business-model mb-lg-60">
+			<div class="express-delivery-business-model__cnt">
+				<h2 class="h2 _ls-minus-03">
+					{{ strategicReport['express-delivery-data']["business-model"].title[lang] | safe }}
+				</h2>
+				<div class="express-delivery-business-model__diagram _desktop">
+					<div class="express-delivery-business-model__diagram-main">
+						<div class="express-delivery-business-model__diagram-main-icon-wrapper">
+							{{ component('icon', {
+								iconName: 'diagram-main-icon',
+								className: "express-delivery-business-model__diagram-main-icon",
+								attributes: "width='85' height='85'"
+							})}}
+						</div>
+						<p class="express-delivery-business-model__diagram-main-text">
+							{{ strategicReport['express-delivery-data']["business-model"]["diagram-main"].text[lang] | safe }}
+						</p>
+					</div>
+					<ul class="express-delivery-business-model__diagram-list">
+						{% for item in strategicReport['express-delivery-data']["business-model"]["diagram-list"] %}
+							<li class="express-delivery-business-model__diagram-list-item">
+								<div class="express-delivery-business-model__diagram-list-icon-wrapper circle">
+									{{ component('icon', {
+										iconName: item.icon,
+										attributes: item.iconData,
+										className: "express-delivery-business-model__diagram-list-icon"
+									})}}
+								</div>
+								<p class="express-delivery-business-model__diagram-list-text text _fs-14 _white">
+									{{ item.text[lang] | safe }}
+								</p>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="express-delivery-business-model__diagram _mobile">
+					<img class="express-delivery__chart-img-mobile" src="{{ strategicReport['express-delivery-data']['business-model'].diagramImg[lang] | safe }}" width="545" height="429" alt="">
+				</div>
+			</div>
+			<div class="express-delivery-business-model__img-wrapper">
+				{{ component('picture', {
+					path: "section-2",
+					name: strategicReport["express-delivery-data"]["business-model"].img,
+					ext: "jpg",
+					width: '456',
+					height: "552",
+					className: "express-delivery-business-model__img",
+					lang: lang
+				})}}
+			</div>
+		</div>
+		<div class="express-delivery__charts express-delivery-charts mb-lg-60">
+			<p class="text c-default pb-lg-10 mb-lg-48 _line-b _ls-0">
+				{{ strategicReport['express-delivery-data'].charts.one.title[lang] | safe }}
+			</p>
+			<div class="express-delivery__charts-images scroll-wrapper-900">
+				<img class="express-delivery__chart-img" src="{{ strategicReport['express-delivery-data'].charts.one.chartImg[lang] | safe }}" width="1112" height="308" alt="">
+			</div>
+		</div>
+		<div class="express-delivery__charts express-delivery-charts mb-lg-60">
+			<p class="text c-default pb-lg-12 mb-lg-24 _line-b _ls-0">
+				{{ strategicReport['express-delivery-data'].charts.two.title[lang] | safe }}
+			</p>
+			<ul class="express-delivery__legend">
+				{% for item in strategicReport['express-delivery-data'].charts.two.legend %}
+					<li class="express-delivery__legend-item">
+						<i class="circle-icon" style="background: {{ item.bg }}; {% if item.border %} border: {{ item.border }} {% endif %}"></i>
+						{{ item.text[lang] | safe }}
+					</li>
+				{% endfor %}
+			</ul>
+			<div class="express-delivery__charts-images scroll-wrapper-900">
+				<img class="express-delivery__chart-img" src="{{ strategicReport['express-delivery-data'].charts.two.chartImg[lang] | safe }}" width="1112" height="401" alt="">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-sm-12 mb-sm-30">
+				<p class="text c-default medium mb-lg-16">
+					{{ strategicReport['express-delivery-data'].texts.one.title[lang] | safe }}
+				</p>
+				<ul class="list text _fs-14 c-gray-menu-text">
+					{% for item in strategicReport['express-delivery-data'].texts.one.list %}
+						<li>{{ item[lang] | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<p class="text c-default ttu medium mb-lg-16 _line-b pb-lg-18">
+					{{ strategicReport['express-delivery-data'].texts.two.title[lang] | safe }}
+				</p>
+				<p class="text c-default medium mb-lg-16">
+					{{ strategicReport['express-delivery-data'].texts.two.subtitle[lang] | safe }}
+				</p>
+				<ul class="list text _fs-14 c-gray-menu-text">
+					{% for item in strategicReport['express-delivery-data'].texts.two.list %}
+						<li>{{ item[lang] | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>

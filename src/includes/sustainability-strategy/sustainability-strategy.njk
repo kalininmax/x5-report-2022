@@ -1,0 +1,329 @@
+{% set sustainabilityStrategy = strategicReport['sustainability-strategy'] %}
+{% set table = strategicReport['sustainability-strategy'].table %}
+
+<section id="sustainability-strategy" class="sustainability-strategy section mb-lg-60">
+	<div class="section__container container">
+		<h2 class="h1 pt-lg-32 pt-sm-16 mb-lg-38 mb-sm-32 _line-t _ls-minus-03">
+			{{ sustainabilityStrategy.title[lang] | safe }}
+		</h2>
+		<h3 class="h3 _line-b pb-lg-12 mb-lg-20 _ls-minus-03">{{ sustainabilityStrategy.approach.title[lang] | safe }}</h3>
+		<div class="row mb-lg-56 text _fs-14 c-gray-desc-text">
+			<div class="col-lg-6 col-sm-12 sustainability-strategy__col-text">
+				{% for item in sustainabilityStrategy.approach.col1[lang] %}
+					<p>{{ item | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="col-lg-6 col-sm-12 sustainability-strategy__col-text">
+				{% for item in sustainabilityStrategy.approach.col2[lang] %}
+					<p>{{ item | safe }}</p>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="row mb-lg-120">
+			<div class="col-lg-6 col-sm-12 mb-sm-40">
+				<div class="mb-lg-20">
+					<p class="text _fs-14 c-gray-desc-text">{{ sustainabilityStrategy.approach.col3.text1[lang] | safe }}</p>
+				</div>
+				<div class="mb-lg-20">
+					<p class="text _fs-14 bold">{{ sustainabilityStrategy.approach.col3.text2[lang] | safe }}</p>
+				</div>
+				<ul class="list mb-lg-20 logistic-and-transport__list">
+					{% for item in sustainabilityStrategy.approach.col3.list1[lang] %}
+						<li>
+							<p class="text _fs-14 c-gray-desc-text">{{ item | safe }}</p>
+						</li>
+					{% endfor %}
+				</ul>
+				<div class="mb-lg-20">
+					<p class="text _fs-14 c-gray-desc-text">{{ sustainabilityStrategy.approach.col3.text3[lang] | safe }}</p>
+				</div>
+				<div class="mb-lg-10">
+					<p class="text _fs-14 bold">{{ sustainabilityStrategy.approach.col3.text4[lang] | safe }}</p>
+				</div>
+				<ul class="list mb-lg-20 logistic-and-transport__list">
+					{% for item in sustainabilityStrategy.approach.col3.list2[lang] %}
+						<li>
+							<p class="text _fs-14 c-gray-desc-text">{{ item | safe }}</p>
+						</li>
+					{% endfor %}
+				</ul>
+				<div>
+					<p class="text _fs-14 c-gray-desc-text">{{ sustainabilityStrategy.approach.col3.text5[lang] | safe }}</p>
+				</div>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<div class="sustainability-strategy__changes">
+					<h3 class="h3 mb-lg-20 _ls-minus-03">{{ sustainabilityStrategy.approach.changes.title[lang] | safe }}</h3>
+					<p class="text _fs-14 bold mb-lg-20">{{ sustainabilityStrategy.approach.changes.text[lang] | safe }}</p>
+					<ul class="sustainability-strategy__list list">
+						{% for item in sustainabilityStrategy.approach.changes.list[lang] %}
+							<li>
+								<p class="text _fs-14 c-gray-desc-text">{{ item | safe }}</p>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<h4 class="h3 _line-b pb-lg-12 mb-lg-30 _ls-minus-03">{{ sustainabilityStrategy.strategy.title[lang] | safe }}</h4>
+		<div class="row mb-lg-48">
+			<div class="col-lg-4 col-sm-12 mb-sm-14">
+				<p class="text _fs-14 c-gray-desc-text">{{ sustainabilityStrategy.strategy.col1[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-4 col-sm-12 mb-sm-14">
+				<p class="text _fs-14 c-gray-desc-text">{{ sustainabilityStrategy.strategy.col2[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-4 col-sm-12 mb-sm-14">
+				<p class="text _fs-14 c-gray-desc-text">{{ sustainabilityStrategy.strategy.col3[lang] | safe }}</p>
+			</div>
+		</div>
+		<table class="sustainability-strategy__table mb-lg-30 _desktop">
+			<tbody>
+				<tr>
+					<th>{{ table.th1[lang] | safe }}</th>
+					<th class="pl-lg-20">{{ table.th2[lang] | safe }}</th>
+					<th class="pl-lg-20">{{ table.th3[lang] | safe }}</th>
+					<th class="pl-lg-20">{{ table.th4[lang] | safe }}</th>
+					<th class="pl-lg-20">{{ table.th5[lang] | safe }}</th>
+				</tr>
+				<tr>
+					<td rowspan="4" class="_first-col">
+						<div class="disp-flex-col">
+							{{ component('icon', {
+								iconName: table.icon1,
+								attributes: 'width="70" height="70" viewBox="0 0 36 36"'
+							}) }}
+							{{ table.row1.td1[lang] | safe }}
+						</div>
+					</td>
+					<td rowspan="4" class="_sec-col">
+						<p class="mb-lg-10">{{ table.row1.td2[lang] | safe }}</p>
+						{{ component('icon', {
+							iconName: table.icon2[lang],
+							attributes: 'width="120" height="120" viewBox="0 0 36 36"'
+						}) }}
+					</td>
+					<td class="_third-col">{{ table.row1.td3[lang] | safe }}</td>
+					<td class="_fourth-col">{{ table.row1.td4[lang] | safe }}</td>
+					<td class="_last-col">{{ table.row1.td5[lang] | safe }}</td>
+				</tr>
+				<tr>
+					<td class="_third-col">{{ table.row2.td3[lang] | safe }}</td>
+					<td class="_fourth-col">{{ table.row2.td4[lang] | safe }}</td>
+					<td class="_last-col">
+						{% for item in table.row2.td5 %}
+							<p class="_text">{{ item[lang] | safe }}</p>
+						{% endfor %}
+					</td>
+				</tr>
+				<tr>
+					<td class="_third-col">{{ table.row3.td3[lang] | safe }}</td>
+					<td class="_fourth-col">{{ table.row3.td4[lang] | safe }}</td>
+					<td class="_last-col">
+						<p class="_text">{{ table.row3.td5.title[lang] | safe }}</p>
+						<ul class="list mb-lg-10">
+							{% for item in table.row3.td5.list %}
+								<li>
+									<p>{{ item[lang] | safe }}</p>
+								</li>
+							{% endfor %}
+						</ul>
+						<p>{{ table.row3.td5.text[lang] | safe }}</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="_third-col">{{ table.row4.td3[lang] | safe }}</td>
+					<td class="_fourth-col">{{ table.row4.td4[lang] | safe }}</td>
+					<td class="_last-col">
+						{% for item in table.row4.td5 %}
+							<p class="_text">{{ item[lang] | safe }}</p>
+						{% endfor %}
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="7" class="_first-col">
+						<div class="disp-flex-col">
+							{{ component('icon', {
+								iconName: table.icon3,
+								attributes: 'width="70" height="70" viewBox="0 0 36 36"'
+							}) }}
+							{{ table.row5.td1[lang] | safe }}
+						</div>
+					</td>
+					<td rowspan="7" class="_sec-col">
+						<p class="mb-lg-10">{{ table.row5.td2.text1[lang] | safe }}</p>
+						{{ component('icon', {
+							iconName: table.icon4[lang],
+							className: 'mb-lg-14',
+							attributes: 'width="120" height="120" viewBox="0 0 36 36"'
+						}) }}
+						<p class="mb-lg-10">{{ table.row5.td2.text2[lang] | safe }}</p>
+						{{ component('icon', {
+							iconName: table.icon5[lang],
+							className: 'sustainability-strategy__table-icon',
+							attributes: 'width="120" height="180" viewBox="0 0 120 180"'
+						}) }}
+					</td>
+					<td class="_third-col">{{ table.row5.td3[lang] | safe }}</td>
+					<td class="_fourth-col">{{ table.row5.td4[lang] | safe }}</td>
+					<td class="_last-col _pb-32">
+						{% for item in table.row5.td5 %}
+							<p class="_text">{{ item[lang] | safe }}</p>
+						{% endfor %}
+					</td>
+				</tr>
+				<tr>
+					<td class="_third-col">{{ table.row6.td3[lang] | safe }}</td>
+					<td class="_fourth-col">{{ table.row6.td4[lang] | safe }}</td>
+					<td class="_last-col _pr-10 _pb-30">
+						{% for item in table.row6.td5 %}
+							<p class="_text">{{ item[lang] | safe }}</p>
+						{% endfor %}
+					</td>
+				</tr>
+				<tr>
+					<td class="_third-col">{{ table.row7.td3[lang] | safe }}</td>
+					<td></td>
+					<td class="_last-col _pb-30">
+						{% for item in table.row7.td5 %}
+							<p class="_text">{{ item[lang] | safe }}</p>
+						{% endfor %}
+					</td>
+				</tr>
+				<tr>
+					<td class="_third-col">{{ table.row8.td3[lang] | safe }}</td>
+					<td></td>
+					<td class="_last-col _pb-30">
+						{% for item in table.row8.td5 %}
+							<p class="_text">{{ item[lang] | safe }}</p>
+						{% endfor %}
+					</td>
+				</tr>
+				<tr>
+					<td class="_third-col">{{ table.row9.td3[lang] | safe }}</td>
+					<td></td>
+					<td class="_last-col _pb-32">
+						{% for item in table.row9.td5 %}
+							<p class="_text">{{ item[lang] | safe }}</p>
+						{% endfor %}
+					</td>
+				</tr>
+				<tr>
+					<td class="_third-col">{{ table.row10.td3[lang] | safe }}</td>
+					<td class="_fourth-col">{{ table.row10.td4[lang] | safe }}</td>
+					<td class="_last-col _pb-30">
+						{% for item in table.row10.td5 %}
+							<p class="_text">{{ item[lang] | safe }}</p>
+						{% endfor %}
+					</td>
+				</tr>
+				<tr>
+					<td class="_third-col">{{ table.row11.td3[lang] | safe }}</td>
+					<td></td>
+					<td class="_last-col _pr-0 _pb-10">
+						{% for item in table.row11.td5 %}
+							<p class="_text">{{ item[lang] | safe }}</p>
+						{% endfor %}
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="4" class="_first-col">
+						<div class="disp-flex-col">
+							{{ component('icon', {
+								iconName: table.icon6,
+								attributes: 'width="70" height="70" viewBox="0 0 36 36"'
+							}) }}
+							{{ table.row12.td1[lang] | safe }}
+						</div>
+					</td>
+					<td rowspan="4" class="_sec-col">
+						<p class="mb-lg-10">{{ table.row12.td2[lang] | safe }}</p>
+						{{ component('icon', {
+							iconName: table.icon7[lang],
+							attributes: 'width="120" height="120" viewBox="0 0 36 36"'
+						}) }}
+					</td>
+					<td class="_third-col">{{ table.row12.td3[lang] | safe }}</td>
+					<td class="_fourth-col _pb-30">{{ table.row12.td4[lang] | safe }}</td>
+					<td class="_last-col">{{ table.row12.td5[lang] | safe }}</td>
+				</tr>
+				<tr>
+					<td class="_third-col">{{ table.row13.td3[lang] | safe }}</td>
+					<td></td>
+					<td class="_last-col _pb-32">
+						{% for item in table.row13.td5 %}
+							<p class="_text">{{ item[lang] | safe }}</p>
+						{% endfor %}
+					</td>
+				</tr>
+				<tr>
+					<td class="_third-col">{{ table.row14.td3[lang] | safe }}</td>
+					<td></td>
+					<td class="_last-col _pb-30">
+						{% for item in table.row14.td5 %}
+							<p class="_text">{{ item[lang] | safe }}</p>
+						{% endfor %}
+					</td>
+				</tr>
+				<tr>
+					<td class="_third-col _pb-32">{{ table.row15.td3[lang] | safe }}</td>
+					<td></td>
+					<td class="_last-col">{{ table.row15.td5[lang] | safe }}</td>
+				</tr>
+				<tr>
+					<td rowspan="3" class="_first-col">
+						<div class="disp-flex-col">
+							{{ component('icon', {
+								iconName: table.icon8,
+								attributes: 'width="70" height="70" viewBox="0 0 36 36"'
+							}) }}
+							{{ table.row16.td1[lang] | safe }}
+						</div>
+					</td>
+					<td rowspan="3" class="_sec-col">
+						<p class="mb-lg-10">{{ table.row16.td2.text1[lang] | safe }}</p>
+						{{ component('icon', {
+							iconName: table.icon9[lang],
+							className: 'mb-lg-16',
+							attributes: 'width="120" height="120" viewBox="0 0 36 36"'
+						}) }}
+						<p class="mb-lg-10">{{ table.row16.td2.text2[lang] | safe }}</p>
+						{{ component('icon', {
+							iconName: table.icon10[lang],
+							attributes: 'width="120" height="60" viewBox="0 0 120 60"'
+						}) }}
+					</td>
+					<td class="_third-col _pl-30">{{ table.row16.td3[lang] | safe }}</td>
+					<td></td>
+					<td class="_last-col _pr-0 _pb-30">
+						{% for item in table.row16.td5 %}
+							<p class="_text">{{ item[lang] | safe }}</p>
+						{% endfor %}
+					</td>
+				</tr>
+				<tr>
+					<td class="_third-col">{{ table.row17.td3[lang] | safe }}</td>
+					<td class="_fourth-col">{{ table.row17.td4[lang] | safe }}</td>
+					<td class="_last-col _pb-32">
+						{% for item in table.row17.td5 %}
+							<p class="_text">{{ item[lang] | safe }}</p>
+						{% endfor %}
+					</td>
+				</tr>
+				<tr>
+					<td class="_third-col">{{ table.row18.td3[lang] | safe }}</td>
+					<td class="_fourth-col">{{ table.row18.td4[lang] | safe }}</td>
+					<td class="_last-col _pr-0 _pb-30">
+						{% for item in table.row18.td5 %}
+							<p class="_text">{{ item[lang] | safe }}</p>
+						{% endfor %}
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		{% include "./table-mob-sustainability.njk" %}
+		{% for item in sustainabilityStrategy.text %}
+			<p class="text _fs-14 mw-730">{{ item[lang] | safe }}</p>
+		{% endfor %}
+	</div>
+</section>

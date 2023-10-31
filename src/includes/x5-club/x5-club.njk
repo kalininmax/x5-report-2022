@@ -1,0 +1,35 @@
+<section class="x5-club" id="x5-club">
+	<div class="container">
+		<h2 class="h1 pt-lg-36 pt-sm-16 mb-lg-38 mb-sm-32 _line-t _ls-minus-03">
+			{{ strategicReport['x5-club'].title[lang] | safe }}
+		</h2>
+		<div class="row mb-lg-30">
+			<div class="col-lg-6 col-sm-12 mb-lg-30">
+				{{ strategicReport['x5-club'].text1[lang] | safe }}
+			</div>
+			<div class="col-lg-6 col-sm-12 ">
+				{{ strategicReport['x5-club'].text2[lang] | safe }}
+			</div>
+		</div>
+		<div class="x5-club__keys mb-lg-44">
+			<p class="text c-default medium mb-lg-12 ttu _ls-0">{{ strategicReport['x5-club'].keys.title[lang] | safe }}</p>
+			<ul class="x5-club__items">
+				{% for item in strategicReport['x5-club'].keys.list %}
+					<li class="x5-club__items-item">
+						<p class="x5-club__items-value big-text">{{ item.value[lang] | safe }}</p>
+						<p class="x5-club__items-text c-default text _fs-14">{{ item.text[lang] | safe }}</p>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		{{ component('picture', {
+			path: "section-2",
+			name: strategicReport["x5-club"].img,
+			ext: "jpg",
+			width: '1112',
+			height: "654",
+			className: "x5-club__img",
+			lang: lang
+		})}}
+	</div>
+</section>

@@ -1,0 +1,144 @@
+<section class="krasny-and-slata" id="krasny-yar-and-slata">
+		<div class="container">
+			<h2 class="h1 pt-lg-32 pt-sm-16 mb-lg-38 mb-sm-32 _line-t _ls-minus-03">
+				{{ strategicReport['krasny-and-slata'].title[lang] | safe }}
+			</h2>
+			<div class="row mb-lg-30">
+				<div class="col-lg-6 col-sm-12 mb-lg-30">
+					{{ strategicReport['krasny-and-slata'].text[lang] | safe }}
+				</div>
+				<div class="col-lg-6 col-sm-12">
+					<ul class="krasny-and-slata__list list">
+						{% for text in strategicReport['krasny-and-slata'].list %}
+							<li class="text _fs-14 c-gray-menu-text _mt-10">{{ text[lang] | safe }}</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+			<h2 class="h3 pb-lg-10 mb-lg-26 mb-sm-32 _line-b _ls-minus-02">
+				{{ strategicReport['krasny-and-slata'].subtitle[lang] | safe }}
+			</h2>
+			<div class="row mb-lg-80">
+				<div class="col-lg-8 col-sm-12 mb-lg-30">
+					{{ component('icon', {
+						iconName: 'slata',
+						className: "krasny-and-slata__icon",
+						attributes: "width=\"108\" height=\"27\""
+					})}}
+					{{ component('picture', {
+						path: "section-2",
+						name: strategicReport["krasny-and-slata"].img,
+						ext: "jpg",
+						width: '728',
+						height: "190",
+						className: "krasny-and-slata__img",
+						lang: lang
+					})}}
+					<p class="h4 pb-lg-14 mb-lg-22 _line-b _ls-minus-02">
+						{{ strategicReport['krasny-and-slata'].subtitle1[lang] | safe }}
+					</p>
+					<div class="krasny-and-slata__texts">
+						<div class="krasny-and-slata__text-wrapper">
+							{{ strategicReport['krasny-and-slata'].text1[lang] | safe }}
+							<ul class="list mt-lg-20">
+								{% for item in strategicReport['krasny-and-slata'].list1 %}
+									<li class="text _fs-14">{{ item[lang] | safe }}</li>
+								{% endfor %}
+							</ul>
+						</div>
+						<div class="krasny-and-slata__text-wrapper">
+							{{ strategicReport['krasny-and-slata'].text2[lang] | safe }}
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-12">
+					{{ component('picture', {
+						path: "section-2",
+						name: strategicReport["krasny-and-slata"].img5,
+						ext: "png",
+						width: '123',
+						height: "27",
+						className: "krasny-and-slata__img-bread",
+						lang: lang
+					})}}
+					{{ component('picture', {
+						path: "section-2",
+						name: strategicReport["krasny-and-slata"].img2,
+						ext: "jpg",
+						width: '344',
+						height: "190",
+						className: "krasny-and-slata__img",
+						lang: lang
+					})}}
+					<p class="h4 pb-lg-14 mb-lg-22 _line-b _ls-minus-02">
+						{{ strategicReport['krasny-and-slata'].subtitle2[lang] | safe }}
+					</p>
+					{{ strategicReport['krasny-and-slata'].text3[lang] | safe }}
+				</div>
+			</div>
+			<h2 class="h3 pb-lg-14 mb-lg-26 mb-sm-32 _line-b _ls-minus-02">
+				{{ strategicReport['krasny-and-slata'].subtitle3[lang] | safe }}
+			</h2>
+			<div class="row">
+				<div class="col-lg-6 col-sm-12">
+					{{ component('icon', {
+						iconName: 'red-yar',
+						className: "krasny-and-slata__icon",
+						attributes: "width=\"148\" height=\"27\""
+					})}}
+					{{ component('picture', {
+						path: "section-2",
+						name: strategicReport["krasny-and-slata"].img3,
+						ext: "jpg",
+						width: '536',
+						height: "343",
+						className: "krasny-and-slata__img",
+						lang: lang
+					})}}
+				</div>
+				<div class="col-lg-6 col-sm-12">
+					{{ component('icon', {
+						iconName: 'long-loaf',
+						className: "krasny-and-slata__icon",
+						attributes: "width=\"141\" height=\"27\""
+					})}}
+					{{ component('picture', {
+						path: "section-2",
+						name: strategicReport["krasny-and-slata"].img4,
+						ext: "png",
+						width: '536',
+						height: "343",
+						className: "krasny-and-slata__img",
+						lang: lang
+					})}}
+				</div>
+			</div>
+			<div class="row mb-lg-70">
+				<div class="col-lg-4 col-sm-12 mb-lg-30">
+					<h3 class="h4 pb-lg-14 mb-lg-20 mb-sm-32 _line-b _ls-minus-02">
+						{{ strategicReport['krasny-and-slata'].subtitle4[lang] | safe }}
+					</h3>
+					{{ strategicReport['krasny-and-slata'].text4[lang] | safe }}
+				</div>
+				<div class="col-lg-8 col-sm-12">
+					<h3 class="h4 pb-lg-14 mb-lg-24 mb-sm-32 _line-b _ls-minus-02">
+						{{ strategicReport['krasny-and-slata'].subtitle5[lang] | safe }}
+					</h3>
+					<div class="krasny-and-slata__texts">
+						<div class="krasny-and-slata__text">
+							{{ strategicReport['krasny-and-slata'].text5[lang] | safe }}
+						</div>
+						<div class="krasny-and-slata__text">
+							{{ strategicReport['krasny-and-slata'].text6[lang] | safe }}
+							<ul class="list mb-lg-18">
+								{% for item in strategicReport['krasny-and-slata'].list2 %}
+									<li class="text _fs-14 _mt-10"> {{ item[lang] | safe }} </li>
+								{% endfor %}
+							</ul>
+							{{ strategicReport['krasny-and-slata'].text7[lang] | safe }}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</section>

@@ -1,0 +1,84 @@
+<section class="paket" id="paket">
+	<div class="container">
+		<h2 class="h1 pt-lg-32 pt-sm-16 mb-lg-38 mb-sm-32 _line-t _ls-minus-03">
+			{{ strategicReport['paket'].title[lang] | safe }}
+		</h2>
+		<div class="row mb-lg-60">
+			<div class="col-lg-7 col-sm-12 mb-lg-30">
+				<div class="paket__icon-wrapper mb-lg-20">
+					{{ component('icon', {
+						iconName: "paket",
+						className: "paket__icon",
+						attributes: "width='100' height='100'"
+					})}}
+				</div>
+				<p class="text c-default mb-lg-16">{{ strategicReport['paket'].leadText[lang] | safe }}</p>
+				<p class="text _fs-14 c-gray-menu-text">{{ strategicReport['paket'].text[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-5 col-sm-12">
+				<div class="paket__card paket-card">
+					<p class="paket-card__title text _white medium ttu">{{ strategicReport['paket'].card.title[lang] | safe }}</p>
+					<div class="paket-card__number-wrap">
+						<p class="paket-card__number">
+							{{ strategicReport['paket'].card.number[lang] | safe }}
+						</p>
+						<p class="paket-card__number-title text _fs-14 _white">
+							{{ strategicReport['paket'].card.numberTitle[lang] | safe }}
+						</p>
+						<p class="paket-card__number-text text _white _60 small-text">
+							{{ strategicReport['paket'].card.numberText[lang] | safe }}
+						</p>
+					</div>
+					<ul class="paket-card__list text _white _fs-14">
+						{% for item in strategicReport['paket'].card.list %}
+							<li class="paket-card__list-item">
+								<span class="paket-card__list-item-number">{{ item.number }}</span>
+								<span>{{ item.text[lang] | safe }}</span>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="paket__keys paket-keys mb-lg-46">
+			<p class="text c-default medium mb-lg-16 ttu _ls-0">{{ strategicReport['paket'].keys.title[lang] | safe }}</p>
+			<ul class="paket-keys__items">
+				{% for item in strategicReport['paket'].keys.list %}
+					<li class="paket-keys__item">
+						{% if item.icon %}
+							<div class="paket-keys__icon-wrapper circle">
+								{{ component('icon', {
+									iconName: item.icon,
+									className: "paket-keys__icon",
+									attributes: item.iconData
+								})}}
+							</div>
+						{% elif item.img %}
+							{{ component('picture', {
+								path: "section-2",
+								name: item.img,
+								ext: "png",
+								width: item.imgWiidth,
+								height: item.imgHeight,
+								className: "paket-keys__img",
+								lang: lang
+							})}}
+						{% else %}
+							<p class="paket-keys__item-value big-text">{{ item.value[lang] | safe }}</p>
+						{% endif %}
+						<p class="paket-keys__item-text text c-default _fs-14">{{ item.text[lang] | safe }}</p>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		{{ component('picture', {
+			path: "section-2",
+			name: strategicReport["paket"].img,
+			ext: "jpg",
+			width: '1112',
+			height: "654",
+			className: "paket__img",
+			lang: lang
+		})}}
+	</div>
+</section>

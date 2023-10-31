@@ -1,0 +1,30 @@
+.legislative-changes {
+	padding-bottom: 100px;
+
+	@include max-screen($breakpoint-sm) {
+		padding-bottom: 60px;
+	}
+	&__table {
+		table {
+			position: relative;
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 1112px;
+				height: 100%;
+				background: inline('table-dots.svg') no-repeat 0 0;
+				background-size: cover;
+			}
+			tr {
+				display: grid;
+				grid-template-columns: 192px 728px 190px;
+			}
+			td,
+			th {
+				width: auto !important;
+			}
+		}
+	}
+}

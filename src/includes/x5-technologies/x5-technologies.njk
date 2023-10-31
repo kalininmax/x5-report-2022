@@ -1,0 +1,85 @@
+{% set x5TechnologiesData = strategicReport['x5-technologies-2'] %}
+
+<section id="x5-technologies" class="direct-imports section">
+	<div class="section__container container">
+		<h2 class="h1 pt-lg-32 pt-sm-16 mb-lg-36 mb-sm-32 _line-t _ls-minus-03">
+			{{ x5TechnologiesData.title[lang] | safe }}
+		</h2>
+		<div class="row mb-lg-90">
+			<div class="col-lg-7 col-sm-12 mb-sm-40">
+				{{ component('icon', {
+					iconName: 'logo',
+					className: 'mb-lg-30',
+					attributes: 'width="145" height="43" viewBox="0 0 145 43"'
+				})}}
+				<p class="text">{{ x5TechnologiesData.tech.text1[lang] }}</p>
+				<p class="text _fs-14 c-gray-desc-text">{{ x5TechnologiesData.tech.text2[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-5 col-sm-12">
+				<h4 class="h3 _line-b pb-lg-12 mb-lg-20 _ls-minus-03">{{ x5TechnologiesData.solutions.title[lang] | safe }}</h4>
+				<p class="text _fs-14 c-gray-desc-text">{{ x5TechnologiesData.solutions.text1[lang] | safe }}</p>
+				<p class="text _fs-14 c-gray-desc-text">{{ x5TechnologiesData.solutions.text2[lang] | safe }}</p>
+			</div>
+		</div>
+		<div class="row mb-lg-46">
+			<div class="col-lg-7 col-sm-12 mb-sm-40">
+				<h4 class="text _bold mb-lg-14 _ls-minus-03 ttu">{{ x5TechnologiesData.highlights.title[lang] | safe }}</h4>
+				<ul class="x5-technologies__highlights-list">
+					{% for item in x5TechnologiesData.highlights.list[lang] %}
+						<li class="x5-technologies__highlights-item">
+							<p class="x5-technologies__highlights-title"><span class="x5-technologies__highlights-dig">{{ item.title1 | safe }}</span>{{ item.title2 | safe }}<span class="x5-technologies__highlights-title-small">{{ item.title3 | safe }}</span></p>
+							<div class="text _fs-14">
+								<p class="">{{ item.text1 | safe }}</p>
+								<p class="x5-technologies__highlights-descr c-gray-desc-text">{{ item.text2 | safe }}</p>
+							</div>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="col-lg-5 col-sm-12">
+				<div class="x5-technologies__improvements">
+					<h4 class="x5-technologies__improvements-title text ttu _line-b pb-lg-16 mb-lg-24">{{ x5TechnologiesData.improvements.title[lang] | safe }}</h4>
+					<ul class="x5-technologies__improvements-list">
+						{% for item in x5TechnologiesData.improvements.list[lang] %}
+							<li class="x5-technologies__improvements-item">
+								<p class="x5-technologies__improvements-item-title">{{ item.title | safe }}</p>
+								<div class="x5-technologies__improvements-content">
+									<div class="x5-technologies__improvements-col">
+										<p class="x5-technologies__improvements-text ttu">{{ item.text1 | safe }}</p>
+										<p class="x5-technologies__improvements-value">{{ item.value1 | safe }}</p>
+									</div>
+									<div class="x5-technologies__improvements-arrow"></div>
+									<div class="x5-technologies__improvements-col">
+										<p class="x5-technologies__improvements-text ttu">{{ item.text2 | safe }}</p>
+										<p class="x5-technologies__improvements-value">{{ item.value2 | safe }}</p>
+									</div>
+								</div>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+		{{ component('picture', {
+			path: "section-3",
+			name: 'x5-technologies',
+			ext: "jpg",
+			width: '1118',
+			height: "760",
+			className: "mb-lg-60 w-100 h-auto _br-10-all",
+			lang: lang
+		})}}
+		<div class="row c-gray-desc-text text _fs-14 c-gray-menu-text">
+			<div class="col-lg-6 col-sm-12 x5-technologies__text-col">
+				{% for item in x5TechnologiesData.col1[lang] %}
+					<p>{{ item | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="col-lg-6 col-sm-12 x5-technologies__text-col">
+				{% for item in x5TechnologiesData.col2[lang] %}
+					<p>{{ item | safe }}</p>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</section>

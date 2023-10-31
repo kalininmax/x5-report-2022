@@ -1,0 +1,40 @@
+<section id="ceo-statement" class="ceo-statement section">
+	<div class="section__container container">
+		<h2 class="h1 _standart-mb _standart-mt _line-t pt-lg-32">{{ strategicReport['ceo-statement'].title[lang] | safe }}</h2>
+		<div class="ceo-statement__quote">
+			<div class="ceo-statement__quote-info">
+				{{ component('icon', {
+					iconName: "quote",
+					className: "ceo-statement__quote-icon",
+					attributes: "width='85' height='60'"
+				})}}
+				<p class="ceo-statement__quote-name c-green">{{ strategicReport['ceo-statement'].name[lang] | safe }}</p>
+			</div>
+			<div class="ceo-statement__quote-text-wrap">
+				{{ strategicReport['ceo-statement'].text[lang] | safe }}
+			</div>
+		</div>
+		<ul class="ceo-statement__talks">
+			{% for item in strategicReport['ceo-statement'].talks %}
+				<li class="ceo-statement__talk">
+					{{ item[lang] | safe }}
+				</li>
+			{% endfor %}
+		</ul>
+		<ul class="ceo-statement__signatures">
+			{% for item in strategicReport['ceo-statement'].signatures %}
+				<li class="ceo-statement__signature">
+					<div class="ceo-statement__signature-data">
+						<p class="ceo-statement__signature-data-name h3">{{ item.name[lang] | safe }}</p>
+						<p class="ceo-statement__signature-data-company">{{ item.company[lang] | safe }}</p>
+					</div>
+					{{ component('icon', {
+						iconName: item.sign[lang],
+						className: "ceo-statement__signature-sign",
+						attributes: item.signData
+					})}}
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</section>

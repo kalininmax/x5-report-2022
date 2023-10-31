@@ -1,0 +1,11 @@
+<section id="legislative-changes" class="legislative-changes section">
+	<div class="section__container container">
+		<h2 class="h2 _line-b pb-lg-14 mb-lg-40 _ls-minus-03">{{ strategicReport['legislative-changes'].title[lang] }}</h2>
+		<div class="legislative-changes__table">
+			{{ component('table', {
+				data: strategicReport['legislative-changes'].table.data,
+				lang: lang
+			})}}
+		</div>
+	</div>
+</section>

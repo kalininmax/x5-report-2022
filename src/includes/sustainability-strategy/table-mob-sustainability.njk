@@ -1,0 +1,382 @@
+<div class="table-mob-sustainability planet-table-mob">
+	<div class="planet-table-mob__buttons mb-sm-16">
+		<button class="planet-table-mob__button _active _strategy" data-target="health">
+			<div class="disp-flex-col _just-c">
+				{{ component('icon', {
+					iconName: table.icon1,
+					attributes: 'width="40" height="40" viewBox="0 0 36 36"'
+				}) }}
+				{{ table.row1.td1[lang] | safe }}
+			</div>
+		</button>
+		<button class="planet-table-mob__button _strategy" data-target="planet">
+			<div class="disp-flex-col _just-c">
+				{{ component('icon', {
+					iconName: table.icon3,
+					attributes: 'width="40" height="40" viewBox="0 0 36 36"'
+				}) }}
+				{{ table.row5.td1[lang] | safe }}
+			</div>
+		</button>
+		<button class="planet-table-mob__button _strategy" data-target="community">
+			<div class="disp-flex-col _just-c">
+				{{ component('icon', {
+					iconName: table.icon6,
+					attributes: 'width="40" height="40" viewBox="0 0 36 36"'
+				}) }}
+				{{ table.row12.td1[lang] | safe }}
+			</div>
+		</button>
+		<button class="planet-table-mob__button _strategy" data-target="employees">
+			<div class="disp-flex-col _just-c">
+				{{ component('icon', {
+					iconName: table.icon8,
+					attributes: 'width="40" height="40" viewBox="0 0 36 36"'
+				}) }}
+				{{ table.row16.td1[lang] | safe }}
+			</div>
+		</button>
+	</div>
+	<div class="planet-table-mob__blocks">
+		<div class="planet-table-mob__block _active" data-block="health">
+			<p class="table-mob-sustainability__text-b mb-lg-12">{{ table.th22[lang] | safe }}</p>
+			<p class="table-mob-sustainability__text-b mb-lg-8">{{ table.row1.td2[lang] | safe }}</p>
+			{{ component('icon', {
+				iconName: table.icon2,
+				className: 'mb-lg-36',
+				attributes: 'width="74" height="74" viewBox="0 0 36 36"'
+			}) }}
+			<h6 class="h6 c-default mb-lg-16">{{ table.th3[lang] | safe }}</h6>
+			<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.row1.td3[lang] | safe }}</p>
+			<button class="planet-table-mob__accordion-button mb-sm-10" data-accordion="accordion-health-1">
+				{{ component('icon', {
+					iconName: strategicReport["planet"]["2022"].table.icon,
+					className: 'planet-table-mob__icon',
+					attributes: 'width="24" height="24" viewBox="0 0 36 36"'
+				}) }}
+			</button>
+			<div class="planet-table-mob__panel mb-lg-36" data-panel="accordion-health-1">
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th4[lang] | safe }}</p>
+				<p class="mb-lg-24">{{ table.row1.td4[lang] | safe }}</p>
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th5[lang] | safe }}</p>
+				<p>{{ table.row1.td5[lang] | safe }}</p>
+			</div>
+			<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.row2.td3[lang] | safe }}</p>
+			<button class="planet-table-mob__accordion-button mb-sm-10" data-accordion="accordion-health-2">
+				{{ component('icon', {
+					iconName: strategicReport["planet"]["2022"].table.icon,
+					className: 'planet-table-mob__icon',
+					attributes: 'width="24" height="24" viewBox="0 0 36 36"'
+				}) }}
+			</button>
+			<div class="planet-table-mob__panel mb-lg-36" data-panel="accordion-health-2">
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th4[lang] | safe }}</p>
+				<p class="mb-lg-24">{{ table.row2.td4[lang] | safe }}</p>
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th5[lang] | safe }}</p>
+				{% for item in table.row2.td5 %}
+					<p class="_text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.row3.td3[lang] | safe }}</p>
+			<button class="planet-table-mob__accordion-button mb-sm-10" data-accordion="accordion-health-3">
+				{{ component('icon', {
+					iconName: strategicReport["planet"]["2022"].table.icon,
+					className: 'planet-table-mob__icon',
+					attributes: 'width="24" height="24" viewBox="0 0 36 36"'
+				}) }}
+			</button>
+			<div class="planet-table-mob__panel mb-lg-36" data-panel="accordion-health-3">
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th4[lang] | safe }}</p>
+				<p class="mb-lg-24">{{ table.row3.td4[lang] | safe }}</p>
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th5[lang] | safe }}</p>
+				<p class="_text medium">{{ table.row3.td5.title[lang] | safe }}</p>
+				<ul class="list mb-lg-10">
+					{% for item in table.row3.td5.list %}
+						<li>
+							<p>{{ item[lang] | safe }}</p>
+						</li>
+					{% endfor %}
+				</ul>
+				<p>{{ table.row3.td5.text[lang] | safe }}</p>
+			</div>
+			<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.row4.td3[lang] | safe }}</p>
+			<button class="planet-table-mob__accordion-button mb-sm-10" data-accordion="accordion-health-4">
+				{{ component('icon', {
+					iconName: strategicReport["planet"]["2022"].table.icon,
+					className: 'planet-table-mob__icon',
+					attributes: 'width="24" height="24" viewBox="0 0 36 36"'
+				}) }}
+			</button>
+			<div class="planet-table-mob__panel mb-lg-36" data-panel="accordion-health-4">
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th4[lang] | safe }}</p>
+				<p class="mb-lg-24">{{ table.row4.td4[lang] | safe }}</p>
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th5[lang] | safe }}</p>
+				{% for item in table.row4.td5 %}
+					<p class="_text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="planet-table-mob__block" data-block="planet">
+			<p class="table-mob-sustainability__text-b mb-lg-12">{{ table.th22[lang] | safe }}</p>
+			<div class="table-mob-sustainability__containers mb-lg-36">
+				<div class="table-mob-sustainability__container">
+					<p class="table-mob-sustainability__text-b mb-lg-8">{{ table.row5.td2.text1[lang] | safe }}</p>
+					{{ component('icon', {
+						iconName: table.icon4,
+						attributes: 'width="74" height="74" viewBox="0 0 36 36"'
+					}) }}
+				</div>
+				<div class="table-mob-sustainability__container">
+					<p class="table-mob-sustainability__text-b mb-lg-8">{{ table.row5.td2.text2[lang] | safe }}</p>
+					{{ component('icon', {
+						iconName: table.icon11,
+						attributes: 'width="111" height="74" viewBox="0 0 111 74"'
+					}) }}
+				</div>
+			</div>
+			<h6 class="h6 c-default mb-lg-16">{{ table.th3[lang] | safe }}</h6>
+			<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.row5.td3[lang] | safe }}</p>
+			<button class="planet-table-mob__accordion-button mb-sm-10" data-accordion="accordion-planet-1">
+				{{ component('icon', {
+					iconName: strategicReport["planet"]["2022"].table.icon,
+					className: 'planet-table-mob__icon',
+					attributes: 'width="24" height="24" viewBox="0 0 36 36"'
+				}) }}
+			</button>
+			<div class="planet-table-mob__panel mb-lg-36" data-panel="accordion-planet-1">
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th4[lang] | safe }}</p>
+				<p class="mb-lg-24">{{ table.row5.td4[lang] | safe }}</p>
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th5[lang] | safe }}</p>
+				{% for item in table.row5.td5 %}
+					<p class="_text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.row6.td3[lang] | safe }}</p>
+			<button class="planet-table-mob__accordion-button mb-sm-10" data-accordion="accordion-planet-2">
+				{{ component('icon', {
+					iconName: strategicReport["planet"]["2022"].table.icon,
+					className: 'planet-table-mob__icon',
+					attributes: 'width="24" height="24" viewBox="0 0 36 36"'
+				}) }}
+			</button>
+			<div class="planet-table-mob__panel mb-lg-36" data-panel="accordion-planet-2">
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th4[lang] | safe }}</p>
+				<p class="mb-lg-24">{{ table.row6.td4[lang] | safe }}</p>
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th5[lang] | safe }}</p>
+				{% for item in table.row6.td5 %}
+					<p class="_text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.row7.td3[lang] | safe }}</p>
+			<button class="planet-table-mob__accordion-button mb-sm-10" data-accordion="accordion-planet-3">
+				{{ component('icon', {
+					iconName: strategicReport["planet"]["2022"].table.icon,
+					className: 'planet-table-mob__icon',
+					attributes: 'width="24" height="24" viewBox="0 0 36 36"'
+				}) }}
+			</button>
+			<div class="planet-table-mob__panel mb-lg-36" data-panel="accordion-planet-3">
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th4[lang] | safe }}</p>
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th5[lang] | safe }}</p>
+				{% for item in table.row7.td5 %}
+					<p class="_text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.row8.td3[lang] | safe }}</p>
+			<button class="planet-table-mob__accordion-button mb-sm-10" data-accordion="accordion-planet-4">
+				{{ component('icon', {
+					iconName: strategicReport["planet"]["2022"].table.icon,
+					className: 'planet-table-mob__icon',
+					attributes: 'width="24" height="24" viewBox="0 0 36 36"'
+				}) }}
+			</button>
+			<div class="planet-table-mob__panel mb-lg-36" data-panel="accordion-planet-4">
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th4[lang] | safe }}</p>
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th5[lang] | safe }}</p>
+				{% for item in table.row8.td5 %}
+					<p class="_text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.row9.td3[lang] | safe }}</p>
+			<button class="planet-table-mob__accordion-button mb-sm-10" data-accordion="accordion-planet-5">
+				{{ component('icon', {
+					iconName: strategicReport["planet"]["2022"].table.icon,
+					className: 'planet-table-mob__icon',
+					attributes: 'width="24" height="24" viewBox="0 0 36 36"'
+				}) }}
+			</button>
+			<div class="planet-table-mob__panel mb-lg-36" data-panel="accordion-planet-5">
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th4[lang] | safe }}</p>
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th5[lang] | safe }}</p>
+				{% for item in table.row9.td5 %}
+					<p class="_text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.row10.td3[lang] | safe }}</p>
+			<button class="planet-table-mob__accordion-button mb-sm-10" data-accordion="accordion-planet-6">
+				{{ component('icon', {
+					iconName: strategicReport["planet"]["2022"].table.icon,
+					className: 'planet-table-mob__icon',
+					attributes: 'width="24" height="24" viewBox="0 0 36 36"'
+				}) }}
+			</button>
+			<div class="planet-table-mob__panel mb-lg-36" data-panel="accordion-planet-6">
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th4[lang] | safe }}</p>
+				<p class="mb-lg-24">{{ table.row10.td4[lang] | safe }}</p>
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th5[lang] | safe }}</p>
+				{% for item in table.row10.td5 %}
+					<p class="_text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.row11.td3[lang] | safe }}</p>
+			<button class="planet-table-mob__accordion-button mb-sm-10" data-accordion="accordion-planet-7">
+				{{ component('icon', {
+					iconName: strategicReport["planet"]["2022"].table.icon,
+					className: 'planet-table-mob__icon',
+					attributes: 'width="24" height="24" viewBox="0 0 36 36"'
+				}) }}
+			</button>
+			<div class="planet-table-mob__panel mb-lg-36" data-panel="accordion-planet-7">
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th4[lang] | safe }}</p>
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th5[lang] | safe }}</p>
+				{% for item in table.row11.td5 %}
+					<p class="_text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="planet-table-mob__block" data-block="community">
+			<p class="table-mob-sustainability__text-b mb-lg-12">{{ table.th22[lang] | safe }}</p>
+			<p class="table-mob-sustainability__text-b mb-lg-8">{{ table.row1.td2[lang] | safe }}</p>
+			{{ component('icon', {
+				iconName: table.icon7,
+				className: 'mb-lg-36',
+				attributes: 'width="74" height="74" viewBox="0 0 36 36"'
+			}) }}
+			<h6 class="h6 c-default mb-lg-16">{{ table.th3[lang] | safe }}</h6>
+			<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.row12.td3[lang] | safe }}</p>
+			<button class="planet-table-mob__accordion-button mb-sm-10" data-accordion="accordion-community-1">
+				{{ component('icon', {
+					iconName: strategicReport["planet"]["2022"].table.icon,
+					className: 'planet-table-mob__icon',
+					attributes: 'width="24" height="24" viewBox="0 0 36 36"'
+				}) }}
+			</button>
+			<div class="planet-table-mob__panel mb-lg-36" data-panel="accordion-community-1">
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th4[lang] | safe }}</p>
+				<p class="mb-lg-24">{{ table.row12.td4[lang] | safe }}</p>
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th5[lang] | safe }}</p>
+				<p>{{ table.row12.td5[lang] | safe }}</p>
+			</div>
+			<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.row13.td3[lang] | safe }}</p>
+			<button class="planet-table-mob__accordion-button mb-sm-10" data-accordion="accordion-community-2">
+				{{ component('icon', {
+					iconName: strategicReport["planet"]["2022"].table.icon,
+					className: 'planet-table-mob__icon',
+					attributes: 'width="24" height="24" viewBox="0 0 36 36"'
+				}) }}
+			</button>
+			<div class="planet-table-mob__panel mb-lg-36" data-panel="accordion-community-2">
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th4[lang] | safe }}</p>
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th5[lang] | safe }}</p>
+				{% for item in table.row13.td5 %}
+					<p class="_text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.row14.td3[lang] | safe }}</p>
+			<button class="planet-table-mob__accordion-button mb-sm-10" data-accordion="accordion-community-3">
+				{{ component('icon', {
+					iconName: strategicReport["planet"]["2022"].table.icon,
+					className: 'planet-table-mob__icon',
+					attributes: 'width="24" height="24" viewBox="0 0 36 36"'
+				}) }}
+			</button>
+			<div class="planet-table-mob__panel mb-lg-36" data-panel="accordion-community-3">
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th4[lang] | safe }}</p>
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th5[lang] | safe }}</p>
+				{% for item in table.row14.td5 %}
+					<p class="_text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.row15.td3[lang] | safe }}</p>
+			<button class="planet-table-mob__accordion-button mb-sm-10" data-accordion="accordion-community-4">
+				{{ component('icon', {
+					iconName: strategicReport["planet"]["2022"].table.icon,
+					className: 'planet-table-mob__icon',
+					attributes: 'width="24" height="24" viewBox="0 0 36 36"'
+				}) }}
+			</button>
+			<div class="planet-table-mob__panel mb-lg-36" data-panel="accordion-community-4">
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th4[lang] | safe }}</p>
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th5[lang] | safe }}</p>
+				<p>{{ table.row15.td5[lang] | safe }}</p>
+			</div>
+		</div>
+		<div class="planet-table-mob__block" data-block="employees">
+			<p class="table-mob-sustainability__text-b mb-lg-12">{{ table.th22[lang] | safe }}</p>
+			<div class="table-mob-sustainability__containers mb-lg-36">
+				<div class="table-mob-sustainability__container">
+					<p class="table-mob-sustainability__text-b mb-lg-8">{{ table.row16.td2.text1[lang] | safe }}</p>
+					{{ component('icon', {
+						iconName: table.icon9,
+						attributes: 'width="74" height="74" viewBox="0 0 36 36"'
+					}) }}
+				</div>
+				<div class="table-mob-sustainability__container">
+					<p class="table-mob-sustainability__text-b mb-lg-8">{{ table.row16.td2.text2[lang] | safe }}</p>
+					{{ component('icon', {
+						iconName: table.icon10,
+						attributes: 'width="148" height="74" viewBox="0 0 148 74"'
+					}) }}
+				</div>
+			</div>
+			<h6 class="h6 c-default mb-lg-16">{{ table.th3[lang] | safe }}</h6>
+			<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.row16.td3[lang] | safe }}</p>
+			<button class="planet-table-mob__accordion-button mb-sm-10" data-accordion="accordion-employees-1">
+				{{ component('icon', {
+					iconName: strategicReport["planet"]["2022"].table.icon,
+					className: 'planet-table-mob__icon',
+					attributes: 'width="24" height="24" viewBox="0 0 36 36"'
+				}) }}
+			</button>
+			<div class="planet-table-mob__panel mb-lg-36" data-panel="accordion-employees-1">
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th4[lang] | safe }}</p>
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th5[lang] | safe }}</p>
+				{% for item in table.row16.td5 %}
+					<p class="_text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.row17.td3[lang] | safe }}</p>
+			<button class="planet-table-mob__accordion-button mb-sm-10" data-accordion="accordion-employees-2">
+				{{ component('icon', {
+					iconName: strategicReport["planet"]["2022"].table.icon,
+					className: 'planet-table-mob__icon',
+					attributes: 'width="24" height="24" viewBox="0 0 36 36"'
+				}) }}
+			</button>
+			<div class="planet-table-mob__panel mb-lg-36" data-panel="accordion-employees-2">
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th4[lang] | safe }}</p>
+				<p class="mb-lg-24">{{ table.row17.td4[lang] | safe }}</p>
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th5[lang] | safe }}</p>
+				{% for item in table.row17.td5 %}
+					<p class="_text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.row18.td3[lang] | safe }}</p>
+			<button class="planet-table-mob__accordion-button mb-sm-10" data-accordion="accordion-employees-3">
+				{{ component('icon', {
+					iconName: strategicReport["planet"]["2022"].table.icon,
+					className: 'planet-table-mob__icon',
+					attributes: 'width="24" height="24" viewBox="0 0 36 36"'
+				}) }}
+			</button>
+			<div class="planet-table-mob__panel mb-lg-36" data-panel="accordion-employees-3">
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th4[lang] | safe }}</p>
+				<p class="mb-lg-24">{{ table.row18.td4[lang] | safe }}</p>
+				<p class="table-mob-sustainability__text-b mb-lg-10">{{ table.th5[lang] | safe }}</p>
+				{% for item in table.row18.td5 %}
+					<p class="_text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,56 @@
+{% set directImportsData = strategicReport['direct-imports-2'] %}
+
+<section id="direct-imports" class="direct-imports section">
+	<div class="section__container container">
+		<h2 class="h1 pt-lg-32 pt-sm-16 mb-lg-40 mb-sm-32 _line-t _ls-minus-03">
+			{{ directImportsData.title[lang] | safe }}
+		</h2>
+		<div class="row mb-lg-34">
+			<div class="col-lg-8 col-sm-12">
+				<h4 class="h3 _line-b pb-lg-12 mb-lg-30 _ls-minus-03">{{ directImportsData.achievements.title[lang] | safe }}</h4>
+				<div class="row">
+					{% for item in directImportsData.achievements.list %}
+						<div class="col-lg-6 col-sm-12 mb-lg-30">
+							{{ component('icon', {
+								iconName: item.icon,
+								className: 'logistic-and-transport__highlights-icon',
+								attributes: 'width="40" height="40" viewBox="0 0 36 36"'
+							})}}
+							<p class="text _fs-14 pt-lg-18 mt-lg-16 _line-t">{{ item[lang] | safe }}</p>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-12">
+				<h4 class="h3 _line-b pb-lg-12 mb-lg-20 _ls-minus-03">{{ directImportsData.plans.title[lang] | safe }}</h4>
+				<ul class="list logistic-and-transport__list _pr">
+					{% for item in directImportsData.plans.list[lang] %}
+						<li>{{ item | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-8 col-sm-12 mb-sm-40">
+				<div class="direct-imports__unit">
+					{{ component('icon', {
+						iconName: 'map',
+						className: 'direct-imports__unit-icon mb-lg-20',
+						attributes: 'width="40" height="40" viewBox="0 0 36 36"'
+					})}}
+					<h4 class="h3 mb-lg-24 _ls-minus-03">{{ directImportsData['imports-units'].title[lang] | safe }}</h4>
+					<ul class="direct-imports__unit-list mb-lg-22">
+						{% for item in directImportsData['imports-units'].list[lang] %}
+							<li class="direct-imports__unit-item">{{ item | safe }}</li>
+						{% endfor %}
+					</ul>
+					<p>{{ directImportsData['imports-units'].text[lang] | safe }}</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-12">
+				<h4 class="h4 _line-b pb-lg-12 mb-lg-34"><span class="h4 _ls-minus-03">{{ directImportsData['total-imports'].title[lang] | safe }}</span>	<br/><span class="text _fs-14 normal c-gray-desc-text">{{ directImportsData['total-imports'].titleSmall[lang] | safe }}</span></h4>
+				<img class="w-100" src="{{ directImportsData['graph'][lang] | safe }}.svg" alt="">
+			</div>
+		</div>
+	</div>
+</section>

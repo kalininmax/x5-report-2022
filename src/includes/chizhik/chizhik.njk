@@ -1,0 +1,135 @@
+<section class="chizhik" id="chizhik">
+	<div class="container">
+		<div class="chizhik__icon-wrapper circle">
+			{{ component('icon', {
+				iconName: "chizhik",
+				className: "chizhik__icon",
+				attributes: "width='66' height='52'"
+			})}}
+		</div>
+		<h2 class="h1 pt-lg-32 pt-sm-16 mb-lg-38 mb-sm-32 _line-t _ls-minus-03">
+			{{ strategicReport['chizhik'].title[lang] | safe }}
+		</h2>
+		<div class="row mb-lg-58">
+			<div class="col-lg-5 col-sm-12 mb-sm-30">
+				{{ strategicReport['chizhik'].text[lang] | safe }}
+			</div>
+			<div class="col-lg-7 col-sm-12">
+				<p class="chizhik__text-prefix text c-default medium ttu">{{ strategicReport['chizhik'].prefix[lang] | safe }}</p>
+				<ul class="chizhik__numbers">
+					{% for number in strategicReport['chizhik'].numbers %}
+						<li class="chizhik__number">
+							<p class="chizhik__number-value big-text">{{ number.value[lang] | safe }}</p>
+							<p class="chizhik__number-text text _fs-14">{{ number.text[lang] | safe }}</p>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		<div class="chizhik__header">
+			{{ component('picture', {
+				path: "section-2",
+				name: strategicReport["chizhik-keys"].cover,
+				ext: "jpg",
+				width: '1112',
+				height: "654",
+				className: "chizhik__header-img",
+				lang: lang
+			})}}
+		</div>
+		<div class="chizhik__keys mb-lg-60">
+			<div class="chizhik__keys-inner chizhik-keys">
+				<div class="chizhik-keys__item">
+					<p class="chizhik__keys-title h3 _white pb-lg-14">
+						{{ strategicReport["chizhik-keys"].title[lang] | safe }}
+					</p>
+					<header class="chizhik-keys__header">
+						<div class="chizhik-keys__header-icon-wrapper">
+							{{ component('icon', {
+								iconName: 'man-green',
+								className: "chizhik-keys__header-icon",
+								attributes: "width=\"24\" height=\"24\""
+							})}}
+						</div>
+						<p class="chizhik-keys__header-title text ttu">
+							{{ strategicReport["chizhik-keys"]['header-titles'][0][lang] | safe }}
+						</p>
+					</header>
+					<ul class="chizhik-keys__list">
+						{% for item in strategicReport["chizhik-keys"].list %}
+							<li class="chizhik-keys__list-item">
+								<p class="chizhik-keys__list-value big-text{% if item.classValue %} {{item.classValue}}{% endif %}">
+									{{ item.value[lang] | safe }}
+								</p>
+								<p class="chizhik-keys__list-title text _fs-14{% if item.classTitle %} {{item.classTitle}}{% endif %}">{{ item.title[lang] | safe }}</p>
+								<p class="chizhik-keys__list-text">{{ item.text[lang] | safe }}</p>
+							</li>
+						{% endfor %}
+					</ul>
+					<ul class="chizhik-keys__list-items list">
+						{% for item in strategicReport["chizhik-keys"].listItems  %}
+							<li class="text _fs-14 _white">{{ item[lang] | safe }}</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="chizhik-keys__item">
+					<div class="list-card__info">
+						<header class="list-card__header">
+							<div class="list-card__icon-wrapper">
+								{{ component('icon', {
+									iconName: 'green-target',
+									className: "list-card__icon",
+									attributes: "width='36' height='36'"
+								})}}
+							</div>
+							<p class="list-card__title h3 _white">
+								{{ strategicReport["chizhik-list-card-1"].title[lang] | safe }}
+							</p>
+						</header>
+						<ul class="list-card__list list">
+							{% for item in strategicReport["chizhik-list-card-1"].list %}
+								<li class="_fs-14">{{ item[lang] | safe }}</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<header class="chizhik__table-header mb-lg-38">
+			<h3 class="h3 pb-lg-16 _line-b _ls-minus-02">
+				{{ strategicReport['chizhik'].table.title[lang] | safe }}
+			</h3>
+			<p class="text">
+				{{ strategicReport['chizhik'].table.text[lang] | safe }}
+			</p>
+		</header>
+		<div class="chizhik__table mb-lg-60">
+			{{ component('table', {
+				data: strategicReport['chizhik'].table.data,
+				lang: lang
+			})}}
+		</div>
+		<div class="row">
+			<div class="col-lg-8 col-sm-12 mb-sm-30">
+				<h3 class="h3 pb-lg-14 mb-lg-20 _line-b _ls-minus-02">
+					{{ strategicReport['chizhik-title-1'][lang] | safe }}
+				</h3>
+				<div class="chizhik__texts">
+					<p class="text _fs-14">{{ strategicReport['chizhik-text-1'][lang] | safe }}</p>
+					<p class="text _fs-14">{{ strategicReport['chizhik-text-2'][lang] | safe }}</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-12">
+				<h3 class="h3 pb-lg-14 mb-lg-20 _line-b _ls-minus-02">
+					{{ strategicReport['chizhik-title-2'][lang] | safe }}
+				</h3>
+				<ul class="chizhik__lists list">
+					{% for text in strategicReport['chizhik-list'] %}
+						<li class="text _fs-14">{{ text[lang] | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</section>

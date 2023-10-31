@@ -1,0 +1,90 @@
+.health {
+	box-sizing: border-box;
+	color: $c-gray-menu-text;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: -0.02em;
+
+	@include max-screen($breakpoint-sm) {
+		font-size: 12px;
+	}
+	&__image {
+		height: auto;
+	}
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		row-gap: 30px;
+		column-gap: 40px;
+
+		@include max-screen($breakpoint-md) {
+			grid-template-rows: auto;
+			grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+			justify-items: center;
+			row-gap: 10px;
+			column-gap: 10px;
+		}
+	}
+	&__card {
+		padding: 30px 24px 43px 31px;
+		box-sizing: border-box;
+		border-radius: 10px;
+		background-color: $c-bg-gray-light;
+	}
+	&__card-title {
+		margin-bottom: 20px;
+		color: $c-black;
+		text-transform: uppercase;
+		font-size: 16px;
+		line-height: 18px;
+		font-weight: 500;
+		&._one-line {
+			margin-bottom: 39px;
+		}
+	}
+	&__card-text {
+		padding-top: 20px;
+		max-width: 280px;
+		border-top: 1px solid $c-highlights-border;
+	}
+	&__plans {
+		padding: 40px 56px 58px 55px;
+		border-radius: 10px;
+		background-color: $c-green-dark;
+		color: $c-white;
+		h4.h3::before {
+			background-color: $c-green-dark-border;
+		}
+		&._without-bottom-radius {
+			padding-bottom: 62px;
+			border-bottom-right-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+		&._without-top-radius {
+			padding-bottom: 66px;
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+		}
+		&._light {
+			background-color: $c-green;
+			h4.h3::before {
+				background-color: $c-white;
+			}
+			ul.list li::before {
+				background-color: $c-white;
+			}
+		}
+	}
+	ul li:not(:first-child) {
+		margin-top: 10px;
+	}
+	._pos-r {
+		position: relative;
+		right: 10px;
+	}
+	ul.list li::before {
+		@include max-screen($breakpoint-sm) {
+			top: 7px;
+		}
+	}
+}

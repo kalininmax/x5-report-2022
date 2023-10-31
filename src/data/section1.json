@@ -3772,7 +3772,7 @@
 									{
 										"mod": "_width-limited-lg _custom _left-padding-sm _top-padding _right-padding",
 										"text": {
-											"ru": "<p class=\"mb-lg-16\">Обязанность по&nbsp;внесению в&nbsp;систему маркировки сведений о&nbsp;розничных продажах упакованной воды для продавцов, производителей и&nbsp;импортёров перенесена на&nbsp;1&nbsp;марта 2023&nbsp;года.</p><p class=\"mb-lg-16 c-green\">Подробнее см. Постановление Правительства Российской Федерации &#8470;&nbsp;477 от&nbsp;26&nbsp;марта 2022 года</p",
+											"ru": "<p class=\"mb-lg-16\">Обязанность по&nbsp;внесению в&nbsp;систему маркировки сведений о&nbsp;розничных продажах упакованной воды для продавцов, производителей и&nbsp;импортёров перенесена на&nbsp;1&nbsp;марта 2023&nbsp;года.</p><p class=\"mb-lg-16 c-green\">Подробнее см. Постановление Правительства Российской Федерации &#8470;&nbsp;477 от&nbsp;26&nbsp;марта 2022 года</p>",
 											"en": "<p class=\"mb-lg-16\">The requirement for sellers, manufacturers and importers to&nbsp;submit information on&nbsp;retail sales of&nbsp;bottled water to&nbsp;the labelling system was postponed until 1&nbsp;March 2023.</p><p class=\"mb-lg-16 c-green\">For more details, see Resolution of&nbsp;the Russian Government No.&nbsp;477 dated 26&nbsp;March 2022</p>"
 										}
 									},
@@ -42284,7 +42284,7 @@
 						"en": "Selling space,"
 					},
 					"text": {
-						"ru": "<span class=\"text light c-gray-menu-text\"><sup class='tooltip-button' data-tooltip-id='tooltip-1-4' aria-expanded='false'></sup> тыс.&nbsp;кв.&nbsp;м",
+						"ru": "<span class=\"text light c-gray-menu-text\"><sup class='tooltip-button' data-tooltip-id='tooltip-1-4' aria-expanded='false'></sup> тыс.&nbsp;кв.&nbsp;м</span>",
 						"en": "<span class=\"text light c-gray-menu-text\"><sup class='tooltip-button' data-tooltip-id='tooltip-1-4' aria-expanded='false'></sup> ths&nbsp;sqm</span>"
 					},
 					"img": {

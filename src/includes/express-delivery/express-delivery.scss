@@ -1,0 +1,228 @@
+.express-delivery {
+	padding-bottom: 104px;
+	background: $c-bg-gray-light;
+	&__legend {
+		display: flex;
+		gap: 30px;
+	}
+	&__legend-item {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		font-size: 13px;
+		line-height: 1.15;
+		font-weight: 400;
+		letter-spacing: -0.02em;
+	}
+	&__charts-images {
+		margin-left: -5px;
+	}
+	&__card {
+		display: grid;
+		grid-template-columns: 410px 318px;
+		margin-top: -12px;
+		min-height: 485px;
+		overflow: hidden;
+		border-radius: $default-border-radius;
+
+		@include max-screen($breakpoint-md) {
+			display: flex;
+			flex-direction: column;
+			margin-top: 0;
+		}
+	}
+	&__card-item {
+		&:first-child {
+			padding: 42px 40px;
+			background: $c-white;
+		}
+		&:last-child {
+			background: $c-lime;
+		}
+		&._phone {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	&__chart-img-mobile {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.express-delivery-keys {
+	overflow: hidden;
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(2, calc(384 / 1111 * 100%)) calc(344 / 1111 * 100%);
+
+		@include max-screen($breakpoint-md) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include max-screen($breakpoint-sm) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	&__item {
+		padding: 30px;
+		border-top: 1px solid $c-dark-gray-3;
+		border-left: 1px solid $c-dark-gray-3;
+		&:nth-child(3) ~ & {
+			margin-top: -20px;
+			border-top: 0;
+
+			@include max-screen($breakpoint-md) {
+				margin-top: 0;
+				border-top: 1px solid $c-dark-gray-3;
+			}
+		}
+	}
+	&__icon-wrapper {
+		margin-bottom: 22px;
+		width: 60px;
+		height: 60px;
+	}
+	&__item-value {
+		display: flex;
+		align-items: baseline;
+		gap: 8px;
+		margin-bottom: 2px;
+		color: $c-green;
+	}
+	&__item-subtext {
+		color: $c-green;
+		font-size: 13px;
+		line-height: 1.31;
+		font-weight: 400;
+		letter-spacing: -0.02em;
+	}
+}
+
+.express-delivery-business-model {
+	$this: &;
+
+	display: grid;
+	grid-template-columns: calc(656 / 1111 * 100%) calc(456 / 1111 * 100%);
+	min-height: 552px;
+	overflow: hidden;
+	border-radius: $default-border-radius;
+	color: $c-white;
+
+	@include max-screen($breakpoint-md) {
+		display: flex;
+		flex-direction: column;
+	}
+	&__img {
+		height: 100%;
+	}
+	&__cnt {
+		padding: 56px;
+		background: $c-green-dark;
+		&._five-post {
+			grid-row: 1/3;
+			background: $c-green-dark;
+		}
+
+		@include max-screen($breakpoint-md) {
+			padding: 20px;
+		}
+	}
+	&__diagram {
+		display: grid;
+		grid-template-columns: 170px 1fr;
+		align-items: center;
+		gap: 105px;
+		margin-top: -73px;
+		&._mobile {
+			display: none;
+		}
+
+		@include max-screen($breakpoint-md) {
+			&._desktop {
+				display: none;
+			}
+			&._mobile {
+				display: block;
+				margin: 10px auto 30px;
+			}
+		}
+	}
+	&__diagram-main {
+		margin-top: 72px;
+		text-align: center;
+	}
+	&__diagram-main-icon-wrapper {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 18px;
+		width: 170px;
+		height: 170px;
+		&::after {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: calc(28 / 170 * 100%);
+			width: 235px;
+			height: 170px;
+			background: inline('diagram-circle.svg') no-repeat 0 0;
+			background-size: cover;
+			content: '';
+			transform: translate(-50%, -50%);
+		}
+	}
+	&__diagram-list {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+		&::after {
+			position: absolute;
+			top: 50%;
+			left: -46px;
+			width: 36px;
+			height: 90%;
+			background: inline('diagram-arrow.svg') no-repeat 0 0;
+			background-size: contain;
+			content: '';
+			transform: translateY(-50%);
+		}
+	}
+	&__diagram-list-item {
+		display: flex;
+		align-items: center;
+		gap: 24px;
+		&:last-child {
+			#{$this}__diagram-list-icon-wrapper {
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+	&__diagram-list-icon-wrapper {
+		position: relative;
+		flex-shrink: 0;
+		margin-bottom: initial;
+		box-sizing: border-box;
+		width: 60px;
+		height: 60px;
+		border-color: $c-green;
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -21px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 11px;
+			height: 10px;
+			background: inline('diagram-triangle.svg') no-repeat 0 0;
+			background-size: contain;
+		}
+	}
+}

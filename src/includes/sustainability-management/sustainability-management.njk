@@ -1,0 +1,425 @@
+{% set sustainabilityData = strategicReport["sustainability-management"] %}
+{% set ourApproach = strategicReport["sustainability-management"]["our-approach"] %}
+{% set valueCreationModel = strategicReport["sustainability-management"]["value-creation-model"] %}
+{% set valueCreationModelTable = strategicReport["sustainability-management"]["value-creation-model-table"] %}
+{% set sustainableInvesting = strategicReport["sustainability-management"]["sustainable-investing"] %}
+{% set governance = strategicReport["sustainability-management"]["governance"] %}
+{% set performance = strategicReport["sustainability-management"]["performance"] %}
+{% set keyRegulation = strategicReport["sustainability-management"]["key-regulation"] %}
+{% set keyRegulationTable = strategicReport["sustainability-management"]["key-regulation-table"] %}
+
+<section class="sustainability" id="sustainability-management">
+	<div class="section__container container">
+		<h2 class="h1 pt-lg-32 pt-sm-16 mb-lg-38 mb-sm-32 _line-t _ls-minus-03">
+			{{ sustainabilityData.title[lang] | safe }}
+		</h2>
+		<h4 class="h3 _line-b pb-lg-14 mb-lg-20 mb-sm-16">{{ ourApproach.title[lang] | safe }}</h4>
+		<p class="mb-lg-40 mb-sm-32 sustainability__max-width-text">{{ ourApproach.text[lang] | safe }}</p>
+		<div class="sustainability__value-model-table _desktop mb-lg-60 mb-sm-48">
+			<h5 class="h4 pb-lg-14 _line-b mb-lg-20">{{ valueCreationModel.title[lang] | safe }}</h5>
+			<p class="mb-lg-26">{{ valueCreationModel.text[lang] | safe }}</p>
+			<table class="sustainability-table">
+				<tbody>
+					<tr class="sustainability-table__tr-h">
+						<th class="sustainability-table__th">
+							<p class="sustainability__text _mw-95 _def-c">
+								{{ valueCreationModelTable.title.th1[lang] | safe }}
+							</p>
+						</th>
+						<th class="sustainability-table__th">
+							<p class="sustainability__text _p-l-30 _def-c">
+								{{ valueCreationModelTable.title.th2[lang] | safe }}
+							</p>
+						</th>
+						<th class="sustainability-table__th">
+							<p class="sustainability__text _mw-180 _p-l-20 _def-c">
+								{{ valueCreationModelTable.title.th3[lang] | safe }}
+							</p>
+						</th>
+						<th class="sustainability-table__th">
+							<p class="sustainability__text _p-l-10 _def-c">
+								{{ valueCreationModelTable.title.th4[lang] | safe }}
+							</p>
+						</th>
+						<th class="sustainability-table__th">
+							<p class="sustainability__text _p-l-0 _def-c">
+								{{ valueCreationModelTable.title.th5[lang] | safe }}
+							</p>
+						</th>
+					</tr>
+					<tr class="sustainability-table__tr-1">
+						<td class="sustainability-table__td-left">
+							<p class="sustainability-table__td-left-text _mt-110 sustainability__text _def-c">
+								{{ valueCreationModelTable.row1.col1.title[lang] | safe }}
+							</p>
+						</td>
+						<td class="sustainability-table__td-with-list">
+							<div class="sustainability-table__card-list sustainability-card">
+								{{ component('icon', {
+									iconName: valueCreationModelTable.row1.col2.icon.name,
+									className: 'sustainability-card__icon',
+									attributes: 'width="50" height="50" viewBox="0 0 36 36"'
+								}) }}
+								<p class="sustainability-card__title _mw-140 sustainability__text _def-c">{{ valueCreationModelTable.row1.col2.title[lang] | safe }}</p>
+								<ul class="list sustainability-card__list">
+									{% for item in valueCreationModelTable.row1.col2.list %}
+										<li>{{ item[lang] | safe }}</li>
+									{% endfor %}
+								</ul>
+							</div>
+						</td>
+						<td class="sustainability-table__td-without-list">
+							<div class="sustainability-table__card sustainability-card">
+								{{ component('icon', {
+									iconName: valueCreationModelTable.row1.col3.icon.name,
+									className: 'sustainability-card__icon',
+									attributes: 'width="50" height="50" viewBox="0 0 36 36"'
+								}) }}
+								<p class="sustainability-card__title _mw-150 sustainability__text _def-c">
+									{{ valueCreationModelTable.row1.col3.title[lang] | safe }}
+								</p>
+							</div>
+						</td>
+						<td class="sustainability-table__td-without-list">
+							<div class="sustainability-table__card sustainability-card">
+								{{ component('icon', {
+									iconName: valueCreationModelTable.row1.col4.icon.name,
+									className: 'sustainability-card__icon',
+									attributes: 'width="50" height="50" viewBox="0 0 36 36"'
+								}) }}
+								<p class="sustainability-card__title _mw-160 sustainability__text _def-c">
+									{{ valueCreationModelTable.row1.col4.title[lang] | safe }}
+								</p>
+							</div>
+						</td>
+						<td class="sustainability-table__td-without-list">
+							<div class="sustainability-table__card sustainability-card">
+								{{ component('icon', {
+									iconName: valueCreationModelTable.row1.col5.icon.name,
+									className: 'sustainability-card__icon',
+									attributes: 'width="50" height="50" viewBox="0 0 36 36"'
+								}) }}
+								<p class="sustainability-card__title _mw-160 sustainability__text _def-c">
+									{{ valueCreationModelTable.row1.col5.title[lang] | safe }}
+								</p>
+							</div>
+						</td>
+					</tr>
+					<tr class="sustainability-table__tr-2">
+						<td class="sustainability-table__td-left">
+							<div class="sustainability-table__td-left-text _mt-34 sustainability__text _def-c _pb-10">
+								<p class="mw-150">{{ valueCreationModelTable.row2.col1.title[lang] | safe }}</p>
+							</div>
+						</td>
+						<td colspan="4">
+							<div class="sustainability-card sustainability-card__cl-4">
+								<ul class="list sustainability-card__ul-2">
+									{% for item in valueCreationModelTable.row2.col21 %}
+										<li class="sustainability-card__list-item">{{ item[lang] | safe }}</li>
+									{% endfor %}
+								</ul>
+								<ul class="list sustainability-card__ul-2">
+									{% for item in valueCreationModelTable.row2.col22 %}
+										<li class="sustainability-card__list-item">{{ item[lang] | safe }}</li>
+									{% endfor %}
+								</ul>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="sustainability__value-model-table _mobile mb-lg-40 mb-ls-32">
+		<h5 class="h4 pb-lg-14 _line-b mb-lg-20">{{ valueCreationModel.title[lang] | safe }}</h5>
+		<p class="mb-lg-26">{{ valueCreationModel.text[lang] | safe }}</p>
+		<table class="mobile-table">
+			<tbody>
+				<tr>
+					<th>{{ valueCreationModelTable.title.th1[lang] | safe }}</th>
+					<th class="pl-lg-20">{{ valueCreationModelTable.row1.col1.title[lang] | safe }}</th>
+				</tr>
+				<tr>
+					<td>{{ valueCreationModelTable.title.th2[lang] | safe }}</td>
+					<td>
+						<div class="_disp-row mb-lg-12">
+							{{ component('icon', {
+								iconName: valueCreationModelTable.row1.col2.icon2.name,
+								className: "mobile-table__icon",
+								attributes: 'width="32" height="32" viewBox="0 0 36 36"'
+							}) }}
+							<p>{{ valueCreationModelTable.row1.col2.title[lang] | safe }}</p>
+						</div>
+						<ul class="list">
+							{% for item in valueCreationModelTable.row1.col2.list %}
+								<li>{{ item[lang] | safe }}</li>
+							{% endfor %}
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>{{ valueCreationModelTable.title.th3[lang] | safe }}</td>
+					<td>
+						<div class="_disp-row">
+							{{ component('icon', {
+								iconName: valueCreationModelTable.row1.col3.icon2.name,
+								className: "mobile-table__icon",
+								attributes: 'width="32" height="32" viewBox="0 0 36 36"'
+							}) }}
+							<p>
+								{{ valueCreationModelTable.row1.col3.title[lang] | safe }}
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>{{ valueCreationModelTable.title.th4[lang] | safe }}</td>
+					<td>
+						<div class="_disp-row">
+							{{ component('icon', {
+								iconName: valueCreationModelTable.row1.col4.icon2.name,
+								className: "mobile-table__icon",
+								attributes: 'width="32" height="32" viewBox="0 0 36 36"'
+							}) }}
+							<p>
+								{{ valueCreationModelTable.row1.col4.title[lang] | safe }}
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>{{ valueCreationModelTable.title.th5[lang] | safe }}</td>
+					<td>
+						<div class="_disp-row ">
+							{{ component('icon', {
+								iconName: valueCreationModelTable.row1.col5.icon2.name,
+								className: "mobile-table__icon",
+								attributes: 'width="32" height="32" viewBox="0 0 36 36"'
+							}) }}
+							<p>
+								{{ valueCreationModelTable.row1.col5.title[lang] | safe }}
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<p class="text _fs-14 c-default medium mb-lg-12">{{ valueCreationModelTable.row2.col1.title[lang] | safe }}</p>
+						<ul class="list mb-lg-8">
+							{% for item in valueCreationModelTable.row2.col21 %}
+								<li>{{ item[lang] | safe }}</li>
+							{% endfor %}
+						</ul>
+						<ul class="list">
+							{% for item in valueCreationModelTable.row2.col22 %}
+								<li>{{ item[lang] | safe }}</li>
+							{% endfor %}
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="section__container container">
+		{{ component('picture', {
+			path: "section-4",
+			name: sustainabilityData.img,
+			ext: "jpg",
+			width: '1111',
+			height: "570",
+			className: "mb-lg-60 mb-sm-40 sustainability__image",
+			lang: lang
+		})}}
+		<h5 class="h4 pb-lg-14 _line-b mb-lg-22"> {{ sustainableInvesting.title[lang] | safe }}</h5>
+		<div class="row mb-lg-60 mb-ms-48">
+			<div class="col-lg-6 col-sm-12 mb-sm-14">
+				{% for item in sustainableInvesting.text1col %}
+					<p class="sustainability__text _mb-p">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<p class="mb-lg-20">{{ sustainableInvesting.text2col.text1[lang] | safe }}</p>
+				<ul class="list">
+					{% for item in sustainableInvesting.text2col.list %}
+						<li class="mb-lg-10 sustainability__text _fs-14">{{ item[lang] | safe }}</li>
+					{% endfor %}
+				</ul>
+				<p class="pt-lg-10">  {{ sustainableInvesting.text2col.text2[lang] | safe }}</p>
+			</div>
+		</div>
+		<h5 class="h4 pb-lg-14 _line-b mb-lg-22">{{ governance.title[lang] | safe }}</h5>
+		<div class="row mb-lg-60 mb-ms-48">
+			<div class="col-lg-6 col-sm-12 mb-sm-14">
+				{% for item in governance.text1col %}
+					<p class="sustainability__text _mb-p">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				{% for item in governance.text2col %}
+					<p class="sustainability__text _mb-p">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+		</div>
+		<h5 class="h4 pb-lg-14 _line-b mb-lg-20">{{ performance.title[lang] | safe }}</h5>
+		<div class="row mb-lg-60 mb-ms-48">
+			<div class="col-lg-6 col-sm-12 mb-sm-14">
+				<p>{{ performance.text1[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<p>{{ performance.text2[lang] | safe }}</p>
+			</div>
+		</div>
+		<h5 class="h4 pb-lg-14 _line-b mb-lg-20">{{ keyRegulation.title[lang] | safe }}</h5>
+		<div class="row mb-lg-40 mb-ms-32">
+			<div class="col-lg-6 col-sm-12 mb-sm-14">
+				<p class="sustainability__text _mb-p">{{ keyRegulation.text1[lang] | safe }}</p>
+				<p>{{ keyRegulation.text21[lang] | safe }}<br>{{ keyRegulation.text22[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<p>{{ keyRegulation.text3[lang] | safe }}</p>
+			</div>
+		</div>
+		<div class="sustainability__key-documents mb-lg-118 mb-ls-60">
+			<table class="sustainability__key-table">
+				<tbody>
+					<tr class="sustainability__key-table-tr">
+						<th class="sustainability__key-table-th">{{ keyRegulationTable.title1[lang] | safe }}</th>
+						<th class="sustainability__key-table-th pl-lg-30">{{ keyRegulationTable.title2[lang] | safe }}</th>
+					</tr>
+					<tr class="sustainability__key-table-tr">
+						<td class="sustainability__key-table-td">
+							<p class="sustainability__text _black _mw-200">
+								{{ keyRegulationTable.row1.col1[lang] | safe }}
+							</p>
+						</td>
+						<td class="sustainability__key-table-td">
+							{% for item in keyRegulationTable.row1.col2 %}
+								<p class="sustainability__text _mb-p">{{ item[lang] | safe }}</p>
+							{% endfor %}
+						</td>
+					</tr>
+					<tr class="sustainability__key-table-tr">
+						<td class="sustainability__key-table-td">
+							<p class="sustainability__text _black">
+								{{ keyRegulationTable.row2.col1[lang] | safe }}
+							</p>
+						</td>
+						<td class="sustainability__key-table-td">
+							<p class="sustainability__text _def-c mb-lg-8">
+								{{ keyRegulationTable.row2.col2.text1[lang] | safe }}
+							</p>
+							<ul class="list mb-lg-10">
+								{% for item in keyRegulationTable.row2.col2.list %}
+									<li class="sustainability-card__list-item">{{ item[lang] | safe }}</li>
+								{% endfor %}
+							</ul>
+							<p class="sustainability__text">
+								{{ keyRegulationTable.row2.col2.text2[lang] | safe }}
+							</p>
+						</td>
+					</tr>
+					<tr class="sustainability__key-table-tr">
+						<td class="sustainability__key-table-td">
+							<p class="sustainability__text _black _mw-190">
+								{{ keyRegulationTable.row3.col1[lang] | safe }}
+							</p>
+						</td>
+						<td class="sustainability__key-table-td">
+							<p class="sustainability__text mw-782">
+								{{ keyRegulationTable.row3.col2[lang] | safe }}
+							</p>
+						</td>
+					</tr>
+					<tr class="sustainability__key-table-tr">
+						<td class="sustainability__key-table-td">
+							<p class="sustainability__text _black _mw-190">
+								{{ keyRegulationTable.row4.col1[lang] | safe }}
+							</p>
+						</td>
+						<td class="sustainability__key-table-td">
+							{% for item in keyRegulationTable.row4.col2 %}
+								<p class="sustainability__text _mb-p mw-810">{{ item[lang] | safe }}</p>
+							{% endfor %}
+						</td>
+					</tr>
+					<tr class="sustainability__key-table-tr">
+						<td class="sustainability__key-table-td">
+							<p class="sustainability__text _black _mw-180">
+								{{ keyRegulationTable.row5.col1[lang] | safe }}
+							</p>
+						</td>
+						<td class="sustainability__key-table-td">
+							{% for item in keyRegulationTable.row5.col2 %}
+								<p class="sustainability__text _mb-p">{{ item[lang] | safe }}</p>
+							{% endfor %}
+						</td>
+					</tr>
+					<tr class="sustainability__key-table-tr">
+						<td class="sustainability__key-table-td">
+							<p class="sustainability__text _black _mw-190">
+								{{ keyRegulationTable.row6.col1[lang] | safe }}
+							</p>
+						</td>
+						<td class="sustainability__key-table-td">
+							<p class="sustainability__text">
+								{{ keyRegulationTable.row6.col2[lang] | safe }}
+							</p>
+						</td>
+					</tr>
+					<tr class="sustainability__key-table-tr">
+						<td class="sustainability__key-table-td">
+							<p class="sustainability__text _black">
+								{{ keyRegulationTable.row7.col1[lang] | safe }}
+							</p>
+						</td>
+						<td class="sustainability__key-table-td">
+							<p class="sustainability__text mw-808">
+								{{ keyRegulationTable.row7.col2[lang] | safe }}
+							</p>
+						</td>
+					</tr>
+					<tr class="sustainability__key-table-tr">
+						<td class="sustainability__key-table-td">
+							<p class="sustainability__text _black">
+								{{ keyRegulationTable.row8.col1[lang] | safe }}
+							</p>
+						</td>
+						<td class="sustainability__key-table-td">
+							<p class="sustainability__text mb-lg-10">
+								{{ keyRegulationTable.row8.col2.text1[lang] | safe }}
+							</p>
+							<ul class="list mb-lg-10">
+								{% for item in keyRegulationTable.row8.col2.list %}
+									<li class="sustainability-card__list-item">{{ item[lang] | safe }}</li>
+								{% endfor %}
+							</ul>
+							<p class="sustainability__text mw-806">
+								{{ keyRegulationTable.row8.col2.text2[lang] | safe }}
+							</p>
+						</td>
+					</tr>
+					<tr class="sustainability__key-table-tr">
+						<td class="sustainability__key-table-td">
+							<p class="sustainability__text _black">
+								{{ keyRegulationTable.row9.col1[lang] | safe }}
+							</p>
+						</td>
+						<td class="sustainability__key-table-td">
+							<p class="sustainability__text _mb-p">
+								{{ keyRegulationTable.row9.col2.text1[lang] | safe }}
+							</p>
+							<p class="sustainability__text mb-lg-10">
+								{{ keyRegulationTable.row9.col2.text2[lang] | safe }}
+							</p>
+							<ul class="list">
+								{% for item in keyRegulationTable.row9.col2.list %}
+									<li class="sustainability-card__list-item">{{ item[lang] | safe }}</li>
+								{% endfor %}
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</section>

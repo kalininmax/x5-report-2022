@@ -1,0 +1,855 @@
+{% set planetData = strategicReport["planet"] %}
+{% set ourApproach = strategicReport["planet"]["our-approach"] %}
+{% set governance = strategicReport["planet"]["governance"] %}
+{% set strategicGoals = strategicReport["planet"]["strategic-goals"] %}
+{% set reducingEnergy = strategicReport["planet"]["reducing-energy"] %}
+{% set reducingWaste = strategicReport["planet"]["reducing-waste"] %}
+{% set guidelines = strategicReport["planet"]["guidelines"] %}
+{% set tcfd = strategicReport["planet"]["tcfd"] %}
+{% set corporateGov = strategicReport["planet"]["corporate-governance"] %}
+{% set strategy = strategicReport["planet"]["strategy"] %}
+{% set climateRel = strategicReport["planet"]["climate-related"] %}
+{% set physicalTransit = strategicReport["planet"]["physical-transition"] %}
+{% set year2022 = strategicReport["planet"]["2022"] %}
+{% set risk = strategicReport["planet"]["risk"] %}
+{% set riskMap = strategicReport["planet"]["risk-mapping"] %}
+{% set metrics = strategicReport["planet"]["metrics"] %}
+{% set plans = strategicReport["planet"]["plans"] %}
+
+<section class="planet" id="planet">
+	<div class="section__container container">
+		<div class="planet__header">
+			<h2 class="h1 pt-lg-32 pt-sm-16 mb-lg-38 mb-sm-32 _line-t _ls-minus-03">
+				{{ planetData.title[lang] | safe }}
+			</h2>
+			{{ component('icon', {
+					iconName: planetData.icon,
+					className: 'planet__header-icon',
+					attributes: 'width="70" height="70" viewBox="0 0 36 36"'
+			}) }}
+		</div>
+		<div class="row mb-lg-60 mb-sm-48">
+			<div class="col-lg-6 col-sm-12 mb-sm-20">
+				<h3 class="h3 pb-lg-14 mb-lg-20 _line-b _ls-minus-02">
+					{{ ourApproach.title[lang] | safe }}
+				</h3>
+				{% for item in ourApproach.text %}
+					<p class="planet__text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<h3 class="h3 pb-lg-14 mb-lg-20 _line-b _ls-minus-02">
+					{{ governance.title[lang] | safe }}
+				</h3>
+				{% for item in governance.text %}
+					<p class="planet__text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="strategic-goals mb-lg-60">
+			<div class="strategic-goals__info">
+				<div class="strategic-goals__header">
+					<div class="strategic-goals__titles">
+						<div class="strategic-goals__title _first _left">
+							<h5 >
+								<span class="_col-gr">{{ strategicGoals["title1-left"][lang] | safe }}</span>
+								<span class="_col-wh">{{ strategicGoals["title2-left"][lang] | safe }}</span>
+							</h5>
+						</div>
+						<div class="strategic-goals__title _second _right _desktop">
+							<h5 >
+								<span class="_col-gr">{{ strategicGoals["title1-right"][lang] | safe }}</span>
+								<span class="_col-wh">{{ strategicGoals["title2-right"][lang] | safe }}</span>
+							</h5>
+						</div>
+					</div>
+					{{ component('icon', {
+						iconName: strategicGoals.icon,
+						className: 'strategic-goals__icon _center',
+						attributes: 'width="60" height="60" viewBox="0 0 36 36"'
+					})}}
+				</div>
+				<div class="strategic-goals__content _center">
+					<div class="strategic-goals__list _center mb-sm-40">
+						<div class="planet__grid">
+							<div class="strategic-goals__card mw-166">
+								<p class="strategic-goals__percents-first _empty"></p>
+								<p class="strategic-goals__percents-number _small">{{ strategicGoals["col-1"]["card-1"].number[lang] | safe }}<span>%</span></p>
+								<p>{{ strategicGoals["col-1"]["card-1"].text[lang] | safe }}</p>
+							</div>
+							<div class="strategic-goals__card mw-152">
+								<p class="strategic-goals__percents-first">{{ strategicGoals["col-1"]["card-2"].title[lang] | safe }}</p>
+								<p class="strategic-goals__percents-number _small">{{ strategicGoals["col-1"]["card-2"].number[lang] | safe }}<span>%</span></p>
+								<p>{{ strategicGoals["col-1"]["card-2"].text[lang] | safe }}</p>
+							</div>
+							<div class="strategic-goals__card mw-158 _third-column">
+								<p class="strategic-goals__percents-first">{{ strategicGoals["col-1"]["card-3"].title[lang] | safe }}</p>
+								<p class="strategic-goals__percents-number _small">{{ strategicGoals["col-1"]["card-3"].number[lang] | safe }}<span>%</span></p>
+								<p>{{ strategicGoals["col-1"]["card-3"].text[lang] | safe }}</p>
+							</div>
+							<div class="strategic-goals__card mw-166">
+								<p class="strategic-goals__percents-first">{{ strategicGoals["col-1"]["card-4"].title[lang] | safe }}</p>
+								<p class="strategic-goals__percents-number _small">{{ strategicGoals["col-1"]["card-4"].number[lang] | safe }}<span>%</span></p>
+								<p>{{ strategicGoals["col-1"]["card-4"].text[lang] | safe }}</p>
+							</div>
+							<div class="strategic-goals__card mw-158">
+								<p class="strategic-goals__percents-first">{{ strategicGoals["col-1"]["card-5"].title[lang] | safe }}</p>
+								<p class="strategic-goals__percents-number _small">{{ strategicGoals["col-1"]["card-5"].number[lang] | safe }}<span>%</span></p>
+								<p>{{ strategicGoals["col-1"]["card-5"].text1[lang] | safe }}</p>
+								<p>{{ strategicGoals["col-1"]["card-5"].text2[lang] | safe }}</p>
+							</div>
+							<div class="strategic-goals__card mw-166 _third-column-bottom">
+								<ul class="list strategic-goals__list-first">
+									{% for item in strategicGoals["col-1"].list %}
+										<li>{{ item[lang] | safe }}</li>
+									{% endfor %}
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="strategic-goals__percents _center">
+						<div class="strategic-goals__title _second _right _mobile mb-sm-20">
+							<h5 >
+								<span class="_col-gr">{{ strategicGoals["title1-right"][lang] | safe }}</span>
+								<span class="_col-wh">{{ strategicGoals["title2-right"][lang] | safe }}</span>
+							</h5>
+						</div>
+						<div class="planet__grid _col-2">
+							<div class="strategic-goals__card mw-168">
+								<p class="strategic-goals__percents-first _empty"></p>
+								<p class="strategic-goals__percents-number _small">{{ strategicGoals["col-2"]["card-1"].number[lang] | safe }}<span>%</span></p>
+								<p>{{ strategicGoals["col-2"]["card-1"].text[lang] | safe }}</p>
+							</div>
+							<div class="strategic-goals__card mw-166">
+								<p class="strategic-goals__percents-first _empty"></p>
+								<p class="strategic-goals__percents-number _small">{{ strategicGoals["col-2"]["card-2"].number[lang] | safe }}<span>%</span></p>
+								<p>{{ strategicGoals["col-2"]["card-2"].text[lang] | safe }}</p>
+							</div>
+							<div class="strategic-goals__card mw-166">
+								<p class="strategic-goals__percents-first">{{ strategicGoals["col-2"]["card-3"].title[lang] | safe }}</p>
+								<p class="strategic-goals__percents-number _small">{{ strategicGoals["col-2"]["card-3"].number[lang] | safe }}<span>%</span></p>
+								<p>{{ strategicGoals["col-2"]["card-3"].text[lang] | safe }}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{{ component('picture', {
+				path: "section-4",
+				name: strategicGoals.img,
+				ext: "jpg",
+				width: '1111',
+				height: "570",
+				className: "planet__image",
+				lang: lang
+			})}}
+		</div>
+		<h4 class="h3 _line-b pb-lg-14 mb-lg-22 mb-sm-18">{{ reducingEnergy.title[lang] | safe }}</h4>
+		<div class="row mb-lg-58 mb-sm-48">
+			<div class="col-lg-6 col-sm-12 mb-sm-20">
+				<div class="strategic-goals-grey">
+					<div class="strategic-goals-grey__block mb-lg-60">
+						<div class="strategic-goals-grey__title mb-lg-20">
+							<h5>
+								<span class="c-default">{{ reducingEnergy.card["title 1-1"][lang] | safe }}</span>
+								<span class="c-green">{{ reducingEnergy.card["title 1-2"][lang] | safe }}</span>
+							</h5>
+						</div>
+						<div class="strategic-goals-grey__content">
+							<div class="strategic-goals-grey__cards">
+								<div class="strategic-goals-grey__card mw-218">
+									<p class="strategic-goals-grey__percents-number _small">{{ reducingEnergy.card.content1.number[lang] | safe }}<span>%</span></p>
+									<p>{{ reducingEnergy.card.content1.text[lang] | safe }}</p>
+								</div>
+								<div class="strategic-goals-grey__card mw-210">
+									{{ component('icon', {
+										iconName: reducingEnergy.card.content2.icon,
+										className: 'strategic-goals-grey__icon',
+										attributes: 'width="45" height="45" viewBox="0 0 36 36"'
+									}) }}
+									<p>{{ reducingEnergy.card.content2.text[lang] | safe }}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="strategic-goals-grey__block mb-lg-20 mw-450">
+						<div class="strategic-goals-grey__title mb-lg-22">
+							<h5>
+								<span class="c-default">{{ reducingEnergy.card["title 2-1"][lang] | safe }}</span>
+								<span class="c-green">{{ reducingEnergy.card["title 2-2"][lang] | safe }}</span>
+							</h5>
+						</div>
+						<div class="strategic-goals-grey__content">
+							<div class="strategic-goals-grey__cards">
+								<div class="strategic-goals-grey__card mw-194">
+									<p class="strategic-goals-grey__card-title _empty"></p>
+									<p class="strategic-goals-grey__percents-number">{{ reducingEnergy.card.content3.number[lang] | safe }}<span>%</span></p>
+									<p>{{ reducingEnergy.card.content3.text[lang] | safe }}</p>
+								</div>
+								<div class="strategic-goals-grey__card mw-192 pl-lg-24 pl-sm-0">
+									<p class="strategic-goals-grey__card-title">{{ reducingEnergy.card.content4.title[lang] | safe }}</p>
+									<p class="strategic-goals-grey__percents-number _small">{{ reducingEnergy.card.content4.number[lang] | safe }}<span>%</span></p>
+									<p>{{ reducingEnergy.card.content4.text[lang] | safe }}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<p class="planet__text">
+					{{ reducingEnergy.text1[lang] | safe }}
+					<a href="https://esg.x5.ru/media/files/X5s_Energy_Efficiency_And_Climate_Change_Prevention_Policy.pdf" target="_blank">{{ reducingEnergy.href[lang] | safe }}</a>
+					{{ reducingEnergy.text2[lang] | safe }}
+				</p>
+				{% for item in reducingEnergy.text3 %}
+					<p class="planet__text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+		</div>
+		<h4 class="h3 _line-b pb-lg-14 mb-lg-22 mb-sm-18">{{ reducingWaste.title[lang] | safe }}</h4>
+		<div class="row mb-lg-60 mb-sm-48">
+			<div class="col-lg-6 col-sm-12 mb-sm-20">
+				<div class="strategic-goals-grey">
+					<div class="strategic-goals-grey__block mb-lg-42">
+						<div class="strategic-goals-grey__title mb-lg-30">
+							<h5>
+								<span class="c-default">{{ reducingWaste.card["title 1-1"][lang] | safe }}</span>
+								<span class="c-green">{{ reducingWaste.card["title 1-2"][lang] | safe }}</span>
+							</h5>
+						</div>
+						<div class="strategic-goals-grey__content">
+							<div class="strategic-goals-grey__cards _grid">
+								<div class="strategic-goals-grey__card mw-218">
+									<p class="strategic-goals-grey__card-title">{{ reducingWaste.card.content1.title[lang] | safe }}</p>
+									<p class="strategic-goals-grey__percents-number _small">{{ reducingWaste.card.content1.number[lang] | safe }}<span>%</span></p>
+									<p>{{ reducingWaste.card.content1.text[lang] | safe }}</p>
+								</div>
+								<div class="strategic-goals-grey__card mw-218">
+									<p class="strategic-goals-grey__card-title">{{ reducingWaste.card.content2.title[lang] | safe }}</p>
+									<p class="strategic-goals-grey__percents-number _small">{{ reducingWaste.card.content2.number[lang] | safe }}<span>%</span></p>
+									<p>{{ reducingWaste.card.content2.text[lang] | safe }}</p>
+								</div>
+								<div class="strategic-goals-grey__card mw-218">
+									<p class="strategic-goals-grey__card-title">{{ reducingWaste.card.content3.title[lang] | safe }}</p>
+									<p class="strategic-goals-grey__percents-number _small">{{ reducingWaste.card.content3.number[lang] | safe }}<span>%</span></p>
+									<p>{{ reducingWaste.card.content3.text[lang] | safe }}</p>
+								</div>
+								<div class="strategic-goals-grey__card mw-218">
+									<p class="strategic-goals-grey__card-title">{{ reducingWaste.card.content4.title[lang] | safe }}</p>
+									<p class="strategic-goals-grey__percents-number _small">{{ reducingWaste.card.content4.number[lang] | safe }}<span>%</span></p>
+									<p>{{ reducingWaste.card.content4.text[lang] | safe }}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="strategic-goals-grey__block mb-lg-10">
+						<div class="strategic-goals-grey__title mb-lg-20">
+							<h5>
+								<span class="c-default">{{ reducingWaste.card["title 2-1"][lang] | safe }}</span>
+								<span class="c-green">{{ reducingWaste.card["title 2-2"][lang] | safe }}</span>
+							</h5>
+						</div>
+						<div class="strategic-goals-grey__content">
+							<div class="strategic-goals-grey__cards _one-el">
+								<div class="strategic-goals-grey__card mw-218">
+									<p class="strategic-goals-grey__percents-number _small">{{ reducingWaste.card.content5.number[lang] | safe }}<span>%</span></p>
+									<p>{{ reducingWaste.card.content5.text[lang] | safe }}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-sm-12 _pr-10">
+				<h5 class="h4 pb-lg-14 _line-b mb-lg-16">{{ reducingWaste["title-col"][lang] | safe }}</h5>
+				{% for item in reducingWaste.text %}
+					<p class="planet__text"> {{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+		</div>
+		<h4 class="h3 _line-b pb-lg-14 mb-lg-20 mb-sm-16">{{ guidelines.title[lang] | safe }}</h4>
+		<div class="row mb-lg-82 mb-sm-60">
+			<div class="col-lg-4 col-sm-12 mb-sm-20">
+				<div class="strategic-goals-grey">
+					<div class="strategic-goals-grey__block mb-lg-60">
+						<div class="strategic-goals-grey__title mb-lg-34">
+							<h5>
+								<span class="c-default">{{ guidelines.card["title 1-1"][lang] | safe }}</span>
+								<span class="c-green">{{ guidelines.card["title 1-2"][lang] | safe }}</span>
+							</h5>
+						</div>
+						<div class="strategic-goals-grey__content">
+							<div class="strategic-goals-grey__cards _flex-col">
+								<div class="strategic-goals-grey__card mw-226">
+									{{ component('icon', {
+										iconName: guidelines.card.content1.icon,
+										className: 'strategic-goals-grey__icon _mb-4',
+										attributes: 'width="45" height="45" viewBox="0 0 36 36"'
+									}) }}
+									<p> {{ guidelines.card.content1.text[lang] | safe }}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="strategic-goals-grey__block mb-lg-34">
+						<div class="strategic-goals-grey__title mb-lg-32">
+							<h5 class="c-default">
+								{{ guidelines.card["title 2"][lang] | safe }}
+							</h5>
+						</div>
+						<div class="strategic-goals-grey__content">
+							<div class="strategic-goals-grey__cards _flex-col">
+								<div class="strategic-goals-grey__card mw-174">
+									{{ component('icon', {
+										iconName: guidelines.card.content2.icon,
+										className: 'strategic-goals-grey__icon _mb-4',
+										attributes: 'width="45" height="45" viewBox="0 0 36 36"'
+									}) }}
+									<p>{{ guidelines.card.content2.text[lang] | safe }}</p>
+								</div>
+								<div class="strategic-goals-grey__card mw-256 mb-lg-10">
+									{{ component('icon', {
+										iconName: guidelines.card.content3.icon,
+										className: 'strategic-goals-grey__icon _mb-4',
+										attributes: 'width="45" height="45" viewBox="0 0 36 36"'
+									}) }}
+									<p>{{ guidelines.card.content3.text[lang] | safe }}</p>
+								</div>
+								<div class="strategic-goals-grey__card mw-270">
+									<p class="strategic-goals-grey__card-title">{{ guidelines.card.content4.title[lang] | safe }}</p>
+									<p class="strategic-goals-grey__percents-number _small">{{ guidelines.card.content4.number[lang] | safe }}<span>%</span></p>
+									<p>{{ guidelines.card.content4.text[lang] | safe }}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-12 mb-sm-14">
+				{% for item in guidelines.col2.text1 %}
+					<p class="planet__text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+				<ul class="list mb-lg-16 _top-5">
+					{% for item in guidelines.col2.list %}
+						<li>{{ item[lang] | safe }}</li>
+					{% endfor %}
+				</ul>
+				{% for item in guidelines.col2.text2 %}
+					<p class="planet__text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="col-lg-4 col-sm-12">
+				{% for item in guidelines.col3 %}
+					<p class="planet__text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+		</div>
+		<h4 class="h3 planet__text-tfcd _line-b pb-lg-32 mb-lg-30 mb-ms-24 pb-sm-26">{{ tcfd.title[lang] | safe }}</h4>
+		<div class="row mb-lg-60 mb-ms-48">
+			<div class="col-lg-6 col-sm-12 mb-sm-20">
+				<p class="planet__text _tfcd-fs-16">{{ tcfd.col1[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<h5 class="h3 _line-b pb-lg-12 mb-lg-20"> {{ tcfd.col2.title[lang] | safe }}</h5>
+				<p class="planet__text _tfcd-fs-16">{{ tcfd.col2.text[lang] | safe }}</p>
+			</div>
+		</div>
+		<h4 class="h3 _line-b pb-lg-14 mb-lg-30 mb-sm-24 scroll-margin" id="planet-сorporate-structure">{{ corporateGov.title[lang] | safe }}</h4>
+		<div class="row mb-lg-60 mb-sm-46">
+			<div class="col-lg-6 col-sm-12 mb-sm-20">
+				<h5 class="h4 pb-lg-14 _line-b mb-lg-16">{{ corporateGov.col1.title[lang] | safe }}</h5>
+				{% for item in corporateGov.col1.text %}
+					<p class="planet__text"> {{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<h5 class="h4 pb-lg-14 _line-b mb-lg-16">{{ corporateGov.col2.title1[lang] | safe }}</h5>
+				<p class="mb-lg-42 mb-sm-30"> {{ corporateGov.col2.text1[lang] | safe }}</p>
+				<h5 class="h4 pb-lg-14 _line-b mb-lg-16">{{ corporateGov.col2.title2[lang] | safe }}</h5>
+				<p>{{ corporateGov.col2.text2[lang] | safe }}</p>
+			</div>
+		</div>
+		<h4 class="h3 _line-b pb-lg-14 mb-lg-20 mb-sm-16 scroll-margin" id="planet-strategy">{{ strategy.title[lang] | safe }}</h4>
+		<div class="row mb-lg-58 mb-sm-46">
+			<div class="col-lg-6 col-sm-12 mb-sm-20">
+				<p class="mb-lg-40">{{ strategy.col1.text[lang] | safe }}</p>
+				<div class="strategic-goals-grey _p-35">
+					<div class="strategic-goals-grey__card mb-lg-30">
+						{{ component('icon', {
+							iconName: strategy.col1.block.icon,
+							className: 'strategic-goals-grey__icon _strategic-icon',
+							attributes: 'width="72" height="72" viewBox="0 0 36 36"'
+						}) }}
+						<p class="planet__text _tfcd-fs-16">{{ strategy.col1.block.text[lang] | safe }}</p>
+					</div>
+					<div class="strategic-goals-grey__cards _grid-no-gap mb-lg-12">
+						<div class="strategic-goals-grey__card mw-216 _card-1">
+							<p class="strategic-goals-grey__percents-number _small">{{ strategy.col1.block.card1.number[lang] | safe }}<span>%</span></p>
+							<p>{{ strategy.col1.block.card1.text[lang] | safe }}</p>
+						</div>
+						<div class="strategic-goals-grey__card mw-206 _card-2">
+							<p class="strategic-goals-grey__percents-number _small">{{ strategy.col1.block.card2.number[lang] | safe }}<span>%</span></p>
+							<p>{{ strategy.col1.block.card2.text[lang] | safe }}</p>
+						</div>
+						<div class="strategic-goals-grey__card mw-216 _card-3">
+							<p class="strategic-goals-grey__percents-number _small">{{ strategy.col1.block.card3.number[lang] | safe }}<span>%</span></p>
+							<p>{{ strategy.col1.block.card3.text[lang] | safe }}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<div class="mb-lg-86">
+					{% for item in strategy.col2.text1 %}
+						<p class="planet__text"> {{ item[lang] | safe }}</p>
+					{% endfor %}
+				</div>
+				<h5 class="h4 pb-lg-14 _line-b mb-lg-16">{{ strategy.col2.title1[lang] | safe }}</h5>
+				<p class="mb-lg-42">{{ strategy.col2.text2[lang] | safe }}</p>
+				<h5 class="h4 pb-lg-14 _line-b mb-lg-14">{{ strategy.col2.title2[lang] | safe }}</h5>
+				<p class="mb-lg-42">{{ strategy.col2.text3[lang] | safe }}</p>
+				<h5 class="h4 pb-lg-14 _line-b mb-lg-14">{{ strategy.col2.title3[lang] | safe }}</h5>
+				<p>{{ strategy.col2.text4[lang] | safe }}</p>
+			</div>
+		</div>
+		<h4 class="h3 _line-b pb-lg-14 mb-lg-20 mb-sm-16 scroll-margin" id="planet-climate-risks">{{ climateRel.title[lang] | safe }}</h4>
+		<div class="row mb-lg-60 mb-sm-48">
+			<p class="c-default mw-786 pl-lg-20 mb-lg-40">{{ climateRel.text[lang] | safe }}</p>
+			<div class="col-lg-6 col-sm-12 mb-sm-20">
+				<h5 class="h4 pb-lg-14 _line-b mb-lg-16 mw-522">
+					<span class="c-green">{{ climateRel.col1["title 1-1"][lang] | safe }}</span>
+					<span>{{ climateRel.col1["title 1-2"][lang] | safe }}</span>
+				</h5>
+				<p class="mb-lg-42">{{ climateRel.col1.text1[lang] | safe }}</p>
+				<h5 class="h4 pb-lg-14 _line-b mb-lg-16 mw-522">
+					<span class="c-green">{{ climateRel.col1["title 2-1"][lang] | safe }}</span>
+					<span>{{ climateRel.col1["title 2-2"][lang] | safe }}</span>
+				</h5>
+				<p>{{ climateRel.col1.text2[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<h5 class="h4 pb-lg-14 _line-b mb-lg-16 mw-522">
+					<span class="c-green">{{ climateRel.col2["title 1-1"][lang] | safe }}</span>
+					<span>{{ climateRel.col2["title 1-2"][lang] | safe }}</span>
+				</h5>
+				<p class="mb-lg-80 mb-sm-40">{{ climateRel.col2.text1[lang] | safe }}</p>
+				<div class="planet__container">
+					<p>{{ climateRel.col2.text2[lang] | safe }}</p>
+				</div>
+			</div>
+		</div>
+		<h4 class="h3 _line-b pb-lg-14 mb-lg-20 mb-sm-16">{{ physicalTransit.title[lang] | safe }}</h4>
+		<div class="row mb-lg-60 mb-sm-48">
+			<div class="col-lg-6 col-sm-12 mb-sm-20">
+				<p>
+					{{ physicalTransit.text1[lang] | safe }}
+					<a href="https://www.ipcc.ch/assessment-report/ar6/" target="_blank">{{ physicalTransit.href[lang] | safe }}</a>
+					{{ physicalTransit.text2[lang] | safe }}
+				</p>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<p>{{ physicalTransit.text3[lang] | safe }}</p>
+			</div>
+		</div>
+		<h4 class="h3 _line-b pb-lg-14 mb-lg-20 mb-sm-16"> {{ year2022.title[lang] | safe }}</h4>
+		<div class="row mb-lg-40 mb-sm-32">
+			<div class="col-lg-6 col-sm-12 mb-sm-14">
+				<p>{{ year2022.text1[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<p class="planet__text">
+					{{ year2022.text2[lang] | safe }}
+					<a href="https://www.x5.ru/en/investors/esg-reports/" target="_blank">{{ year2022.href[lang] | safe }}</a>
+					{{ year2022.text3[lang] | safe }}
+				</p>
+				<p class="planet__text">{{ year2022.text4[lang] | safe }}</p>
+			</div>
+		</div>
+		<div class="table-marks mb-lg-40 _desktop">
+			<div class="table-mark">
+				<div class="table-marker _green"></div>
+				<p>{{ year2022.table.marks.mark1[lang] | safe }}</p>
+			</div>
+			<div class="table-mark">
+				<div class="table-marker _yellow"></div>
+				<p>{{ year2022.table.marks.mark2[lang] | safe }}</p>
+			</div>
+			<div class="table-mark _mark3">
+				<div class="table-marker _red"></div>
+				<p>{{ year2022.table.marks.mark3[lang] | safe }}</p>
+			</div>
+			<div class="table-mark _mark4">
+				{{ component('icon', {
+					iconName: year2022.table.marks.mark4.icon,
+					attributes: 'width="14" height="15" viewBox="0 0 36 36"'
+				}) }}
+				<p>{{ year2022.table.marks.mark4.text[lang] | safe }}</p>
+			</div>
+			<div class="table-mark">
+				{{ component('icon', {
+					iconName: year2022.table.marks.mark5.icon,
+					attributes: 'width="14" height="15" viewBox="0 0 36 36"'
+				}) }}
+				<p>{{ year2022.table.marks.mark5.text[lang] | safe }}</p>
+			</div>
+			<div class="table-mark _mark6">
+				<div class="table-marker _grey-line"></div>
+				<p>{{ year2022.table.marks.mark6[lang] | safe }}</p>
+			</div>
+		</div>
+		<table class="planet-table mb-lg-60 _desktop">
+			<tbody>
+				<tr>
+					<th>{{ year2022.table.header.th1[lang] | safe }}</th>
+					<th>{{ year2022.table.header.th2[lang] | safe }}</th>
+					<th>
+						<div class="mw-80 mb-sm-12">
+							{{ year2022.table.header.th3.text[lang] | safe }}<span class="_th-grey mw-80">{{ year2022.table.header.th3.c[lang] | safe }}</span>
+						</div>
+
+					</th>
+					<th>{{ year2022.table.header.th4.text[lang] | safe }}<span class="_th-grey">{{ year2022.table.header.th4.c[lang] | safe }}</span></th>
+					<th>{{ year2022.table.header.th5.text[lang] | safe }}<span class="_th-grey">{{ year2022.table.header.th5.c[lang] | safe }}</span></th>
+					<th>{{ year2022.table.header.th6[lang] | safe }}</th>
+					<th>
+						<div class="mw-142">
+							{{ year2022.table.header.th7[lang] | safe }}
+						</div>
+					</th>
+				</tr>
+				<tr>
+					<td colspan="7" class="_bg-grey">
+						<h5 class="text medium mb-lg-4">{{ year2022.table.row1.title[lang] | safe }}</h5>
+						<p>{{ year2022.table.row1.text[lang] | safe }}</p>
+					</td>
+				</tr>
+				<tr class="planet-table__row-second">
+					<td><p>{{ year2022.table.row2.col1[lang] | safe }}</p></td>
+					<td><p>{{ year2022.table.row2.col2[lang] | safe }}</p></td>
+					<td>
+						<div class="planet-table__years">
+							<div class="planet-table__year">
+								{{ component('icon', {
+									iconName: year2022.table.marks.mark4.icon,
+									className: 'planet-table__icon',
+									attributes: 'width="14" height="15" viewBox="0 0 36 36"'
+								}) }}
+								{{ year2022.table.row2.col3.num1 }}
+								<div class="planet-table__year-block _gradient"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row2.col3.num2 }}
+								<div class="planet-table__year-block _yellow"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row2.col3.num3 }}
+								<div class="planet-table__year-block _red"></div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="planet-table__years">
+							<div class="planet-table__year">
+								{{ component('icon', {
+									iconName: year2022.table.marks.mark4.icon,
+									className: 'planet-table__icon',
+									attributes: 'width="14" height="15" viewBox="0 0 36 36"'
+								}) }}
+								{{ year2022.table.row2.col4.num1 }}
+								<div class="planet-table__year-block _gradient"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row2.col4.num2 }}
+								<div class="planet-table__year-block _yellow"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row2.col4.num3 }}
+								<div class="planet-table__year-block _yellow"></div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="planet-table__years">
+							<div class="planet-table__year">
+								{{ component('icon', {
+									iconName: year2022.table.marks.mark4.icon,
+									className: 'planet-table__icon',
+									attributes: 'width="14" height="15" viewBox="0 0 36 36"'
+								}) }}
+								{{ year2022.table.row2.col5.num1 }}
+								<div class="planet-table__year-block _gradient"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row2.col5.num2 }}
+								<div class="planet-table__year-block _yellow"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row2.col5.num3 }}
+								<div class="planet-table__year-block _yellow"></div>
+							</div>
+						</div>
+					</td>
+					<td>
+						{% for item in  year2022.table.row2.col6 %}
+							<p class="planet__text _table"> {{ item[lang] | safe }}</p>
+						{% endfor %}
+					</td>
+					<td>
+						{% for item in  year2022.table.row2.col7 %}
+							<p class="planet__text _table"> {{ item[lang] | safe }}</p>
+						{% endfor %}
+					</td>
+				</tr>
+				<tr>
+					<td><p class="planet__text _table-height">{{ year2022.table.row3.col1[lang] | safe }}</p></td>
+					<td><p class="planet__text _table-height">{{ year2022.table.row3.col2[lang] | safe }}</p></td>
+					<td>
+						<div class="planet-table__years">
+							<div class="planet-table__year">
+								{{ component('icon', {
+									iconName: year2022.table.marks.mark4.icon,
+									className: 'planet-table__icon',
+									attributes: 'width="14" height="15" viewBox="0 0 36 36"'
+								}) }}
+								{{ year2022.table.row3.col3.num1 }}
+								<div class="planet-table__year-block _gradient"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row3.col4.num2 }}
+								<div class="planet-table__year-block _yellow"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row3.col5.num3 }}
+								<div class="planet-table__year-block _red"></div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="planet-table__years">
+							<div class="planet-table__year">
+								{{ component('icon', {
+									iconName: year2022.table.marks.mark4.icon,
+									className: 'planet-table__icon',
+									attributes: 'width="14" height="15" viewBox="0 0 36 36"'
+								}) }}
+								{{ year2022.table.row3.col3.num1 }}
+								<div class="planet-table__year-block _gradient"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row3.col4.num2 }}
+								<div class="planet-table__year-block _yellow"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row3.col5.num3 }}
+								<div class="planet-table__year-block _red"></div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="planet-table__years">
+							<div class="planet-table__year">
+								{{ component('icon', {
+									iconName: year2022.table.marks.mark4.icon,
+									className: 'planet-table__icon',
+									attributes: 'width="14" height="15" viewBox="0 0 36 36"'
+								}) }}
+								{{ year2022.table.row3.col3.num1 }}
+								<div class="planet-table__year-block _gradient"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row3.col4.num2 }}
+								<div class="planet-table__year-block _yellow"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row3.col5.num3 }}
+								<div class="planet-table__year-block _red"></div>
+							</div>
+						</div>
+					</td>
+					<td>
+						{% for item in  year2022.table.row3.col6 %}
+							<p class="planet__text"> {{ item[lang] | safe }}</p>
+						{% endfor %}
+					</td>
+					<td>
+						<div class="mb-lg-10">
+							{% for item in  year2022.table.row3.col7 %}
+								<p class="planet__text _table"> {{ item[lang] | safe }}</p>
+							{% endfor %}
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="7" class="_bg-grey">
+						<h5 class="text medium mb-lg-4">{{ year2022.table.row4.title[lang] | safe }}</h5>
+						<p class="mb-lg-2">{{ year2022.table.row4.text[lang] | safe }}</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p class="mb-lg-10">{{ year2022.table.row5.col1.text[lang] | safe }}</p>
+						<ul class="list mw-130">
+							{% for item in year2022.table.row5.col1.list %}
+								<li>{{ item[lang] | safe }}</li>
+							{% endfor %}
+						</ul>
+					</td>
+					<td><p>{{ year2022.table.row5.col2[lang] | safe }}</p></td>
+					<td>
+						<div class="planet-table__years">
+							<div class="planet-table__year">
+								{{ year2022.table.row5.col3.num1 }}
+								<div class="planet-table__year-block _green"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ component('icon', {
+									iconName: year2022.table.marks.mark4.icon,
+									className: 'planet-table__icon',
+									attributes: 'width="14" height="15" viewBox="0 0 36 36"'
+								}) }}
+								{{ year2022.table.row5.col4.num2 }}
+								<div class="planet-table__year-block _yellow"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row5.col5.num3 }}
+								<div class="planet-table__year-block _yellow"></div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="planet-table__years">
+							<div class="planet-table__year">
+								{{ component('icon', {
+									iconName: year2022.table.marks.mark5.icon,
+									className: 'planet-table__icon',
+									attributes: 'width="14" height="15" viewBox="0 0 36 36"'
+								}) }}
+								{{ year2022.table.row5.col4.num1 }}
+								<div class="planet-table__year-block _gradient"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row5.col4.num2 }}
+								<div class="planet-table__year-block _yellow"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row5.col4.num3 }}
+								<div class="planet-table__year-block _yellow"></div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="planet-table__years">
+							<div class="planet-table__year">
+								{{ component('icon', {
+									iconName: year2022.table.marks.mark4.icon,
+									className: 'planet-table__icon',
+									attributes: 'width="14" height="15" viewBox="0 0 36 36"'
+								}) }}
+								{{ year2022.table.row5.col5.num1 }}
+								<div class="planet-table__year-block _green"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row5.col5.num2 }}
+								<div class="planet-table__year-block _green"></div>
+							</div>
+							<div class="planet-table__year">
+								{{ year2022.table.row5.col5.num3 }}
+								<div class="planet-table__year-block _yellow"></div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="mb-lg-14">
+							{% for item in  year2022.table.row5.col6 %}
+								<p class="planet__text"> {{ item[lang] | safe }}</p>
+							{% endfor %}
+						</div>
+					</td>
+					<td>
+						{% for item in  year2022.table.row5.col7 %}
+							<p class="planet__text _table"> {{ item[lang] | safe }}</p>
+						{% endfor %}
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		{% include "planet/planet-table-mob.njk" %}
+		<h4 class="h3 _line-b pb-lg-14 mb-lg-20 mb-sm-16 scroll-margin" id="planet-risk-assessment"> {{ risk.title[lang] | safe }}</h4>
+		<div class="row mb-lg-40 mb-sm-32">
+			<div class="col-lg-6 col-sm-12 mb-sm-20">
+				{% for item in risk.text1 %}
+					<p class="planet__text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+				<p class="c-default mb-lg-10 pt-lg-4"> {{ risk.text2[lang] | safe }}</p>
+				<ol class="planet-list">
+					{% for item in risk.list1 %}
+					<li>{{ item[lang] | safe }}</li>
+				{% endfor %}
+				</ol>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<p class="c-default mb-lg-10">{{ risk.text3[lang] | safe }}</p>
+				<ul class="list mb-lg-20">
+					<li>{{ risk["list2-tooltip"][lang] | safe }}<sup class="tooltip-button" data-tooltip-id="tooltip-04-1" aria-expanded="false"></sup></li>
+					{% for item in risk.list2 %}
+						<li>{{ item[lang] | safe }}</li>
+					{% endfor %}
+				</ul>
+				{% for item in risk.text4 %}
+					<p class="planet__text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+		</div>
+		<h4 class="h4 pb-lg-14 _line-b mb-lg-20 mb-sm-16"> {{ riskMap.title[lang] | safe }}</h4>
+		<div class="row mb-lg-60 mb-sm-48">
+			<div class="col-lg-6 col-sm-12 mb-sm-20">
+				{% for item in riskMap.text1 %}
+					<p class="planet__text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<p>{{riskMap.text2[lang] | safe }}</p>
+			</div>
+		</div>
+		<h4 class="h3 _line-b pb-lg-14 mb-lg-20 mb-am-16 scroll-margin" id="planet-indicators"> {{ metrics.title[lang] | safe }}</h4>
+		<div class="row mb-lg-16">
+			<div class="col-lg-6 col-sm-12 mb-sm-20">
+				{% for item in metrics.row2.text1 %}
+					<p class="planet__text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<p class="c-default mb-lg-20">{{metrics.row2.text2[lang] | safe }}</p>
+				<ul class="list mb-lg-20">
+					{% for item in metrics.row2.list %}
+					<li>{{ item[lang] | safe }}</li>
+				{% endfor %}
+				</ul>
+				<p class="mb-lg-20">{{metrics.row2.text3[lang] | safe }}</p>
+			</div>
+		</div>
+		<h4 class="h3 _line-b pb-lg-14 mb-lg-20 mb-sm-16">{{ plans.title[lang] | safe }}</h4>
+		<div class="row">
+			<div class="col-lg-6 col-sm-12 mb-sm-20">
+				{% for item in plans.text1 %}
+					<p class="planet__text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				{% for item in plans.text2 %}
+					<p class="planet__text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+		</div>
+		{{ component('picture', {
+			path: "section-4",
+			name: plans.img,
+			ext: "jpg",
+			width: "1112",
+			height: "285",
+			className: "mb-lg-94 mb-sm-60 planet__img",
+			lang: lang
+		}) }}
+	</div>
+</section>

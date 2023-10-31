@@ -1,0 +1,34 @@
+.krasny-and-slata {
+	padding-top: 88px;
+	background: $c-bg-gray-light;
+	&__list {
+		li {
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+	&__img {
+		display: block;
+		margin-top: 15px;
+		margin-bottom: 30px;
+		height: 100%;
+		overflow: hidden;
+		border-radius: 5px;
+	}
+	&__img-bread {
+		display: inline-block;
+		width: 123px;
+	}
+	&__texts {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 40px;
+
+		@include max-screen($breakpoint-md) {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+		}
+	}
+}

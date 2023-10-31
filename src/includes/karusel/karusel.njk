@@ -1,0 +1,41 @@
+<section class="karusel" id="karusel">
+	<div class="container">
+		<div class="karusel__icon-wrapper circle">
+			{{ component('icon', {
+				iconName: "karusel",
+				className: "karusel__icon",
+				attributes: "width='66' height='52'"
+			})}}
+		</div>
+		<h2 class="h1 pt-lg-32 pt-sm-16 mb-lg-38 mb-sm-32 _line-t _ls-minus-03">
+			{{ strategicReport['karusel'].title[lang] | safe }}
+		</h2>
+		<div class="row mb-lg-84">
+			<div class="col-lg-5 col-sm-12 mb-sm-30">
+				{{ strategicReport['karusel'].text[lang] | safe }}
+			</div>
+			<div class="col-lg-7 col-sm-12">
+				<p class="karusel__text-prefix text c-default medium ttu">{{ strategicReport['karusel'].prefix[lang] | safe }}</p>
+				<ul class="karusel__numbers">
+					{% for number in strategicReport['karusel'].numbers %}
+						<li class="karusel__number">
+							<p class="karusel__number-value big-text">{{ number.value[lang] | safe }}</p>
+							<p class="karusel__number-text text _fs-14">{{ number.text[lang] | safe }}</p>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		<div class="karusel__header">
+			{{ component('picture', {
+				path: "section-2",
+				name: strategicReport["karusel-header"],
+				ext: "jpg",
+				width: '1112',
+				height: "600",
+				className: "karusel__header-img",
+				lang: lang
+			})}}
+		</div>
+	</div>
+</section>

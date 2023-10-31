@@ -1,0 +1,35 @@
+.direct-imports {
+	margin-bottom: -20px;
+	&__unit {
+		padding: 30px 138px 44px 40px;
+		border-radius: 10px;
+		background: $c-green-dark;
+		color: $c-white;
+
+		@include max-screen($breakpoint-sm) {
+			padding: 30px 40px 44px;
+		}
+
+		@include max-screen($breakpoint-sm) {
+			padding: 25px;
+		}
+		.h3 {
+			color: $c-white;
+		}
+	}
+	&__unit-icon {
+		padding: 9px;
+		border: 1px solid $c-green;
+		border-radius: 50%;
+	}
+	&__unit-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 9px;
+	}
+	&__unit-item {
+		padding: 8px 19px;
+		border: 1px solid $c-green;
+		border-radius: 100px;
+	}
+}

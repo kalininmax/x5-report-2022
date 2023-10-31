@@ -1,0 +1,155 @@
+<section id="our-formats" class="our-formats section">
+	<header class="our-formats__header">
+		<div class="section__container container">
+			<h2 class="h1 mb-sm-28 mb-lg-40 _white _line-t pt-lg-32">{{ strategicReport['our-formats'].title[lang] | safe }}</h2>
+			<div class="our-formats__texts row">
+				<div class="col-lg-6 col-xs-12">
+					{{ strategicReport['our-formats'].text1[lang] | safe }}
+				</div>
+				<div class="col-lg-6 col-xs-12">
+					{{ strategicReport['our-formats'].text2[lang] | safe }}
+				</div>
+			</div>
+			<div class="our-formats__images">
+				{{ component('picture', {
+					path: "section-1",
+					name: strategicReport['our-formats'].img[lang],
+					ext: "jpg",
+					width: '1112',
+					height: "888",
+					className: "our-formats__img",
+					lang: lang
+				})}}
+				<img class="our-formats__brands" src="{{ strategicReport['our-formats'].imgSvg[lang] | safe }}.svg" />
+			</div>
+		</div>
+	</header>
+	<div class="our-formats__cards">
+		<div class="container">
+			<div class="our-formats__cards-inner">
+				{% for item in strategicReport['our-formats'].list1 %}
+					<article class="our-formats__card our-formats-card">
+						<div class="our-formats-card__content">
+							<div class="our-formats-card__icon-wrapper">
+								{{ component('icon', {
+									iconName: item.icon,
+									className: "our-formats__icon",
+									attributes: item.iconData
+								})}}
+							</div>
+							<p class="our-formats-card__title h2">{{ item.title[lang] | safe }}</p>
+							<p class="our-formats-card__text text _fs-14">{{ item.text[lang] | safe }}</p>
+						</div>
+						<ul class="our-formats-card__items">
+							{% for numberCard in item.numbers %}
+								<li class="our-formats-card__item">
+									<div class="our-formats-card__item-icon-wrapper">
+										{{ component('icon', {
+											iconName: numberCard.icon,
+											className: "our-formats__icon",
+											attributes: "width='29' height='29'"
+										})
+									}}
+									</div>
+									<p class="our-formats-card__item-value">
+										{{ numberCard.value[lang] | safe }}
+										{{ numberCard.unit[lang] | safe }}
+									</p>
+									<p class="our-formats-card__item-text text _fs-14 c-gray-menu-text">{{ numberCard.text[lang] | safe }}</p>
+									<p class="our-formats-card__item-subtext">{{ numberCard.subtext[lang] | safe }}</p>
+								</li>
+							{% endfor %}
+						</ul>
+					</article>
+				{% endfor %}
+				<section class="our-formats__digital our-formats-digital">
+					<header class="our-formats-digital__header">
+						<div class="our-formats-digital__header-info">
+							<div class="our-formats-digital__header-icon-wrapper">
+								{{ component('icon', {
+									iconName: 'green-phone',
+									className: "our-formats-digital__icon",
+									attributes: "width='46' height='46'"
+								})}}
+							</div>
+							<p class="our-formats-digital__header-title h2 _line-b pb-lg-24 mb-lg-22">
+								{{ strategicReport['our-formats'].digital.title[lang] | safe }}
+							</p>
+							<p class="our-formats-digital__header-text">
+								{{ strategicReport['our-formats'].digital.text[lang] | safe }}
+							</p>
+						</div>
+						{{ component('picture', {
+							path: "section-1",
+							name: strategicReport['our-formats'].headerImg,
+							ext: "jpg",
+							width: '1112',
+							height: "888",
+							className: "our-formats-digital__header-img",
+							lang: lang
+						})}}
+					</header>
+					<ul class="our-formats-digital__items">
+						<li class="our-formats-digital__item">
+							<header class="our-formats-digital__item-header">
+								{{ component('icon', {
+									iconName: "x5-digital",
+									className: "our-formats-digital__item-icon",
+									attributes: "width='170' height='51'"
+								})}}
+							</header>
+							<div class="our-formats-digital__item-content">
+								<div class="our-formats-digital__item-icon-wrapper circle">
+									{{ component('icon', {
+										iconName: strategicReport['our-formats'].digital.item1.icon,
+										className: "our-formats-digital__item-icon",
+										attributes: strategicReport['our-formats'].digital.item1.iconData
+									})}}
+								</div>
+								<p class="our-formats-digital__item-title h3 _line-b">{{ strategicReport['our-formats'].digital.item1.title[lang] | safe }}</p>
+								<p class="our-formats-digital__item-text text _fs-14">{{ strategicReport['our-formats'].digital.item1.text[lang] | safe }}</p>
+							</div>
+							<div class="our-formats-digital__item-content">
+								<div class="our-formats-digital__item-icon-wrapper circle">
+									{{ component('icon', {
+										iconName: strategicReport['our-formats'].digital.item2.icon,
+										className: "our-formats-digital__item-icon",
+										attributes: strategicReport['our-formats'].digital.item2.iconData
+									})}}
+								</div>
+								<p class="our-formats-digital__item-title h3 _line-b">{{ strategicReport['our-formats'].digital.item2.title[lang] | safe }}</p>
+								<p class="our-formats-digital__item-text text _fs-14">{{ strategicReport['our-formats'].digital.item2.text[lang] | safe }}</p>
+							</div>
+						</li>
+						<li class="our-formats-digital__item">
+							<div class="our-formats-digital__item-content">
+								<div class="our-formats-digital__item-icon-wrapper circle">
+									{{ component('icon', {
+										iconName: strategicReport['our-formats'].digital.item3.icon,
+										className: "our-formats-digital__item-icon",
+										attributes: strategicReport['our-formats'].digital.item3.iconData
+									})}}
+								</div>
+								<p class="our-formats-digital__item-title h3 _line-b">{{ strategicReport['our-formats'].digital.item3.title[lang] | safe }}</p>
+								<p class="our-formats-digital__item-text text _fs-14">{{ strategicReport['our-formats'].digital.item3.text[lang] | safe }}</p>
+							</div>
+						</li>
+						<li class="our-formats-digital__item">
+							<div class="our-formats-digital__item-content">
+								<div class="our-formats-digital__item-icon-wrapper circle">
+									{{ component('icon', {
+										iconName: strategicReport['our-formats'].digital.item4.icon,
+										className: "our-formats-digital__item-icon",
+										attributes: strategicReport['our-formats'].digital.item4.iconData
+									})}}
+								</div>
+								<p class="our-formats-digital__item-title h3 _line-b">{{ strategicReport['our-formats'].digital.item4.title[lang] | safe }}</p>
+								<p class="our-formats-digital__item-text text _fs-14">{{ strategicReport['our-formats'].digital.item4.text[lang] | safe }}</p>
+							</div>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+	</div>
+</section>

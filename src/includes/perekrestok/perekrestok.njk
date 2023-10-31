@@ -1,0 +1,288 @@
+<section class="perekrestok" id="perekrestok">
+	<div class="container">
+		<div class="perekrestok__icon-wrapper circle">
+			{{ component('icon', {
+				iconName: "perekrestok",
+				className: "perekrestok__icon",
+				attributes: "width='50' height='50'"
+			})}}
+		</div>
+		<h2 class="h1 pt-lg-32 pt-sm-16 mb-lg-38 mb-sm-32 _line-t _ls-minus-03">
+			{{ strategicReport['perekrestok'].title[lang] | safe }}
+		</h2>
+		<div class="row mb-lg-60">
+			<div class="col-lg-5 col-sm-12 mb-sm-30">
+				<p class="perekrestok__text text c-default">{{ strategicReport['perekrestok'].text[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-7 col-sm-12">
+				<p class="perekrestok__text-prefix text c-default medium ttu">{{ strategicReport['perekrestok'].prefix[lang] | safe }}</p>
+				<ul class="perekrestok__numbers">
+					{% for number in strategicReport['perekrestok'].numbers %}
+						<li class="perekrestok__number">
+							<p class="perekrestok__number-value big-text">{{ number.value[lang] | safe }}</p>
+							<p class="perekrestok__number-text text _fs-14">{{ number.text[lang] | safe }}</p>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		<div class="perekrestok__header">
+			{{ component('picture', {
+				path: "section-2",
+				name: strategicReport["perekrestok-keys"].cover,
+				ext: "jpg",
+				width: '1112',
+				height: "654",
+				className: "perekrestok__header-img",
+				lang: lang
+			})}}
+		</div>
+		<div class="perekrestok__keys mb-lg-60">
+			<p class="perekrestok__keys-title h3 _white pb-lg-14">
+				{{ strategicReport["perekrestok-keys"].title[lang] | safe }}
+			</p>
+			<div class="perekrestok__keys-inner perekrestok-keys">
+				<div class="perekrestok-keys__item">
+					<header class="perekrestok-keys__header">
+						<div class="perekrestok-keys__header-icon-wrapper">
+							{{ component('icon', {
+								iconName: 'man-green',
+								className: "perekrestok-keys__header-icon",
+								attributes: "width=\"24\" height=\"24\""
+							})}}
+						</div>
+						<p class="perekrestok-keys__header-title text ttu">
+							{{ strategicReport["perekrestok-keys"]['header-titles'][0][lang] | safe }}
+						</p>
+					</header>
+					<ul class="perekrestok-keys__list">
+						{% for item in strategicReport["perekrestok-keys"].list %}
+							<li class="perekrestok-keys__list-item">
+								<p class="perekrestok-keys__list-value big-text">
+									{{ item.value[lang] | safe }}
+								</p>
+								<p class="perekrestok-keys__list-title text _fs-14{% if item.classTitle %} {{item.classTitle}}{% endif %}">{{ item.title[lang] | safe }}</p>
+								<p class="perekrestok-keys__list-text">{{ item.text[lang] | safe }}</p>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="perekrestok-keys__item">
+					<header class="perekrestok-keys__header">
+						<div class="perekrestok-keys__header-icon-wrapper">
+							{{ component('icon', {
+								iconName: 'basket-dark-green',
+								className: "perekrestok-keys__header-icon",
+								attributes: "width=\"24\" height=\"24\""
+							})}}
+						</div>
+						<p class="perekrestok-keys__header-title text ttu">
+							{{ strategicReport["perekrestok-keys"]['header-titles'][1][lang] | safe }}
+						</p>
+					</header>
+					<ul class="perekrestok-keys__list">
+						{% for item in strategicReport["perekrestok-keys"].list2 %}
+							<li class="perekrestok-keys__list-item">
+								<p class="perekrestok-keys__list-value big-text{% if item.classValue %} {{item.classValue}}{% endif %}">
+									{{ item.value[lang] | safe }}
+								</p>
+								<p class="perekrestok-keys__list-title text _fs-14{% if item.classTitle %} {{item.classTitle}}{% endif %}">{{ item.title[lang] | safe }}</p>
+								<p class="perekrestok-keys__list-text">{{ item.text[lang] | safe }}</p>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="perekrestok-keys__item">
+					<header class="perekrestok-keys__header">
+						<div class="perekrestok-keys__header-icon-wrapper">
+							{{ component('icon', {
+								iconName: 'money-gray',
+								className: "perekrestok-keys__header-icon",
+								attributes: "width=\"24\" height=\"24\""
+							})}}
+						</div>
+						<p class="perekrestok-keys__header-title text ttu">
+							{{ strategicReport["perekrestok-keys"]['header-titles'][2][lang] | safe }}
+						</p>
+					</header>
+					<ul class="perekrestok-keys__list">
+						{% for item in strategicReport["perekrestok-keys"].list3 %}
+							<li class="perekrestok-keys__list-item">
+								<p class="perekrestok-keys__list-value big-text{% if item.classValue %} {{item.classValue}}{% endif %}">
+									{{ item.value[lang] | safe }}
+								</p>
+								<p class="perekrestok-keys__list-title text _fs-14{% if item.classTitle %} {{item.classTitle}}{% endif %}">{{ item.title[lang] | safe }}</p>
+								<p class="perekrestok-keys__list-text">{{ item.text[lang] | safe }}</p>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<h3 class="perekrestok-strategic__title h3 _line-b pb-lg-12 mb-lg-30">{{ strategicReport['perekrestok-strategic'].title2[lang] | safe }}</h3>
+		<div class="perekrestok-strategic__table mb-lg-60">
+			{{ component('table', {
+				data: strategicReport['perekrestok-strategic'].tableOperatingResults1.data,
+				lang: lang
+			})}}
+		</div>
+		<h3 class="perekrestok-strategic__title h3 _line-b pb-lg-12 mb-lg-34">{{ strategicReport['perekrestok-strategic'].title3[lang] | safe }}</h3>
+		<div class="perekrestok-strategic__charts mb-lg-60">
+			<div class="perekrestok-strategic__charts-images">
+				<img class="perekrestok-strategic__chart-img" src="{{ strategicReport['perekrestok-strategic'].chartImg1[lang] | safe }}" width="355" height="304" alt="">
+				<img class="perekrestok-strategic__chart-img" src="{{ strategicReport['perekrestok-strategic'].chartImg2[lang] | safe }}" width="355" height="304" alt="">
+			</div>
+			<ul class="perekrestok-strategic__legend">
+				{% for item in strategicReport['perekrestok-strategic'].legend %}
+					<li class="perekrestok-strategic__legend-item">
+						<i class="circle-icon" style="background: #{{ item.icon }}"></i>
+						{{ item.text[lang] | safe }}
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="perekrestok__list-card list-card mb-lg-60">
+			<div class="list-card__info">
+				<header class="list-card__header">
+					<div class="list-card__icon-wrapper">
+						{{ component('icon', {
+							iconName: 'green-target',
+							className: "list-card__icon",
+							attributes: "width='36' height='36'"
+						})}}
+					</div>
+					<p class="list-card__title h3 _white">
+						{{ strategicReport["perekrestok-list-card-1"].title[lang] | safe }}
+					</p>
+				</header>
+				<ul class="list-card__list list">
+					{% for item in strategicReport["perekrestok-list-card-1"].list %}
+						<li class="text _fs-14">{{ item[lang] | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			{{ component('picture', {
+				path: "section-2",
+				name: strategicReport["perekrestok-list-card-1"].img,
+				ext: "jpg",
+				width: '536',
+				height: "540",
+				className: "list-card__img",
+				lang: lang
+			})}}
+		</div>
+		<div class="row mb-lg-64">
+			<div class="col-lg-6 col-sm-12 mb-sm-30">
+				<h3 class="h3 _line-b pb-lg-12 mb-lg-20">
+					{{ strategicReport['perekrestok-updating'].title[lang] | safe }}
+				</h3>
+				<p class="text c-gray-menu-text">{{ strategicReport['perekrestok-updating'].text[lang] | safe }}</p>
+				<p class="text c-gray-menu-text _mt-14 mb-lg-16">{{ strategicReport['perekrestok-updating'].text1[lang] | safe }}</p>
+				<ul class="list text _fs-14 pl-lg-4 c-gray-menu-text">
+					{% for item in strategicReport['perekrestok-updating'].list %}
+						<li>{{ item[lang] | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<h3 class="h3 _line-b pb-lg-12 mb-lg-22">
+					{{ strategicReport['perekrestok-adaptation'].title[lang] | safe }}
+				</h3>
+				<ul class="list text _fs-14 c-gray-menu-text">
+					{% for item in strategicReport['perekrestok-adaptation'].list %}
+						<li>{{ item[lang] | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		<h3 class="h3 _line-b pb-lg-12 mb-lg-32">
+			{{ strategicReport['perekrestok-assortment'].title[lang] | safe }}
+		</h3>
+		<div class="row mb-lg-44">
+			<div class="col-lg-6 col-sm-12 mb-sm-30">
+				<h3 class="h4 _line-b pb-lg-12 mb-lg-22">
+					{{ strategicReport['perekrestok-assortment'].subtitle[lang] | safe }}
+				</h3>
+				<ul class="list text _fs-14 c-gray-menu-text">
+					{% for item in strategicReport['perekrestok-assortment'].list %}
+						<li>{{ item[lang] | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="col-lg-6 col-sm-12 mb-sm-30">
+				<h3 class="h4 _line-b pb-lg-12 mb-lg-22">
+					{{ strategicReport['perekrestok-assortment'].subtitle2[lang] | safe }}
+				</h3>
+				<ul class="list text _fs-14 c-gray-menu-text">
+					{% for item in strategicReport['perekrestok-assortment'].list2 %}
+						<li>{{ item[lang] | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		<div class="row mb-lg-60">
+			<div class="col-lg-6 col-sm-12 mb-sm-30">
+				<h3 class="h4 _line-b pb-lg-12">
+					{{ strategicReport['perekrestok-assortment']['chart-1-title'][lang] | safe }}
+				</h3>
+				<img class="perekrestok__chart-img" src="{{ strategicReport['perekrestok-assortment']['chart-1-img'][lang] | safe }}.svg" width="536" alt="">
+			</div>
+			<div class="col-lg-6 col-sm-12 mb-lg-42 mb-sm-30">
+				<h3 class="h4 _line-b pb-lg-12">
+					{{ strategicReport['perekrestok-assortment']['chart-2-title'][lang] | safe }}
+				</h3>
+				<img class="perekrestok__chart-img" src="{{ strategicReport['perekrestok-assortment']['chart-2-img'][lang] | safe }}.svg" width="536" alt="">
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<h3 class="h4 _line-b pb-lg-12 mb-lg-22">
+					{{ strategicReport['perekrestok-assortment'].subtitle3[lang] | safe }}
+				</h3>
+				<ul class="list text _fs-14 c-gray-menu-text">
+					{% for item in strategicReport['perekrestok-assortment'].list3 %}
+						<li>{{ item[lang] | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-sm-12 mb-sm-30">
+				{{ strategicReport['perekrestok-intro'].text1[lang] | safe }}
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				{{ strategicReport['perekrestok-intro'].text2[lang] | safe }}
+			</div>
+		</div>
+		<h3 class="h3 _line-b pb-lg-12 mb-lg-24">
+			{{ strategicReport['perekrestok-personnel'].title[lang] | safe }}
+		</h3>
+		<div class="row mb-lg-60">
+			<div class="col-lg-6 col-sm-12 mb-sm-30">
+				{{ strategicReport['perekrestok-personnel'].text1[lang] | safe }}
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				{{ strategicReport['perekrestok-personnel'].text2[lang] | safe }}
+			</div>
+		</div>
+		<div class="perekrestok__list-card list-card mb-lg-60">
+			<div class="list-card__info">
+				<header class="list-card__header">
+					<p class="list-card__title h3 _white">
+						{{ strategicReport["perekrestok-list-card-2"].title[lang] | safe }}
+					</p>
+				</header>
+				{% for text in strategicReport["perekrestok-list-card-2"].texts %}
+					<p class="text _fs-14 _white _mt-14">{{ text[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			{{ component('picture', {
+				path: "section-2",
+				name: strategicReport["perekrestok-list-card-2"].img,
+				ext: "jpg",
+				width: '536',
+				height: "540",
+				className: "list-card__img",
+				lang: lang
+			})}}
+		</div>
+	</div>
+</section>

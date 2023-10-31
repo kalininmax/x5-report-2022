@@ -1,0 +1,26 @@
+<section id="trends-in-economy-and-consumer-behaviour" class="trends-in-economy-and-consumer-behaviour section">
+	<div class="section__container container">
+		<h2 class="h2 _line-b pb-lg-14 mb-lg-30 _ls-minus-03">{{ strategicReport['trends-in-economy-and-consumer-behaviour'].title[lang] | safe }}</h2>
+		<div class="row mb-lg-56">
+			<div class="col-lg-4 col-sm-12">
+				{{ strategicReport['trends-in-economy-and-consumer-behaviour'].text1[lang] | safe }}
+			</div>
+			<div class="col-lg-4 col-sm-12 mt-sm-28 mt-xs-18">
+				{{ strategicReport['trends-in-economy-and-consumer-behaviour'].text2[lang] | safe }}
+			</div>
+			<div class="col-lg-4 col-sm-12 mt-sm-28 mt-xs-18">
+				{{ strategicReport['trends-in-economy-and-consumer-behaviour'].text3[lang] | safe }}
+			</div>
+		</div>
+		<h4 class="russias-food-retail-market__chart-title h3 _line-b pb-lg-14">{{ strategicReport['trends-in-economy-and-consumer-behaviour'].tableTitle[lang] | safe }}</h4>
+		<div class="mb-lg-26">
+			{{ component('table', {
+				data: strategicReport['trends-in-economy-and-consumer-behaviour'].table.data,
+				lang: lang
+			})}}
+		</div>
+		<p class="trends-in-economy-and-consumer-behaviour__source">
+			{{ strategicReport['trends-in-economy-and-consumer-behaviour'].source[lang] | safe }}
+		</p>
+	</div>
+</section>

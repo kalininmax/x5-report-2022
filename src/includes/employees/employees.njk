@@ -1,0 +1,468 @@
+{% set employees = strategicReport["employees"] %}
+{% set performance = strategicReport["employees"]["performance"] %}
+{% set strategic = strategicReport["employees"]["strategic"] %}
+{% set key = strategicReport["employees"]["key"] %}
+{% set hr = strategicReport["employees"]["hr"] %}
+{% set code = strategicReport["employees"]["code"] %}
+{% set x5 = strategicReport["employees"]["x5"] %}
+{% set corporate = strategicReport["employees"]["corporate"] %}
+{% set feedback = strategicReport["employees"]["feedback"] %}
+{% set motivation = strategicReport["employees"]["motivation"] %}
+{% set training = strategicReport["employees"]["training"] %}
+{% set employer = strategicReport["employees"]["employer"] %}
+{% set occupation = strategicReport["employees"]["occupation"] %}
+{% set approach = strategicReport["employees"]["approach"] %}
+{% set plans2023 = strategicReport["employees"]["plans2023"] %}
+{% set key2023 = strategicReport["employees"]["key2023"] %}
+
+<section class="employees" id="employees">
+	<div class="section__container container">
+		<div class="planet__header">
+			<h2 class="h1 pt-lg-30 pt-sm-16 mb-lg-38 mb-sm-32 _line-t _ls-minus-03">{{ employees.title[lang] | safe }}</h2>
+			{{ component('icon', {
+					iconName: employees.icon,
+					className: 'planet__header-icon',
+					attributes: 'width="70" height="70" viewBox="0 0 36 36"'
+			}) }}
+		</div>
+		<h4 class="h3 _line-b pb-lg-14 mb-lg-20 mb-sm-16">{{ performance.title[lang] | safe }}</h4>
+		<div class="row mb-lg-60 mb-sm-48">
+			<div class="col-lg-6 col-sm-12 mb-sm-20">
+				<p>{{ performance.col1[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				{% for item in performance.col2 %}
+					<p class="planet__text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="strategic-goals mb-lg-60 mb-sm-48">
+			<div class="strategic-goals__info _full-radius">
+				<div class="strategic-goals__header">
+					<div class="strategic-goals__titles">
+						<div class="strategic-goals__title _first">
+							<h5 >
+								<span class="_col-gr">{{ strategic["title1-left"][lang] | safe }}</span>
+								<span class="_col-wh">{{ strategic["title2-left"][lang] | safe }}</span>
+							</h5>
+						</div>
+						<div class="strategic-goals__title _second _right-120 _desktop">
+							<h5>
+								<span class="_col-gr">{{ strategic["title1-right"][lang] | safe }}</span>
+								<span class="_col-wh">{{ strategic["title2-right"][lang] | safe }}</span>
+							</h5>
+						</div>
+					</div>
+					{{ component('icon', {
+						iconName: strategic.icon,
+						className: 'strategic-goals__icon',
+						attributes: 'width="60" height="60" viewBox="0 0 36 36"'
+					})}}
+				</div>
+				<div class="strategic-goals__content _pb-52">
+					<div class="strategic-goals__list mw-554 _gap-31">
+						<div class="mw-234">
+							<p class="employees__percent mb-lg-2">
+								<span class="employees__percent _mark">&gt;</span>
+								<span class="employees__percent _number">{{ strategic.number[lang] | safe }}</span>
+								<span class="employees__percent _percent">%</span>
+							</p>
+							<p>{{ strategic.text[lang] | safe }}</p>
+						</div>
+						<ul class="list mw-232">
+							{% for item in strategic.list1 %}
+								<li>{{ item[lang] | safe }}</li>
+							{% endfor %}
+						</ul>
+					</div>
+					<div class="strategic-goals__percents _w-401">
+						<div class="strategic-goals__title _second _right-120 _mobile mb-sm-20">
+							<h5>
+								<span class="_col-gr">{{ strategic["title1-right"][lang] | safe }}</span>
+								<span class="_col-wh">{{ strategic["title2-right"][lang] | safe }}</span>
+							</h5>
+						</div>
+						<ul class="list pl-lg-30 mb-lg-26 mw-280 pl-sm-0">
+							{% for item in strategic.list2 %}
+								<li>{{ item[lang] | safe }}</li>
+							{% endfor %}
+						</ul>
+						<p class="pl-lg-30">{{ strategicProduct.text2[lang] | safe }}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h4 class="h3 _line-b pb-lg-14 mb-lg-30 mb-sm-24">{{ key.title[lang] | safe }}</h4>
+		<div class="row mb-lg-40 mb-sm-32">
+			<div class="col-lg-8 col-sm-12 employees__key mb-sm-40">
+				<div class="health__card mw-344">
+					{{ component('icon', {
+						iconName: key.card1.icon,
+						className: 'mb-lg-16',
+						attributes: 'width="50" height="50" viewBox="0 0 36 36"'
+					}) }}
+					<p class="health__card-text">{{ key.card1.text[lang] | safe }}</p>
+				</div>
+				<div class="health__card mw-344">
+					{{ component('icon', {
+						iconName: key.card2.icon,
+						className: 'mb-lg-16',
+						attributes: 'width="50" height="50" viewBox="0 0 36 36"'
+					}) }}
+					<p class="health__card-text">{{ key.card2.text[lang] | safe }}</p>
+				</div>
+				<div class="health__card mw-344">
+					{{ component('icon', {
+						iconName: key.card3.icon,
+						className: 'mb-lg-16',
+						attributes: 'width="50" height="50" viewBox="0 0 36 36"'
+					}) }}
+					<p class="health__card-text">{{ key.card3.text[lang] | safe }}</p>
+				</div>
+				<div class="health__card mw-344">
+					{{ component('icon', {
+						iconName: key.card4.icon,
+						className: 'mb-lg-16',
+						attributes: 'width="50" height="50" viewBox="0 0 36 36"'
+					}) }}
+					<p class="health__card-text">{{ key.card4.text[lang] | safe }}</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-12">
+				{{ component('picture', {
+						path: "section-4",
+						name: key.img,
+						ext: "jpg",
+						className: 'employees__image _height-image',
+						width: '344',
+						height: "640",
+						lang: lang
+				})}}
+			</div>
+		</div>
+		<p class="mw-556 mb-lg-60 mb-sm-48 _p-full-width">{{ key.text[lang] | safe }}</p>
+		<h4 class="h3 _line-b pb-lg-14 mb-lg-20 mb-sm-16">{{ hr.title[lang] | safe }}</h4>
+		<div class="row mb-lg-60">
+			<div class="col-lg-6 col-sm-12 mb-sm-20">
+				{% for item in hr.col1 %}
+					<p class="planet__text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				{% for item in hr.col2 %}
+					<p class="planet__text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+		</div>
+		<h4 class="h3 _line-b pb-lg-14 mb-lg-20 mb-sm-16">{{ code.title[lang] | safe }}</h4>
+		<div class="row mb-lg-80 mb-sm-60">
+			<div class="col-lg-6 col-sm-12 mb-sm-20">
+				<p>{{ code.col1[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				{% for item in code.col2 %}
+					<p class="planet__text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+		</div>
+		<h4 class="h3 _line-b pb-lg-14 mb-lg-30 employees__h4 mb-sm-24">{{ x5.title[lang] | safe }}</h4>
+		<div class="employees__x5-content mb-lg-60 mb-sm-48">
+			<div class="employees__x5-content-text mw-322">
+				{% for item in x5.text %}
+					<p class="planet__text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="employees__table-container">
+				<table class="employees__table mw-750">
+					<tbody>
+						<tr>
+							<th>{{ x5.table.th1[lang] | safe }}</th>
+							<th class="pl-lg-30">{{ x5.table.th2[lang] | safe }}</th>
+						</tr>
+						<tr>
+							<td>
+								<div class="mw-100">
+									{{ x5.table.row1.col1[lang] | safe }}
+								</div>
+							</td>
+							<td>
+								<ul class="list">
+									{% for item in x5.table.row1.col2 %}
+										<li>{{ item[lang] | safe }}</li>
+									{% endfor %}
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>{{ x5.table.row2.col1[lang] | safe }}</td>
+							<td>
+								<ul class="list">
+									{% for item in x5.table.row2.col2 %}
+										<li>{{ item[lang] | safe }}</li>
+									{% endfor %}
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="mw-100">
+									{{ x5.table.row3.col1[lang] | safe }}
+								</div>
+							</td>
+							<td>
+								<ul class="list">
+									{% for item in x5.table.row3.col2 %}
+										<li>{{ item[lang] | safe }}</li>
+									{% endfor %}
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="mw-100">
+									{{ x5.table.row4.col1[lang] | safe }}
+								</div>
+							</td>
+							<td>
+								<ul class="list">
+									{% for item in x5.table.row4.col2 %}
+										<li>{{ item[lang] | safe }}</li>
+									{% endfor %}
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		{{ component('picture', {
+				path: "section-4",
+				name: x5.img,
+				ext: "jpg",
+				className: 'mb-lg-80 mb-sm-60 employees__image',
+				width: '1112',
+				height: "570",
+				lang: lang
+		})}}
+		<h4 class="h3 _line-b pb-lg-14 mb-lg-30 employees__h4 mb-sm-24">{{ corporate.title[lang] | safe }}</h4>
+		<div class="row mb-lg-60 mb-sm-48">
+			<div class="col-lg-4 col-sm-12 mb-sm-20">
+				<p>{{ corporate.col1[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-4 col-sm-12 mb-sm-20">
+				<p>{{ corporate.col2[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-4 col-sm-12">
+				<div class="corporate-card">
+					{{ component('icon', {
+							iconName: corporate.card.icon,
+							className: 'corporate-card__icon',
+							attributes: 'width="40" height="40" viewBox="0 0 36 36"'
+					}) }}
+					<h5 class="corporate-card__title mb-lg-10 _mw-h">{{ corporate.card.title[lang] | safe }}</h5>
+					<p class="mw-230">{{ corporate.card.text[lang] | safe }}</p>
+				</div>
+			</div>
+		</div>
+		{{ component('picture', {
+				path: "section-4",
+				name: corporate.img,
+				ext: "jpg",
+				className: 'mb-lg-60 mb-sm-48 employees__image',
+				width: '1112',
+				height: "580",
+				lang: lang
+		})}}
+		<h4 class="h3 _line-b pb-lg-14 mb-lg-30 mb-sm-24">{{ feedback.title[lang] | safe }}</h4>
+		<div class="employees__feedback mb-lg-60 mb-sm-48">
+			<div class="employees__feedback-text mw-632">
+				{% for item in feedback.col1 %}
+					<p class="planet__text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="employees__feedback-cards">
+				<div class="corporate-card _max-width mb-lg-22">
+					{{ component('icon', {
+							iconName: feedback.col2.card1.icon,
+							className: 'corporate-card__icon _max-width',
+							attributes: 'width="40" height="40" viewBox="0 0 36 36"'
+					}) }}
+					<h5 class="corporate-card__title mb-lg-10 mw-280">{{ feedback.col2.card1.title[lang] | safe }}</h5>
+					<p class="mw-324">{{ feedback.col2.card1.text[lang] | safe }}</p>
+				</div>
+				<div class="corporate-card _max-width mb-lg-16">
+					{{ component('icon', {
+							iconName: feedback.col2.card1.icon,
+							className: 'corporate-card__icon _max-width',
+							attributes: 'width="40" height="40" viewBox="0 0 36 36"'
+					}) }}
+					<h5 class="corporate-card__title mb-lg-10 mw-280">
+						<span>{{ feedback.col2.card2.title1[lang] | safe }}</span>
+						<span>{{ feedback.col2.card2.title2[lang] | safe }}</span>
+					</h5>
+					<p class="mw-354">{{ feedback.col2.card2.text[lang] | safe }}</p>
+				</div>
+				<p class="mw-440">{{ feedback.col2.text[lang] | safe }}</p>
+			</div>
+		</div>
+		<h4 class="h3 _line-b pb-lg-14 mb-lg-20 mb-sm-16">{{ motivation.title[lang] | safe }}</h4>
+		<div class="row mb-lg-42 mb-sm-32">
+			<div class="col-lg-4 col-sm-12 mb-sm-14"><p>{{ motivation.col1[lang] | safe }}</p></div>
+			<div class="col-lg-4 col-sm-12">
+				{% for item in motivation.col2 %}
+					<p class="planet__text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="col-lg-4 col-sm-12"><p>{{ motivation.col3[lang] | safe }}</p></div>
+		</div>
+		<h4 class="h4 pb-lg-14 _line-b mb-lg-20 mb-sm-16"> {{ training.title[lang] | safe }}</h4>
+		<div class="row mb-lg-30 mb-sm-24">
+			<div class="col-lg-4 col-sm-12 mb-sm-14">
+				{% for item in training.col1 %}
+					<p class="planet__text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="col-lg-4 col-sm-12 mb-sm-14">
+				{% for item in training.col2 %}
+					<p class="planet__text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="col-lg-4 col-sm-12">
+				{% for item in training.col3 %}
+					<p class="planet__text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="row mb-lg-56 mb-sm-42">
+			<div class="col-lg-4 col-sm-12 mb-sm-20">
+				<div class="corporate-card _max-h">
+					{{ component('icon', {
+							iconName: training.card1.icon,
+							className: 'corporate-card__icon _row',
+							attributes: 'width="40" height="40" viewBox="0 0 36 36"'
+					}) }}
+					<h5 class="corporate-card__title mb-lg-10">{{ training.card1.title[lang] | safe }}</h5>
+					<p class="mw-258">{{ training.card1.text[lang] | safe }}</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-12 mb-sm-20">
+				<div class="corporate-card _max-h">
+					{{ component('icon', {
+							iconName: training.card2.icon,
+							className: 'corporate-card__icon _row',
+							attributes: 'width="40" height="40" viewBox="0 0 36 36"'
+					}) }}
+					<h5 class="corporate-card__title mb-lg-10">{{ training.card2.title[lang] | safe }}</h5>
+					<p class="mw-258">{{ training.card2.text[lang] | safe }}</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-12 mb-sm-20">
+				<div class="corporate-card _max-h">
+					{{ component('icon', {
+							iconName: training.card3.icon,
+							className: 'corporate-card__icon _row',
+							attributes: 'width="40" height="40" viewBox="0 0 36 36"'
+					}) }}
+					<h5 class="corporate-card__title mb-lg-10">{{ training.card3.title[lang] | safe }}</h5>
+					<p class="mw-258">{{ training.card3.text[lang] | safe }}</p>
+					<p class="_empty"></p>
+				</div>
+			</div>
+		</div>
+		<h4 class="h4 pb-lg-14 _line-b mb-lg-20 mb-sm-16"> {{ employer.title[lang] | safe }}</h4>
+		<div class="row mb-lg-80 mb-sm-60">
+			<div class="col-lg-6 col-sm-12 mb-sm-20">
+				{% for item in employer.col1 %}
+					<p class="planet__text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<div class="corporate-card _width-full">
+					{{ component('icon', {
+							iconName: employer.card.icon,
+							className: 'corporate-card__icon _row',
+							attributes: 'width="40" height="40" viewBox="0 0 36 36"'
+					}) }}
+					<p class="mw-410 mb-lg-14">
+						<span class="c-default medium">{{ employer.card.text1[lang] | safe }}</span>
+						{{ employer.card.text2[lang] | safe }}
+						<a href="https://bpmaward.ru" target="_blank">{{ employer.card.href[lang] | safe }}</a>
+						{{ employer.card.text3[lang] | safe }}
+					</p>
+					<p>{{ employer.card.text4[lang] | safe }}</p>
+				</div>
+			</div>
+		</div>
+		<h4 class="h3 _line-b pb-lg-14 mb-lg-32 employees__h4 mb-sm-26">{{ occupation.title[lang] | safe }}</h4>
+		<p class="mw-810 mb-lg-60 large-text _fs-18 c-default mb-sm-48">{{ occupation.text[lang] | safe }}</p>
+		<h4 class="h3 _line-b pb-lg-14 mb-lg-20 mb-sm-16">{{ approach.title[lang] | safe }}</h4>
+		<p class="mw-1000 mb-lg-20 mb-sm-16">{{ approach.text1[lang] | safe }}</p>
+		<div class="row mb-lg-40 mb-sm-32">
+			<div class="col-lg-6 col-sm-12 mb-sm-10">
+				<ul class="list">
+					{% for item in approach.list1 %}
+						<li>{{ item[lang] | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<ul class="list">
+					{% for item in approach.list2 %}
+						<li>{{ item[lang] | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		<div class="employees__border mb-lg-20 mb-sm-16"></div>
+		<div class="row mb-lg-58 mb-sm-46">
+			<div class="col-lg-6 col-sm-12 mb-sm-14">
+				{% for item in approach.text2 %}
+					<p class="planet__text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				{% for item in approach.text3 %}
+					<p class="planet__text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="health__plans _without-bottom-radius">
+			<h4 class="h3 _line-b pb-lg-14 mb-lg-30 _white mb-sm-24">{{ plans2023.title[lang] | safe }}</h4>
+			<div class="row">
+				<div class="col-lg-6 col-sm-12 mb-sm-20">
+					{% for item in plans2023.text1 %}
+						<p class="planet__text">{{ item[lang] | safe }}</p>
+					{% endfor %}
+				</div>
+				<div class="col-lg-6 col-sm-12">
+					<p class="medium mb-lg-18">{{ plans2023.text2[lang] | safe }}</p>
+					<ul class="list">
+						{% for item in plans2023.list %}
+							<li>{{ item[lang] | safe }}</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="health__plans _without-top-radius mb-lg-120 _light mb-sm-80">
+			<h4 class="h3 _line-b pb-lg-14 mb-lg-20 _white mb-sm-16"> {{ key2023.title[lang] | safe }}</h4>
+			<div class="row">
+				<div class="col-lg-6 col-sm-12 mb-sm-10">
+					<ul class="list">
+						{% for item in key2023.list1 %}
+							<li>{{ item[lang] | safe }}</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="col-lg-6 col-sm-12">
+					<ul class="list mb-lg-20">
+						{% for item in key2023.list2 %}
+							<li>{{ item[lang] | safe }}</li>
+						{% endfor %}
+					</ul>
+					<p>{{ key2023.text[lang] | safe }}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

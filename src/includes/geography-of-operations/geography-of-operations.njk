@@ -1,0 +1,104 @@
+<section id="geography-of-operations" class="geography-of-operations">
+	<div class="container">
+		<h2 class="h1 pt-lg-32 mb-lg-38 _line-t">{{ strategicReport['geography-of-operations'].title[lang] | safe }}</h2>
+		<div class="row mb-lg-84">
+			<div class="col-lg-6 col-sm-12 mb-sm-30">
+				<div class="geography-of-operations__text large-text _fs-18 _ln-1-39">{{ strategicReport['geography-of-operations'].text[lang] | safe }}</div>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<div class="geography-of-operations__text large-text _fs-18 _ln-1-39">
+					{{ strategicReport['geography-of-operations'].text2[lang] | safe }}
+				</div>
+			</div>
+		</div>
+		<p class="text ttu medium pb-lg-14 _line-b mb-lg-30 _ls-0">{{ strategicReport['geography-of-operations'].table1Title[lang] | safe }}</p>
+		<div class="geography-of-operations__table _v1 mb-lg-58 scroll-wrapper-1111">
+			{{ component('table', {
+				data: strategicReport['geography-of-operations'].table1.data,
+				lang: lang
+			})}}
+		</div>
+		<p class="text ttu medium pb-lg-14 _line-b mb-lg-32 _ls-0">{{ strategicReport['geography-of-operations'].table2Title[lang] | safe }}</p>
+		<div class="geography-of-operations__table _v2 mb-lg-60 scroll-wrapper-1111">
+			{{ component('table', {
+				data: strategicReport['geography-of-operations'].table2.data,
+				lang: lang
+			})}}
+		</div>
+		<ul class="geography-of-operations__list">
+			{% for item in strategicReport['geography-of-operations'].numbers %}
+				<li class="geography-of-operations__list-item">
+					<p class="geography-of-operations__list-number">{{ item.number[lang] | safe }}</p>
+					<p class="geography-of-operations__list-title text _fs-14 _ls-minus-02">{{ item.title[lang] | safe }}</p>
+					<p class="geography-of-operations__list-text">{{ item.text[lang] | safe }}</p>
+				</li>
+			{% endfor %}
+		</ul>
+		<h2 class="h2 _line-b pb-lg-14 mb-lg-38 _ls-minus-03">{{ strategicReport['geography-of-operations'].subtitle[lang] | safe }}</h2>
+		<div class="geography-of-operations__multi">
+			<h2 class="h2 _ls-minus-03">{{ strategicReport['geography-of-operations']['multi'].title[lang] | safe }}</h2>
+			<div class="geography-of-operations__multi-card">
+				{{ component('picture', {
+					path: "section-1",
+					name: strategicReport['geography-of-operations']['multi'].img[lang],
+					ext: "jpg",
+					width: '536',
+					height: "272",
+					className: "geography-of-operations__multi-card-bg",
+					lang: lang
+				})}}
+				<div class="geography-of-operations__multi-card-content">
+					<div class="geography-of-operations__multi-card-icon-wrapper">
+						{{ component('icon', {
+							iconName: "layout-white",
+							className: "geography-of-operations__multi-card-icon",
+							attributes: "width='34' height='34'"
+						})}}
+					</div>
+					<p class="geography-of-operations__multi-card-count">
+						{{ strategicReport['geography-of-operations']['multi'].count[lang] | safe }}
+					</p>
+					<p class="geography-of-operations__multi-card-title text _fs-14">
+						{{ strategicReport['geography-of-operations']['multi'].cardTitle[lang] | safe }}
+					</p>
+				</div>
+			</div>
+		</div>
+		<ul class="geography-of-operations__items">
+			{% for item in strategicReport['geography-of-operations'].list %}
+				<li class="geography-of-operations__items-item">
+					<div class="geography-of-operations__items-icon-wrapper circle{% if item.iconClassName %} {{ item.iconClassName }} {% endif %}">
+						{{ component('icon', {
+							iconName: item.icon,
+							className: "geography-of-operations__items-icon",
+							attributes: item.iconData
+						})}}
+					</div>
+					<p class="geography-of-operations__items-number">{{ item.number[lang] | safe }}</p>
+					<p class="geography-of-operations__items-text text _fs-14">{{ item.text[lang] | safe }}</p>
+				</li>
+			{% endfor %}
+		</ul>
+		<ul class="geography-of-operations__elements mb-lg-64">
+			{% for item in strategicReport['geography-of-operations'].elements %}
+				<li>
+					<div class="geography-of-operations__elements-icon-wrapper circle">
+						{{ component('icon', {
+							iconName: item.icon,
+							className: "geography-of-operations__elements-icon",
+							attributes: item.iconData
+						})}}
+					</div>
+					<p class="geography-of-operations__elements-text text _fs-14 c-gray-menu-text">{{ item.text[lang] | safe }}</p>
+				</li>
+			{% endfor %}
+		</ul>
+		<p class="h3 pb-lg-14 _line-b mb-lg-26 _ls-0">{{ strategicReport['geography-of-operations'].table3Title[lang] | safe }}</p>
+		<div class="geography-of-operations__table _v3 mb-lg-58 scroll-wrapper-1111">
+			{{ component('table', {
+				data: strategicReport['geography-of-operations'].table3.data,
+				lang: lang
+			})}}
+		</div>
+	</div>
+</section>

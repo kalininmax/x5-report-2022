@@ -1,0 +1,71 @@
+.stakeholder {
+	letter-spacing: -0.02em;
+	color: $c-gray-menu-text;
+	font-size: 14px;
+	line-height: 20px;
+
+	@include max-screen($breakpoint-sm) {
+		font-size: 12px;
+	}
+	&__text {
+		&._mb-p:not(:last-of-type) {
+			margin-bottom: 20px;
+		}
+		&._black {
+			color: $default-color;
+		}
+		&._fs-16 {
+			color: $default-color;
+			font-size: 16px;
+			line-height: 1.43;
+		}
+	}
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		grid-gap: 40px;
+	}
+	&__card {
+		display: flex;
+		flex-direction: column;
+		padding: 29px 33px 0 29px;
+		border-radius: 10px;
+		background-color: $c-bg-gray-light;
+
+		@include max-screen($breakpoint-md) {
+			padding-bottom: 20px;
+		}
+	}
+	&__card-icon {
+		margin-bottom: 35px;
+		width: 70px;
+		height: 70px;
+	}
+	&__card-title {
+		margin-bottom: 20px;
+		color: $default-color;
+		font-size: 24px;
+		line-height: 30px;
+		font-weight: 500;
+		&._mb-0 {
+			margin-bottom: 0;
+		}
+	}
+	&__card-list {
+		padding-top: 20px;
+		border-top: 1px solid $c-highlights-border;
+	}
+	ul li:not(:first-child) {
+		margin-top: 10px;
+	}
+	ul.list li::before {
+		@include max-screen($breakpoint-sm) {
+			top: 7px;
+		}
+	}
+	._sm-h {
+		@include max-screen($mobile-2) {
+			font-size: 24px;
+		}
+	}
+}

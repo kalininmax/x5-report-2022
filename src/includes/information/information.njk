@@ -1,0 +1,113 @@
+{% set information = strategicReport['information'] %}
+{% set tableEbitda1 = strategicReport['information']['table-ebitda-1'] %}
+{% set tableEbitda2 = strategicReport['information']['table-ebitda-2'] %}
+{% set tableAdjEbitda1 = strategicReport['information']['table-adj-ebitda-1'] %}
+{% set tableAdjEbitda2 = strategicReport['information']['table-adj-ebitda-2'] %}
+{% set tableAdjNet1 = strategicReport['information']['table-adj-net-1'] %}
+{% set tableAdjNet2 = strategicReport['information']['table-adj-net-2'] %}
+{% set tableAdjSga1 = strategicReport['information']['table-adj-sga-1'] %}
+{% set tableAdjSga2 = strategicReport['information']['table-adj-sga-2'] %}
+{% set tableAdjNetCash = strategicReport['information']['table-adj-net-cash'] %}
+{% set tableAdjFcf = strategicReport['information']['table-adj-fcf'] %}
+{% set tableRoic = strategicReport['information']['table-roic'] %}
+{% set tableAdjRoic = strategicReport['information']['table-adj-roic'] %}
+{% set tableNetDebt = strategicReport['information']['table-net-debt'] %}
+{% set tableNetRetail = strategicReport['information']['table-net-retail'].table %}
+{% set tableLike = strategicReport['information']['table-like'].table %}
+
+<section id="information-on-alternative-performance-measures" class="information section">
+	<div class="section__container container">
+		<h2 class="h1 pt-lg-32 pt-sm-16 mb-lg-36 mb-sm-32 _line-t _ls-minus-03">
+			{{ information.title[lang] | safe }}
+		</h2>
+		<p class="text information__text-1 mb-lg-60">{{ information.text[lang] | safe }}</p>
+		<h3 class="h3 _line-b pb-lg-12 mb-lg-20 _ls-minus-03">{{ information.ebitda.title[lang] | safe }}</h3>
+		<p class="text _fs-14 information__text-2 mb-lg-22">{{ information.ebitda.text[lang] | safe }}</p>
+		{{ component('table', {
+			data: tableEbitda1,
+			lang: lang
+		})}}
+		{{ component('table', {
+			data: tableEbitda2,
+			lang: lang
+		})}}
+		<h3 class="h3 _line-b pb-lg-12 mb-lg-20 _ls-minus-03">{{ information['adjusted-ebitda'].title[lang] | safe }}</h3>
+		<p class="text _fs-14 information__text-2 mb-lg-22">{{ information['adjusted-ebitda'].text[lang] | safe }}</p>
+		{{ component('table', {
+			data: tableAdjEbitda1,
+			lang: lang
+		})}}
+		{{ component('table', {
+			data: tableAdjEbitda2,
+			lang: lang
+		})}}
+		<h3 class="h3 _line-b pb-lg-12 mb-lg-20 _ls-minus-03">{{ information['adjusted-net-profit'].title[lang] | safe }}</h3>
+		<p class="text _fs-14 information__text-3 mb-lg-22">{{ information['adjusted-net-profit'].text[lang] | safe }}</p>
+		{{ component('table', {
+			data: tableAdjNet1,
+			lang: lang
+		})}}
+		{{ component('table', {
+			data: tableAdjNet2,
+			lang: lang
+		})}}
+		<h3 class="h3 _line-b pb-lg-12 mb-lg-20 _ls-minus-03">{{ information['adjusted-sg&a'].title[lang] | safe }}</h3>
+		<p class="text _fs-14 information__text-3 mb-lg-22">{{ information['adjusted-sg&a'].text[lang] | safe }}</p>
+		{{ component('table', {
+			data: tableAdjSga1,
+			lang: lang
+		})}}
+		{{ component('table', {
+			data: tableAdjSga2,
+			lang: lang
+		})}}
+		<h3 class="h3 _line-b pb-lg-12 mb-lg-20 _ls-minus-03">{{ information['adjusted-net-cash'].title[lang] | safe }}</h3>
+		<p class="text _fs-14 information__text-3 mb-lg-22">{{ information['adjusted-net-cash'].text[lang] | safe }}</p>
+		{{ component('table', {
+			data: tableAdjNetCash,
+			lang: lang
+		})}}
+		<h3 class="h3 _line-b pb-lg-12 mb-lg-20 _ls-minus-03">{{ information['adjusted-fcf'].title[lang] | safe }}</h3>
+		<p class="text _fs-14 information__text-3 mb-lg-22">{{ information['adjusted-fcf'].text[lang] | safe }}</p>
+		{{ component('table', {
+			data: tableAdjFcf,
+			lang: lang
+		})}}
+		<h3 class="h3 _line-b pb-lg-12 mb-lg-20 _ls-minus-03">{{ information['roic'].title[lang] | safe }}</h3>
+		<p class="text _fs-14 information__text-3 mb-lg-22">{{ information['roic'].text[lang] | safe }}</p>
+		{{ component('table', {
+			data: tableRoic,
+			lang: lang
+		})}}
+		<h3 class="h3 _line-b pb-lg-12 mb-lg-20 _ls-minus-03">{{ information['adjusted-roic'].title[lang] | safe }}</h3>
+		<p class="text _fs-14 information__text-3 mb-lg-22">{{ information['adjusted-roic'].text[lang] | safe }}</p>
+		{{ component('table', {
+			data: tableAdjRoic,
+			lang: lang
+		})}}
+		<h3 class="h3 _line-b pb-lg-12 mb-lg-20 _ls-minus-03">{{ information['net-debt'].title[lang] | safe }}</h3>
+		<p class="text _fs-14 information__text-3 mb-lg-22">{{ information['net-debt'].text[lang] | safe }}</p>
+		{{ component('table', {
+			data: tableNetDebt,
+			lang: lang
+		})}}
+		<div class="row">
+			<div class="col-lg-6 col-sm-12">
+				<h3 class="h3 _line-b pb-lg-12 mb-lg-20 _ls-minus-03">{{ information['net-retail-sales'].title[lang] | safe }}</h3>
+				<p class="text _fs-14 information__text-3 mb-lg-40">{{ information['net-retail-sales'].text[lang] | safe }}</p>
+				{{ component('table', {
+					data: tableNetRetail,
+					lang: lang
+				})}}
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<h3 class="h3 _line-b pb-lg-12 mb-lg-20 _ls-minus-03">{{ information['like-for-like'].title[lang] | safe }}</h3>
+				<p class="text _fs-14 information__text-3 mb-lg-44">{{ information['like-for-like'].text[lang] | safe }}</p>
+				{{ component('table', {
+					data: tableLike,
+					lang: lang
+				})}}
+			</div>
+		</div>
+	</div>
+</section>

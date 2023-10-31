@@ -1,0 +1,193 @@
+<section class="five-post section" id="five-post">
+	<div class="container">
+		<h2 class="h1 pt-lg-32 pt-sm-16 mb-lg-40 mb-sm-32 _line-t _ls-minus-03">
+			{{ strategicReport['five-post-data'].title[lang] | safe }}
+		</h2>
+		<div class="row mb-lg-70">
+			<div class="col-lg-7 col-sm-12 mb-sm-30">
+				<div class="five-post__icon-wrapper mb-lg-18">
+					{{ component('icon', {
+						iconName: '5post-full',
+						className: "five-post__icon",
+						attributes: "width=\"108\" height=\"45\""
+					})}}
+				</div>
+				{{ strategicReport['five-post-data'].text[lang] | safe }}
+			</div>
+			<div class="col-lg-5 col-sm-12">
+				<div class="five-post__list">
+					<p class="text ttu c-default medium pb-lg-18 _line-b _ls-0">{{ strategicReport['five-post-data'].keyTexts.title[lang] | safe }}</p>
+					<ul class="list text _fs-14">
+						{% for item in strategicReport['five-post-data'].keyTexts.list %}
+							<li>{{ item[lang] | safe }}</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="five-post__keys five-post-keys mb-lg-68">
+			<p class="text medium c-default mb-lg-14 ttu _ls-0">{{ strategicReport['five-post-data'].keys.title[lang] | safe }}</p>
+			<ul class="five-post-keys__items">
+				{% for item in strategicReport['five-post-data'].keys.list %}
+					<li class="five-post-keys__item">
+						<p class="five-post-keys__item-value big-text">{{ item.value[lang] | safe }}</p>
+						<p class="five-post-keys__item-text text _fs-14">{{ item.text[lang] | safe }}</p>
+						<p class="five-post-keys__item-subtext">{{ item.subtext[lang] | safe }}</p>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="five-post__business-model five-post-business-model mb-lg-60">
+			<div class="express-delivery-business-model__cnt _five-post">
+				<h2 class="h2 _ls-minus-03">
+					{{ strategicReport['express-delivery-data']["business-model"].title[lang] | safe }}
+				</h2>
+				<div class="express-delivery-business-model__diagram _desktop">
+					<div class="express-delivery-business-model__diagram-main">
+						<div class="express-delivery-business-model__diagram-main-icon-wrapper">
+							{{ component('icon', {
+								iconName: 'diagram-five-icon',
+								className: "express-delivery-business-model__diagram-main-icon",
+								attributes: "width='85' height='85'"
+							})}}
+						</div>
+					</div>
+					<ul class="express-delivery-business-model__diagram-list">
+						{% for item in strategicReport['five-post-data']["business-model"]["diagram-list"] %}
+							<li class="express-delivery-business-model__diagram-list-item">
+								<div class="express-delivery-business-model__diagram-list-icon-wrapper circle">
+									{{ component('icon', {
+										iconName: item.icon,
+										attributes: item.iconData,
+										className: "express-delivery-business-model__diagram-list-icon"
+									})}}
+								</div>
+								<p class="express-delivery-business-model__diagram-list-text text _fs-14 _white">
+									{{ item.text[lang] | safe }}
+								</p>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="express-delivery-business-model__diagram _mobile">
+					<img class="express-delivery__chart-img-mobile" src="{{ strategicReport['five-post-data']["business-model"].diagramImg[lang] | safe }}" width="621" height="669" alt="">
+				</div>
+			</div>
+			<div class="five-post-business-model__value">
+				<p class="five-post-business-model__value-number">
+					{{ strategicReport["five-post-data"]["business-model"].value.number[lang] | safe }}
+				</p>
+				<p class="five-post-business-model__value-text">
+					{{ strategicReport["five-post-data"]["business-model"].value.text[lang] | safe }}
+				</p>
+			</div>
+			<div class="five-post-business-model__photo-wrapper">
+				{{ component('picture', {
+					path: "section-2",
+					name: strategicReport["five-post-data"]["business-model"].img,
+					ext: "jpg",
+					width: '384',
+					height: "490",
+					className: "five-post-business-model__photo",
+					lang: lang
+				})}}
+			</div>
+		</div>
+		<div class="five-post__key-partners five-post-key-partners mb-lg-60">
+			<p class="text c-default medium mb-lg-14 ttu _ls-0 _line-b pb-lg-12 mb-lg-20">
+				{{ strategicReport['five-post-data']['key-partners'].title[lang] | safe }}
+			</p>
+			<ul class="five-post-key-partners__items">
+				{% for item in strategicReport['five-post-data']['key-partners'].list %}
+					<li class="five-post-key-partners__item">
+						{% if item.icon %}
+							{{ component('icon', {
+								iconName: item.icon,
+								attributes: item.iconData
+							})}}
+						{% else %}
+						{{ component('picture', {
+							path: "section-2",
+							name: item.img,
+							ext: "png",
+							width: item.imgWiidth,
+							height: item.imgHeight,
+							lang: lang
+						})}}
+						{% endif %}
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<p class="text c-default medium mb-lg-14 ttu _ls-0 _line-b pb-lg-12 mb-lg-20">
+			{{ strategicReport['five-post-data']['texts'].title[lang] | safe }}
+		</p>
+		<div class="row text _fs-14 c-gray-menu-text mb-lg-60">
+			<div class="col-lg-4 col-sm-12 mb-sm-30">
+				<p>{{ strategicReport['five-post-data']['texts'].text1[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-4 col-sm-12 mb-sm-30">
+				<p>{{ strategicReport['five-post-data']['texts'].text2[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-4 col-sm-12">
+				<p>{{ strategicReport['five-post-data']['texts'].text3[lang] | safe }}</p>
+			</div>
+		</div>
+		<div class="five-post__advantages five-post-advantages mb-lg-70">
+			<div class="five-post-advantages__cnt">
+				<p class="text ttu _white medium pb-lg-10 _line-b _ls-0 mb-lg-20">{{ strategicReport['five-post-data']['advantages'].cnt.title[lang] | safe }}</p>
+				<ul class="five-post-advantages__cnt-list">
+					{% for item in strategicReport['five-post-data']['advantages'].cnt.list %}
+						<li class="five-post-advantages__cnt-list-item">
+							<div class="five-post-advantages__cnt-list-icon-wrapper circle">
+								{{ component('icon', {
+									iconName:  item.icon,
+									attributes: item.iconData,
+									className: "five-post__icon"
+								})}}
+							</div>
+							<div class="five-post-advantages__cnt-list-texts">
+								<p class="large-text _fs-18 medium _white mb-lg-6">{{ item.title[lang] | safe }}</p>
+								<p class="text _fs-14 _white _mt-0">{{ item.text[lang] | safe }}</p>
+							</div>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="five-post-advantages__img-wrapper">
+				{{ component('picture', {
+					path: "section-2",
+					name: strategicReport["five-post-data"]["advantages"].img,
+					ext: "jpg",
+					width: '480',
+					height: "587",
+					lang: lang
+				})}}
+			</div>
+		</div>
+		<h2 class="h2 pb-lg-32 mb-lg-18 _line-b _ls-minus-03">
+			{{ strategicReport['five-post-data']['plans'].title[lang] | safe }}
+		</h2>
+		<div class="row mb-lg-58">
+			<h3 class="h3 _ls-minus-03 col-lg-8 col-sm-12">
+				{{ strategicReport['five-post-data']['plans'].subtitle[lang] | safe }}
+			</h3>
+		</div>
+		<div class="five-post__goals five-post-goals">
+			<p class="text c-default ttu medium _line-b pb-lg-14 mb-lg-30 _ls-0">{{ strategicReport['five-post-data']['plans'].goalsTitle[lang] | safe }}</p>
+			<ul class="five-post-goals__list">
+				{% for item in strategicReport['five-post-data']['plans'].goals %}
+					<li class="five-post-goals__list-item">
+						<div class="five-post-goals__list-icon-wrapper circle">
+							{{ component('icon', {
+								iconName: item.icon,
+								attributes: item.iconData
+							})}}
+						</div>
+						<p class="five-post-goals__text text c-gray-menu-text">{{ item.text[lang] | safe }}</p>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</section>

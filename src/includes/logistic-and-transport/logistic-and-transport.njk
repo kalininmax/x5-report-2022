@@ -1,0 +1,307 @@
+{% set logisticData = strategicReport['logistic-and-transport'] %}
+
+<section id="logistics-and-transport" class="logistic-and-transport">
+	<div class="section__container container">
+		<h2 class="h1 pt-lg-32 pt-sm-16 mb-lg-40 mb-sm-32 _line-t _ls-minus-03">
+			{{ logisticData.title[lang] | safe }}
+		</h2>
+		{{ component('picture', {
+			path: "section-3",
+			name: logisticData.img,
+			ext: "jpg",
+			width: '1118',
+			height: "760",
+			className: "mb-lg-80 w-100 h-auto _br-10-all",
+			lang: lang
+		})}}
+		{% set pyaterochka = strategicReport['logistic-and-transport'].pyaterochka %}
+		<div class="logistic-and-transport__title mb-lg-22">
+			<h3 class="h2 _line-b pb-lg-14 _ls-minus-03">
+				{{ pyaterochka.title[lang] | safe }}
+			</h3>
+			{{ component('icon', {
+				iconName: pyaterochka.titleIcon,
+				className: 'logistic-and-transport__title-icon',
+				attributes: 'width="40" height="40" viewBox="0 0 36 36"'
+			}) }}
+		</div>
+		<div class="row mb-lg-60">
+			<div class="col-lg-4 col-sm-12 logistic-and-transport__col-text c-gray-menu-text">
+				{% for item in pyaterochka.col1.texts[lang] %}
+					<p>{{ item | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="col-lg-4 col-sm-12 mt-sm-28 mt-xs-18">
+				<h4 class="h3 _line-b pb-lg-14 mb-lg-20">{{ pyaterochka.col2.title[lang] | safe }}</h4>
+				<ul class="list text _fs-14 c-gray-menu-text logistic-and-transport__list">
+					{% for item in pyaterochka.col2.list[lang] %}
+						<li>{{ item | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="col-lg-4 col-sm-12 mt-sm-28 mt-xs-18">
+				<h4 class="h3 _line-b pb-lg-14 mb-lg-20">{{ pyaterochka.col3.title[lang] | safe }}</h4>
+				<ul class="list text _fs-14 c-gray-menu-text logistic-and-transport__list">
+					{% for item in pyaterochka.col3.list[lang] %}
+						<li>{{ item | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		<h4 class="h3 _line-b pb-lg-14 mb-lg-20">{{ pyaterochka.title2[lang] | safe }}</h4>
+		<div class="row mb-lg-40">
+			<div class="col-lg-6 col-sm-12">
+				<p class="text _fs-14 c-gray-menu-text">{{ pyaterochka.col4[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<p class="text _fs-14 c-gray-menu-text">{{ pyaterochka.col5[lang] | safe }}</p>
+			</div>
+		</div>
+		<div class="row mb-lg-62">
+			<div class="col-lg-6 col-sm-12">
+				<h5 class="h4 _line-b pb-lg-14 mb-lg-50">{{ pyaterochka.col6.title[lang] | safe }}<br/><span class="text-small normal">{{ pyaterochka.col6.titleSmall[lang] | safe }} <span class="c-gray-desc-text">{{ pyaterochka.col6.titleSmallGray[lang] | safe }}</span></span></h5>
+				<img class="w-100" src="{{ pyaterochka.col6.graph[lang] | safe }}.svg" alt="">
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<h5 class="h4 _line-b pb-lg-14 mb-lg-20 pt-lg-20">{{ pyaterochka.col7.title[lang] | safe }} <span class="text-small normal c-gray-desc-text">{{ pyaterochka.col7.titleSmallGray[lang] | safe }}</span></h5>
+				<ul class="logistic-and-transport__legend mb-lg-26 text c-gray-desc-text">
+					{% for item in pyaterochka.col7.legend %}
+						<li class="logistic-and-transport__legend-item">
+							<span class="logistic-and-transport__legend-color" style="background-color:{{ item.color }}"></span>
+							{{ item.name[lang] | safe }}
+						</li>
+					{% endfor %}
+				</ul>
+				<img class="w-100" src="{{ pyaterochka.col7.graph[lang] | safe }}.svg" alt="">
+			</div>
+		</div>
+		<div class="row mb-lg-60">
+			<div class="col-lg-6 col-sm-12 mb-md-30">
+				<div class="logistic-and-transport__achieving">
+					<h5 class="h3 mb-lg-30 logistic-and-transport__achieving-title">
+						{{ component('icon', {
+							iconName: pyaterochka.col8.icon,
+							className: 'logistic-and-transport__achieving-icon',
+							attributes: 'width="40" height="40" viewBox="0 0 36 36"'
+						})}}
+						{{ pyaterochka.col8.title[lang] | safe }}
+					</h5>
+					<ul class="list logistic-and-transport__list">
+						{% for item in pyaterochka.col8.list %}
+							<li>{{ item[lang] | safe }}</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<h5 class="h4 _line-b pb-lg-14 mb-lg-20">{{ pyaterochka.col9.title[lang] | safe }} <span class="text-small normal c-gray-desc-text">{{ pyaterochka.col9.titleSmallGray[lang] | safe }}</span></h5>
+				<ul class="logistic-and-transport__legend mb-lg-24 c-gray-desc-text">
+					{% for item in pyaterochka.col9.legend %}
+						<li class="logistic-and-transport__legend-item">
+							<span class="logistic-and-transport__legend-color" style="background-color:{{ item.color }}"></span>
+							{{ item.name[lang] | safe }}
+						</li>
+					{% endfor %}
+				</ul>
+				<img class="w-100" src="{{ pyaterochka.col9.graph[lang] | safe }}.svg" alt="">
+			</div>
+		</div>
+		<div class="mb-lg-80 logistic-and-transport__plans">
+			<div class="col-sm-12 logistic-and-transport__plans-content">
+				<h5 class="h3 pb-lg-12 mb-lg-20 _line-b logistic-and-transport__achieving-title">
+					{{ pyaterochka.plans.title[lang] | safe }}
+				</h5>
+				<ul class="list c-gray-menu-text">
+					{% for item in pyaterochka.plans.list[lang] %}
+						<li>{{ item | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div>
+				{{ component('picture', {
+					path: "section-3",
+					name: pyaterochka.plans.img,
+					ext: "jpg",
+					width: '1118',
+					height: "760",
+					className: "w-100 h-auto logistic-and-transport__plans-img",
+					lang: lang
+				})}}
+			</div>
+		</div>
+		{% set perekrestok = strategicReport['logistic-and-transport'].perekrestok %}
+		<div class="logistic-and-transport__title mb-lg-12">
+			<h3 class="h2 _line-b pb-lg-14 _ls-minus-03">
+				{{ perekrestok.title[lang] | safe }}
+			</h3>
+			{{ component('icon', {
+				iconName: perekrestok.titleIcon,
+				className: 'logistic-and-transport__title-icon',
+				attributes: 'width="40" height="40" viewBox="0 0 36 36"'
+			})}}
+		</div>
+		<p class="text _fs-14 logistic-and-transport__max-width-text mb-lg-60">{{ perekrestok.descr[lang] | safe }}</p>
+		<div class="row mb-lg-70">
+			<div class="col-lg-5 col-sm-12 mb-sm-40">
+				<h4 class="h3 _line-b pb-lg-12 mb-lg-30 _ls-minus-03">{{ perekrestok.highlights.title[lang] | safe }}</h4>
+				<div class="logistic-and-transport__highlights">
+					{% for item in perekrestok.highlights.list[lang] %}
+						{% if ((loop.index == loop.length) and (loop.index % 2 == 1) ) %}
+							<div class="mb-xs-20">
+								{{ component('icon', {
+									iconName: item.icon,
+									className: 'logistic-and-transport__highlights-icon',
+									attributes: 'width="40" height="40" viewBox="0 0 36 36"'
+								})}}
+								<p class="text _fs-14 pt-lg-20 mt-lg-16 _line-t">{{ item.text }}</p>
+							</div>
+						{% else %}
+							<div class="mb-xs-20">
+								{{ component('icon', {
+									iconName: item.icon,
+									className: 'logistic-and-transport__highlights-icon',
+									attributes: 'width="40" height="40" viewBox="0 0 36 36"'
+								})}}
+								<p class="text _fs-14 pt-lg-20 mt-lg-16 _line-t">{{ item.text }}</p>
+							</div>
+						{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+			<div class="col-lg-7 col-sm-12">
+				<h4 class="h3 _line-b pb-lg-12 mb-lg-20 _ls-minus-03">{{ perekrestok.planing.title[lang] | safe }}</h4>
+				<div class="logistic-and-transport__cols mb-lg-60">
+					<ul class="list logistic-and-transport__list">
+						{% for item in perekrestok.planing.list1[lang] %}
+							<li>{{ item | safe }}</li>
+						{% endfor %}
+					</ul>
+					<ul class="list logistic-and-transport__list">
+						{% for item in perekrestok.planing.list2[lang] %}
+							<li>{{ item | safe }}</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<h4 class="h3 _line-b pb-lg-12 mb-lg-20 _ls-minus-03">{{ perekrestok.logistics.title[lang] | safe }}</h4>
+				<div class="logistic-and-transport__cols">
+					<ul class="list logistic-and-transport__list">
+						{% for item in perekrestok.logistics.list1[lang] %}
+							<li>{{ item | safe }}</li>
+						{% endfor %}
+					</ul>
+					<ul class="list logistic-and-transport__list">
+						{% for item in perekrestok.logistics.list2[lang] %}
+							<li>{{ item | safe }}</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="mb-lg-80 logistic-and-transport__plans">
+			<div class="col-sm-12 logistic-and-transport__plans-content">
+				<h5 class="h3 pb-lg-12 mb-lg-20 _line-b logistic-and-transport__achieving-title">
+					{{ perekrestok.plans.title[lang] | safe }}
+				</h5>
+				<ul class="list c-gray-menu-text">
+					{% for item in perekrestok.plans.list[lang] %}
+						<li>{{ item | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div>
+				{{ component('picture', {
+					path: "section-3",
+					name: perekrestok.plans.img,
+					ext: "jpg",
+					width: '1118',
+					height: "760",
+					className: "w-100 h-auto logistic-and-transport__plans-img",
+					lang: lang
+				})}}
+			</div>
+		</div>
+		{% set chizhik = strategicReport['logistic-and-transport'].chizhik %}
+		<div class="logistic-and-transport__title mb-lg-22">
+			<h3 class="h2 _line-b pb-lg-14 _ls-minus-03">
+				{{ chizhik.title[lang] | safe }}
+			</h3>
+			{{ component('icon', {
+				iconName: chizhik.titleIcon,
+				className: 'logistic-and-transport__title-icon',
+				attributes: 'width="40" height="40" viewBox="0 0 36 36"'
+			})}}
+		</div>
+		<div class="row mb-lg-60">
+			<div class="col-lg-6 col-sm-12 mb-xs-10">
+				<p class="text _fs-14">{{ chizhik.col1[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<p class="text _fs-14">{{ chizhik.col2[lang] | safe }}</p>
+			</div>
+		</div>
+		<div class="row mb-lg-40">
+			<div class="col-lg-8 col-sm-12">
+				<h4 class="h3 _line-b pb-lg-12 mb-lg-30 _ls-minus-03">{{ chizhik.highlights.title[lang] | safe }}</h4>
+				<div class="row">
+					{% for item in chizhik.highlights.list %}
+						<div class="col-lg-6 col-sm-12 mb-lg-38">
+							{{ component('icon', {
+								iconName: item.icon,
+								className: 'logistic-and-transport__highlights-icon',
+								attributes: 'width="40" height="40" viewBox="0 0 36 36"'
+							})}}
+							<p class="text _fs-14 pt-lg-20 mt-lg-16 _line-t">{{ item[lang] | safe }}</p>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-12">
+				<h4 class="h3 _line-b pb-lg-12 mb-lg-20 _ls-minus-03">{{ chizhik.plans.title[lang] | safe }}</h4>
+				<ul class="list logistic-and-transport__list">
+					{% for item in chizhik.plans.list %}
+						<li>{{ item[lang] | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		{% set x5transport = strategicReport['logistic-and-transport'].x5transport %}
+		<h3 class="h2 _line-b pb-lg-14 _ls-minus-03 mb-lg-30">{{ x5transport.title[lang] | safe }}</h3>
+		<div class="row mb-lg-60">
+			<div class="col-lg-6 col-sm-12 mb-xs-10">
+				<p class="text _fs-14 c-gray-menu-text">{{ x5transport.col1[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<p class="text _fs-14 c-gray-menu-text">{{ x5transport.col2[lang] | safe }}</p>
+			</div>
+		</div>
+		<div class="row mb-lg-106 mb-md-60">
+			<div class="col-lg-6 col-sm-12 mb-sm-40">
+				<h4 class="h3 _line-b pb-lg-12 mb-lg-20 _ls-minus-03">{{ x5transport.highlights.title[lang] | safe }}</h4>
+				<ul class="list logistic-and-transport__list">
+					{% for item in x5transport.highlights.list[lang] %}
+						<li>
+							<p>{{ item.text | safe }}</p>
+							{% if item.list %}
+								<ul class="list ">
+									{% for item in item.list %}
+										<li>
+											<p>{{ item | safe }}</p>
+										</li>
+									{% endfor %}
+								</ul>
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<h4 class="h3 _line-b pb-lg-12 mb-lg-20 _ls-minus-03">{{ x5transport.plans.title[lang] | safe }}</h4>
+				<ul class="list logistic-and-transport__list">
+					{% for item in x5transport.plans.list[lang] %}
+						<li>{{ item | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>

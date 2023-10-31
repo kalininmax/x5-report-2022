@@ -1,0 +1,19 @@
+<section id="leadership-team" class="leadership-team section">
+	<div class="section__container container">
+		<header class="leadership-team__header">
+			<div>
+				<h2 class="leadership-team__title h1 mb-lg-40">{{ strategicReport['leadership-team'].title[lang] | safe }}</h2>
+				<p class="leadership-team__text text _ls-minus-02">{{ strategicReport['leadership-team'].text[lang] | safe }}</p>
+			</div>
+			<img class="leadership-team__image" src="{{ strategicReport['leadership-team'].chartImg[lang] | safe }}" width="420" height="352" />
+		</header>
+		<ul class="leadership-team__items">
+			{% for item in strategicReport['leadership-team'].list %}
+				<li class="leadership-team__item">
+					<p class="leadership-team__item-title large-text _fs-18">{{ item.title[lang] | safe }}{% if item.tooltip %}<sup class='tooltip-button' data-tooltip-id='tooltip-leadership-{{ item.tooltip | safe }}' aria-expanded='false'></sup>{% endif %}</p>
+					<p class="leadership-team__item-text">{{ item.text[lang] | safe }}</p>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</section>

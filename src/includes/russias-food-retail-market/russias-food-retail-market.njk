@@ -1,0 +1,132 @@
+<section id="russias-food-retail-market" class="russias-food-retail-market section">
+	<div class="section__container container">
+		<h2 class="h1 pt-lg-32 mb-lg-42 _line-t">{{ strategicReport['russias-food-retail-market'].title[lang] | safe }}</h2>
+		<div class="row mb-lg-60">
+			<p class="col-lg-8 col-sm-12 large-text _fs-18">{{ strategicReport['russias-food-retail-market'].intro.leadText[lang] | safe }}</p>
+			<div class="russias-food-retail-market__chart col-lg-12 mt-lg-56 mb-lg-60">
+				<h3 class="h3 _line-b pb-lg-14 mb-lg-22">{{ strategicReport['russias-food-retail-market']['russian-food'].title[lang] | safe }}</h3>
+				<div class="russias-food-retail-market__chart-wrapper scroll-wrapper-500 mb-lg-50 mb-sm-14">
+					<img class="russias-food-retail-market__chart-img" src="{{ strategicReport['russias-food-retail-market']['russian-food'].chartImg[lang] | safe }}" width="1111" alt="">
+				</div>
+				<ul class="russias-food-retail-market__legend mb-lg-30">
+					{% for item in strategicReport['russias-food-retail-market'].charts.legend %}
+						<li class="russias-food-retail-market__legend-item">
+							<i class="circle-icon" style="background: #{{ item.icon | safe }}"></i>
+							<span class="small-text c-gray-header-text">{{ item.text[lang] | safe }}</span>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="col-lg-12">
+				<div class="russias-food-retail-market__position">
+					<h3 class="h3 mb-lg-20 pb-lg-14 _line-b">{{ strategicReport['russias-food-retail-market'].intro.title[lang] | safe }}</h3>
+					<p class="russias-food-retail-market__position-text text _fs-14 mb-lg-40">{{ strategicReport['russias-food-retail-market'].intro.text[lang] | safe }}</p>
+					<ul class="russias-food-retail-market__position-list">
+						{% for item in strategicReport['russias-food-retail-market'].intro.list %}
+							<li class="russias-food-retail-market__position-item">
+								{{ item.value[lang] | safe }}
+								<p class="text _fs-14 _ls-minus-02">{{ item.text[lang] | safe }}</p>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<h3 class=" h3 _line-b pb-lg-14 mb-lg-22">{{ strategicReport['russias-food-retail-market']['food-market-trends'].title[lang] | safe }}</h3>
+		<div class="russias-food-retail-market__trends row">
+			<div class="col-lg-6 col-sm-12 mb-md-40">
+				<div class="russias-food-retail-market__trends-text">{{ strategicReport['russias-food-retail-market']['food-market-trends'].text[lang] | safe }}</div>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<ul class="russias-food-retail-market__trends-list">
+					{% for item in strategicReport['russias-food-retail-market']['food-market-trends'].list %}
+						<li class="russias-food-retail-market__trends-list-item">
+							<div class="russias-food-retail-market__trends-list-icon-wrapper">
+								{{ component('icon', {
+									iconName: item.icon,
+									className: "russias-food-retail-market__trends-list-icon",
+									attributes: item.iconData
+								})}}
+							</div>
+							<p class="russias-food-retail-market__trends-list-title text _line-t pt-lg-20 medium">{{ item.title[lang] | safe }}</p>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		<h3 class=" h3 _line-b pb-lg-14 mb-lg-36">{{ strategicReport['russias-food-retail-market']['x5-growth'].title[lang] | safe }}</h3>
+		<div class="russias-food-retail-market__chart-wrapper scroll-wrapper-1000 mb-lg-32">
+			<img class="russias-food-retail-market__chart-img" src="{{ strategicReport['russias-food-retail-market']['x5-growth'].chartImg[lang] | safe }}" width="1100" height="632" alt="">
+		</div>
+		<p class="russias-food-retail-market__source mb-lg-54">
+			{{ strategicReport['russias-food-retail-market']['x5-growth'].source[lang] | safe }}
+		</p>
+		<p class="russias-food-retail-market__introtext text mb-lg-30">
+			{{ strategicReport['russias-food-retail-market']['x5-growth'].introText[lang] | safe }}
+		</p>
+		<div class="row mb-lg-34">
+			<div class="col-lg-6 col-sm-12 mb-sm-30">
+				<h4 class="h4 _line-b pb-lg-12 mb-lg-8">
+					{{ strategicReport['russias-food-retail-market']['top10'].title1[lang] | safe }}
+				</h4>
+				<div class="table mb-xs-28">
+					{{ component('table', {
+						data: strategicReport['russias-food-retail-market']["top10"].table1.data,
+						lang: lang
+					})}}
+				</div>
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<h4 class="h4 _line-b pb-lg-12 mb-lg-8">
+					{{ strategicReport['russias-food-retail-market']['top10'].title2[lang] | safe }}
+				</h4>
+				<div class="table mb-xs-28">
+					{{ component('table', {
+						data: strategicReport['russias-food-retail-market']["top10"].table2.data,
+						lang: lang
+					})}}
+				</div>
+			</div>
+		</div>
+		<p class="russias-food-retail-market__source mb-lg-52">
+			{{ strategicReport['russias-food-retail-market']["top10"].table2.sourceText[lang] | safe }}
+		</p>
+		<div class="row">
+			<div class="col-lg-6 col-sm-12 mb-lg-30">
+				<h3 class="russias-food-retail-market__chart-title h3 _line-b pb-lg-14 mb-lg-34">{{ strategicReport['russias-food-retail-market']["global-context"].chart5.title[lang] | safe }}</h3>
+				<ul class="russias-food-retail-market__legend _vertical mb-lg-70 mb-sm-40">
+					{% for item in strategicReport['russias-food-retail-market'].charts.legend2 %}
+						<li class="russias-food-retail-market__legend-item">
+							<i class="circle-icon" style="background: #{{ item.icon | safe }}"></i>
+							<span class="small-text c-gray-header-text">{{ item.text[lang] | safe }}</span>
+						</li>
+					{% endfor %}
+				</ul>
+				<div class="russias-food-retail-market__chart-wrapper _market-dynamics scroll-wrapper-500">
+					<picture>
+						<img class="russias-food-retail-market__chart-img" src="{{ strategicReport['russias-food-retail-market']['global-context'].chart5.chartImg[lang] | safe }}.svg" width="536" alt="">
+					</picture>
+				</div>
+			</div>
+			<div class="col-lg-6 col-sm-12 mb-lg-30">
+				<h3 class="russias-food-retail-market__chart-title h3 _line-b pb-lg-14 mb-lg-34">{{ strategicReport['russias-food-retail-market']["global-context"].chart6.title[lang] | safe }}</h3>
+				<ul class="russias-food-retail-market__legend _vertical _col-2 mb-lg-42 mb-sm-40">
+					{% for item in strategicReport['russias-food-retail-market'].charts.legend3 %}
+						<li class="russias-food-retail-market__legend-item">
+							<i class="circle-icon" style="background: #{{ item.icon | safe }}"></i>
+							<span class="small-text c-gray-header-text">{{ item.text[lang] | safe }}</span>
+						</li>
+					{% endfor %}
+				</ul>
+				<div class="russias-food-retail-market__chart-wrapper _market-dynamics scroll-wrapper-500">
+					<picture>
+						<img class="russias-food-retail-market__chart-img" src="{{ strategicReport['russias-food-retail-market']['global-context'].chart6.chartImg[lang] | safe }}.svg" width="536" alt="">
+					</picture>
+				</div>
+			</div>
+		</div>
+		<p class="russias-food-retail-market__source">
+			{{ strategicReport['russias-food-retail-market']["global-context"].source[lang] | safe }}
+		</p>
+	</div>
+</section>

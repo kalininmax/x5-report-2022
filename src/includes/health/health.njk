@@ -1,0 +1,141 @@
+{% set health = strategicReport["health-section"] %}
+{% set healthProduct = strategicReport["health-section"]["products"] %}
+{% set strategicProduct = strategicReport["health-section"]["strategic"] %}
+{% set keyProduct = strategicReport["health-section"]["key"] %}
+{% set plansProduct = strategicReport["health-section"]["plans"] %}
+
+<section class="health" id="health">
+	<div class="section__container container">
+		<div class="planet__header">
+			<h2 class="h1 pt-lg-32 pt-sm-16 mb-lg-38 mb-sm-32 _line-t _ls-minus-03">{{ health.title[lang] | safe }}</h2>
+			{{ component('icon', {
+					iconName: health.icon,
+					className: 'planet__header-icon',
+					attributes: 'width="70" height="70" viewBox="0 0 36 36"'
+			}) }}
+		</div>
+		<div class="row mb-lg-60 mb-sm-48">
+			<div class="col-lg-6 col-sm-12 mb-sm-20">
+				<h3 class="h3 pb-lg-14 mb-lg-20 _line-b _ls-minus-02">
+					{{ healthProduct.col1.title[lang] | safe }}
+				</h3>
+				{% for item in healthProduct.col1.text %}
+					<p class="planet__text">{{ item[lang] | safe }}</p>
+				{% endfor %}
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<h3 class="h3 pb-lg-14 mb-lg-20 _line-b _ls-minus-02">
+					{{ healthProduct.col2.title[lang] | safe }}
+				</h3>
+				<p class="planet__text">
+					{{ healthProduct.col2.text1[lang] | safe }}
+					<sup class="tooltip-button _ml-v1" data-tooltip-id="tooltip-04-4" aria-expanded="false"></sup>
+					{{ healthProduct.col2.text2[lang] | safe }}
+				</p>
+				<p class="planet__text">
+					{{ healthProduct.col2.text3[lang] | safe }}
+				</p>
+			</div>
+		</div>
+		<div class="strategic-goals mb-lg-60 mb-sm-48">
+			<div class="strategic-goals__info">
+				<div class="strategic-goals__header">
+					<div class="strategic-goals__titles">
+						<div class="strategic-goals__title _first">
+							<h5 >
+								<span class="_col-gr">{{ strategicProduct["title1-left"][lang] | safe }}</span>
+								<span class="_col-wh">{{ strategicProduct["title2-left"][lang] | safe }}</span>
+							</h5>
+						</div>
+						<div class="strategic-goals__title _second _right-120 _desktop">
+							<h5>
+								<span class="_col-gr">{{ strategicProduct["title1-right"][lang] | safe }}</span>
+								<span class="_col-wh">{{ strategicProduct["title2-right"][lang] | safe }}</span>
+							</h5>
+						</div>
+					</div>
+					{{ component('icon', {
+						iconName: strategicProduct.icon,
+						className: 'strategic-goals__icon',
+						attributes: 'width="60" height="60" viewBox="0 0 36 36"'
+					})}}
+				</div>
+				<div class="strategic-goals__content">
+					<div class="strategic-goals__list _pb-l mw-554 _gap-31">
+						<p class="mw-236">{{ strategicProduct.text1[lang] | safe }}</p>
+						<ul class="list mw-242 _pos-r">
+							{% for item in strategicProduct.list1 %}
+								<li>{{ item[lang] | safe }}</li>
+							{% endfor %}
+						</ul>
+					</div>
+					<div class="strategic-goals__percents _w-401">
+						<div class="strategic-goals__title _second _right-120 _mobile mb-sm-20">
+							<h5>
+								<span class="_col-gr">{{ strategicProduct["title1-right"][lang] | safe }}</span>
+								<span class="_col-wh">{{ strategicProduct["title2-right"][lang] | safe }}</span>
+							</h5>
+						</div>
+						<ul class="list pl-lg-30 mb-lg-20 pl-sm-0">
+							{% for item in strategicProduct.list2 %}
+								<li>{{ item[lang] | safe }}</li>
+							{% endfor %}
+						</ul>
+						<p class="pl-lg-30 pl-sm-0">{{ strategicProduct.text2[lang] | safe }}</p>
+					</div>
+				</div>
+			</div>
+			{{ component('picture', {
+				path: "section-4",
+				name: strategicProduct.img,
+				ext: "jpg",
+				className: 'health__image',
+				width: '1111',
+				height: "570",
+				lang: lang
+			})}}
+		</div>
+		<h4 class="h3 _line-b pb-lg-14 mb-lg-30 mb-sm-24">{{ keyProduct.title[lang] | safe }}</h4>
+		<div class="health__cards mb-lg-60 mb-sm-48">
+			<div class="health__card mw-344">
+				<h5 class="health__card-title mw-154">{{ keyProduct.card1.title[lang] | safe }}</h5>
+				<div class="health__card-text">
+					{% for item in keyProduct.card1.text %}
+						<p class="planet__text">{{ item[lang] | safe }}</p>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="health__card mw-344">
+				<h5 class="health__card-title mw-154 _one-line">{{ keyProduct.card2.title[lang] | safe }}</h5>
+				<p class="health__card-text">{{ keyProduct.card2.text[lang] | safe }}</p>
+			</div>
+			<div class="health__card mw-344">
+				<h5 class="health__card-title mw-192">{{ keyProduct.card3.title[lang] | safe }}</h5>
+				<p class="health__card-text">{{ keyProduct.card3.text[lang] | safe }}</p>
+			</div>
+			<div class="health__card mw-344">
+				<h5 class="health__card-title mw-154">{{ keyProduct.card4.title[lang] | safe }}</h5>
+				<p class="health__card-text">{{ keyProduct.card4.text[lang] | safe }}</p>
+			</div>
+			<div class="health__card mw-344">
+				<h5 class="health__card-title mw-254"> {{ keyProduct.card5.title[lang] | safe }}</h5>
+				<p class="health__card-text">{{ keyProduct.card5.text[lang] | safe }}</p>
+			</div>
+		</div>
+		<div class="health__plans mb-lg-120 mb-sm-80">
+			<h4 class="h3 _line-b pb-lg-14 mb-lg-20 _white mb-sm-16">{{ plansProduct.title[lang] | safe }}</h4>
+			<div class="row">
+				<div class="col-lg-6 col-sm-12 mb-sm-20">
+					{% for item in plansProduct.col1 %}
+						<p class="planet__text">{{ item[lang] | safe }}</p>
+					{% endfor %}
+				</div>
+				<div class="col-lg-6 col-sm-12">
+					{% for item in plansProduct.col2 %}
+						<p class="planet__text">{{ item[lang] | safe }}</p>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

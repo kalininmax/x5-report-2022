@@ -1,0 +1,64 @@
+<section class="mnogo-lososya section" id="mnogo-lososya">
+	<div class="container">
+		<h2 class="h1 _line-t pt-lg-32 mb-lg-38 _ls-minus-03">
+			{{ strategicReport['mnogo-lososya-data'].title[lang] | safe }}
+		</h2>
+		<div class="row mb-lg-58">
+			<div class="col-lg-7 col-sm-12 mb-sm-30">
+				<div class="mnogo-lososya__icon-wrapper mb-lg-22">
+					{{ component('icon', {
+						iconName: 'mnogo-lososya',
+						className: "mnogo-lososya__icon",
+						attributes: "width=\"131\" height=\"41\""
+					})}}
+				</div>
+				{{ strategicReport['mnogo-lososya-data'].text[lang] | safe }}
+			</div>
+			<div class="col-lg-5 col-sm-12">
+				<div class="mnogo-lososya__card mnogo-lososya-card">
+					<div class="mnogo-lososya-card__icon-wrapper circle">
+						{{ component('icon', {
+							iconName: 'graph-white',
+							className: "mnogo-lososya-card__icon",
+							attributes: "width=\"35\" height=\"35\""
+						})}}
+					</div>
+					{{ strategicReport['mnogo-lososya-data'].cardText[lang] | safe }}
+				</div>
+			</div>
+		</div>
+		<div class="mnogo-lososya__keys mnogo-lososya-keys mb-lg-56">
+			<p class="text c-default medium mb-lg-14 ttu _ls-0">{{ strategicReport['mnogo-lososya-data'].keys.title[lang] | safe }}</p>
+			<ul class="mnogo-lososya-keys__items">
+				{% for item in strategicReport['mnogo-lososya-data'].keys.list %}
+					<li class="mnogo-lososya-keys__item">
+						<p class="mnogo-lososya-keys__item-value big-text">{{ item.value[lang] | safe }}</p>
+						<p class="mnogo-lososya-keys__item-text text c-default _fs-14">{{ item.text[lang] | safe }}</p>
+						<p class="mnogo-lososya-keys__item-subtext">{{ item.subtext[lang] | safe }}</p>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="mnogo-lososya__plans mnogo-lososya-plans">
+			<div class="mnogo-lososya-plans__cnt">
+				<p class="text _white ttu medium _line-b pb-lg-10 mb-lg-32">
+					{{ strategicReport['mnogo-lososya-data'].plans.title[lang] | safe }}
+				</p>
+				<ul class="list text _white _fs-14">
+					{% for item in strategicReport['mnogo-lososya-data'].plans.list %}
+						<li>{{ item[lang] | safe }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			{{ component('picture', {
+				path: "section-2",
+				name: strategicReport["mnogo-lososya-data"].plans.img,
+				ext: "jpg",
+				width: '672',
+				height: "464",
+				className: "express-delivery-business-model__img",
+				lang: lang
+			})}}
+		</div>
+	</div>
+</section>

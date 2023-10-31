@@ -1,0 +1,118 @@
+{% set communityData = strategicReport["community"] %}
+{% set ourApproach = strategicReport["community"]["our-approach"] %}
+{% set strategicGoals = strategicReport["community"]["strategic-goals"] %}
+
+<section class="community mb-lg-120" id="community">
+	<div class="section__container container">
+		<div class="community__header">
+			<h2 class="h1 pt-lg-32 pt-sm-16 mb-lg-38 mb-sm-32 _line-t _ls-minus-03">
+				{{ communityData.title[lang] }}
+			</h2>
+			{{ component('icon', {
+					iconName: communityData.icon,
+					className: 'community__icon',
+					attributes: 'width="70" height="70" viewBox="0 0 36 36"'
+			}) }}
+		</div>
+		<div class="row mb-lg-60 mb-sm-48">
+			<div class="col-lg-8 col-sm-12 mb-sm-20">
+				<h3 class="h3 pb-lg-14 mb-lg-20 _line-b _ls-minus-02">
+					{{ ourApproach.title[lang] }}
+				</h3>
+				<div class="row">
+					<div class="col-lg-6 col-sm-12 mb-sm-14">
+						{% for item in ourApproach.col1 %}
+							<p class="community__text">{{ item[lang] }}</p>
+						{% endfor %}
+					</div>
+					<div class="col-lg-6 col-sm-12">
+						{% for item in ourApproach.col2 %}
+							<p class="community__text">{{ item[lang] }}</p>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-12">
+				<h3 class="h3 pb-lg-14 mb-lg-20 _line-b _ls-minus-02">
+					{{ ourApproach.col3.title[lang] }}
+				</h3>
+				<ul class="list mb-lg-20">
+					<li>
+						{{ ourApproach.col3.list1[lang] }}
+						<ul class="community__list mt-lg-10 mb-lg-10 pl-lg-4">
+							{% for item in ourApproach.col3.list11 %}
+								<li class="community__item">{{ item[lang] }}</li>
+							{% endfor %}
+						</ul>
+					</li>
+					{% for item in ourApproach.col3.list2 %}
+						<li>{{ item[lang] }}</li>
+					{% endfor %}
+				</ul>
+				<p>{{ ourApproach.col3.text[lang] }}</p>
+			</div>
+		</div>
+		<div class="strategic-goals">
+			<div class="strategic-goals__info">
+				<div class="strategic-goals__header">
+					<div class="strategic-goals__titles">
+						<div class="strategic-goals__title _first">
+							<h5 >
+								<span class="_col-gr">{{ strategicGoals["title1-left"][lang] }}</span>
+								<span class="_col-wh">{{ strategicGoals["title2-left"][lang] }}</span>
+							</h5>
+						</div>
+						<div class="strategic-goals__title _second _desktop">
+							<h5>
+								<span class="_col-gr">{{ strategicGoals["title1-right"][lang] }}</span>
+								<span class="_col-wh">{{ strategicGoals["title2-right"][lang] }}</span>
+							</h5>
+						</div>
+					</div>
+					{{ component('icon', {
+						iconName: strategicGoals.icon,
+						className: 'strategic-goals__icon',
+						attributes: 'width="60" height="60" viewBox="0 0 36 36"'
+					})}}
+				</div>
+				<div class="strategic-goals__content">
+					<div class="strategic-goals__list">
+						<ul class="list strategic-goals__list-first">
+							{% for item in strategicGoals.list1 %}
+								<li>{{ item[lang] }}</li>
+							{% endfor %}
+						</ul>
+						<ul class="list strategic-goals__list-first">
+							{% for item in strategicGoals.list2 %}
+								<li>{{ item[lang] }}</li>
+							{% endfor %}
+						</ul>
+					</div>
+					<div class="strategic-goals__percents">
+						<div class="strategic-goals__title _second _mobile mb-sm-20">
+							<h5 >
+								<span class="_col-gr">{{ strategicGoals["title1-right"][lang] }}</span>
+								<span class="_col-wh">{{ strategicGoals["title2-right"][lang] }}</span>
+							</h5>
+						</div>
+						<div class="strategic-goals__percents-content">
+							<p class="strategic-goals__percents-first">{{ strategicGoals.text1[lang] }}</p>
+							<p class="strategic-goals__percents-number">{{ strategicGoals.percents[lang] }}<span>%</span></p>
+							<p>{{ strategicGoals.text2[lang] }}</p>
+							<p>{{ strategicGoals.text3[lang] }}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			{{ component('picture', {
+				path: "section-4",
+				name: strategicGoals.img,
+				ext: "jpg",
+				className: 'community__image',
+				width: '1111',
+				height: "570",
+				lang: lang
+			})}}
+		</div>
+	</div>
+</section>

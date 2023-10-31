@@ -1,0 +1,218 @@
+.employees {
+	box-sizing: border-box;
+	color: $c-gray-menu-text;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: -0.02em;
+
+	@include max-screen($breakpoint-sm) {
+		font-size: 12px;
+	}
+	&__image {
+		height: auto;
+		border-radius: 10px;
+		&._height-image {
+			@include max-screen($breakpoint-md) {
+				margin: auto;
+				width: 60%;
+			}
+
+			@include max-screen($breakpoint-xs) {
+				width: 100%;
+			}
+		}
+	}
+	&__percent {
+		color: $c-green;
+		font-weight: 500;
+		letter-spacing: -0.03em;
+		&._mark {
+			font-size: 50px;
+			line-height: 50px;
+			font-weight: 400;
+		}
+		&._number {
+			font-size: 56px;
+			line-height: 56px;
+		}
+		&._percent {
+			font-size: 26px;
+			line-height: 23px;
+			letter-spacing: -0.01em;
+		}
+	}
+	&__key {
+		display: grid;
+		grid-template-rows: 275px 315px;
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 50px;
+		column-gap: 40px;
+
+		@include max-screen($breakpoint-md) {
+			grid-template-rows: auto;
+			grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+			justify-items: center;
+			gap: 20px;
+		}
+	}
+	&__h4 {
+		font-size: 36px;
+		line-height: 38px;
+		letter-spacing: -0.03em;
+	}
+	&__x5-content {
+		display: flex;
+		gap: 62px;
+
+		@include max-screen($breakpoint-md) {
+			flex-wrap: wrap;
+			gap: 30px;
+		}
+	}
+	&__x5-content-text {
+		@include max-screen($breakpoint-md) {
+			max-width: 100%;
+		}
+	}
+	&__table-container {
+		overflow-x: auto;
+	}
+	&__table {
+		min-width: 725px;
+		th {
+			padding-bottom: 20px;
+			text-align: left;
+			font-size: 13px;
+			line-height: 17px;
+		}
+		tr td:nth-child(1) {
+			padding-top: 20px;
+			width: 150px;
+			border: 1px solid $c-partners-border;
+			border-left: none;
+			color: $c-black;
+		}
+		tr td:nth-child(2) {
+			padding: 20px 0 20px 29px;
+			border: 1px solid $c-partners-border;
+			border-right: none;
+		}
+	}
+	&__feedback {
+		display: flex;
+		gap: 40px;
+
+		@include max-screen($breakpoint-md) {
+			flex-wrap: wrap;
+			gap: 30px;
+			.planet__text,
+			p {
+				max-width: 100%;
+			}
+		}
+	}
+	&__feedback-text {
+		@include max-screen($breakpoint-md) {
+			max-width: 100%;
+		}
+	}
+	&__border {
+		width: 100%;
+		height: 1px;
+		background-color: $c-partners-border;
+	}
+	._empty::before {
+		content: '\00a0';
+	}
+	ul li:not(:first-child) {
+		margin-top: 10px;
+	}
+	._p-full-width {
+		max-width: 100%;
+	}
+	ul.list li::before {
+		@include max-screen($breakpoint-sm) {
+			top: 7px;
+		}
+	}
+}
+
+.corporate-card {
+	position: relative;
+	padding: 26px 15px 27px 30px;
+	box-sizing: border-box;
+	width: 344px;
+	border-radius: 10px;
+	background-color: $c-bg-gray-light;
+	p {
+		@include max-screen($breakpoint-md) {
+			max-width: 80%;
+		}
+	}
+
+	@include max-screen($breakpoint-md) {
+		width: 100%;
+	}
+	&._max-width {
+		width: 440px;
+
+		@include max-screen($breakpoint-md) {
+			width: 100%;
+		}
+		h5 {
+			@include max-screen($breakpoint-xs-1) {
+				max-width: 200px;
+			}
+		}
+	}
+	&._width-full {
+		width: 100%;
+	}
+	._mw-h {
+		@include max-screen($breakpoint-xs-1) {
+			max-width: 200px;
+		}
+	}
+	&__icon {
+		position: absolute;
+		top: 18px;
+		right: 24px;
+		&._max-width {
+			right: 20px;
+		}
+		&._row {
+			right: 15px;
+		}
+	}
+	&__title {
+		color: $default-color;
+		font-size: 18px;
+		line-height: 23px;
+	}
+	ul.list li::before {
+		@include max-screen($breakpoint-sm) {
+			top: 7px;
+		}
+	}
+}
+
+[lang='ru'] {
+	.employees {
+		&__key {
+			grid-template-rows: 300px 370px;
+
+			@include max-screen($breakpoint-md) {
+				grid-template-rows: auto;
+			}
+		}
+	}
+	.corporate-card {
+		&._max-h {
+			height: 266px;
+
+			@include max-screen($breakpoint-md) {
+				height: auto;
+			}
+		}
+	}
+}

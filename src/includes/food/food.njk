@@ -1,0 +1,130 @@
+<section class="food section" id="food">
+	<div class="container">
+		<h2 class="h1 pt-lg-32 pt-sm-16 mb-lg-34 mb-sm-32 _line-t _ls-minus-03">
+			{{ strategicReport['food-data'].title[lang] | safe }}
+		</h2>
+		<div class="row mb-lg-48">
+			<div class="col-lg-7 col-sm-12 mb-lg-30">
+				<div class="five-post__icon-wrapper mb-lg-14">
+					{{ component('icon', {
+						iconName: 'food-logo',
+						attributes: "width=\"100\" height=\"100\""
+					})}}
+				</div>
+				<p class="text c-gray-menu-text">{{ strategicReport['food-data'].text[lang] | safe }}</p>
+			</div>
+			<div class="col-lg-5 col-sm-12">
+				<div class="food__gray-card">
+					{{ strategicReport['food-data'].grayCard[lang] | safe }}
+				</div>
+			</div>
+		</div>
+		<div class="food__keys food-keys mb-lg-48">
+			<p class="text c-default ttu medium _line-b pb-lg-14 _ls-0">{{ strategicReport['food-data']['keys'].title[lang] | safe }}</p>
+			<div class="food-keys__wrap">
+				<div class="food-keys__content mt-lg-40">
+					<p class="text c-default ttu medium _ls-0 mb-lg-16">{{ strategicReport['food-data']['keys']['content'].title[lang] | safe }}</p>
+					<ul class="food-keys__content-list">
+						{% for item in strategicReport['food-data']['keys']['content'].list %}
+							<li class="food-keys__content-list-item">
+								<p class="food-keys__content-list-value">{{ item.value[lang] | safe }}</p>
+								<p class="food-keys__content-list-text text c-default _fs-14">{{ item.text[lang] | safe }}</p>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="food-keys__audience">
+					<p class="text ttu medium _ls-0 pb-lg-12 _white _line-b mb-lg-40">{{ strategicReport['food-data']['keys']['audience'].title[lang] | safe }}</p>
+					<ul class="food-keys__audience-list">
+						{% for item in strategicReport['food-data']['keys']['audience'].list %}
+							<li class="food-keys__audience-list-item">
+								<p class="food-keys__audience-list-value">{{ item.value[lang] | safe }}</p>
+								<p class="food-keys__audience-list-text">{{ item.text[lang] | safe }}</p>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="food__platform food-platform mb-lg-58">
+			<p class="text c-default ttu medium _line-b pb-lg-14 _ls-0 mb-lg-20">
+				{{ strategicReport['food-data']['platform'].title[lang] | safe }}
+			</p>
+			<div class="row">
+				<div class="col-lg-7 col-sm-12 mb-sm-30">
+					<img class="food-platform__diagram-img" src="{{ strategicReport['food-data']['platform'].diagram[lang] | safe }}" width="632" height="488" alt="">
+					<ul class="food-platform__list list c-default text _fs-14">
+						{% for item in strategicReport['food-data']['platform']['list'] %}
+							<li>{{ item[lang] | safe }}</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="col-lg-5 col-sm-12">
+					<div class="food-platform__img-wrapper">
+						{{ component('picture', {
+							path: "section-2",
+							name: strategicReport["food-data"]["platform"].img,
+							ext: "jpg",
+							width: '440',
+							height: "719",
+							className: "food-platform__img",
+							lang: lang
+						})}}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="food__plans food-plans">
+			<header class="food-plans__header">
+				<p class="food-plans__header-title text ttu medium _white _line-b pb-lg-14">
+					{{ strategicReport['food-data'].plans.title[lang] | safe }}
+				</p>
+				<p class="food-plans__header-text h3 _white">
+					{{ strategicReport['food-data'].plans.text[lang] | safe }}
+				</p>
+			</header>
+			<div class="food-plans__body food-plans-body">
+				<div class="food-plans-body__item">
+					<p class="food-plans-body__title text _white ttu medium mb-lg-14">
+						{{ strategicReport['food-data'].plans.media.title[lang] | safe }}
+					</p>
+					<ul class="food-plans-body__list">
+						{% for item in strategicReport['food-data'].plans.media.list %}
+							<li class="food-plans-body__list-item">
+								<p class="food-plans-body__list-item-value big-text">
+									{{ item.value[lang] | safe }}
+								</p>
+								<p class="food-plans-body__list-item-text text _fs-14 _white">
+									{{ item.text[lang] | safe }}
+								</p>
+								<p class="food-plans-body__list-item-subtext c-green">
+									{{ item.subtext[lang] | safe }}
+								</p>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="food-plans-body__item">
+					<p class="food-plans-body__title text _white ttu medium mb-lg-14">
+						{{ strategicReport['food-data'].plans.commerce.title[lang] | safe }}
+					</p>
+					<ul class="food-plans-body__list">
+						{% for item in strategicReport['food-data'].plans.commerce.list %}
+							<li class="food-plans-body__list-item">
+								<p class="food-plans-body__list-item-value big-text">
+									{{ item.value[lang] | safe }}
+								</p>
+								<p class="food-plans-body__list-item-text text _fs-14 _white">
+									{{ item.text[lang] | safe }}
+								</p>
+								<p class="food-plans-body__list-item-subtext c-green">
+									{{ item.subtext[lang] | safe }}
+								</p>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
